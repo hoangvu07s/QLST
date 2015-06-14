@@ -73,7 +73,6 @@
     <Build Include="Tables\KhachHangThanThiet.sql" />
     <Build Include="Tables\DonHang.sql" />
     <Build Include="Tables\Kho.sql" />
-    <Build Include="Tables\SieuThi.sql" />
     <Build Include="Tables\XuatKho.sql" />
     <Build Include="Tables\NhapKho.sql" />
     <Build Include="Tables\HoaDon.sql" />
