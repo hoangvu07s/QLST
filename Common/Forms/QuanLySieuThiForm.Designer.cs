@@ -1,6 +1,6 @@
 ﻿namespace Common.Forms
 {
-    partial class QuanLySieuThiForm
+    partial class QuanLySieuThiForm: DevExpress.XtraEditors.XtraForm
     {
         /// <summary>
         /// Required designer variable.
