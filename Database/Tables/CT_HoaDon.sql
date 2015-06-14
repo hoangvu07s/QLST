@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[CT_HoaDon]
+(
+	[HoaDonId] UNIQUEIDENTIFIER NOT NULL,
+	[HangHoaId] BIGINT NOT NULL,
+	[SoLuong] INT NOT NULL DEFAULT 0,
+	[DonGia] DECIMAL(18,0) NOT NULL,
+	PRIMARY KEY([HoaDonId], [HangHoaId]),
+	CONSTRAINT [FK_CTHoaDon_HoaDon] FOREIGN KEY ([HoaDonId]) REFERENCES [HoaDon]([HoaDonId]),
+	CONSTRAINT [FK_CTHoaDon_HangHoa] FOREIGN KEY ([HangHoaId]) REFERENCES [HangHoa]([Id])
+)
