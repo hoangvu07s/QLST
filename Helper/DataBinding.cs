@@ -17,7 +17,7 @@ namespace Helper
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+        
         public static void BindLookupEdit(LookUpEdit control, string propertyName, Object entity, Object dataSource,
             string fieldName, string displayMember, string valueMember)
         {

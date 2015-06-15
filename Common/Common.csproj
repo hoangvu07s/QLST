@@ -56,6 +56,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\QButtonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\QButtonControl.Designer.cs">
+      <DependentUpon>QButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QDateEditControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\QDateEditControl.Designer.cs">
+      <DependentUpon>QDateEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QLookupEditControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\QLookupEditControl.Designer.cs">
+      <DependentUpon>QLookupEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QNummericControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\QNummericControl.Designer.cs">
+      <DependentUpon>QNummericControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QTextBoxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\QTextBoxControl.Designer.cs">
+      <DependentUpon>QTextBoxControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\QuanLySieuThiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,9 +94,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{A397ECF4-05BB-4622-8FAC-2A050455909B}</Project>
