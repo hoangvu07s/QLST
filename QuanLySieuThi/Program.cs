@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using QuanLySieuThi.NhanVien;
 
 namespace QuanLySieuThi
 {
@@ -13,7 +14,6 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-        }
+            Application.Run(new ChucVuListForm());}
     }
 }

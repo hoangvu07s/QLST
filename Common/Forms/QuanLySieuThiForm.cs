@@ -67,11 +67,12 @@ namespace Common.Forms
         }
 
 
-        public QuanLySieuThiForm(bool isValided)
+        public QuanLySieuThiForm()
         {
             InitializeComponent();
             Entity = new object();
         }
+
         #endregion
 
         #region Override methods

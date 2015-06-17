@@ -4,6 +4,8 @@
 	[HoVaTen] VARCHAR(255) NOT NULL, 
     [GioiTinh] BIT NOT NULL, 
     [NgayThangNamSinh] DATETIME2 NOT NULL, 
+	[TenDangNhap] VARCHAR(255) NOT NULL,
+	[MatKhau] VARCHAR(255) NOT NULL,
     [ChucVuId] BIGINT NOT NULL, 
     [SoDienThoai] VARCHAR(50) NOT NULL, 
     [DiaChi] VARCHAR(MAX) NOT NULL, 
