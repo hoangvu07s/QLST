@@ -92,6 +92,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\ChucVuEditForm.resx">
+      <DependentUpon>ChucVuEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\ChucVuListForm.resx">
       <DependentUpon>ChucVuListForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,5 +14,14 @@ namespace Helper
         {
             Debug.WriteLine(ex.Message);
         }
+
+        #region Extension method
+
+        public static long ToLong(this string value)
+        {
+            return Convert.ToInt64(value);
+        }
+
+        #endregion
     }
 }

@@ -66,7 +66,7 @@ namespace QuanLySieuThi.NhanVien
             // 
             this.ChucVuGridControl.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChucVuGridControl.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.ChucVuGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChucVuGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.ChucVuGridControl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChucVuGridControl.Location = new System.Drawing.Point(12, 12);
             this.ChucVuGridControl.MainView = this.GridView1;
@@ -78,6 +78,10 @@ namespace QuanLySieuThi.NhanVien
             // 
             // GridView1
             // 
+            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.Row.Options.UseFont = true;
             this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenChucVuColumn});
             this.GridView1.GridControl = this.ChucVuGridControl;
@@ -85,6 +89,8 @@ namespace QuanLySieuThi.NhanVien
             this.GridView1.OptionsView.ShowAutoFilterRow = true;
             this.GridView1.OptionsView.ShowGroupPanel = false;
             this.GridView1.OptionsView.ShowIndicator = false;
+            this.GridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.GridView1_FocusedRowChanged);
+            this.GridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
             // 
             // TenChucVuColumn
             // 
@@ -128,6 +134,7 @@ namespace QuanLySieuThi.NhanVien
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -139,6 +146,7 @@ namespace QuanLySieuThi.NhanVien
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AddButton
             // 
@@ -150,6 +158,7 @@ namespace QuanLySieuThi.NhanVien
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 3;
             this.AddButton.Text = "Them";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // EditButton
             // 
@@ -161,6 +170,7 @@ namespace QuanLySieuThi.NhanVien
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sua";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // OKButton
             // 
@@ -172,6 +182,7 @@ namespace QuanLySieuThi.NhanVien
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 5;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // ChucVuListForm
             // 
