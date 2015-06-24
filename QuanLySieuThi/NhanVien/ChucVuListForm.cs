@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Common.Forms;
 using Helper;
 using Model;
 using Service;
@@ -17,15 +9,13 @@ namespace QuanLySieuThi.NhanVien
     public partial class ChucVuListForm
     {
         private ChucVuService _chucVuService;
-        private Object _selRow = null;
+        private Object _selRow;
 
         public ChucVuListForm()
         {
             InitializeComponent();
             MinimumSizeWidth = 694;
-            MinimumSizeHeight = 279;
-
-            _chucVuService = new ChucVuService(Entities);
+            MinimumSizeHeight = 279;          
         }
 
         public override void LoadData(EventArgs e)
@@ -46,6 +36,7 @@ namespace QuanLySieuThi.NhanVien
             try
             {
                 ResetEntities();
+                _chucVuService = new ChucVuService(Entities);
                 var chucVuList = _chucVuService.GetChucVus();
                 ChucVuGridControl.DataSource = chucVuList;
                 ChucVuGridControl.RefreshDataSource();
@@ -79,18 +70,18 @@ namespace QuanLySieuThi.NhanVien
                     if (nhanViens.Count > 0)
                     {
                         MessageBox.Show(
-                            "Chuc Vu ngay dang duoc su dung trong co so du lieu cua nhan vien. Ban khong the xoa",
-                            "Thong Bao", MessageBoxButtons.OK);
+                            @"Chuc Vu ngay dang duoc su dung trong co so du lieu cua nhan vien. Ban khong the xoa",
+                            @"Thong Bao", MessageBoxButtons.OK);
                     }
                     else if(selRow.TenChucVu == "Admin")
                     {
-                        MessageBox.Show("Ban khong the xoa chuc vu Admin", "Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Ban khong the xoa chuc vu Admin", @"Thong Bao", MessageBoxButtons.OK);
                     }
                     else
                     {
                         if (DialogResult.Yes ==
                             MessageBox.Show(string.Format("Ban co muon xoa Chuc Vu '{0}' ?", selRow.TenChucVu),
-                                "Xac Nhan", MessageBoxButtons.YesNo))
+                                @"Xac Nhan", MessageBoxButtons.YesNo))
                         {
                             _chucVuService.DeleteChucVu(selRow.Id);
                             _chucVuService.Save();
@@ -131,7 +122,7 @@ namespace QuanLySieuThi.NhanVien
                 {
                     if (selRow.TenChucVu == "Admin")
                     {
-                        MessageBox.Show("Ban khong the sua chuc vu Admin", "Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Ban khong the sua chuc vu Admin", @"Thong Bao", MessageBoxButtons.OK);
                     }
                     else
                     {
@@ -152,8 +143,7 @@ namespace QuanLySieuThi.NhanVien
             try
             {
                 ShowData();
-            }
-            catch (Exception ex)
+            }catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
             }

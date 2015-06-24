@@ -65,6 +65,8 @@ namespace Model
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
+        public string TenDangNhap { get; set; }
+        public string MatKhau { get; set; }
     
         public virtual ICollection<ChucVu> ChucVus { get; set; }
         public virtual ICollection<ChucVu> ChucVus1 { get; set; }

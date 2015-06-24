@@ -9,8 +9,8 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
---INSERT INTO ChucVu (TenChucVu, NgayTao,NgayChinhSua,HoatDong) VALUES('Admin', SYSDATETIME(),SYSDATETIME(),1)
 
+-- INIT CHUC VU DATA
 GO
 SET IDENTITY_INSERT ChucVu OFF;
 GO
@@ -31,4 +31,36 @@ VALUES(TenChucVu, HoatDong);
 GO
 
 SET IDENTITY_INSERT ChucVu ON;
+GO
+
+ --INIT NHAN VIEN DATA
+GO
+SET IDENTITY_INSERT ChucVu OFF;
+GO
+SET IDENTITY_INSERT NhanVien OFF;
+GO
+
+MERGE INTO NhanVien AS Target
+USING (VALUES
+	(1,'Admin',1,'20150621','admin','GZ7lhU0L9IY=',1,'123','123',1)
+)
+AS Source (Id, HoVaTen, GioiTinh, NgayThangNamSinh, TenDangNhap, MatKhau, ChucVuId, SoDienThoai, DiaChi, HoatDong)
+ON Target.Id = Source.Id
+
+WHEN MATCHED THEN
+UPDATE SET	HoVaTen = Source.HoVaTen,
+			GioiTinh = Source.GioiTinh,
+			NgayThangNamSinh = Source.NgayThangNamSinh,
+			TenDangNhap = Source.TenDangNhap,
+			MatKhau = Source.MatKhau,
+			ChucVuId = Source.ChucVuId,
+			SoDienThoai = Source.SoDienThoai,
+			DiaChi = Source.DiaChi,
+			HoatDong = Source.HoatDong
+WHEN NOT MATCHED BY Target THEN
+INSERT(HoVaTen, GioiTinh, NgayThangNamSinh, TenDangNhap, MatKhau, ChucVuId, SoDienThoai, DiaChi, HoatDong)
+VALUES(HoVaTen, GioiTinh, NgayThangNamSinh, TenDangNhap, MatKhau, ChucVuId, SoDienThoai, DiaChi, HoatDong);
+GO
+
+SET IDENTITY_INSERT NhanVien ON;
 GO

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using Common.Forms;
 using Helper;
 using Model;
@@ -6,7 +7,6 @@ using Service;
 
 namespace QuanLySieuThi.NhanVien
 {
-    //TODO VuDao: need to check duplidate chuc vu when we Edit or Add new chuc vu
     public partial class ChucVuEditForm
     {
         private readonly ChucVuService _chucVuService;
@@ -32,7 +32,8 @@ namespace QuanLySieuThi.NhanVien
             catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
-            }}
+            }
+        }
 
         public override void LoadData(EventArgs e)
         {
@@ -46,8 +47,7 @@ namespace QuanLySieuThi.NhanVien
                 {
                     FormMode = FormMode.Edit;
                     Entity = _chucVuService.GetChucVu(EntityId.ToLong());
-                }
-            }
+                }}
             catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
@@ -61,7 +61,10 @@ namespace QuanLySieuThi.NhanVien
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            AcceptAndSavechange();
+            if (ValidateInput(e))
+            {
+                AcceptAndSavechange();
+            }
         }
 
         public override void SaveData(EventArgs e)
@@ -102,6 +105,56 @@ namespace QuanLySieuThi.NhanVien
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
+        }
+
+        public override bool ValidateInput(EventArgs e)
+        {
+            try
+            {
+                var chucVu = Entity as ChucVu;
+                if (chucVu != null)
+                {
+                    if (string.IsNullOrEmpty(chucVu.TenChucVu))
+                    {
+                        MessageBox.Show(
+                                @"Vui long nhap Ten Chu Vu",
+                                @"Thong Bao", MessageBoxButtons.OK);
+
+                        return false;
+                    }
+
+                    if (FormMode == FormMode.Add)
+                    {
+                        var chucVuInDatabase = _chucVuService.GetByName(chucVu.TenChucVu);
+                        if (chucVuInDatabase != null)
+                        {
+                            MessageBox.Show(
+                                @"Ten Chuc Vu da ton tai trong co so du lieu",
+                                @"Thong Bao", MessageBoxButtons.OK);
+
+                            return false;
+                        }
+                    }
+                    else if (FormMode == FormMode.Edit)
+                    {
+                        var chucVuInDatabase = _chucVuService.GetByName(chucVu.TenChucVu);
+                        if (chucVuInDatabase != null && chucVuInDatabase.Id != chucVu.Id)
+                        {
+                            MessageBox.Show(
+                                @"Ten Chuc Vu da ton tai trong co so du lieu",
+                                @"Thong Bao", MessageBoxButtons.OK);
+
+                            return false;}
+                    }                    
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return true;
         }
     }
 }

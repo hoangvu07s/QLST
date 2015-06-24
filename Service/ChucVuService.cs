@@ -75,6 +75,22 @@ namespace Service
             return null;
         }
 
+        public ChucVu GetByName(string tenChucVu)
+        {
+            try
+            {
+                return
+                    Entities.ChucVus.FirstOrDefault(
+                        _ => _.TenChucVu == tenChucVu && (_.HoatDong.HasValue && _.HoatDong == true));
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public IList<NhanVien> GetNhanViens(long chucVuId)
         {
             try

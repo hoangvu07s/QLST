@@ -87,6 +87,30 @@
     <Compile Include="NhanVien\ChucVuListForm.Designer.cs">
       <DependentUpon>ChucVuListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\NhanVienEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\NhanVienEditForm.Designer.cs">
+      <DependentUpon>NhanVienEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\NhanVienEditFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\NhanVienEditFormNew.Designer.cs">
+      <DependentUpon>NhanVienEditFormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\NhanVienListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\NhanVienListForm.Designer.cs">
+      <DependentUpon>NhanVienListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -97,6 +121,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\ChucVuListForm.resx">
       <DependentUpon>ChucVuListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\NhanVienEditForm.resx">
+      <DependentUpon>NhanVienEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\NhanVienListForm.resx">
+      <DependentUpon>NhanVienListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
