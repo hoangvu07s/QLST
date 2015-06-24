@@ -144,7 +144,7 @@ namespace QuanLySieuThi.NhanVien
                     }
                     else
                     {
-                        var nhanVienEditForm = new NhanVienEditForm(selRow.Id);
+                        var nhanVienEditForm = new NhanVienEditFormNew(selRow.Id);
                         nhanVienEditForm.ShowForm(string.Format("NhanVien: {0}", selRow.Id));
                         nhanVienEditForm.FormClosed += NhanVienEditFormClosed;
                     }

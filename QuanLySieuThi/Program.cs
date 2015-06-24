@@ -5,8 +5,7 @@ using QuanLySieuThi.NhanVien;
 
 namespace QuanLySieuThi
 {
-    static class Program
-    {
+    static class Program{
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,6 +14,7 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChucVuListForm());}
+            Application.Run(new NhanVienListForm());
+        }
     }
 }

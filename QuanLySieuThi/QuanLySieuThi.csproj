@@ -125,6 +125,9 @@
     <EmbeddedResource Include="NhanVien\NhanVienEditForm.resx">
       <DependentUpon>NhanVienEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\NhanVienEditFormNew.resx">
+      <DependentUpon>NhanVienEditFormNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\NhanVienListForm.resx">
       <DependentUpon>NhanVienListForm.cs</DependentUpon>
     </EmbeddedResource>
