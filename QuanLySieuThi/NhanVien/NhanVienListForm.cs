@@ -104,6 +104,7 @@ namespace QuanLySieuThi.NhanVien
                         {
                             _nhanVienService.DeleteNhanVien(selRow.Id);
                             _nhanVienService.Save();
+                            ShowData();
                         }
                     }
                 }
@@ -172,7 +173,7 @@ namespace QuanLySieuThi.NhanVien
         {
             try
             {
-                var nhanVienEditForm = new NhanVienEditForm(null);
+                var nhanVienEditForm = new NhanVienEditFormNew(null);
                 nhanVienEditForm.ShowForm("NhanVien");
                 nhanVienEditForm.FormClosed += NhanVienEditFormClosed;
             }

@@ -87,12 +87,6 @@
     <Compile Include="NhanVien\ChucVuListForm.Designer.cs">
       <DependentUpon>ChucVuListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien\NhanVienEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanVien\NhanVienEditForm.Designer.cs">
-      <DependentUpon>NhanVienEditForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="NhanVien\NhanVienEditFormNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,9 +115,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\ChucVuListForm.resx">
       <DependentUpon>ChucVuListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien\NhanVienEditForm.resx">
-      <DependentUpon>NhanVienEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\NhanVienEditFormNew.resx">
       <DependentUpon>NhanVienEditFormNew.cs</DependentUpon>

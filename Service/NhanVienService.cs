@@ -68,8 +68,27 @@ namespace Service
         {
             try
             {
-                var nhanVien = new NhanVien();
+                var nhanVien = new NhanVien
+                {
+                    NgayThangNamSinh = DateTime.Now
+                };
                 return Entities.NhanViens.Add(nhanVien);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public NhanVien GetByTenDangNhap(string tenDangNhap)
+        {
+            try
+            {
+                return
+                    Entities.NhanViens.FirstOrDefault(
+                        _ => _.TenDangNhap == tenDangNhap && (_.HoatDong.HasValue && _.HoatDong == true));
             }
             catch (Exception ex)
             {

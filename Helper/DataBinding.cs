@@ -1,5 +1,6 @@
 ﻿using System;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 
 namespace Helper
 {
@@ -19,7 +20,7 @@ namespace Helper
         }
         
         public static void BindLookupEdit(LookUpEdit control, string propertyName, Object entity, Object dataSource,
-            string fieldName, string displayMember, string valueMember)
+            string fieldName, string displayMember, string valueMember, params string[] columnsName)
         {
             try
             {
@@ -28,6 +29,10 @@ namespace Helper
                 control.Properties.DataSource = dataSource;
                 control.Properties.ValueMember = valueMember;
                 control.Properties.DisplayMember = displayMember;
+                foreach (var column in columnsName)
+                {
+                    control.Properties.Columns.Add(new LookUpColumnInfo(column));
+                }
             }
             catch (Exception ex)
             {
