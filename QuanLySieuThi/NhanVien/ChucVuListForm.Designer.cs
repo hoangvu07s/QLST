@@ -193,7 +193,8 @@ namespace QuanLySieuThi.NhanVien
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.DeleteButton);this.Controls.Add(this.CancelButtonControl);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ChucVuListForm";
