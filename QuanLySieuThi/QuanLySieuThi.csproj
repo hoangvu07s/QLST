@@ -59,6 +59,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +75,18 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhaCungCap\NhaCungCapEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhaCungCap\NhaCungCapEditForm.Designer.cs">
+      <DependentUpon>NhaCungCapEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhaCungCap\NhaCungCapListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhaCungCap\NhaCungCapListForm.Designer.cs">
+      <DependentUpon>NhaCungCapListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien\ChucVuEditForm.cs">
       <SubType>Form</SubType>
@@ -109,6 +122,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhaCungCap\NhaCungCapEditForm.resx">
+      <DependentUpon>NhaCungCapEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhaCungCap\NhaCungCapListForm.resx">
+      <DependentUpon>NhaCungCapListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\ChucVuEditForm.resx">
       <DependentUpon>ChucVuEditForm.cs</DependentUpon>

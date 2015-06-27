@@ -33,7 +33,8 @@ namespace Service
         {
             try
             {
-                var chucVu = Entities.ChucVus.FirstOrDefault(_ => _.Id == id);
+                var chucVu =
+                    Entities.ChucVus.FirstOrDefault(_ => _.Id == id && _.HoatDong.HasValue && _.HoatDong == true);
                 if (chucVu != null)
                 {
                     chucVu.HoatDong = false;

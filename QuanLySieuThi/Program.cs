@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Helper;
-using QuanLySieuThi.NhanVien;
-
+using QuanLySieuThi.NhaCungCap;
 namespace QuanLySieuThi
 {
     static class Program{
@@ -14,7 +12,7 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanVienListForm());
+            Application.Run(new NhaCungCapListForm());
         }
     }
 }
