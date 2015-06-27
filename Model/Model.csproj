@@ -102,6 +102,7 @@
     <Compile Include="LoaiHangHoa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiHangHoaExtension.cs" />
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

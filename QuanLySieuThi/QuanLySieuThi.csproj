@@ -88,6 +88,18 @@
     <Compile Include="HangHoa\HangHoaListForm.Designer.cs">
       <DependentUpon>HangHoaListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangHoa\LoaiHangHoaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\LoaiHangHoaEditForm.Designer.cs">
+      <DependentUpon>LoaiHangHoaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HangHoa\LoaiHangHoaListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\LoaiHangHoaListForm.Designer.cs">
+      <DependentUpon>LoaiHangHoaListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa\QuayHangEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +167,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\ChungLoaiHangHoaListForm.resx">
       <DependentUpon>ChungLoaiHangHoaListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HangHoa\HangHoaListForm.resx">
+      <DependentUpon>HangHoaListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HangHoa\LoaiHangHoaEditForm.resx">
+      <DependentUpon>LoaiHangHoaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HangHoa\LoaiHangHoaListForm.resx">
+      <DependentUpon>LoaiHangHoaListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\QuayHangEditForm.resx">
       <DependentUpon>QuayHangEditForm.cs</DependentUpon>
