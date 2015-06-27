@@ -31,11 +31,11 @@ namespace QuanLySieuThi.HangHoa
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ChungLoaiHangHoaGridControl = new DevExpress.XtraGrid.GridControl();
             this.GridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.TenChungLoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
@@ -43,9 +43,9 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton = new Common.Controls.QButtonControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChungLoaiHangHoaGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,19 +62,9 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 286);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
             // ChungLoaiHangHoaGridControl
             // 
+            this.ChungLoaiHangHoaGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.ChungLoaiHangHoaGridControl.Location = new System.Drawing.Point(12, 12);
             this.ChungLoaiHangHoaGridControl.MainView = this.GridView1;
             this.ChungLoaiHangHoaGridControl.Name = "ChungLoaiHangHoaGridControl";
@@ -98,6 +88,30 @@ namespace QuanLySieuThi.HangHoa
             this.GridView1.OptionsView.ShowAutoFilterRow = true;
             this.GridView1.OptionsView.ShowGroupPanel = false;
             this.GridView1.OptionsView.ShowIndicator = false;
+            this.GridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.GridView1_FocusedRowChanged);
+            this.GridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
+            // 
+            // TenChungLoaiColumn
+            // 
+            this.TenChungLoaiColumn.Caption = "Ten Chung Loai";
+            this.TenChungLoaiColumn.FieldName = "TenChungLoai";
+            this.TenChungLoaiColumn.Name = "TenChungLoaiColumn";
+            this.TenChungLoaiColumn.OptionsColumn.AllowEdit = false;
+            this.TenChungLoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TenChungLoaiColumn.Visible = true;
+            this.TenChungLoaiColumn.VisibleIndex = 0;
+            this.TenChungLoaiColumn.Width = 150;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 286);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -107,16 +121,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1.Size = new System.Drawing.Size(703, 266);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // TenChungLoaiColumn
-            // 
-            this.TenChungLoaiColumn.Caption = "Ten Chung Loai";
-            this.TenChungLoaiColumn.Name = "TenChungLoaiColumn";
-            this.TenChungLoaiColumn.OptionsColumn.AllowEdit = false;
-            this.TenChungLoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.TenChungLoaiColumn.Visible = true;
-            this.TenChungLoaiColumn.VisibleIndex = 0;
-            this.TenChungLoaiColumn.Width = 150;
             // 
             // CancelButtonControl
             // 
@@ -128,6 +132,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -139,6 +144,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
@@ -150,6 +156,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // EditButton
             // 
@@ -161,6 +168,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sua";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
@@ -172,6 +180,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Them";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ChungLoaiHangHoaListForm
             // 
@@ -190,9 +199,9 @@ namespace QuanLySieuThi.HangHoa
             this.Text = "Chung Loai Hang Hoa";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChungLoaiHangHoaGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 

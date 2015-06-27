@@ -70,7 +70,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HangHoa\ChungLoaiHangHoaListForm.cs" />
+    <Compile Include="HangHoa\ChungLoaiHangHoaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\ChungLoaiHangHoaEditForm.Designer.cs">
+      <DependentUpon>ChungLoaiHangHoaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HangHoa\ChungLoaiHangHoaListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HangHoa\ChungLoaiHangHoaListForm.Designer.cs">
       <DependentUpon>ChungLoaiHangHoaListForm.cs</DependentUpon>
     </Compile>
@@ -124,6 +132,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HangHoa\ChungLoaiHangHoaEditForm.resx">
+      <DependentUpon>ChungLoaiHangHoaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\ChungLoaiHangHoaListForm.resx">
       <DependentUpon>ChungLoaiHangHoaListForm.cs</DependentUpon>
     </EmbeddedResource>
