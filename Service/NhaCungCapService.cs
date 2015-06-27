@@ -15,7 +15,7 @@ namespace Service
             Entities = quanLySieuThiEntities;
         }
 
-        public NhaCungCap AddNhaCungCap()
+        public NhaCungCap Add()
         {
             try
             {
@@ -55,6 +55,24 @@ namespace Service
                 var nhaCungCap =
                     Entities.NhaCungCaps.FirstOrDefault(
                         _ => _.Id == nhaCungCapId && _.HoatDong.HasValue && _.HoatDong == true);
+
+                return nhaCungCap;
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public NhaCungCap GetByTenNhaCungCap(string tenNhaCungCap)
+        {
+            try
+            {
+                var nhaCungCap =
+                    Entities.NhaCungCaps.FirstOrDefault(
+                        _ => _.TenNhaCungCap == tenNhaCungCap && _.HoatDong.HasValue && _.HoatDong == true);
 
                 return nhaCungCap;
             }
