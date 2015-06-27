@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using QuanLySieuThi.NhaCungCap;
+using QuanLySieuThi.HangHoa;
+
 namespace QuanLySieuThi
 {
     static class Program{
@@ -12,6 +13,6 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhaCungCapListForm());}
+            Application.Run(new ChungLoaiHangHoaListForm());}
     }
 }
