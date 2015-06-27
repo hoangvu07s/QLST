@@ -82,6 +82,12 @@
     <Compile Include="HangHoa\ChungLoaiHangHoaListForm.Designer.cs">
       <DependentUpon>ChungLoaiHangHoaListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangHoa\HangHoaListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\HangHoaListForm.Designer.cs">
+      <DependentUpon>HangHoaListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa\QuayHangEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
