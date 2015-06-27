@@ -302,6 +302,10 @@
           </Key>
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenQuay" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NgayTao" Type="datetime2" Precision="7" />
+          <Property Name="NguoiTaoId" Type="bigint" />
+          <Property Name="NgayChinhSua" Type="datetime2" Precision="7" />
+          <Property Name="NguoiChinhSuaId" Type="bigint" />
           <Property Name="HoatDong" Type="bit" />
         </EntityType>
         <EntityType Name="TonKho">
@@ -1045,6 +1049,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_QuayHang_NguoiChinhSua">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="QuayHang" Type="Self.QuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuayHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuayHang_NguoiTao">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="QuayHang" Type="Self.QuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuayHang">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TonKho_HangHoa">
           <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="1" />
           <End Role="TonKho" Type="Self.TonKho" Multiplicity="*" />
@@ -1370,6 +1398,14 @@
           <AssociationSet Name="FK_PhieuTraQuayHang_QuayHang" Association="Self.FK_PhieuTraQuayHang_QuayHang">
             <End Role="QuayHang" EntitySet="QuayHang" />
             <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuayHang_NguoiChinhSua" Association="Self.FK_QuayHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="QuayHang" EntitySet="QuayHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuayHang_NguoiTao" Association="Self.FK_QuayHang_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="QuayHang" EntitySet="QuayHang" />
           </AssociationSet>
           <AssociationSet Name="FK_TonKho_HangHoa" Association="Self.FK_TonKho_HangHoa">
             <End Role="HangHoa" EntitySet="HangHoa" />
@@ -1775,6 +1811,8 @@
           <NavigationProperty Name="XuatKhoes1" Relationship="Self.FK_XuatKho_NhanVien" FromRole="NhanVien" ToRole="XuatKho" />
           <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="QuayHangs" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" FromRole="NhanVien" ToRole="QuayHang" />
+          <NavigationProperty Name="QuayHangs1" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiTao" FromRole="NhanVien" ToRole="QuayHang" />
         </EntityType>
         <EntityType Name="NhapKho">
           <Key>
@@ -1818,6 +1856,12 @@
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="HangHoas" Relationship="Self.FK_HangHoa_QuayHang" FromRole="QuayHang" ToRole="HangHoa" />
           <NavigationProperty Name="PhieuTraQuayHangs" Relationship="Self.FK_PhieuTraQuayHang_QuayHang" FromRole="QuayHang" ToRole="PhieuTraQuayHang" />
+          <Property Name="NgayTao" Type="DateTime" Precision="7" />
+          <Property Name="NguoiTaoId" Type="Int64" />
+          <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
+          <Property Name="NguoiChinhSuaId" Type="Int64" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" FromRole="QuayHang" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiTao" FromRole="QuayHang" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="TonKho">
           <Key>
@@ -2912,7 +2956,39 @@
             <End Role="QuayHang" EntitySet="QuayHangs" />
             <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
           </AssociationSet>
+          <AssociationSet Name="FK_QuayHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="QuayHang" EntitySet="QuayHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuayHang_NguoiTao" Association="QuanLySieuThiModel.FK_QuayHang_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="QuayHang" EntitySet="QuayHangs" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_QuayHang_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuayHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuayHang_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuayHang">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3228,6 +3304,10 @@
           <EntitySetMapping Name="QuayHangs">
             <EntityTypeMapping TypeName="QuanLySieuThiModel.QuayHang">
               <MappingFragment StoreEntitySet="QuayHang">
+                <ScalarProperty Name="NguoiChinhSuaId" ColumnName="NguoiChinhSuaId" />
+                <ScalarProperty Name="NgayChinhSua" ColumnName="NgayChinhSua" />
+                <ScalarProperty Name="NguoiTaoId" ColumnName="NguoiTaoId" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TenQuay" ColumnName="TenQuay" />
                 <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />

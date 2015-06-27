@@ -95,6 +95,8 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_XuatKho_NguoiChinhSua" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_XuatKho_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_QuayHang_NguoiTao" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

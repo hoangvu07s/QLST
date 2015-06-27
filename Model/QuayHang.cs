@@ -23,8 +23,14 @@ namespace Model
         public long Id { get; set; }
         public string TenQuay { get; set; }
         public Nullable<bool> HoatDong { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
+        public Nullable<long> NguoiTaoId { get; set; }
+        public Nullable<System.DateTime> NgayChinhSua { get; set; }
+        public Nullable<long> NguoiChinhSuaId { get; set; }
     
         public virtual ICollection<HangHoa> HangHoas { get; set; }
         public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual NhanVien NhanVien1 { get; set; }
     }
 }

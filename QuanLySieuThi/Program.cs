@@ -13,6 +13,6 @@ namespace QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChungLoaiHangHoaListForm());}
+            Application.Run(new QuayHangListForm());}
     }
 }

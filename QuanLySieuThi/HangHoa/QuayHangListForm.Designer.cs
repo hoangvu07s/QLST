@@ -31,21 +31,21 @@ namespace QuanLySieuThi.HangHoa
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.QuayHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.GridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.TenQuayHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CencalButtonControl = new Common.Controls.QButtonControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuayHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,17 +61,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.Size = new System.Drawing.Size(723, 289);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 289);
-            this.layoutControlGroup1.TextVisible = false;
             // 
             // QuayHangGridControl
             // 
@@ -98,15 +87,8 @@ namespace QuanLySieuThi.HangHoa
             this.GridView1.OptionsView.ShowAutoFilterRow = true;
             this.GridView1.OptionsView.ShowGroupPanel = false;
             this.GridView1.OptionsView.ShowIndicator = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.QuayHangGridControl;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(703, 269);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
+            this.GridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.GridView1_FocusedRowChanged);
+            this.GridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
             // 
             // TenQuayHangColumn
             // 
@@ -119,16 +101,37 @@ namespace QuanLySieuThi.HangHoa
             this.TenQuayHangColumn.VisibleIndex = 0;
             this.TenQuayHangColumn.Width = 150;
             // 
-            // CencalButtonControl
+            // layoutControlGroup1
             // 
-            this.CencalButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CencalButtonControl.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.CencalButtonControl.Appearance.Options.UseFont = true;
-            this.CencalButtonControl.Location = new System.Drawing.Point(12, 292);
-            this.CencalButtonControl.Name = "CencalButtonControl";
-            this.CencalButtonControl.Size = new System.Drawing.Size(120, 30);
-            this.CencalButtonControl.TabIndex = 1;
-            this.CencalButtonControl.Text = "Thoat";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 289);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.QuayHangGridControl;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(703, 269);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // CancelButtonControl
+            // 
+            this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CancelButtonControl.Appearance.Options.UseFont = true;
+            this.CancelButtonControl.Location = new System.Drawing.Point(12, 292);
+            this.CancelButtonControl.Name = "CancelButtonControl";
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.TabIndex = 1;
+            this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -140,6 +143,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
@@ -151,6 +155,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // EditButton
             // 
@@ -162,6 +167,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sua";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
@@ -173,6 +179,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Them";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // QuayHangListForm
             // 
@@ -183,16 +190,16 @@ namespace QuanLySieuThi.HangHoa
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.CencalButtonControl);
+            this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "QuayHangListForm";
             this.Text = "Quay Hang";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuayHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -206,7 +213,7 @@ namespace QuanLySieuThi.HangHoa
         private DevExpress.XtraGrid.Views.Grid.GridView GridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.Columns.GridColumn TenQuayHangColumn;
-        private Common.Controls.QButtonControl CencalButtonControl;
+        private Common.Controls.QButtonControl CancelButtonControl;
         private Common.Controls.QButtonControl DeleteButton;
         private Common.Controls.QButtonControl OKButton;
         private Common.Controls.QButtonControl EditButton;
