@@ -15,6 +15,9 @@ namespace QuanLySieuThi.HangHoa
         public QuayHangListForm()
         {
             InitializeComponent();
+
+            MinimumSizeWidth = 694;
+            MinimumSizeHeight = 279;  
         }
     }
 }
