@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Forms;
-using DevExpress.XtraPrinting.Native;
 using Helper;
 using Model;
 using Service;
@@ -17,7 +9,7 @@ namespace QuanLySieuThi.HangHoa
 {
     public partial class ChungLoaiHangHoaEditForm
     {
-        private ChungLoaiHangHoaService _chungLoaiHangHoaService;
+        private readonly ChungLoaiHangHoaService _chungLoaiHangHoaService;
         public ChungLoaiHangHoaEditForm(long? chungLoaiHangHoaId)
         {
             InitializeComponent();
