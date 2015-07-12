@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Helper;
 using Model;
@@ -10,11 +11,16 @@ namespace QuanLySieuThi.HangHoa
     {
         private LoaiHangHoaService _loaiHangHoaService;
         private Object _selRow;
-        public LoaiHangHoaListForm()
+        private long? _chungLoaiHangHoaId;
+        public LoaiHangHoaListForm(long? chungLoaiHangHoaId)
         {
             InitializeComponent();
             MinimumSizeWidth = 694;
-            MinimumSizeHeight = 279;  
+            MinimumSizeHeight = 279;
+            if (chungLoaiHangHoaId.HasValue)
+            {
+                _chungLoaiHangHoaId = chungLoaiHangHoaId.Value;
+            }
         }
 
         public override void LoadData(EventArgs e)
@@ -36,7 +42,15 @@ namespace QuanLySieuThi.HangHoa
             {
                 ResetEntities();
                 _loaiHangHoaService = new LoaiHangHoaService(Entities);
-                var loaiHangList = _loaiHangHoaService.GetAll();
+                IList<LoaiHangHoa> loaiHangList;
+                if (_chungLoaiHangHoaId.HasValue)
+                {
+                    loaiHangList = _loaiHangHoaService.GetByChungLoaiHangHoaId(_chungLoaiHangHoaId.Value);
+                }
+                else
+                {
+                    loaiHangList = _loaiHangHoaService.GetAll();
+                }
                 LoaiHangHoaGridControl.DataSource = loaiHangList;
                 LoaiHangHoaGridControl.RefreshDataSource();
             }

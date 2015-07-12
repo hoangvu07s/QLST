@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Helper;
 using Model;
 
@@ -86,6 +84,21 @@ namespace Service
                 return
                     Entities.LoaiHangHoas.FirstOrDefault(
                         _ => _.TenLoaiHangHoa == tenLoaiHangHoa && _.HoatDong.HasValue && _.HoatDong == true);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+            return null;
+        }
+
+        public IList<LoaiHangHoa> GetByChungLoaiHangHoaId(long chungLoaiHangHoaId)
+        {
+            try
+            {
+                return
+                    Entities.LoaiHangHoas.Where(
+                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
             }
             catch (Exception ex)
             {

@@ -141,5 +141,23 @@ namespace QuanLySieuThi.HangHoa
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
+
+        private void LoaiHoangHoaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selRow = _selRow as ChungLoaiHangHoa;
+                if (selRow != null)
+                {
+                    var loaiHangHoaListForm = new LoaiHangHoaListForm(selRow.Id);
+                    loaiHangHoaListForm.ShowForm("LoaiHangHoaListForm");
+                    loaiHangHoaListForm.FormClosed += ChungLoaiHangHoaEditFormClosed;}
+                
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
     }
 }

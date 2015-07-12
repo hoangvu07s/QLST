@@ -2,7 +2,7 @@
 
 namespace QuanLySieuThi.HangHoa
 {
-    partial class ChungLoaiHangHoaListForm : QuanLySieuThiForm
+    partial class DonHangListForm : QuanLySieuThiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,22 +31,23 @@ namespace QuanLySieuThi.HangHoa
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.ChungLoaiHangHoaGridControl = new DevExpress.XtraGrid.GridControl();
-            this.GridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.TenChungLoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.DonHangGridControl = new DevExpress.XtraGrid.GridControl();
+            this.DonHangGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
-            this.LoaiHoangHoaButton = new Common.Controls.QButtonControl();
+            this.MaDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NguoiLapDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NhaCungCapGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChungLoaiHangHoaGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonHangGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,53 +56,13 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.layoutControl1.Controls.Add(this.ChungLoaiHangHoaGridControl);
+            this.layoutControl1.Controls.Add(this.DonHangGridControl);
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(845, 286);
+            this.layoutControl1.Size = new System.Drawing.Size(676, 237);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // ChungLoaiHangHoaGridControl
-            // 
-            this.ChungLoaiHangHoaGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.ChungLoaiHangHoaGridControl.Location = new System.Drawing.Point(12, 12);
-            this.ChungLoaiHangHoaGridControl.MainView = this.GridView1;
-            this.ChungLoaiHangHoaGridControl.Name = "ChungLoaiHangHoaGridControl";
-            this.ChungLoaiHangHoaGridControl.Size = new System.Drawing.Size(821, 262);
-            this.ChungLoaiHangHoaGridControl.TabIndex = 4;
-            this.ChungLoaiHangHoaGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GridView1});
-            // 
-            // GridView1
-            // 
-            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GridView1.Appearance.Row.Options.UseFont = true;
-            this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.TenChungLoaiColumn});
-            this.GridView1.GridControl = this.ChungLoaiHangHoaGridControl;
-            this.GridView1.Name = "GridView1";
-            this.GridView1.OptionsBehavior.Editable = false;
-            this.GridView1.OptionsView.ColumnAutoWidth = false;
-            this.GridView1.OptionsView.ShowAutoFilterRow = true;
-            this.GridView1.OptionsView.ShowGroupPanel = false;
-            this.GridView1.OptionsView.ShowIndicator = false;
-            this.GridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.GridView1_FocusedRowChanged);
-            this.GridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
-            // 
-            // TenChungLoaiColumn
-            // 
-            this.TenChungLoaiColumn.Caption = "Ten Chung Loai";
-            this.TenChungLoaiColumn.FieldName = "TenChungLoai";
-            this.TenChungLoaiColumn.Name = "TenChungLoaiColumn";
-            this.TenChungLoaiColumn.OptionsColumn.AllowEdit = false;
-            this.TenChungLoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.TenChungLoaiColumn.Visible = true;
-            this.TenChungLoaiColumn.VisibleIndex = 0;
-            this.TenChungLoaiColumn.Width = 150;
             // 
             // layoutControlGroup1
             // 
@@ -111,15 +72,43 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(845, 286);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(676, 237);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // DonHangGridControl
+            // 
+            this.DonHangGridControl.Location = new System.Drawing.Point(12, 12);
+            this.DonHangGridControl.MainView = this.DonHangGridView;
+            this.DonHangGridControl.Name = "DonHangGridControl";
+            this.DonHangGridControl.Size = new System.Drawing.Size(652, 213);
+            this.DonHangGridControl.TabIndex = 4;
+            this.DonHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.DonHangGridView});
+            // 
+            // DonHangGridView
+            // 
+            this.DonHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonHangGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.DonHangGridView.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonHangGridView.Appearance.Row.Options.UseFont = true;
+            this.DonHangGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MaDonHangGridColumn,
+            this.NguoiLapDonHangGridColumn,
+            this.NhaCungCapGridColumn});
+            this.DonHangGridView.GridControl = this.DonHangGridControl;
+            this.DonHangGridView.Name = "DonHangGridView";
+            this.DonHangGridView.OptionsBehavior.Editable = false;
+            this.DonHangGridView.OptionsView.ColumnAutoWidth = false;
+            this.DonHangGridView.OptionsView.ShowAutoFilterRow = true;
+            this.DonHangGridView.OptionsView.ShowGroupPanel = false;
+            this.DonHangGridView.OptionsView.ShowIndicator = false;
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.ChungLoaiHangHoaGridControl;
+            this.layoutControlItem1.Control = this.DonHangGridControl;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(825, 266);
+            this.layoutControlItem1.Size = new System.Drawing.Size(656, 217);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -128,79 +117,95 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.CancelButtonControl.Appearance.Options.UseFont = true;
-            this.CancelButtonControl.Location = new System.Drawing.Point(12, 292);
+            this.CancelButtonControl.Location = new System.Drawing.Point(12, 235);
             this.CancelButtonControl.Name = "CancelButtonControl";
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoat";
-            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.DeleteButton.Appearance.Options.UseFont = true;
-            this.DeleteButton.Location = new System.Drawing.Point(138, 292);
+            this.DeleteButton.Location = new System.Drawing.Point(138, 235);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xoa";
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.OKButton.Appearance.Options.UseFont = true;
-            this.OKButton.Location = new System.Drawing.Point(713, 292);
+            this.OKButton.Location = new System.Drawing.Point(544, 235);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
-            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // EditButton
             // 
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(587, 292);
+            this.EditButton.Location = new System.Drawing.Point(418, 235);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sua";
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(461, 292);
+            this.AddButton.Location = new System.Drawing.Point(292, 235);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Them";
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // LoaiHoangHoaButton
+            // MaDonHangGridColumn
             // 
-            this.LoaiHoangHoaButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LoaiHoangHoaButton.Appearance.Options.UseFont = true;
-            this.LoaiHoangHoaButton.Location = new System.Drawing.Point(335, 292);
-            this.LoaiHoangHoaButton.Name = "LoaiHoangHoaButton";
-            this.LoaiHoangHoaButton.Size = new System.Drawing.Size(120, 30);
-            this.LoaiHoangHoaButton.TabIndex = 6;
-            this.LoaiHoangHoaButton.Text = "Loai Hang Hoa";
-            this.LoaiHoangHoaButton.Click += new System.EventHandler(this.LoaiHoangHoaButton_Click);
+            this.MaDonHangGridColumn.Caption = "Ma Don Hang";
+            this.MaDonHangGridColumn.FieldName = "DonHangId";
+            this.MaDonHangGridColumn.Name = "MaDonHangGridColumn";
+            this.MaDonHangGridColumn.OptionsColumn.AllowEdit = false;
+            this.MaDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.MaDonHangGridColumn.Visible = true;
+            this.MaDonHangGridColumn.VisibleIndex = 0;
+            this.MaDonHangGridColumn.Width = 200;
             // 
-            // ChungLoaiHangHoaListForm
+            // NguoiLapDonHangGridColumn
+            // 
+            this.NguoiLapDonHangGridColumn.Caption = "Nguoi Lap Don Hang";
+            this.NguoiLapDonHangGridColumn.FieldName = "TenDangNhap";
+            this.NguoiLapDonHangGridColumn.Name = "NguoiLapDonHangGridColumn";
+            this.NguoiLapDonHangGridColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiLapDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiLapDonHangGridColumn.Visible = true;
+            this.NguoiLapDonHangGridColumn.VisibleIndex = 1;
+            this.NguoiLapDonHangGridColumn.Width = 200;
+            // 
+            // NhaCungCapGridColumn
+            // 
+            this.NhaCungCapGridColumn.Caption = "Ten Nha Cung Cap";
+            this.NhaCungCapGridColumn.FieldName = "TenNhaCungCap";
+            this.NhaCungCapGridColumn.Name = "NhaCungCapGridColumn";
+            this.NhaCungCapGridColumn.OptionsColumn.AllowEdit = false;
+            this.NhaCungCapGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NhaCungCapGridColumn.Visible = true;
+            this.NhaCungCapGridColumn.VisibleIndex = 2;
+            this.NhaCungCapGridColumn.Width = 200;
+            // 
+            // DonHangListForm
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 334);
-            this.Controls.Add(this.LoaiHoangHoaButton);
+            this.ClientSize = new System.Drawing.Size(676, 275);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.OKButton);
@@ -208,13 +213,13 @@ namespace QuanLySieuThi.HangHoa
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "ChungLoaiHangHoaListForm";
-            this.Text = "Chung Loai Hang Hoa";
+            this.Name = "DonHangListForm";
+            this.Text = "Don Hang List Form";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ChungLoaiHangHoaGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonHangGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -224,15 +229,16 @@ namespace QuanLySieuThi.HangHoa
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraGrid.GridControl ChungLoaiHangHoaGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView GridView1;
+        private DevExpress.XtraGrid.GridControl DonHangGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView DonHangGridView;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn TenChungLoaiColumn;
         private Common.Controls.QButtonControl CancelButtonControl;
         private Common.Controls.QButtonControl DeleteButton;
         private Common.Controls.QButtonControl OKButton;
         private Common.Controls.QButtonControl EditButton;
         private Common.Controls.QButtonControl AddButton;
-        private Common.Controls.QButtonControl LoaiHoangHoaButton;
+        private DevExpress.XtraGrid.Columns.GridColumn MaDonHangGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiLapDonHangGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NhaCungCapGridColumn;
     }
 }
