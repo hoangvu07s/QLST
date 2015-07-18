@@ -29,13 +29,9 @@ namespace Model
             this.HangHoaKhuyenMais = new HashSet<HangHoaKhuyenMai>();
             this.HoaDons = new HashSet<HoaDon>();
             this.HoaDons1 = new HashSet<HoaDon>();
-            this.KhachHangs = new HashSet<KhachHang>();
-            this.KhachHangs1 = new HashSet<KhachHang>();
             this.Khoes = new HashSet<Kho>();
             this.Khoes1 = new HashSet<Kho>();
             this.Khoes2 = new HashSet<Kho>();
-            this.KhuyenMais = new HashSet<KhuyenMai>();
-            this.KhuyenMais1 = new HashSet<KhuyenMai>();
             this.LoaiHangHoas = new HashSet<LoaiHangHoa>();
             this.LoaiHangHoas1 = new HashSet<LoaiHangHoa>();
             this.NhaCungCaps = new HashSet<NhaCungCap>();
@@ -51,6 +47,10 @@ namespace Model
             this.QuayHangs = new HashSet<QuayHang>();
             this.QuayHangs1 = new HashSet<QuayHang>();
             this.TheKhachHangs = new HashSet<TheKhachHang>();
+            this.KhachHangs = new HashSet<KhachHang>();
+            this.KhachHangs1 = new HashSet<KhachHang>();
+            this.KhuyenMais = new HashSet<KhuyenMai>();
+            this.KhuyenMais1 = new HashSet<KhuyenMai>();
         }
     
         public long Id { get; set; }
@@ -83,13 +83,9 @@ namespace Model
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual ICollection<HoaDon> HoaDons1 { get; set; }
-        public virtual ICollection<KhachHang> KhachHangs { get; set; }
-        public virtual ICollection<KhachHang> KhachHangs1 { get; set; }
         public virtual ICollection<Kho> Khoes { get; set; }
         public virtual ICollection<Kho> Khoes1 { get; set; }
         public virtual ICollection<Kho> Khoes2 { get; set; }
-        public virtual ICollection<KhuyenMai> KhuyenMais { get; set; }
-        public virtual ICollection<KhuyenMai> KhuyenMais1 { get; set; }
         public virtual ICollection<LoaiHangHoa> LoaiHangHoas { get; set; }
         public virtual ICollection<LoaiHangHoa> LoaiHangHoas1 { get; set; }
         public virtual ICollection<NhaCungCap> NhaCungCaps { get; set; }
@@ -107,5 +103,9 @@ namespace Model
         public virtual ICollection<QuayHang> QuayHangs { get; set; }
         public virtual ICollection<QuayHang> QuayHangs1 { get; set; }
         public virtual ICollection<TheKhachHang> TheKhachHangs { get; set; }
+        public virtual ICollection<KhachHang> KhachHangs { get; set; }
+        public virtual ICollection<KhachHang> KhachHangs1 { get; set; }
+        public virtual ICollection<KhuyenMai> KhuyenMais { get; set; }
+        public virtual ICollection<KhuyenMai> KhuyenMais1 { get; set; }
     }
 }

@@ -26,13 +26,12 @@ namespace Model
         public string SoDienThoai { get; set; }
         public int Tuoi { get; set; }
         public string Email { get; set; }
-        public Nullable<int> DiemTichLuy { get; set; }
+        public bool KhachHangThanThiet { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }
         public Nullable<long> NguoiTaoId { get; set; }
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
-        public bool KhachHangThanThiet { get; set; }
     
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual NhanVien NhanVien { get; set; }

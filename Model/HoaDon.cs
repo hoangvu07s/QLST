@@ -30,8 +30,8 @@ namespace Model
     
         public virtual ICollection<CT_HoaDon> CT_HoaDon { get; set; }
         public virtual ICollection<DoiTraHangHoa> DoiTraHangHoas { get; set; }
-        public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
     }
 }

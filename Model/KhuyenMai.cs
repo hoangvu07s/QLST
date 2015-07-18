@@ -20,8 +20,7 @@ namespace Model
         }
     
         public long Id { get; set; }
-        public Nullable<decimal> GiamGiaPhanTram { get; set; }
-        public string QuaTang { get; set; }
+        public string TenKhuyenMai { get; set; }
         public System.DateTime NgayBatDau { get; set; }
         public System.DateTime NgayKetThuc { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }
@@ -29,7 +28,6 @@ namespace Model
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
-        public string TenKhuyenMai { get; set; }
     
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
         public virtual NhanVien NhanVien { get; set; }
