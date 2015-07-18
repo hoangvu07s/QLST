@@ -47,9 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="ChiTietDonHangService.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ChucVuService.cs" />
     <Compile Include="ChungLoaiHangHoaService.cs" />
     <Compile Include="DonHangService.cs" />
+    <Compile Include="HangHoaService.cs" />
     <Compile Include="LoaiHangHoaService.cs" />
     <Compile Include="NhaCungCapService.cs" />
     <Compile Include="NhanVienService.cs" />

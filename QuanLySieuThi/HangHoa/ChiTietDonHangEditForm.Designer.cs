@@ -125,7 +125,7 @@ namespace QuanLySieuThi.HangHoa
             // 
             // ChiTietDonHangGridControl
             // 
-            this.ChiTietDonHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChiTietDonHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.ChiTietDonHangGridControl.Location = new System.Drawing.Point(12, 223);
             this.ChiTietDonHangGridControl.MainView = this.ChiTietDonHangGridView;
             this.ChiTietDonHangGridControl.Name = "ChiTietDonHangGridControl";
@@ -152,8 +152,10 @@ namespace QuanLySieuThi.HangHoa
             this.ChiTietDonHangGridView.OptionsBehavior.Editable = false;
             this.ChiTietDonHangGridView.OptionsView.ColumnAutoWidth = false;
             this.ChiTietDonHangGridView.OptionsView.ShowAutoFilterRow = true;
+            this.ChiTietDonHangGridView.OptionsView.ShowFooter = true;
             this.ChiTietDonHangGridView.OptionsView.ShowGroupPanel = false;
             this.ChiTietDonHangGridView.OptionsView.ShowIndicator = false;
+            this.ChiTietDonHangGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.ChiTietDonHangGridView_FocusedRowChanged);
             // 
             // TenHangHoaGridColumn
             // 
@@ -169,7 +171,7 @@ namespace QuanLySieuThi.HangHoa
             // LoaiHangHoaGridColumn
             // 
             this.LoaiHangHoaGridColumn.Caption = "Loai Hang Hoa";
-            this.LoaiHangHoaGridColumn.FieldName = "LoaiHangHoa";
+            this.LoaiHangHoaGridColumn.FieldName = "TenLoaiHangHoa";
             this.LoaiHangHoaGridColumn.Name = "LoaiHangHoaGridColumn";
             this.LoaiHangHoaGridColumn.OptionsColumn.AllowEdit = false;
             this.LoaiHangHoaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -180,7 +182,7 @@ namespace QuanLySieuThi.HangHoa
             // NhaCungCapGridColumn
             // 
             this.NhaCungCapGridColumn.Caption = "Nha Cung Cap";
-            this.NhaCungCapGridColumn.FieldName = "NhaCungCap";
+            this.NhaCungCapGridColumn.FieldName = "TenNhaCungCap";
             this.NhaCungCapGridColumn.Name = "NhaCungCapGridColumn";
             this.NhaCungCapGridColumn.OptionsColumn.AllowEdit = false;
             this.NhaCungCapGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -206,6 +208,8 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.SoLuongGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tong So Luong = {0}")});
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 4;
             // 
@@ -216,6 +220,8 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.Name = "DonGiaGridColumn";
             this.DonGiaGridColumn.OptionsColumn.AllowEdit = false;
             this.DonGiaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.DonGiaGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DonGia", "Tong Cong = {0:c2}")});
             this.DonGiaGridColumn.Visible = true;
             this.DonGiaGridColumn.VisibleIndex = 5;
             // 
@@ -225,6 +231,11 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaNummeric.Name = "DonGiaNummeric";
             this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.DonGiaNummeric.Properties.NullText = "0.00";
             this.DonGiaNummeric.Size = new System.Drawing.Size(740, 26);
             this.DonGiaNummeric.StyleController = this.layoutControl1;
             this.DonGiaNummeric.TabIndex = 10;
@@ -235,6 +246,11 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongNummeric.Name = "SoLuongNummeric";
             this.SoLuongNummeric.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
+            this.SoLuongNummeric.Properties.DisplayFormat.FormatString = "d";
+            this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(740, 26);
             this.SoLuongNummeric.StyleController = this.layoutControl1;
             this.SoLuongNummeric.TabIndex = 9;
@@ -440,6 +456,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -451,6 +468,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
@@ -462,6 +480,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // EditButton
             // 
@@ -472,7 +491,8 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
-            this.EditButton.Text = "Sua";
+            this.EditButton.Text = "Cap Nhat";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
@@ -484,6 +504,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Them";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ChiTietDonHangEditForm
             // 

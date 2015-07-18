@@ -1,26 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Helper;
 using Model;
 
 namespace Service
 {
-    public class DonHangService : BaseService
+    public class ChiTietDonHangService: BaseService
     {
-        public DonHangService(QuanLySieuThiEntities quanLySieuThiEntities)
+        public ChiTietDonHangService(QuanLySieuThiEntities quanLySieuThiEntities)
         {
             Entities = quanLySieuThiEntities;
         }
 
-        public DonHang AddDonHang()
+        public CT_DonHang AddChiTietDonHang()
         {
             try
             {
-                var donHang = new DonHang();
-                return Entities.DonHangs.Add(donHang);
+                var chiTietDonHang = new CT_DonHang();
+                return Entities.CT_DonHang.Add(chiTietDonHang);
             }
             catch (Exception ex)
             {

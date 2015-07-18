@@ -19,7 +19,7 @@ namespace Model
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
     
-        public virtual DonHang DonHang { get; set; }
         public virtual HangHoa HangHoa { get; set; }
+        public virtual DonHang DonHang { get; set; }
     }
 }

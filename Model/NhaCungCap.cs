@@ -17,8 +17,8 @@ namespace Model
         public NhaCungCap()
         {
             this.CT_XuatKho = new HashSet<CT_XuatKho>();
-            this.DonHangs = new HashSet<DonHang>();
             this.HangHoas = new HashSet<HangHoa>();
+            this.DonHangs = new HashSet<DonHang>();
         }
     
         public long Id { get; set; }
@@ -34,9 +34,9 @@ namespace Model
         public Nullable<bool> HoatDong { get; set; }
     
         public virtual ICollection<CT_XuatKho> CT_XuatKho { get; set; }
-        public virtual ICollection<DonHang> DonHangs { get; set; }
         public virtual ICollection<HangHoa> HangHoas { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
+        public virtual ICollection<DonHang> DonHangs { get; set; }
     }
 }

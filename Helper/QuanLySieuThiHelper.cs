@@ -22,6 +22,16 @@ namespace Helper
             return Convert.ToInt64(value);
         }
 
+        public static decimal ToDecimal(this string value)
+        {
+            return Convert.ToDecimal(value);
+        }
+
+        public static int ToInt(this string value)
+        {
+            return Convert.ToInt32(value);
+        }
+
         #endregion
     }
 }

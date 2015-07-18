@@ -21,18 +21,17 @@ namespace Model
         }
     
         public System.Guid DonHangId { get; set; }
-        public long NhanVienId { get; set; }
         public long NhaCungCapId { get; set; }
-        public System.DateTime NgayLap { get; set; }
+        public string TrangThaiDonHang { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
+        public Nullable<long> NguoiTaoId { get; set; }
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
-        public string TrangThaiDonHang { get; set; }
     
         public virtual ICollection<CT_DonHang> CT_DonHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
-        public virtual NhanVien NhanVien1 { get; set; }
         public virtual ICollection<NhapKho> NhapKhoes { get; set; }
     }
 }

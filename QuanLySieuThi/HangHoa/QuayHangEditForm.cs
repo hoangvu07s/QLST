@@ -16,7 +16,7 @@ namespace QuanLySieuThi.HangHoa
 {
     public partial class QuayHangEditForm
     {
-        private QuayHangService _quayHangService;
+        private readonly QuayHangService _quayHangService;
 
         public QuayHangEditForm(long? quayHangId)
         {
