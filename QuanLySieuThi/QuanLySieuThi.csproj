@@ -88,7 +88,9 @@
     <Compile Include="HangHoa\ChungLoaiHangHoaListForm.Designer.cs">
       <DependentUpon>ChungLoaiHangHoaListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HangHoa\DonHangListForm.cs" />
+    <Compile Include="HangHoa\DonHangListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HangHoa\DonHangListForm.Designer.cs">
       <DependentUpon>DonHangListForm.cs</DependentUpon>
     </Compile>
