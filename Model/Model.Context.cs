@@ -39,7 +39,6 @@ namespace Model
         public virtual DbSet<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
-        public virtual DbSet<KhachHangThanThiet> KhachHangThanThiets { get; set; }
         public virtual DbSet<Kho> Khoes { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
         public virtual DbSet<LoaiHangHoa> LoaiHangHoas { get; set; }
@@ -50,5 +49,6 @@ namespace Model
         public virtual DbSet<QuayHang> QuayHangs { get; set; }
         public virtual DbSet<TonKho> TonKhoes { get; set; }
         public virtual DbSet<XuatKho> XuatKhoes { get; set; }
+        public virtual DbSet<TheKhachHang> TheKhachHangs { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Model
         public KhachHang()
         {
             this.HoaDons = new HashSet<HoaDon>();
-            this.KhachHangThanThiets = new HashSet<KhachHangThanThiet>();
+            this.TheKhachHangs = new HashSet<TheKhachHang>();
         }
     
         public long Id { get; set; }
@@ -32,10 +32,11 @@ namespace Model
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
+        public bool KhachHangThanThiet { get; set; }
     
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
-        public virtual ICollection<KhachHangThanThiet> KhachHangThanThiets { get; set; }
+        public virtual ICollection<TheKhachHang> TheKhachHangs { get; set; }
     }
 }

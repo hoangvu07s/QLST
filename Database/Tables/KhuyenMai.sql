@@ -1,8 +1,7 @@
 ﻿CREATE TABLE [dbo].[KhuyenMai]
 (
 	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
-    [GiamGiaPhanTram] DECIMAL NULL, 
-    [QuaTang] VARCHAR(255) NULL, 
+	[TenKhuyenMai] VARCHAR(255) NOT NULL,
     [NgayBatDau] DATETIME2 NOT NULL, 
     [NgayKetThuc] DATETIME2 NOT NULL,
 	[NgayTao] DATETIME2 NULL DEFAULT SYSDATETIME(), 

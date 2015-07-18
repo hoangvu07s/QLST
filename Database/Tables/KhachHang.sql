@@ -6,7 +6,7 @@
     [SoDienThoai] VARCHAR(50) NOT NULL, 
     [Tuoi] INT NOT NULL, 
     [Email] VARCHAR(50) NULL,
-	[DiemTichLuy] INT NULL,
+	[KhachHangThanThiet] BIT NOT NULL DEFAULT 1,
 	[NgayTao] DATETIME2 NULL DEFAULT SYSDATETIME(), 
     [NguoiTaoId] BIGINT NULL, 
     [NgayChinhSua] DATETIME2 NULL DEFAULT SYSDATETIME(), 

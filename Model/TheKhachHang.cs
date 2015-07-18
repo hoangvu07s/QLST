@@ -12,12 +12,11 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class KhachHangThanThiet
+    public partial class TheKhachHang
     {
-        public long Id { get; set; }
+        public System.Guid TheKhachHangId { get; set; }
         public long KhachHangId { get; set; }
-        public int DiemTichLuy { get; set; }
-        public int Nam { get; set; }
+        public Nullable<int> DiemTichLuy { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }
         public Nullable<long> NguoiTaoId { get; set; }
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
@@ -26,6 +25,5 @@ namespace Model
     
         public virtual KhachHang KhachHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
-        public virtual NhanVien NhanVien1 { get; set; }
     }
 }

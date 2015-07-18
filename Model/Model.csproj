@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietDonHang.cs" />
     <Compile Include="ChucVu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -88,9 +89,6 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KhachHangThanThiet.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Kho.cs">
@@ -135,6 +133,9 @@
     <Compile Include="QuayHang.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="TheKhachHang.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="TonKho.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -168,9 +169,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

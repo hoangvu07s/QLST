@@ -29,6 +29,7 @@ namespace Model
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
+        public string TenKhuyenMai { get; set; }
     
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
         public virtual NhanVien NhanVien { get; set; }

@@ -19,7 +19,6 @@
         <EntityTypeShape EntityType="QuanLySieuThiModel.HangHoaKhuyenMai" Width="1.5" PointX="18" PointY="33.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.HoaDon" Width="1.5" PointX="7.5" PointY="33" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.KhachHang" Width="1.5" PointX="5.25" PointY="37.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLySieuThiModel.KhachHangThanThiet" Width="1.5" PointX="10.5" PointY="34" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.Kho" Width="1.5" PointX="5.25" PointY="42.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.KhuyenMai" Width="1.5" PointX="5.25" PointY="47.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.LoaiHangHoa" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="true" />
@@ -71,9 +70,6 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_KhachHang_NguoiChinhSua" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_KhachHang_NguoiTao" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_KhachHangThanThiet_KhachHang" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_KhachHangThanThiet_NguoiChinhSua" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_KhachHangThanThiet_NguoiTao" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_Kho_NguoiChinhSua" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_Kho_NguoiTao" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_Kho_NhanVien" ManuallyRouted="false" />
@@ -97,6 +93,10 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_QuayHang_NguoiTao" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.TheKhachHang" Width="1.5" PointX="10.5" PointY="30.375" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_HangHoaKhuyenMai_HangHoaTang" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_TheKhachHang_KhachHang" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiTao" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

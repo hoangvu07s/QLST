@@ -31,59 +31,59 @@ namespace QuanLySieuThi.HangHoa
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.MaDonHangTextBox = new Common.Controls.QTextBoxControl();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TenHangHoaTextBox = new Common.Controls.QTextBoxControl();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.LoaiHangHoaLookupEdit = new Common.Controls.QLookupEditControl();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NhaCungCapLookupEdit = new Common.Controls.QLookupEditControl();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.QuayHangLookupEdit = new Common.Controls.QLookupEditControl();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SoLuongNummeric = new Common.Controls.QNummericControl();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DonGiaNummeric = new Common.Controls.QNummericControl();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.SearchTenHangHoaButton = new Common.Controls.QButtonControl();
             this.ChiTietDonHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.ChiTietDonHangGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.TenHangHoaGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LoaiHangHoaGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NhaCungCapGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.QuayHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonGiaGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DonGiaNummeric = new Common.Controls.QNummericControl();
+            this.SoLuongNummeric = new Common.Controls.QNummericControl();
+            this.QuayHangLookupEdit = new Common.Controls.QLookupEditControl();
+            this.NhaCungCapLookupEdit = new Common.Controls.QLookupEditControl();
+            this.LoaiHangHoaLookupEdit = new Common.Controls.QLookupEditControl();
+            this.TenHangHoaTextBox = new Common.Controls.QTextBoxControl();
+            this.MaDonHangTextBox = new Common.Controls.QTextBoxControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
-            this.SearchTenHangHoaButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoLuongNummeric.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChiTietDonHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChiTietDonHangGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongNummeric.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -110,190 +110,22 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
+            // SearchTenHangHoaButton
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.emptySpaceItem1,
-            this.layoutControlItem8,
-            this.layoutControlItem9,
-            this.emptySpaceItem2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(863, 412);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // MaDonHangTextBox
-            // 
-            this.MaDonHangTextBox.Location = new System.Drawing.Point(533, 12);
-            this.MaDonHangTextBox.Name = "MaDonHangTextBox";
-            this.MaDonHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.MaDonHangTextBox.Properties.Appearance.Options.UseFont = true;
-            this.MaDonHangTextBox.Size = new System.Drawing.Size(318, 26);
-            this.MaDonHangTextBox.StyleController = this.layoutControl1;
-            this.MaDonHangTextBox.TabIndex = 4;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem1.Control = this.MaDonHangTextBox;
-            this.layoutControlItem1.Location = new System.Drawing.Point(421, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(422, 30);
-            this.layoutControlItem1.Text = "Ma Don Hang";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // TenHangHoaTextBox
-            // 
-            this.TenHangHoaTextBox.Location = new System.Drawing.Point(112, 42);
-            this.TenHangHoaTextBox.Name = "TenHangHoaTextBox";
-            this.TenHangHoaTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.TenHangHoaTextBox.Properties.Appearance.Options.UseFont = true;
-            this.TenHangHoaTextBox.Size = new System.Drawing.Size(317, 26);
-            this.TenHangHoaTextBox.StyleController = this.layoutControl1;
-            this.TenHangHoaTextBox.TabIndex = 5;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.Control = this.TenHangHoaTextBox;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 30);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(421, 31);
-            this.layoutControlItem2.Text = "Ten Hang Hoa";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // LoaiHangHoaLookupEdit
-            // 
-            this.LoaiHangHoaLookupEdit.Location = new System.Drawing.Point(112, 73);
-            this.LoaiHangHoaLookupEdit.Name = "LoaiHangHoaLookupEdit";
-            this.LoaiHangHoaLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LoaiHangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
-            this.LoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LoaiHangHoaLookupEdit.Size = new System.Drawing.Size(739, 26);
-            this.LoaiHangHoaLookupEdit.StyleController = this.layoutControl1;
-            this.LoaiHangHoaLookupEdit.TabIndex = 6;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem3.Control = this.LoaiHangHoaLookupEdit;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 61);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(843, 30);
-            this.layoutControlItem3.Text = "Loai Hang";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // NhaCungCapLookupEdit
-            // 
-            this.NhaCungCapLookupEdit.Location = new System.Drawing.Point(112, 103);
-            this.NhaCungCapLookupEdit.Name = "NhaCungCapLookupEdit";
-            this.NhaCungCapLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.NhaCungCapLookupEdit.Properties.Appearance.Options.UseFont = true;
-            this.NhaCungCapLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.NhaCungCapLookupEdit.Size = new System.Drawing.Size(739, 26);
-            this.NhaCungCapLookupEdit.StyleController = this.layoutControl1;
-            this.NhaCungCapLookupEdit.TabIndex = 7;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.NhaCungCapLookupEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 91);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(843, 30);
-            this.layoutControlItem4.Text = "Nha Cung Cap";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // QuayHangLookupEdit
-            // 
-            this.QuayHangLookupEdit.Location = new System.Drawing.Point(112, 133);
-            this.QuayHangLookupEdit.Name = "QuayHangLookupEdit";
-            this.QuayHangLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.QuayHangLookupEdit.Properties.Appearance.Options.UseFont = true;
-            this.QuayHangLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.QuayHangLookupEdit.Size = new System.Drawing.Size(739, 26);
-            this.QuayHangLookupEdit.StyleController = this.layoutControl1;
-            this.QuayHangLookupEdit.TabIndex = 8;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem5.Control = this.QuayHangLookupEdit;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 121);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(843, 30);
-            this.layoutControlItem5.Text = "Quay Hang";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // SoLuongNummeric
-            // 
-            this.SoLuongNummeric.Location = new System.Drawing.Point(112, 163);
-            this.SoLuongNummeric.Name = "SoLuongNummeric";
-            this.SoLuongNummeric.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
-            this.SoLuongNummeric.Size = new System.Drawing.Size(739, 26);
-            this.SoLuongNummeric.StyleController = this.layoutControl1;
-            this.SoLuongNummeric.TabIndex = 9;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem6.Control = this.SoLuongNummeric;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 151);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(843, 30);
-            this.layoutControlItem6.Text = "So Luong";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // DonGiaNummeric
-            // 
-            this.DonGiaNummeric.Location = new System.Drawing.Point(112, 193);
-            this.DonGiaNummeric.Name = "DonGiaNummeric";
-            this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
-            this.DonGiaNummeric.Size = new System.Drawing.Size(739, 26);
-            this.DonGiaNummeric.StyleController = this.layoutControl1;
-            this.DonGiaNummeric.TabIndex = 10;
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem7.Control = this.DonGiaNummeric;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 181);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(843, 30);
-            this.layoutControlItem7.Text = "Don Gia";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(96, 20);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(421, 30);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.SearchTenHangHoaButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.SearchTenHangHoaButton.Appearance.Options.UseFont = true;
+            this.SearchTenHangHoaButton.Location = new System.Drawing.Point(433, 42);
+            this.SearchTenHangHoaButton.MaximumSize = new System.Drawing.Size(150, 0);
+            this.SearchTenHangHoaButton.MinimumSize = new System.Drawing.Size(150, 0);
+            this.SearchTenHangHoaButton.Name = "SearchTenHangHoaButton";
+            this.SearchTenHangHoaButton.Size = new System.Drawing.Size(150, 27);
+            this.SearchTenHangHoaButton.StyleController = this.layoutControl1;
+            this.SearchTenHangHoaButton.TabIndex = 12;
+            this.SearchTenHangHoaButton.Text = "Tim Hang Hoa";
             // 
             // ChiTietDonHangGridControl
             // 
+            this.ChiTietDonHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ChiTietDonHangGridControl.Location = new System.Drawing.Point(12, 223);
             this.ChiTietDonHangGridControl.MainView = this.ChiTietDonHangGridView;
             this.ChiTietDonHangGridControl.Name = "ChiTietDonHangGridControl";
@@ -322,15 +154,6 @@ namespace QuanLySieuThi.HangHoa
             this.ChiTietDonHangGridView.OptionsView.ShowAutoFilterRow = true;
             this.ChiTietDonHangGridView.OptionsView.ShowGroupPanel = false;
             this.ChiTietDonHangGridView.OptionsView.ShowIndicator = false;
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.ChiTietDonHangGridControl;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 211);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(843, 181);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
             // 
             // TenHangHoaGridColumn
             // 
@@ -396,6 +219,217 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.Visible = true;
             this.DonGiaGridColumn.VisibleIndex = 5;
             // 
+            // DonGiaNummeric
+            // 
+            this.DonGiaNummeric.Location = new System.Drawing.Point(111, 193);
+            this.DonGiaNummeric.Name = "DonGiaNummeric";
+            this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
+            this.DonGiaNummeric.Size = new System.Drawing.Size(740, 26);
+            this.DonGiaNummeric.StyleController = this.layoutControl1;
+            this.DonGiaNummeric.TabIndex = 10;
+            // 
+            // SoLuongNummeric
+            // 
+            this.SoLuongNummeric.Location = new System.Drawing.Point(111, 163);
+            this.SoLuongNummeric.Name = "SoLuongNummeric";
+            this.SoLuongNummeric.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
+            this.SoLuongNummeric.Size = new System.Drawing.Size(740, 26);
+            this.SoLuongNummeric.StyleController = this.layoutControl1;
+            this.SoLuongNummeric.TabIndex = 9;
+            // 
+            // QuayHangLookupEdit
+            // 
+            this.QuayHangLookupEdit.Location = new System.Drawing.Point(111, 133);
+            this.QuayHangLookupEdit.Name = "QuayHangLookupEdit";
+            this.QuayHangLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.QuayHangLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.QuayHangLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.QuayHangLookupEdit.Properties.NullText = "";
+            this.QuayHangLookupEdit.Size = new System.Drawing.Size(740, 26);
+            this.QuayHangLookupEdit.StyleController = this.layoutControl1;
+            this.QuayHangLookupEdit.TabIndex = 8;
+            // 
+            // NhaCungCapLookupEdit
+            // 
+            this.NhaCungCapLookupEdit.Location = new System.Drawing.Point(111, 103);
+            this.NhaCungCapLookupEdit.Name = "NhaCungCapLookupEdit";
+            this.NhaCungCapLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.NhaCungCapLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.NhaCungCapLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NhaCungCapLookupEdit.Properties.NullText = "";
+            this.NhaCungCapLookupEdit.Size = new System.Drawing.Size(740, 26);
+            this.NhaCungCapLookupEdit.StyleController = this.layoutControl1;
+            this.NhaCungCapLookupEdit.TabIndex = 7;
+            // 
+            // LoaiHangHoaLookupEdit
+            // 
+            this.LoaiHangHoaLookupEdit.Location = new System.Drawing.Point(111, 73);
+            this.LoaiHangHoaLookupEdit.Name = "LoaiHangHoaLookupEdit";
+            this.LoaiHangHoaLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LoaiHangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.LoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LoaiHangHoaLookupEdit.Properties.NullText = "";
+            this.LoaiHangHoaLookupEdit.Size = new System.Drawing.Size(740, 26);
+            this.LoaiHangHoaLookupEdit.StyleController = this.layoutControl1;
+            this.LoaiHangHoaLookupEdit.TabIndex = 6;
+            // 
+            // TenHangHoaTextBox
+            // 
+            this.TenHangHoaTextBox.Location = new System.Drawing.Point(111, 42);
+            this.TenHangHoaTextBox.Name = "TenHangHoaTextBox";
+            this.TenHangHoaTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.TenHangHoaTextBox.Properties.Appearance.Options.UseFont = true;
+            this.TenHangHoaTextBox.Size = new System.Drawing.Size(318, 26);
+            this.TenHangHoaTextBox.StyleController = this.layoutControl1;
+            this.TenHangHoaTextBox.TabIndex = 5;
+            // 
+            // MaDonHangTextBox
+            // 
+            this.MaDonHangTextBox.Location = new System.Drawing.Point(532, 12);
+            this.MaDonHangTextBox.Name = "MaDonHangTextBox";
+            this.MaDonHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.MaDonHangTextBox.Properties.Appearance.Options.UseFont = true;
+            this.MaDonHangTextBox.Size = new System.Drawing.Size(319, 26);
+            this.MaDonHangTextBox.StyleController = this.layoutControl1;
+            this.MaDonHangTextBox.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.emptySpaceItem1,
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.emptySpaceItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(863, 412);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.Control = this.MaDonHangTextBox;
+            this.layoutControlItem1.Location = new System.Drawing.Point(421, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(422, 30);
+            this.layoutControlItem1.Text = "Ma Don Hang";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.TenHangHoaTextBox;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 30);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(421, 31);
+            this.layoutControlItem2.Text = "Ten Hang Hoa";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.Control = this.LoaiHangHoaLookupEdit;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 61);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(843, 30);
+            this.layoutControlItem3.Text = "Loai Hang";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.NhaCungCapLookupEdit;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 91);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(843, 30);
+            this.layoutControlItem4.Text = "Nha Cung Cap";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.Control = this.QuayHangLookupEdit;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 121);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(843, 30);
+            this.layoutControlItem5.Text = "Quay Hang";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem6.Control = this.SoLuongNummeric;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 151);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(843, 30);
+            this.layoutControlItem6.Text = "So Luong";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem7.Control = this.DonGiaNummeric;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 181);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(843, 30);
+            this.layoutControlItem7.Text = "Don Gia";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(96, 20);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(421, 30);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.ChiTietDonHangGridControl;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 211);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(843, 181);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.SearchTenHangHoaButton;
+            this.layoutControlItem9.Location = new System.Drawing.Point(421, 30);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(154, 31);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(575, 30);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(268, 31);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // CancelButtonControl
             // 
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -451,36 +485,6 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Them";
             // 
-            // SearchTenHangHoaButton
-            // 
-            this.SearchTenHangHoaButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.SearchTenHangHoaButton.Appearance.Options.UseFont = true;
-            this.SearchTenHangHoaButton.Location = new System.Drawing.Point(433, 42);
-            this.SearchTenHangHoaButton.MaximumSize = new System.Drawing.Size(150, 0);
-            this.SearchTenHangHoaButton.MinimumSize = new System.Drawing.Size(150, 0);
-            this.SearchTenHangHoaButton.Name = "SearchTenHangHoaButton";
-            this.SearchTenHangHoaButton.Size = new System.Drawing.Size(150, 27);
-            this.SearchTenHangHoaButton.StyleController = this.layoutControl1;
-            this.SearchTenHangHoaButton.TabIndex = 12;
-            this.SearchTenHangHoaButton.Text = "Tim Hang Hoa";
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.SearchTenHangHoaButton;
-            this.layoutControlItem9.Location = new System.Drawing.Point(421, 30);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(154, 31);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(575, 30);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(268, 31);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // ChiTietDonHangEditForm
             // 
             this.Appearance.Options.UseFont = true;
@@ -499,24 +503,24 @@ namespace QuanLySieuThi.HangHoa
             this.Text = "Chi Tiet Don Hang";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoLuongNummeric.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChiTietDonHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChiTietDonHangGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongNummeric.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();

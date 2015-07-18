@@ -16,8 +16,8 @@ namespace QuanLySieuThi.HangHoa
 {
     public partial class LoaiHangHoaEditForm
     {
-        private LoaiHangHoaService _loaiHangHoaService;
-        private ChungLoaiHangHoaService _chungLoaiHangHoaService;
+        private readonly LoaiHangHoaService _loaiHangHoaService;
+        private readonly ChungLoaiHangHoaService _chungLoaiHangHoaService;
 
         private IList<ChungLoaiHangHoa> _chungLoaiHangHoas; 
         public LoaiHangHoaEditForm(long? loaiHangHoaId)
