@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[HangHoa]
 (
-	[Id] BIGINT NOT NULL PRIMARY KEY , 
+	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
     [TenHangHoa] VARCHAR(255) NOT NULL, 
     [LoaiHangHoaId] BIGINT NOT NULL, 
     [NhaCungCapId] BIGINT NOT NULL, 

@@ -438,53 +438,56 @@ namespace QuanLySieuThi.HangHoa
         {
             try
             {
-                // Save Hang Hoa
-                var hangHoas = new List<Model.HangHoa>();
-                foreach (var chiTietDonHang in _chiTietDonHangs)
+                if (_chiTietDonHangs.Count > 0)
                 {
-                    var hangHoa = _hangHoaService.GetByTenHangHoaLoaiHangHoaNhaCungCap(chiTietDonHang.TenHangHoa,
-                        chiTietDonHang.LoaiHangHoaId, chiTietDonHang.NhaCungCapId);
-                    if (hangHoa == null)
+                    var currentDateTime = DateTime.Now;
+                    // Save Don Hang
+                    var donHang = _donHangService.AddDonHang();
+                    donHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
+                    donHang.NhaCungCapId = _chiTietDonHangs.First().NhaCungCapId;
+                    donHang.TrangThaiDonHang = "Dang Cho";
+                    donHang.NgayChinhSua = currentDateTime;
+                    donHang.NgayTao = currentDateTime;
+                    donHang.NguoiChinhSuaId = CurrentUserId;
+                    donHang.NguoiTaoId = CurrentUserId;
+                    donHang.HoatDong = true;
+
+                    _donHangService.Save();
+
+                    // Save Hang Hoa
+                    foreach (var chiTietDonHang in _chiTietDonHangs)
                     {
-                        hangHoa = _hangHoaService.AddHangHoa();
-                        hangHoa.TenHangHoa = chiTietDonHang.TenHangHoa;
-                        hangHoa.LoaiHangHoaId = chiTietDonHang.LoaiHangHoaId;
-                        hangHoa.NhaCungCapId = chiTietDonHang.NhaCungCapId;
-                        hangHoa.QuayHangId = chiTietDonHang.QuayHangId;
-                        hangHoa.GiaNhapVao = chiTietDonHang.DonGia;
-                        hangHoa.GiaBanRa = 0;
-                        hangHoa.NgayChinhSua = DateTime.Now;
-                        hangHoa.NgayTao = DateTime.Now;
-                        hangHoa.NguoiChinhSuaId = CurrentUserId;
-                        hangHoa.NguoiTaoId = CurrentUserId;
-                        hangHoa.HoatDong = true;
+                        var hangHoa = _hangHoaService.GetByTenHangHoaLoaiHangHoaNhaCungCap(chiTietDonHang.TenHangHoa,
+                            chiTietDonHang.LoaiHangHoaId, chiTietDonHang.NhaCungCapId);
+                        if (hangHoa == null)
+                        {
+                            hangHoa = _hangHoaService.AddHangHoa();
+                            hangHoa.TenHangHoa = chiTietDonHang.TenHangHoa;
+                            hangHoa.LoaiHangHoaId = chiTietDonHang.LoaiHangHoaId;
+                            hangHoa.NhaCungCapId = chiTietDonHang.NhaCungCapId;
+                            hangHoa.QuayHangId = chiTietDonHang.QuayHangId;
+                            hangHoa.GiaNhapVao = chiTietDonHang.DonGia;
+                            hangHoa.GiaBanRa = 0;
+                            hangHoa.NgayChinhSua = currentDateTime;
+                            hangHoa.NgayTao = currentDateTime;
+                            hangHoa.NguoiChinhSuaId = CurrentUserId;
+                            hangHoa.NguoiTaoId = CurrentUserId;
+                            hangHoa.HoatDong = true;
 
-                        hangHoas.Add(hangHoa);
-                    }                    
+                            _hangHoaService.Save();
+
+                            // Save Chi Tiet Don Hang
+                            var ctDonHang = _chiTietDonHangService.AddChiTietDonHang();
+                            ctDonHang.HangHoaId = hangHoa.Id;
+                            ctDonHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
+                            ctDonHang.SoLuong = chiTietDonHang.SoLuong;
+                            ctDonHang.DonGia = chiTietDonHang.DonGia;
+                            _chiTietDonHangService.Save();
+                        }
+                    }
                 }
-
-                // Save Don Hang
-                var donHang = _donHangService.AddDonHang();
-                donHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
-                donHang.NhaCungCapId = _chiTietDonHangs.First().NhaCungCapId;
-                donHang.TrangThaiDonHang = "Dang Cho";
-                donHang.NgayChinhSua = DateTime.Now;
-                donHang.NgayTao = DateTime.Now;
-                donHang.NguoiChinhSuaId = CurrentUserId;
-                donHang.NguoiTaoId = CurrentUserId;
-
-                // Save Chi Tiet Don Hang
-                foreach (var hangHoa in hangHoas)
-                {
-                    var chiTietDonHang = _chiTietDonHangService.AddChiTietDonHang();
-                    chiTietDonHang.HangHoaId = hangHoa.Id;
-                    chiTietDonHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
-                }
-
-                _hangHoaService.Save();
-                _donHangService.Save();
-                _chiTietDonHangService.Save();
-
+                
+                Close();
             }
             catch (Exception ex)
             {

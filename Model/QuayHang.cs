@@ -16,8 +16,8 @@ namespace Model
     {
         public QuayHang()
         {
-            this.HangHoas = new HashSet<HangHoa>();
             this.PhieuTraQuayHangs = new HashSet<PhieuTraQuayHang>();
+            this.HangHoas = new HashSet<HangHoa>();
         }
     
         public long Id { get; set; }
@@ -28,9 +28,9 @@ namespace Model
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
     
-        public virtual ICollection<HangHoa> HangHoas { get; set; }
         public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
+        public virtual ICollection<HangHoa> HangHoas { get; set; }
     }
 }

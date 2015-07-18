@@ -22,8 +22,8 @@ namespace Model
             this.CT_NhapKho = new HashSet<CT_NhapKho>();
             this.CT_XuatKho = new HashSet<CT_XuatKho>();
             this.HangHoaKhuyenMais = new HashSet<HangHoaKhuyenMai>();
-            this.TonKhoes = new HashSet<TonKho>();
             this.HangHoaKhuyenMais1 = new HashSet<HangHoaKhuyenMai>();
+            this.TonKhoes = new HashSet<TonKho>();
         }
     
         public long Id { get; set; }
@@ -53,7 +53,7 @@ namespace Model
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual QuayHang QuayHang { get; set; }
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
-        public virtual ICollection<TonKho> TonKhoes { get; set; }
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais1 { get; set; }
+        public virtual ICollection<TonKho> TonKhoes { get; set; }
     }
 }

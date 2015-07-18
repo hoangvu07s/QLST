@@ -20,8 +20,8 @@ namespace Model
         public decimal DonGia { get; set; }
         public long NhaCungCapId { get; set; }
     
-        public virtual HangHoa HangHoa { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual XuatKho XuatKho { get; set; }
+        public virtual HangHoa HangHoa { get; set; }
     }
 }

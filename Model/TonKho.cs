@@ -18,7 +18,7 @@ namespace Model
         public long HangHoaId { get; set; }
         public Nullable<long> SoLuongTon { get; set; }
     
-        public virtual HangHoa HangHoa { get; set; }
         public virtual Kho Kho { get; set; }
+        public virtual HangHoa HangHoa { get; set; }
     }
 }

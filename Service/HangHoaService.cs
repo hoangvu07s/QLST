@@ -54,7 +54,23 @@ namespace Service
                     Entities.HangHoas.FirstOrDefault(
                         _ =>
                             _.TenHangHoa == tenHangHoa && _.LoaiHangHoaId == loaiHangHoaId &&
-                            _.NhaCungCapId == nhaCungCapId);
+                            _.NhaCungCapId == nhaCungCapId && _.HoatDong.HasValue && _.HoatDong == true);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public HangHoa GetByNgayTao(DateTime ngayTaoDateTime)
+        {
+            try
+            {
+                return
+                    Entities.HangHoas.FirstOrDefault(
+                        _ => _.NgayTao == ngayTaoDateTime && _.HoatDong.HasValue && _.HoatDong == true);
             }
             catch (Exception ex)
             {
