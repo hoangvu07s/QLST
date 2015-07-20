@@ -16,12 +16,10 @@ namespace Model
     {
         public System.Guid NhapKhoId { get; set; }
         public long HangHoaId { get; set; }
-        public long KhoId { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
     
-        public virtual Kho Kho { get; set; }
-        public virtual NhapKho NhapKho { get; set; }
         public virtual HangHoa HangHoa { get; set; }
+        public virtual NhapKho NhapKho { get; set; }
     }
 }

@@ -22,11 +22,13 @@ namespace Model
         public System.Guid PhieuTraQuayHangId { get; set; }
         public long NhanVienId { get; set; }
         public long QuayHangId { get; set; }
+        public long KhoId { get; set; }
         public System.DateTime NgayLap { get; set; }
         public Nullable<System.DateTime> NgayChinhSua { get; set; }
         public Nullable<long> NguoiChinhSuaId { get; set; }
     
         public virtual ICollection<CT_PhieuTraQuayHang> CT_PhieuTraQuayHang { get; set; }
+        public virtual Kho Kho { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
         public virtual QuayHang QuayHang { get; set; }

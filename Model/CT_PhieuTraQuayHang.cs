@@ -15,12 +15,12 @@ namespace Model
     public partial class CT_PhieuTraQuayHang
     {
         public System.Guid PhieuTraQuayHangId { get; set; }
-        public long KhoId { get; set; }
+        public long HangHoaId { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
         public string LyDo { get; set; }
     
-        public virtual Kho Kho { get; set; }
+        public virtual HangHoa HangHoa { get; set; }
         public virtual PhieuTraQuayHang PhieuTraQuayHang { get; set; }
     }
 }

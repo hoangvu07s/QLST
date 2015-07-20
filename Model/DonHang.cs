@@ -31,6 +31,7 @@ namespace Model
     
         public virtual ICollection<CT_DonHang> CT_DonHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
+        public virtual NhanVien NhanVien1 { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual ICollection<NhapKho> NhapKhoes { get; set; }
     }

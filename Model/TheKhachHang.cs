@@ -23,7 +23,8 @@ namespace Model
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
     
-        public virtual NhanVien NhanVien { get; set; }
         public virtual KhachHang KhachHang { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual NhanVien NhanVien1 { get; set; }
     }
 }

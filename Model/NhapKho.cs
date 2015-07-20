@@ -28,10 +28,10 @@ namespace Model
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
     
-        public virtual ICollection<CT_NhapKho> CT_NhapKho { get; set; }
         public virtual Kho Kho { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
+        public virtual ICollection<CT_NhapKho> CT_NhapKho { get; set; }
         public virtual DonHang DonHang { get; set; }
     }
 }

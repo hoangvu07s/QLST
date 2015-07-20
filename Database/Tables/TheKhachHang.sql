@@ -9,5 +9,6 @@
     [NguoiChinhSuaId] BIGINT NULL,
     [HoatDong] BIT NULL DEFAULT 1,
 	CONSTRAINT [FK_TheKhachHang_NguoiTao] FOREIGN KEY ([NguoiTaoId]) REFERENCES [NhanVien]([Id]),
+	CONSTRAINT [FK_TheKhachHang_NguoiChinhSua] FOREIGN KEY ([NguoiChinhSuaId]) REFERENCES [NhanVien]([Id]),
 	CONSTRAINT [FK_TheKhachHang_KhachHang] FOREIGN KEY ([KhachHangId]) REFERENCES [KhachHang]([Id])
 )
