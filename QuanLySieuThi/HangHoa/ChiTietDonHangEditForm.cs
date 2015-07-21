@@ -36,8 +36,6 @@ namespace QuanLySieuThi.HangHoa
             base.LoadData(e);
             try
             {
-                ShowData();
-
                 if (string.IsNullOrEmpty(EntityId))
                 {
                     _chiTietDonHangs = new List<ChiTietDonHang>();
@@ -47,6 +45,8 @@ namespace QuanLySieuThi.HangHoa
                 {
                     FormMode = FormMode.View;
                 }
+
+                ShowData();
             }
             catch (Exception ex)
             {
@@ -80,12 +80,46 @@ namespace QuanLySieuThi.HangHoa
                     MaDonHangTextBox.Text = EntityId;
                 }
 
+                if (FormMode == FormMode.View)
+                {
+                    _chiTietDonHangs = new List<ChiTietDonHang>();
+                    var chiTietDonHangsInDatabase = _chiTietDonHangService.GetByDonHangId(new Guid(EntityId));
+                    foreach (var ctDonHang in chiTietDonHangsInDatabase)
+                    {
+                        _chiTietDonHangs.Add(new ChiTietDonHang
+                        {
+                            DonGia = ctDonHang.DonGia,
+                            LoaiHangHoaId = ctDonHang.HangHoa.LoaiHangHoaId,
+                            MaDonHang = ctDonHang.DonHangId.ToString(),
+                            NhaCungCapId = ctDonHang.HangHoa.NhaCungCapId,
+                            QuayHangId = ctDonHang.HangHoa.QuayHangId,
+                            SoLuong = ctDonHang.SoLuong,
+                            TenHangHoa = ctDonHang.HangHoa.TenHangHoa,
+                            TenLoaiHangHoa = ctDonHang.HangHoa.LoaiHangHoa.TenLoaiHangHoa,
+                            TenNhaCungCap = ctDonHang.HangHoa.NhaCungCap.TenNhaCungCap,
+                            TenQuayHang = ctDonHang.HangHoa.QuayHang.TenQuay
+                        });
+                    }
+
+                    LoadGridData();
+
+                    DisableControl();
+                }
+
             }
             catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
+
+        private void DisableControl()
+        {
+            DeleteButton.Enabled = false;
+            AddButton.Enabled = false;
+            EditButton.Enabled = false;
+        }
+
 
         private void LoadLoaiHangHoa()
         {

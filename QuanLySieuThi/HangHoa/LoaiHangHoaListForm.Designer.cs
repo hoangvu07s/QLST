@@ -65,7 +65,7 @@ namespace QuanLySieuThi.HangHoa
             // 
             // LoaiHangHoaGridControl
             // 
-            this.LoaiHangHoaGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoaiHangHoaGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.LoaiHangHoaGridControl.Location = new System.Drawing.Point(12, 12);
             this.LoaiHangHoaGridControl.MainView = this.GridView1;
             this.LoaiHangHoaGridControl.Name = "LoaiHangHoaGridControl";

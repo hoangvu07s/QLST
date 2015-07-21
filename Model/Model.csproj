@@ -79,6 +79,7 @@
     <Compile Include="DonHang.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DonHangExtension.cs" />
     <Compile Include="HangHoa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

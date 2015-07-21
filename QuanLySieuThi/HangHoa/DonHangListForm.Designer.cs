@@ -31,23 +31,24 @@ namespace QuanLySieuThi.HangHoa
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.DonHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.DonHangGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MaDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NguoiLapDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NhaCungCapGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TrangThaiDonHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
-            this.MaDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NguoiLapDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NhaCungCapGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,19 +65,9 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(676, 237);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
             // DonHangGridControl
             // 
+            this.DonHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.DonHangGridControl.Location = new System.Drawing.Point(12, 12);
             this.DonHangGridControl.MainView = this.DonHangGridView;
             this.DonHangGridControl.Name = "DonHangGridControl";
@@ -94,7 +85,8 @@ namespace QuanLySieuThi.HangHoa
             this.DonHangGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaDonHangGridColumn,
             this.NguoiLapDonHangGridColumn,
-            this.NhaCungCapGridColumn});
+            this.NhaCungCapGridColumn,
+            this.TrangThaiDonHangColumn});
             this.DonHangGridView.GridControl = this.DonHangGridControl;
             this.DonHangGridView.Name = "DonHangGridView";
             this.DonHangGridView.OptionsBehavior.Editable = false;
@@ -102,6 +94,63 @@ namespace QuanLySieuThi.HangHoa
             this.DonHangGridView.OptionsView.ShowAutoFilterRow = true;
             this.DonHangGridView.OptionsView.ShowGroupPanel = false;
             this.DonHangGridView.OptionsView.ShowIndicator = false;
+            this.DonHangGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.DonHangGridView_FocusedRowChanged);
+            this.DonHangGridView.DoubleClick += new System.EventHandler(this.DonHangGridView_DoubleClick);
+            // 
+            // MaDonHangGridColumn
+            // 
+            this.MaDonHangGridColumn.Caption = "Ma Don Hang";
+            this.MaDonHangGridColumn.FieldName = "DonHangId";
+            this.MaDonHangGridColumn.Name = "MaDonHangGridColumn";
+            this.MaDonHangGridColumn.OptionsColumn.AllowEdit = false;
+            this.MaDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.MaDonHangGridColumn.Visible = true;
+            this.MaDonHangGridColumn.VisibleIndex = 0;
+            this.MaDonHangGridColumn.Width = 200;
+            // 
+            // NguoiLapDonHangGridColumn
+            // 
+            this.NguoiLapDonHangGridColumn.Caption = "Nguoi Lap Don Hang";
+            this.NguoiLapDonHangGridColumn.FieldName = "NguoiLapDonHang";
+            this.NguoiLapDonHangGridColumn.Name = "NguoiLapDonHangGridColumn";
+            this.NguoiLapDonHangGridColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiLapDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiLapDonHangGridColumn.Visible = true;
+            this.NguoiLapDonHangGridColumn.VisibleIndex = 1;
+            this.NguoiLapDonHangGridColumn.Width = 200;
+            // 
+            // NhaCungCapGridColumn
+            // 
+            this.NhaCungCapGridColumn.Caption = "Ten Nha Cung Cap";
+            this.NhaCungCapGridColumn.FieldName = "TenNhaCungCap";
+            this.NhaCungCapGridColumn.Name = "NhaCungCapGridColumn";
+            this.NhaCungCapGridColumn.OptionsColumn.AllowEdit = false;
+            this.NhaCungCapGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NhaCungCapGridColumn.Visible = true;
+            this.NhaCungCapGridColumn.VisibleIndex = 2;
+            this.NhaCungCapGridColumn.Width = 200;
+            // 
+            // TrangThaiDonHangColumn
+            // 
+            this.TrangThaiDonHangColumn.Caption = "Trang Thai Don Hang";
+            this.TrangThaiDonHangColumn.FieldName = "TrangThaiDonHang";
+            this.TrangThaiDonHangColumn.Name = "TrangThaiDonHangColumn";
+            this.TrangThaiDonHangColumn.OptionsColumn.AllowEdit = false;
+            this.TrangThaiDonHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TrangThaiDonHangColumn.Visible = true;
+            this.TrangThaiDonHangColumn.VisibleIndex = 3;
+            this.TrangThaiDonHangColumn.Width = 200;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(676, 237);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -122,6 +171,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -132,7 +182,8 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
-            this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Text = "Huy Don Hang";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
@@ -144,61 +195,32 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // EditButton
             // 
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(418, 235);
+            this.EditButton.Location = new System.Drawing.Point(408, 235);
+            this.EditButton.MinimumSize = new System.Drawing.Size(130, 0);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 30);
+            this.EditButton.Size = new System.Drawing.Size(130, 30);
             this.EditButton.TabIndex = 4;
-            this.EditButton.Text = "Sua";
+            this.EditButton.Text = "Xem CT Don Hang";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(292, 235);
+            this.AddButton.Location = new System.Drawing.Point(282, 235);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Them";
-            // 
-            // MaDonHangGridColumn
-            // 
-            this.MaDonHangGridColumn.Caption = "Ma Don Hang";
-            this.MaDonHangGridColumn.FieldName = "DonHangId";
-            this.MaDonHangGridColumn.Name = "MaDonHangGridColumn";
-            this.MaDonHangGridColumn.OptionsColumn.AllowEdit = false;
-            this.MaDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.MaDonHangGridColumn.Visible = true;
-            this.MaDonHangGridColumn.VisibleIndex = 0;
-            this.MaDonHangGridColumn.Width = 200;
-            // 
-            // NguoiLapDonHangGridColumn
-            // 
-            this.NguoiLapDonHangGridColumn.Caption = "Nguoi Lap Don Hang";
-            this.NguoiLapDonHangGridColumn.FieldName = "TenDangNhap";
-            this.NguoiLapDonHangGridColumn.Name = "NguoiLapDonHangGridColumn";
-            this.NguoiLapDonHangGridColumn.OptionsColumn.AllowEdit = false;
-            this.NguoiLapDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.NguoiLapDonHangGridColumn.Visible = true;
-            this.NguoiLapDonHangGridColumn.VisibleIndex = 1;
-            this.NguoiLapDonHangGridColumn.Width = 200;
-            // 
-            // NhaCungCapGridColumn
-            // 
-            this.NhaCungCapGridColumn.Caption = "Ten Nha Cung Cap";
-            this.NhaCungCapGridColumn.FieldName = "TenNhaCungCap";
-            this.NhaCungCapGridColumn.Name = "NhaCungCapGridColumn";
-            this.NhaCungCapGridColumn.OptionsColumn.AllowEdit = false;
-            this.NhaCungCapGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.NhaCungCapGridColumn.Visible = true;
-            this.NhaCungCapGridColumn.VisibleIndex = 2;
-            this.NhaCungCapGridColumn.Width = 200;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DonHangListForm
             // 
@@ -217,9 +239,9 @@ namespace QuanLySieuThi.HangHoa
             this.Text = "Don Hang List Form";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -240,5 +262,6 @@ namespace QuanLySieuThi.HangHoa
         private DevExpress.XtraGrid.Columns.GridColumn MaDonHangGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn NguoiLapDonHangGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn NhaCungCapGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn TrangThaiDonHangColumn;
     }
 }
