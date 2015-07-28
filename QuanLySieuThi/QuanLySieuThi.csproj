@@ -207,6 +207,9 @@
     <EmbeddedResource Include="HangHoa\QuayHangListForm.resx">
       <DependentUpon>QuayHangListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kho\KhoHangListForm.resx">
+      <DependentUpon>KhoHangListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

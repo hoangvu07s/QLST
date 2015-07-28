@@ -30,7 +30,7 @@ namespace Common.Controls
         /// </summary>
         private void InitializeComponent(){
             components = new System.ComponentModel.Container();
-            Font = new Font("Segoe UI", 11.0f);
+            Font = new Font("Times New Roman", 11.0f);
             Size = new Size(120,30);
         }
 

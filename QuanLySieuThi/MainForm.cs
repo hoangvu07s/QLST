@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using Helper;
 using QuanLySieuThi.HangHoa;
+using QuanLySieuThi.Kho;
 using QuanLySieuThi.NhaCungCap;
 using QuanLySieuThi.NhanVien;
 
@@ -80,6 +81,19 @@ namespace QuanLySieuThi
             {
                 var donHangListForm = new DonHangListForm();
                 donHangListForm.ShowForm("OpenDonHangListForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void QuanLyKhoHangButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var khoHangListForm = new KhoHangListForm();
+                khoHangListForm.ShowForm("OpenKhoHangListForm");
             }
             catch (Exception ex)
             {

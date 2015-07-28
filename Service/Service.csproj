@@ -54,6 +54,7 @@
     <Compile Include="ChungLoaiHangHoaService.cs" />
     <Compile Include="DonHangService.cs" />
     <Compile Include="HangHoaService.cs" />
+    <Compile Include="KhoHangService.cs" />
     <Compile Include="LoaiHangHoaService.cs" />
     <Compile Include="NhaCungCapService.cs" />
     <Compile Include="NhanVienService.cs" />

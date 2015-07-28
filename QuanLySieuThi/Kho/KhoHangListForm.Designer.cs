@@ -30,11 +30,225 @@ namespace QuanLySieuThi.Kho
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.CancelButtonControl = new Common.Controls.QButtonControl();
+            this.DeleteButton = new Common.Controls.QButtonControl();
+            this.AddButton = new Common.Controls.QButtonControl();
+            this.EditButton = new Common.Controls.QButtonControl();
+            this.OKButton = new Common.Controls.QButtonControl();
+            this.KhoGridControl = new DevExpress.XtraGrid.GridControl();
+            this.KhoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.TenKhoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenQuanLyKhoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DiaChiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoDienThoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhoGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutControl1.Controls.Add(this.KhoGridControl);
+            this.layoutControl1.Location = new System.Drawing.Point(-1, -1);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(723, 295);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 295);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // CancelButtonControl
+            // 
+            this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.CancelButtonControl.Appearance.Options.UseFont = true;
+            this.CancelButtonControl.Location = new System.Drawing.Point(12, 292);
+            this.CancelButtonControl.Name = "CancelButtonControl";
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.TabIndex = 1;
+            this.CancelButtonControl.Text = "Thoát";
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DeleteButton.Appearance.Options.UseFont = true;
+            this.DeleteButton.Location = new System.Drawing.Point(138, 292);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
+            this.DeleteButton.TabIndex = 2;
+            this.DeleteButton.Text = "Xóa";
+            // 
+            // AddButton
+            // 
+            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AddButton.Appearance.Options.UseFont = true;
+            this.AddButton.Location = new System.Drawing.Point(339, 292);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
+            this.AddButton.TabIndex = 3;
+            this.AddButton.Text = "Thêm";
+            // 
+            // EditButton
+            // 
+            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.EditButton.Appearance.Options.UseFont = true;
+            this.EditButton.Location = new System.Drawing.Point(465, 292);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(120, 30);
+            this.EditButton.TabIndex = 4;
+            this.EditButton.Text = "Sửa";
+            // 
+            // OKButton
+            // 
+            this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.OKButton.Appearance.Options.UseFont = true;
+            this.OKButton.Location = new System.Drawing.Point(591, 292);
+            this.OKButton.Name = "OKButton";
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
+            this.OKButton.TabIndex = 5;
+            this.OKButton.Text = "OK";
+            // 
+            // KhoGridControl
+            // 
+            this.KhoGridControl.Location = new System.Drawing.Point(12, 12);
+            this.KhoGridControl.MainView = this.KhoGridView;
+            this.KhoGridControl.Name = "KhoGridControl";
+            this.KhoGridControl.Size = new System.Drawing.Size(699, 271);
+            this.KhoGridControl.TabIndex = 4;
+            this.KhoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.KhoGridView});
+            // 
+            // KhoGridView
+            // 
+            this.KhoGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.KhoGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoGridView.Appearance.Row.Options.UseFont = true;
+            this.KhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.TenKhoColumn,
+            this.TenQuanLyKhoColumn,
+            this.DiaChiColumn,
+            this.SoDienThoaiColumn});
+            this.KhoGridView.GridControl = this.KhoGridControl;
+            this.KhoGridView.Name = "KhoGridView";
+            this.KhoGridView.OptionsBehavior.Editable = false;
+            this.KhoGridView.OptionsView.ColumnAutoWidth = false;
+            this.KhoGridView.OptionsView.ShowAutoFilterRow = true;
+            this.KhoGridView.OptionsView.ShowGroupPanel = false;
+            this.KhoGridView.OptionsView.ShowIndicator = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.KhoGridControl;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(703, 275);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // TenKhoColumn
+            // 
+            this.TenKhoColumn.Caption = "Tên Kho";
+            this.TenKhoColumn.FieldName = "TenKho";
+            this.TenKhoColumn.Name = "TenKhoColumn";
+            this.TenKhoColumn.OptionsColumn.AllowEdit = false;
+            this.TenKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TenKhoColumn.Visible = true;
+            this.TenKhoColumn.VisibleIndex = 0;
+            // 
+            // TenQuanLyKhoColumn
+            // 
+            this.TenQuanLyKhoColumn.Caption = "Tên Người Quản Lý Kho";
+            this.TenQuanLyKhoColumn.FieldName = "TenDangNhap";
+            this.TenQuanLyKhoColumn.Name = "TenQuanLyKhoColumn";
+            this.TenQuanLyKhoColumn.OptionsColumn.AllowEdit = false;
+            this.TenQuanLyKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TenQuanLyKhoColumn.Visible = true;
+            this.TenQuanLyKhoColumn.VisibleIndex = 1;
+            // 
+            // DiaChiColumn
+            // 
+            this.DiaChiColumn.Caption = "Địa Chỉ";
+            this.DiaChiColumn.FieldName = "DiaChi";
+            this.DiaChiColumn.Name = "DiaChiColumn";
+            this.DiaChiColumn.OptionsColumn.AllowEdit = false;
+            this.DiaChiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.DiaChiColumn.Visible = true;
+            this.DiaChiColumn.VisibleIndex = 2;
+            // 
+            // SoDienThoaiColumn
+            // 
+            this.SoDienThoaiColumn.Caption = "Số Điện Thoại";
+            this.SoDienThoaiColumn.FieldName = "SoDienThoai";
+            this.SoDienThoaiColumn.Name = "SoDienThoaiColumn";
+            this.SoDienThoaiColumn.OptionsColumn.AllowEdit = false;
+            this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.SoDienThoaiColumn.Visible = true;
+            this.SoDienThoaiColumn.VisibleIndex = 3;
+            // 
+            // KhoHangListForm
+            // 
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "KhoHangListForm";
+            this.ClientSize = new System.Drawing.Size(723, 334);
+            this.Controls.Add(this.OKButton);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.CancelButtonControl);
+            this.Controls.Add(this.layoutControl1);
+            this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "KhoHangListForm";
+            this.Text = "Kho Hàng";
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhoGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private Common.Controls.QButtonControl CancelButtonControl;
+        private Common.Controls.QButtonControl DeleteButton;
+        private Common.Controls.QButtonControl AddButton;
+        private Common.Controls.QButtonControl EditButton;
+        private Common.Controls.QButtonControl OKButton;
+        private DevExpress.XtraGrid.GridControl KhoGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView KhoGridView;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn TenKhoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn TenQuanLyKhoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn DiaChiColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn SoDienThoaiColumn;
     }
 }
