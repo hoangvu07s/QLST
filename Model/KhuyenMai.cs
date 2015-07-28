@@ -21,6 +21,7 @@ namespace Model
     
         public long Id { get; set; }
         public string TenKhuyenMai { get; set; }
+        public string LyDoKhuyenMai { get; set; }
         public System.DateTime NgayBatDau { get; set; }
         public System.DateTime NgayKetThuc { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }

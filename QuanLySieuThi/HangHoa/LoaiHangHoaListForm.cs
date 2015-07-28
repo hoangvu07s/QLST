@@ -130,7 +130,6 @@ namespace QuanLySieuThi.HangHoa
         {
             EditButton_Click(sender,e);
         }
-
         private void GridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             try
