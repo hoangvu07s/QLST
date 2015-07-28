@@ -86,6 +86,7 @@ namespace QuanLySieuThi.Kho
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -97,6 +98,7 @@ namespace QuanLySieuThi.Kho
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AddButton
             // 

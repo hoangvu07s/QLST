@@ -124,6 +124,10 @@
     <Compile Include="HangHoa\QuayHangListForm.Designer.cs">
       <DependentUpon>QuayHangListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\KhoHangEditForm.cs" />
+    <Compile Include="Kho\KhoHangEditForm.Designer.cs">
+      <DependentUpon>KhoHangEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\KhoHangListForm.cs">
       <SubType>Form</SubType>
     </Compile>
