@@ -110,6 +110,7 @@ namespace QuanLySieuThi.Kho
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 3;
             this.AddButton.Text = "Thêm";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // EditButton
             // 
@@ -121,6 +122,7 @@ namespace QuanLySieuThi.Kho
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sửa";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // OKButton
             // 
@@ -132,6 +134,7 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 5;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // KhoGridControl
             // 
@@ -161,6 +164,8 @@ namespace QuanLySieuThi.Kho
             this.KhoGridView.OptionsView.ShowAutoFilterRow = true;
             this.KhoGridView.OptionsView.ShowGroupPanel = false;
             this.KhoGridView.OptionsView.ShowIndicator = false;
+            this.KhoGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.KhoGridView_FocusedRowChanged);
+            this.KhoGridView.DoubleClick += new System.EventHandler(this.KhoGridView_DoubleClick);
             // 
             // layoutControlItem1
             // 

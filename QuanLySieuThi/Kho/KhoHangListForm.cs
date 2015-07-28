@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Helper;
 using Service;
@@ -91,6 +84,72 @@ namespace QuanLySieuThi.Kho
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var khoHangEditForm = new KhoHangEditForm(null);
+                khoHangEditForm.ShowForm("AddKhoHang");
+                khoHangEditForm.FormClosed += KhoHangEditFormOnFormClosed;
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void KhoHangEditFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
+        {
+            try
+            {
+                ShowData();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selRow = _sellRow as Model.Kho;
+                if (selRow != null)
+                {
+                    var khoHangEditForm = new KhoHangEditForm(selRow.Id);
+                    khoHangEditForm.ShowForm(string.Format("EditKhoHang: {0}", selRow.Id));
+                    khoHangEditForm.FormClosed += KhoHangEditFormOnFormClosed;
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            AcceptAndSavechange();
+        }
+
+        private void KhoGridView_DoubleClick(object sender, EventArgs e)
+        {
+            EditButton_Click(sender,e);
+        }
+
+        private void KhoGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            try
+            {
+                _sellRow = KhoGridView.GetRow(e.FocusedRowHandle);
             }
             catch (Exception ex)
             {
