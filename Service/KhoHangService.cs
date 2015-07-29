@@ -69,6 +69,22 @@ namespace Service
             }
         }
 
+        public Kho AddKho()
+        {
+            try
+            {
+                var kho = new Kho();
+
+                return Entities.Khoes.Add(kho);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

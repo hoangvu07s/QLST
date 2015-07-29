@@ -31,24 +31,24 @@ namespace QuanLySieuThi.Kho
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.KhoGridControl = new DevExpress.XtraGrid.GridControl();
+            this.KhoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.TenKhoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenQuanLyKhoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DiaChiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoDienThoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
-            this.KhoGridControl = new DevExpress.XtraGrid.GridControl();
-            this.KhoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TenKhoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TenQuanLyKhoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DiaChiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SoDienThoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +65,78 @@ namespace QuanLySieuThi.Kho
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // KhoGridControl
+            // 
+            this.KhoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KhoGridControl.Location = new System.Drawing.Point(12, 12);
+            this.KhoGridControl.MainView = this.KhoGridView;
+            this.KhoGridControl.Name = "KhoGridControl";
+            this.KhoGridControl.Size = new System.Drawing.Size(699, 271);
+            this.KhoGridControl.TabIndex = 4;
+            this.KhoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.KhoGridView});
+            // 
+            // KhoGridView
+            // 
+            this.KhoGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.KhoGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoGridView.Appearance.Row.Options.UseFont = true;
+            this.KhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.TenKhoColumn,
+            this.TenQuanLyKhoColumn,
+            this.DiaChiColumn,
+            this.SoDienThoaiColumn});
+            this.KhoGridView.GridControl = this.KhoGridControl;
+            this.KhoGridView.Name = "KhoGridView";
+            this.KhoGridView.OptionsBehavior.Editable = false;
+            this.KhoGridView.OptionsView.ColumnAutoWidth = false;
+            this.KhoGridView.OptionsView.ShowAutoFilterRow = true;
+            this.KhoGridView.OptionsView.ShowGroupPanel = false;
+            this.KhoGridView.OptionsView.ShowIndicator = false;
+            this.KhoGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.KhoGridView_FocusedRowChanged);
+            this.KhoGridView.DoubleClick += new System.EventHandler(this.KhoGridView_DoubleClick);
+            // 
+            // TenKhoColumn
+            // 
+            this.TenKhoColumn.Caption = "Tên Kho";
+            this.TenKhoColumn.FieldName = "TenKho";
+            this.TenKhoColumn.Name = "TenKhoColumn";
+            this.TenKhoColumn.OptionsColumn.AllowEdit = false;
+            this.TenKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TenKhoColumn.Visible = true;
+            this.TenKhoColumn.VisibleIndex = 0;
+            // 
+            // TenQuanLyKhoColumn
+            // 
+            this.TenQuanLyKhoColumn.Caption = "Tên Người Quản Lý Kho";
+            this.TenQuanLyKhoColumn.FieldName = "NhanVien2.TenDangNhap";
+            this.TenQuanLyKhoColumn.Name = "TenQuanLyKhoColumn";
+            this.TenQuanLyKhoColumn.OptionsColumn.AllowEdit = false;
+            this.TenQuanLyKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TenQuanLyKhoColumn.Visible = true;
+            this.TenQuanLyKhoColumn.VisibleIndex = 1;
+            // 
+            // DiaChiColumn
+            // 
+            this.DiaChiColumn.Caption = "Địa Chỉ";
+            this.DiaChiColumn.FieldName = "DiaChi";
+            this.DiaChiColumn.Name = "DiaChiColumn";
+            this.DiaChiColumn.OptionsColumn.AllowEdit = false;
+            this.DiaChiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.DiaChiColumn.Visible = true;
+            this.DiaChiColumn.VisibleIndex = 2;
+            // 
+            // SoDienThoaiColumn
+            // 
+            this.SoDienThoaiColumn.Caption = "Số Điện Thoại";
+            this.SoDienThoaiColumn.FieldName = "SoDienThoai";
+            this.SoDienThoaiColumn.Name = "SoDienThoaiColumn";
+            this.SoDienThoaiColumn.OptionsColumn.AllowEdit = false;
+            this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.SoDienThoaiColumn.Visible = true;
+            this.SoDienThoaiColumn.VisibleIndex = 3;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -75,6 +147,15 @@ namespace QuanLySieuThi.Kho
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(723, 295);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.KhoGridControl;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(703, 275);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // CancelButtonControl
             // 
@@ -136,86 +217,6 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
-            // KhoGridControl
-            // 
-            this.KhoGridControl.Location = new System.Drawing.Point(12, 12);
-            this.KhoGridControl.MainView = this.KhoGridView;
-            this.KhoGridControl.Name = "KhoGridControl";
-            this.KhoGridControl.Size = new System.Drawing.Size(699, 271);
-            this.KhoGridControl.TabIndex = 4;
-            this.KhoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.KhoGridView});
-            // 
-            // KhoGridView
-            // 
-            this.KhoGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhoGridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.KhoGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhoGridView.Appearance.Row.Options.UseFont = true;
-            this.KhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.TenKhoColumn,
-            this.TenQuanLyKhoColumn,
-            this.DiaChiColumn,
-            this.SoDienThoaiColumn});
-            this.KhoGridView.GridControl = this.KhoGridControl;
-            this.KhoGridView.Name = "KhoGridView";
-            this.KhoGridView.OptionsBehavior.Editable = false;
-            this.KhoGridView.OptionsView.ColumnAutoWidth = false;
-            this.KhoGridView.OptionsView.ShowAutoFilterRow = true;
-            this.KhoGridView.OptionsView.ShowGroupPanel = false;
-            this.KhoGridView.OptionsView.ShowIndicator = false;
-            this.KhoGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.KhoGridView_FocusedRowChanged);
-            this.KhoGridView.DoubleClick += new System.EventHandler(this.KhoGridView_DoubleClick);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.KhoGridControl;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(703, 275);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // TenKhoColumn
-            // 
-            this.TenKhoColumn.Caption = "Tên Kho";
-            this.TenKhoColumn.FieldName = "TenKho";
-            this.TenKhoColumn.Name = "TenKhoColumn";
-            this.TenKhoColumn.OptionsColumn.AllowEdit = false;
-            this.TenKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.TenKhoColumn.Visible = true;
-            this.TenKhoColumn.VisibleIndex = 0;
-            // 
-            // TenQuanLyKhoColumn
-            // 
-            this.TenQuanLyKhoColumn.Caption = "Tên Người Quản Lý Kho";
-            this.TenQuanLyKhoColumn.FieldName = "TenDangNhap";
-            this.TenQuanLyKhoColumn.Name = "TenQuanLyKhoColumn";
-            this.TenQuanLyKhoColumn.OptionsColumn.AllowEdit = false;
-            this.TenQuanLyKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.TenQuanLyKhoColumn.Visible = true;
-            this.TenQuanLyKhoColumn.VisibleIndex = 1;
-            // 
-            // DiaChiColumn
-            // 
-            this.DiaChiColumn.Caption = "Địa Chỉ";
-            this.DiaChiColumn.FieldName = "DiaChi";
-            this.DiaChiColumn.Name = "DiaChiColumn";
-            this.DiaChiColumn.OptionsColumn.AllowEdit = false;
-            this.DiaChiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.DiaChiColumn.Visible = true;
-            this.DiaChiColumn.VisibleIndex = 2;
-            // 
-            // SoDienThoaiColumn
-            // 
-            this.SoDienThoaiColumn.Caption = "Số Điện Thoại";
-            this.SoDienThoaiColumn.FieldName = "SoDienThoai";
-            this.SoDienThoaiColumn.Name = "SoDienThoaiColumn";
-            this.SoDienThoaiColumn.OptionsColumn.AllowEdit = false;
-            this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.SoDienThoaiColumn.Visible = true;
-            this.SoDienThoaiColumn.VisibleIndex = 3;
-            // 
             // KhoHangListForm
             // 
             this.Appearance.Options.UseFont = true;
@@ -233,9 +234,9 @@ namespace QuanLySieuThi.Kho
             this.Text = "Kho Hàng";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 

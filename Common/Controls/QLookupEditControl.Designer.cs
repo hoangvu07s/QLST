@@ -31,7 +31,7 @@ namespace Common.Controls
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Font = new Font("Segoe UI", 11.0F);
+            Font = new Font("Times New Roman", 11.0F);
         }
 
         #endregion
