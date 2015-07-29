@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,6 +72,25 @@ namespace Service
                 return
                     Entities.HangHoas.FirstOrDefault(
                         _ => _.NgayTao == ngayTaoDateTime && _.HoatDong.HasValue && _.HoatDong == true);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<HangHoa> GetAll()
+        {
+            try
+            {
+                return
+                    Entities.HangHoas.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
+                        .Include(_ => _.LoaiHangHoa)
+                        .Include(_ => _.NhaCungCap)
+                        .Include(_ => _.QuayHang)
+                        .ToList();
             }
             catch (Exception ex)
             {

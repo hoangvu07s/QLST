@@ -101,5 +101,18 @@ namespace QuanLySieuThi
             }
         }
 
+        private void QuanLyHangHoaButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var hangHoaListForm = new HangHoaListForm();
+                hangHoaListForm.ShowForm("OpenHangHoaListForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
     }
 }
