@@ -107,6 +107,8 @@ namespace QuanLySieuThi.HangHoa
             this.GridView1.OptionsView.ShowAutoFilterRow = true;
             this.GridView1.OptionsView.ShowGroupPanel = false;
             this.GridView1.OptionsView.ShowIndicator = false;
+            this.GridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.GridView1_FocusedRowChanged);
+            this.GridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
             // 
             // TenHangHoaColumn
             // 
@@ -234,6 +236,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -245,6 +248,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AddButton
             // 
@@ -256,6 +260,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 3;
             this.AddButton.Text = "Thêm";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // EditButton
             // 
@@ -267,6 +272,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sửa";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // OKButton
             // 
@@ -278,6 +284,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 5;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // HangHoaListForm
             // 

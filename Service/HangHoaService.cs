@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -98,6 +99,50 @@ namespace Service
             }
 
             return null;
+        }
+
+        public HangHoa Get(long hangHoaId)
+        {
+            try
+            {
+                return
+                    Entities.HangHoas.Where(_ => _.Id == hangHoaId && _.HoatDong.HasValue && _.HoatDong == true)
+                        .Include(_ => _.CT_DoiTraHangHoa)
+                        .Include(_ => _.CT_DonHang)
+                        .Include(_ => _.CT_NhapKho)
+                        .Include(_ => _.CT_PhieuTraQuayHang)
+                        .Include(_ => _.CT_XuatKho)
+                        .Include(_=>_.CT_HoaDon)
+                        .Include(_ => _.HangHoaKhuyenMais)
+                        .Include(_ => _.HangHoaKhuyenMais1)
+                        .Include(_ => _.TonKhoes)
+                        .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public void Delete(long hangHoaId)
+        {
+            try
+            {
+                var hangHoa =
+                    Entities.HangHoas.FirstOrDefault(_ => _.Id == hangHoaId && _.HoatDong.HasValue && _.HoatDong == true);
+                if (hangHoa != null)
+                {
+                    hangHoa.HoatDong = false;
+
+                    Entities.HangHoas.AddOrUpdate(hangHoa);
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
 
         public override void Save()

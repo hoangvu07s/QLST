@@ -137,7 +137,8 @@ namespace QuanLySieuThi.NhanVien
                     }
 
                     nhanVien.HoatDong = true;
-                    nhanVien.MatKhau = nhanVien.MatKhau.Encrypt();}
+                    nhanVien.MatKhau = nhanVien.MatKhau.Encrypt();
+                }
             }
             catch (Exception ex)
             {
