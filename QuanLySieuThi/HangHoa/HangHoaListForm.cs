@@ -76,18 +76,18 @@ namespace QuanLySieuThi.HangHoa
                             @"Hàng Hóa này hiện đang được sử dụng trong database. Bạn không thể xóa",
                             @"Thông Báo", MessageBoxButtons.OK);
                         }
-                    }
-                    else
-                    {
-                        if (DialogResult.Yes ==
-                                MessageBox.Show(string.Format("Bạn có muốn xóa hàng hóa '{0}' ?", selRow.TenHangHoa),
-                                    @"Xác nhận", MessageBoxButtons.YesNo))
+                        else
                         {
-                            _hangHoaService.Delete(selRow.Id);
-                            _hangHoaService.Save();
-                            ShowData();
+                            if (DialogResult.Yes ==
+                                    MessageBox.Show(string.Format("Bạn có muốn xóa hàng hóa '{0}' ?", selRow.TenHangHoa),
+                                        @"Xác nhận", MessageBoxButtons.YesNo))
+                            {
+                                _hangHoaService.Delete(selRow.Id);
+                                _hangHoaService.Save();
+                                ShowData();
+                            }
                         }
-                    }
+                    }                   
                 }
             }
             catch (Exception ex)

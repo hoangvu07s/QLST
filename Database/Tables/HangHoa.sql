@@ -6,7 +6,7 @@
     [NhaCungCapId] BIGINT NOT NULL, 
 	[QuayHangId] BIGINT NOT NULL, 
 	[SoLuongTonQuay] BIGINT NULL,
-    [CoTheTraLai] BIT NULL,
+    [CoTheTraLai] BIT NULL DEFAULT 0 ,
     [GiaNhapVao] DECIMAL NOT NULL, 
     [GiaBanRa] DECIMAL NOT NULL,
 	[HinhAnh] VARCHAR(MAX),
