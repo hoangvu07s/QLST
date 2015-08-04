@@ -31,39 +31,39 @@ namespace QuanLySieuThi.HangHoa
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.TenHangHoaTextBox = new Common.Controls.QTextBoxControl();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.LoaiHangHoaLookupEdit = new Common.Controls.QLookupEditControl();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NhaCungCapLookupEdit = new Common.Controls.QLookupEditControl();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.QuayHangLookupEdit = new Common.Controls.QLookupEditControl();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TraLaiCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.GiaNhapVaoNummeric = new Common.Controls.QNummericControl();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.GiaBanRaNummeric = new Common.Controls.QNummericControl();
+            this.GiaNhapVaoNummeric = new Common.Controls.QNummericControl();
+            this.TraLaiCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.QuayHangLookupEdit = new Common.Controls.QLookupEditControl();
+            this.NhaCungCapLookupEdit = new Common.Controls.QLookupEditControl();
+            this.LoaiHangHoaLookupEdit = new Common.Controls.QLookupEditControl();
+            this.TenHangHoaTextBox = new Common.Controls.QTextBoxControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TraLaiCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GiaNhapVaoNummeric.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GiaBanRaNummeric.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GiaNhapVaoNummeric.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TraLaiCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +86,93 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // GiaBanRaNummeric
+            // 
+            this.GiaBanRaNummeric.Location = new System.Drawing.Point(12, 295);
+            this.GiaBanRaNummeric.Name = "GiaBanRaNummeric";
+            this.GiaBanRaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.GiaBanRaNummeric.Properties.Appearance.Options.UseFont = true;
+            this.GiaBanRaNummeric.Properties.DisplayFormat.FormatString = "n";
+            this.GiaBanRaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.GiaBanRaNummeric.Properties.Mask.EditMask = "n";
+            this.GiaBanRaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.GiaBanRaNummeric.Properties.NullText = "0.00";
+            this.GiaBanRaNummeric.Size = new System.Drawing.Size(432, 24);
+            this.GiaBanRaNummeric.StyleController = this.layoutControl1;
+            this.GiaBanRaNummeric.TabIndex = 10;
+            // 
+            // GiaNhapVaoNummeric
+            // 
+            this.GiaNhapVaoNummeric.Location = new System.Drawing.Point(12, 247);
+            this.GiaNhapVaoNummeric.Name = "GiaNhapVaoNummeric";
+            this.GiaNhapVaoNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.GiaNhapVaoNummeric.Properties.Appearance.Options.UseFont = true;
+            this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatString = "n";
+            this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.GiaNhapVaoNummeric.Properties.Mask.EditMask = "n";
+            this.GiaNhapVaoNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.GiaNhapVaoNummeric.Properties.NullText = "0.00";
+            this.GiaNhapVaoNummeric.Size = new System.Drawing.Size(432, 24);
+            this.GiaNhapVaoNummeric.StyleController = this.layoutControl1;
+            this.GiaNhapVaoNummeric.TabIndex = 9;
+            // 
+            // TraLaiCheckEdit
+            // 
+            this.TraLaiCheckEdit.Location = new System.Drawing.Point(108, 204);
+            this.TraLaiCheckEdit.Name = "TraLaiCheckEdit";
+            this.TraLaiCheckEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TraLaiCheckEdit.Properties.Appearance.Options.UseFont = true;
+            this.TraLaiCheckEdit.Properties.Caption = "";
+            this.TraLaiCheckEdit.Size = new System.Drawing.Size(336, 19);
+            this.TraLaiCheckEdit.StyleController = this.layoutControl1;
+            this.TraLaiCheckEdit.TabIndex = 8;
+            // 
+            // QuayHangLookupEdit
+            // 
+            this.QuayHangLookupEdit.Location = new System.Drawing.Point(12, 176);
+            this.QuayHangLookupEdit.Name = "QuayHangLookupEdit";
+            this.QuayHangLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.QuayHangLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.QuayHangLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.QuayHangLookupEdit.Size = new System.Drawing.Size(432, 24);
+            this.QuayHangLookupEdit.StyleController = this.layoutControl1;
+            this.QuayHangLookupEdit.TabIndex = 7;
+            // 
+            // NhaCungCapLookupEdit
+            // 
+            this.NhaCungCapLookupEdit.Location = new System.Drawing.Point(12, 128);
+            this.NhaCungCapLookupEdit.Name = "NhaCungCapLookupEdit";
+            this.NhaCungCapLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.NhaCungCapLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.NhaCungCapLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NhaCungCapLookupEdit.Size = new System.Drawing.Size(432, 24);
+            this.NhaCungCapLookupEdit.StyleController = this.layoutControl1;
+            this.NhaCungCapLookupEdit.TabIndex = 6;
+            // 
+            // LoaiHangHoaLookupEdit
+            // 
+            this.LoaiHangHoaLookupEdit.Location = new System.Drawing.Point(12, 80);
+            this.LoaiHangHoaLookupEdit.Name = "LoaiHangHoaLookupEdit";
+            this.LoaiHangHoaLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.LoaiHangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.LoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LoaiHangHoaLookupEdit.Size = new System.Drawing.Size(432, 24);
+            this.LoaiHangHoaLookupEdit.StyleController = this.layoutControl1;
+            this.LoaiHangHoaLookupEdit.TabIndex = 5;
+            // 
+            // TenHangHoaTextBox
+            // 
+            this.TenHangHoaTextBox.Location = new System.Drawing.Point(12, 32);
+            this.TenHangHoaTextBox.Name = "TenHangHoaTextBox";
+            this.TenHangHoaTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.TenHangHoaTextBox.Properties.Appearance.Options.UseFont = true;
+            this.TenHangHoaTextBox.Size = new System.Drawing.Size(432, 24);
+            this.TenHangHoaTextBox.StyleController = this.layoutControl1;
+            this.TenHangHoaTextBox.TabIndex = 4;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -103,16 +190,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlGroup1.Size = new System.Drawing.Size(456, 332);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // TenHangHoaTextBox
-            // 
-            this.TenHangHoaTextBox.Location = new System.Drawing.Point(12, 32);
-            this.TenHangHoaTextBox.Name = "TenHangHoaTextBox";
-            this.TenHangHoaTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.TenHangHoaTextBox.Properties.Appearance.Options.UseFont = true;
-            this.TenHangHoaTextBox.Size = new System.Drawing.Size(432, 24);
-            this.TenHangHoaTextBox.StyleController = this.layoutControl1;
-            this.TenHangHoaTextBox.TabIndex = 4;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,18 +201,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1.Text = "Tên Hàng Hóa";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(93, 17);
-            // 
-            // LoaiHangHoaLookupEdit
-            // 
-            this.LoaiHangHoaLookupEdit.Location = new System.Drawing.Point(12, 80);
-            this.LoaiHangHoaLookupEdit.Name = "LoaiHangHoaLookupEdit";
-            this.LoaiHangHoaLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.LoaiHangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
-            this.LoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LoaiHangHoaLookupEdit.Size = new System.Drawing.Size(432, 24);
-            this.LoaiHangHoaLookupEdit.StyleController = this.layoutControl1;
-            this.LoaiHangHoaLookupEdit.TabIndex = 5;
             // 
             // layoutControlItem2
             // 
@@ -149,18 +214,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(93, 17);
             // 
-            // NhaCungCapLookupEdit
-            // 
-            this.NhaCungCapLookupEdit.Location = new System.Drawing.Point(12, 128);
-            this.NhaCungCapLookupEdit.Name = "NhaCungCapLookupEdit";
-            this.NhaCungCapLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.NhaCungCapLookupEdit.Properties.Appearance.Options.UseFont = true;
-            this.NhaCungCapLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.NhaCungCapLookupEdit.Size = new System.Drawing.Size(432, 24);
-            this.NhaCungCapLookupEdit.StyleController = this.layoutControl1;
-            this.NhaCungCapLookupEdit.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,18 +225,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem3.Text = "Nhà Cung Cấp";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(93, 17);
-            // 
-            // QuayHangLookupEdit
-            // 
-            this.QuayHangLookupEdit.Location = new System.Drawing.Point(12, 176);
-            this.QuayHangLookupEdit.Name = "QuayHangLookupEdit";
-            this.QuayHangLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.QuayHangLookupEdit.Properties.Appearance.Options.UseFont = true;
-            this.QuayHangLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.QuayHangLookupEdit.Size = new System.Drawing.Size(432, 24);
-            this.QuayHangLookupEdit.StyleController = this.layoutControl1;
-            this.QuayHangLookupEdit.TabIndex = 7;
             // 
             // layoutControlItem4
             // 
@@ -197,17 +238,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 17);
             // 
-            // TraLaiCheckEdit
-            // 
-            this.TraLaiCheckEdit.Location = new System.Drawing.Point(108, 204);
-            this.TraLaiCheckEdit.Name = "TraLaiCheckEdit";
-            this.TraLaiCheckEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TraLaiCheckEdit.Properties.Appearance.Options.UseFont = true;
-            this.TraLaiCheckEdit.Properties.Caption = "";
-            this.TraLaiCheckEdit.Size = new System.Drawing.Size(336, 19);
-            this.TraLaiCheckEdit.StyleController = this.layoutControl1;
-            this.TraLaiCheckEdit.TabIndex = 8;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,21 +248,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem5.Size = new System.Drawing.Size(436, 23);
             this.layoutControlItem5.Text = "Có Thể Trả Lại";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(93, 17);
-            // 
-            // GiaNhapVaoNummeric
-            // 
-            this.GiaNhapVaoNummeric.Location = new System.Drawing.Point(12, 247);
-            this.GiaNhapVaoNummeric.Name = "GiaNhapVaoNummeric";
-            this.GiaNhapVaoNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.GiaNhapVaoNummeric.Properties.Appearance.Options.UseFont = true;
-            this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatString = "n";
-            this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.GiaNhapVaoNummeric.Properties.Mask.EditMask = "n";
-            this.GiaNhapVaoNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.GiaNhapVaoNummeric.Properties.NullText = "0.00";
-            this.GiaNhapVaoNummeric.Size = new System.Drawing.Size(432, 24);
-            this.GiaNhapVaoNummeric.StyleController = this.layoutControl1;
-            this.GiaNhapVaoNummeric.TabIndex = 9;
             // 
             // layoutControlItem6
             // 
@@ -245,21 +260,6 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem6.Text = "Giá Nhập Vào";
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 17);
-            // 
-            // GiaBanRaNummeric
-            // 
-            this.GiaBanRaNummeric.Location = new System.Drawing.Point(12, 295);
-            this.GiaBanRaNummeric.Name = "GiaBanRaNummeric";
-            this.GiaBanRaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.GiaBanRaNummeric.Properties.Appearance.Options.UseFont = true;
-            this.GiaBanRaNummeric.Properties.DisplayFormat.FormatString = "n";
-            this.GiaBanRaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.GiaBanRaNummeric.Properties.Mask.EditMask = "n";
-            this.GiaBanRaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.GiaBanRaNummeric.Properties.NullText = "0.00";
-            this.GiaBanRaNummeric.Size = new System.Drawing.Size(432, 24);
-            this.GiaBanRaNummeric.StyleController = this.layoutControl1;
-            this.GiaBanRaNummeric.TabIndex = 10;
             // 
             // layoutControlItem7
             // 
@@ -309,23 +309,23 @@ namespace QuanLySieuThi.HangHoa
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HangHoaEditForm";
-            this.Text = "HangHoaEditForm";
+            this.Text = "HÀNG HÓA";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TraLaiCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GiaNhapVaoNummeric.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GiaBanRaNummeric.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GiaNhapVaoNummeric.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TraLaiCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuayHangLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TenHangHoaTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 

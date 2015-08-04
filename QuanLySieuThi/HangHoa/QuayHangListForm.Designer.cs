@@ -56,18 +56,20 @@ namespace QuanLySieuThi.HangHoa
             | System.Windows.Forms.AnchorStyles.Right)));
             this.layoutControl1.Controls.Add(this.QuayHangGridControl);
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(723, 289);
+            this.layoutControl1.Size = new System.Drawing.Size(964, 378);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // QuayHangGridControl
             // 
+            this.QuayHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.QuayHangGridControl.Location = new System.Drawing.Point(12, 12);
             this.QuayHangGridControl.MainView = this.GridView1;
             this.QuayHangGridControl.Name = "QuayHangGridControl";
-            this.QuayHangGridControl.Size = new System.Drawing.Size(699, 265);
+            this.QuayHangGridControl.Size = new System.Drawing.Size(940, 354);
             this.QuayHangGridControl.TabIndex = 4;
             this.QuayHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridView1});
@@ -92,7 +94,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // TenQuayHangColumn
             // 
-            this.TenQuayHangColumn.Caption = "Ten Quay Hang";
+            this.TenQuayHangColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenQuayHangColumn.AppearanceCell.Options.UseFont = true;
+            this.TenQuayHangColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenQuayHangColumn.AppearanceHeader.Options.UseFont = true;
+            this.TenQuayHangColumn.Caption = "Tên Quầy Hàng";
             this.TenQuayHangColumn.FieldName = "TenQuay";
             this.TenQuayHangColumn.Name = "TenQuayHangColumn";
             this.TenQuayHangColumn.OptionsColumn.AllowEdit = false;
@@ -109,7 +115,7 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 289);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(964, 378);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -117,42 +123,45 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1.Control = this.QuayHangGridControl;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(703, 269);
+            this.layoutControlItem1.Size = new System.Drawing.Size(944, 358);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // CancelButtonControl
             // 
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
-            this.CancelButtonControl.Location = new System.Drawing.Point(12, 292);
+            this.CancelButtonControl.Location = new System.Drawing.Point(16, 382);
+            this.CancelButtonControl.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.Size = new System.Drawing.Size(160, 39);
             this.CancelButtonControl.TabIndex = 1;
-            this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Appearance.Options.UseFont = true;
-            this.DeleteButton.Location = new System.Drawing.Point(138, 292);
+            this.DeleteButton.Location = new System.Drawing.Point(184, 382);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
+            this.DeleteButton.Size = new System.Drawing.Size(160, 39);
             this.DeleteButton.TabIndex = 2;
-            this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OKButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
-            this.OKButton.Location = new System.Drawing.Point(591, 292);
+            this.OKButton.Location = new System.Drawing.Point(788, 382);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 30);
+            this.OKButton.Size = new System.Drawing.Size(160, 39);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -160,41 +169,45 @@ namespace QuanLySieuThi.HangHoa
             // EditButton
             // 
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(465, 292);
+            this.EditButton.Location = new System.Drawing.Point(620, 382);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(4);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 30);
+            this.EditButton.Size = new System.Drawing.Size(160, 39);
             this.EditButton.TabIndex = 4;
-            this.EditButton.Text = "Sua";
+            this.EditButton.Text = "Sửa";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(339, 292);
+            this.AddButton.Location = new System.Drawing.Point(452, 382);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 30);
+            this.AddButton.Size = new System.Drawing.Size(160, 39);
             this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Them";
+            this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // QuayHangListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 334);
+            this.ClientSize = new System.Drawing.Size(964, 437);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Name = "QuayHangListForm";
-            this.Text = "Quay Hang";
+            this.Text = "QUẦY HÀNG";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QuayHangGridControl)).EndInit();

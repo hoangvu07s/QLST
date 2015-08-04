@@ -31,27 +31,27 @@ namespace QuanLySieuThi.Kho
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.SoDienThoaiTextBox = new Common.Controls.QTextBoxControl();
+            this.DiaChiTextBox = new Common.Controls.QTextBoxControl();
             this.TenNhanVienLookupEdit = new Common.Controls.QLookupEditControl();
             this.TenKhoHangTextBox = new Common.Controls.QTextBoxControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DiaChiTextBox = new Common.Controls.QTextBoxControl();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SoDienThoaiTextBox = new Common.Controls.QTextBoxControl();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoDienThoaiTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TenNhanVienLookupEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TenKhoHangTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoDienThoaiTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,26 @@ namespace QuanLySieuThi.Kho
             this.layoutControl1.Size = new System.Drawing.Size(456, 218);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // SoDienThoaiTextBox
+            // 
+            this.SoDienThoaiTextBox.Location = new System.Drawing.Point(12, 176);
+            this.SoDienThoaiTextBox.Name = "SoDienThoaiTextBox";
+            this.SoDienThoaiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SoDienThoaiTextBox.Properties.Appearance.Options.UseFont = true;
+            this.SoDienThoaiTextBox.Size = new System.Drawing.Size(432, 24);
+            this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
+            this.SoDienThoaiTextBox.TabIndex = 7;
+            // 
+            // DiaChiTextBox
+            // 
+            this.DiaChiTextBox.Location = new System.Drawing.Point(12, 128);
+            this.DiaChiTextBox.Name = "DiaChiTextBox";
+            this.DiaChiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DiaChiTextBox.Properties.Appearance.Options.UseFont = true;
+            this.DiaChiTextBox.Size = new System.Drawing.Size(432, 24);
+            this.DiaChiTextBox.StyleController = this.layoutControl1;
+            this.DiaChiTextBox.TabIndex = 6;
             // 
             // TenNhanVienLookupEdit
             // 
@@ -131,16 +151,6 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(176, 17);
             // 
-            // DiaChiTextBox
-            // 
-            this.DiaChiTextBox.Location = new System.Drawing.Point(12, 128);
-            this.DiaChiTextBox.Name = "DiaChiTextBox";
-            this.DiaChiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.DiaChiTextBox.Properties.Appearance.Options.UseFont = true;
-            this.DiaChiTextBox.Size = new System.Drawing.Size(432, 24);
-            this.DiaChiTextBox.StyleController = this.layoutControl1;
-            this.DiaChiTextBox.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,16 +162,6 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem3.Text = "Địa Chỉ";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(176, 17);
-            // 
-            // SoDienThoaiTextBox
-            // 
-            this.SoDienThoaiTextBox.Location = new System.Drawing.Point(12, 176);
-            this.SoDienThoaiTextBox.Name = "SoDienThoaiTextBox";
-            this.SoDienThoaiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.SoDienThoaiTextBox.Properties.Appearance.Options.UseFont = true;
-            this.SoDienThoaiTextBox.Size = new System.Drawing.Size(432, 24);
-            this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
-            this.SoDienThoaiTextBox.TabIndex = 7;
             // 
             // layoutControlItem4
             // 
@@ -211,17 +211,17 @@ namespace QuanLySieuThi.Kho
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhoHangEditForm";
-            this.Text = "Kho Hàng Edit Form";
+            this.Text = "KHO HÀNG";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SoDienThoaiTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TenNhanVienLookupEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TenKhoHangTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoDienThoaiTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 

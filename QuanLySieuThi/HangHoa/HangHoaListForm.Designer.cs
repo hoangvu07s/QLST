@@ -68,7 +68,7 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(723, 294);
+            this.layoutControl1.Size = new System.Drawing.Size(920, 294);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -79,7 +79,7 @@ namespace QuanLySieuThi.HangHoa
             this.HangHoaGridControl.Name = "HangHoaGridControl";
             this.HangHoaGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.TraLaiItemCheckEdit});
-            this.HangHoaGridControl.Size = new System.Drawing.Size(699, 270);
+            this.HangHoaGridControl.Size = new System.Drawing.Size(896, 270);
             this.HangHoaGridControl.TabIndex = 4;
             this.HangHoaGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridView1});
@@ -119,6 +119,7 @@ namespace QuanLySieuThi.HangHoa
             this.TenHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenHangHoaColumn.Visible = true;
             this.TenHangHoaColumn.VisibleIndex = 0;
+            this.TenHangHoaColumn.Width = 103;
             // 
             // LoaiHangHoaColumn
             // 
@@ -129,6 +130,7 @@ namespace QuanLySieuThi.HangHoa
             this.LoaiHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.LoaiHangHoaColumn.Visible = true;
             this.LoaiHangHoaColumn.VisibleIndex = 1;
+            this.LoaiHangHoaColumn.Width = 112;
             // 
             // NhaCungCapColumn
             // 
@@ -139,6 +141,7 @@ namespace QuanLySieuThi.HangHoa
             this.NhaCungCapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NhaCungCapColumn.Visible = true;
             this.NhaCungCapColumn.VisibleIndex = 2;
+            this.NhaCungCapColumn.Width = 113;
             // 
             // QuayHangColumn
             // 
@@ -149,6 +152,7 @@ namespace QuanLySieuThi.HangHoa
             this.QuayHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.QuayHangColumn.Visible = true;
             this.QuayHangColumn.VisibleIndex = 3;
+            this.QuayHangColumn.Width = 105;
             // 
             // SoLuongTonQuayColumn
             // 
@@ -159,6 +163,7 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongTonQuayColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongTonQuayColumn.Visible = true;
             this.SoLuongTonQuayColumn.VisibleIndex = 4;
+            this.SoLuongTonQuayColumn.Width = 123;
             // 
             // CoTheTraLaiColumn
             // 
@@ -185,6 +190,7 @@ namespace QuanLySieuThi.HangHoa
             this.GiaNhapVaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.GiaNhapVaoColumn.Visible = true;
             this.GiaNhapVaoColumn.VisibleIndex = 6;
+            this.GiaNhapVaoColumn.Width = 94;
             // 
             // GiaBanRaColumn
             // 
@@ -195,6 +201,7 @@ namespace QuanLySieuThi.HangHoa
             this.GiaBanRaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.GiaBanRaColumn.Visible = true;
             this.GiaBanRaColumn.VisibleIndex = 7;
+            this.GiaBanRaColumn.Width = 90;
             // 
             // HinhAnhColumn
             // 
@@ -214,7 +221,7 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(723, 294);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(920, 294);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -222,7 +229,7 @@ namespace QuanLySieuThi.HangHoa
             this.layoutControlItem1.Control = this.HangHoaGridControl;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(703, 274);
+            this.layoutControlItem1.Size = new System.Drawing.Size(900, 274);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -255,7 +262,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(339, 292);
+            this.AddButton.Location = new System.Drawing.Point(536, 292);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 3;
@@ -267,7 +274,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(465, 292);
+            this.EditButton.Location = new System.Drawing.Point(662, 292);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
@@ -279,7 +286,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.OKButton.Appearance.Options.UseFont = true;
-            this.OKButton.Location = new System.Drawing.Point(591, 292);
+            this.OKButton.Location = new System.Drawing.Point(788, 292);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 5;
@@ -290,7 +297,7 @@ namespace QuanLySieuThi.HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 334);
+            this.ClientSize = new System.Drawing.Size(920, 334);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.AddButton);
@@ -298,7 +305,7 @@ namespace QuanLySieuThi.HangHoa
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Name = "HangHoaListForm";
-            this.Text = "Hàng Hóa";
+            this.Text = "HÀNG HÓA";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HangHoaGridControl)).EndInit();

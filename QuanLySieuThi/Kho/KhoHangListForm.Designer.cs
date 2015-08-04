@@ -67,7 +67,7 @@ namespace QuanLySieuThi.Kho
             // 
             // KhoGridControl
             // 
-            this.KhoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KhoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.KhoGridControl.Location = new System.Drawing.Point(12, 12);
             this.KhoGridControl.MainView = this.KhoGridView;
             this.KhoGridControl.Name = "KhoGridControl";
@@ -116,6 +116,7 @@ namespace QuanLySieuThi.Kho
             this.TenQuanLyKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenQuanLyKhoColumn.Visible = true;
             this.TenQuanLyKhoColumn.VisibleIndex = 1;
+            this.TenQuanLyKhoColumn.Width = 177;
             // 
             // DiaChiColumn
             // 
@@ -126,6 +127,7 @@ namespace QuanLySieuThi.Kho
             this.DiaChiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DiaChiColumn.Visible = true;
             this.DiaChiColumn.VisibleIndex = 2;
+            this.DiaChiColumn.Width = 108;
             // 
             // SoDienThoaiColumn
             // 
@@ -136,6 +138,7 @@ namespace QuanLySieuThi.Kho
             this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoDienThoaiColumn.Visible = true;
             this.SoDienThoaiColumn.VisibleIndex = 3;
+            this.SoDienThoaiColumn.Width = 140;
             // 
             // layoutControlGroup1
             // 
@@ -231,7 +234,7 @@ namespace QuanLySieuThi.Kho
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "KhoHangListForm";
-            this.Text = "Kho Hàng";
+            this.Text = "KHO HÀNG";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KhoGridControl)).EndInit();

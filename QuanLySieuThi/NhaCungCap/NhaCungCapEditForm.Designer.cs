@@ -70,60 +70,61 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControl1.Controls.Add(this.TenCongTyTextBox);
             this.layoutControl1.Controls.Add(this.TenNhaCungCapTextBox);
             this.layoutControl1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControl1.Location = new System.Drawing.Point(2, 1);
+            this.layoutControl1.Location = new System.Drawing.Point(3, 1);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(453, 286);
+            this.layoutControl1.Size = new System.Drawing.Size(604, 261);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(12, 247);
+            this.EmailTextBox.Location = new System.Drawing.Point(12, 224);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.EmailTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTextBox.Properties.Appearance.Options.UseFont = true;
-            this.EmailTextBox.Size = new System.Drawing.Size(429, 26);
+            this.EmailTextBox.Size = new System.Drawing.Size(580, 24);
             this.EmailTextBox.StyleController = this.layoutControl1;
             this.EmailTextBox.TabIndex = 8;
             // 
             // SoDienThoaiTextBox
             // 
-            this.SoDienThoaiTextBox.Location = new System.Drawing.Point(12, 194);
+            this.SoDienThoaiTextBox.Location = new System.Drawing.Point(12, 176);
             this.SoDienThoaiTextBox.Name = "SoDienThoaiTextBox";
-            this.SoDienThoaiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.SoDienThoaiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoDienThoaiTextBox.Properties.Appearance.Options.UseFont = true;
-            this.SoDienThoaiTextBox.Size = new System.Drawing.Size(429, 26);
+            this.SoDienThoaiTextBox.Size = new System.Drawing.Size(580, 24);
             this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
             this.SoDienThoaiTextBox.TabIndex = 7;
             // 
             // DiaChiTextBox
             // 
-            this.DiaChiTextBox.Location = new System.Drawing.Point(12, 141);
+            this.DiaChiTextBox.Location = new System.Drawing.Point(12, 128);
             this.DiaChiTextBox.Name = "DiaChiTextBox";
-            this.DiaChiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DiaChiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiaChiTextBox.Properties.Appearance.Options.UseFont = true;
-            this.DiaChiTextBox.Size = new System.Drawing.Size(429, 26);
+            this.DiaChiTextBox.Size = new System.Drawing.Size(580, 24);
             this.DiaChiTextBox.StyleController = this.layoutControl1;
             this.DiaChiTextBox.TabIndex = 6;
             // 
             // TenCongTyTextBox
             // 
-            this.TenCongTyTextBox.Location = new System.Drawing.Point(12, 88);
+            this.TenCongTyTextBox.Location = new System.Drawing.Point(12, 80);
             this.TenCongTyTextBox.Name = "TenCongTyTextBox";
-            this.TenCongTyTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.TenCongTyTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenCongTyTextBox.Properties.Appearance.Options.UseFont = true;
-            this.TenCongTyTextBox.Size = new System.Drawing.Size(429, 26);
+            this.TenCongTyTextBox.Size = new System.Drawing.Size(580, 24);
             this.TenCongTyTextBox.StyleController = this.layoutControl1;
             this.TenCongTyTextBox.TabIndex = 5;
             // 
             // TenNhaCungCapTextBox
             // 
-            this.TenNhaCungCapTextBox.Location = new System.Drawing.Point(12, 35);
+            this.TenNhaCungCapTextBox.Location = new System.Drawing.Point(12, 32);
             this.TenNhaCungCapTextBox.Name = "TenNhaCungCapTextBox";
-            this.TenNhaCungCapTextBox.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.TenNhaCungCapTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenNhaCungCapTextBox.Properties.Appearance.Options.UseFont = true;
-            this.TenNhaCungCapTextBox.Size = new System.Drawing.Size(429, 26);
+            this.TenNhaCungCapTextBox.Size = new System.Drawing.Size(580, 24);
             this.TenNhaCungCapTextBox.StyleController = this.layoutControl1;
             this.TenNhaCungCapTextBox.TabIndex = 4;
             // 
@@ -139,103 +140,108 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem5});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(453, 286);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(604, 261);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.Control = this.TenNhaCungCapTextBox;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(433, 53);
-            this.layoutControlItem1.Text = "Ten Nha Cung Cap";
+            this.layoutControlItem1.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem1.Text = "Tên Nhà Cung Cấp";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(123, 20);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(115, 17);
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.TenCongTyTextBox;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 53);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(433, 53);
-            this.layoutControlItem2.Text = "Ten Cong Ty";
+            this.layoutControlItem2.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem2.Text = "Tên Công Ty";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(123, 20);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(115, 17);
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.DiaChiTextBox;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 106);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(433, 53);
-            this.layoutControlItem3.Text = "Dia Chi";
+            this.layoutControlItem3.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem3.Text = "Địa Chỉ";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(123, 20);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(115, 17);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.SoDienThoaiTextBox;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 159);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(433, 53);
-            this.layoutControlItem4.Text = "So Dien Thoai";
+            this.layoutControlItem4.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem4.Text = "Số Điện Thoại";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(123, 20);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(115, 17);
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem5.Control = this.EmailTextBox;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 212);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(433, 54);
+            this.layoutControlItem5.Size = new System.Drawing.Size(584, 49);
             this.layoutControlItem5.Text = "Email";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(123, 20);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(115, 17);
             // 
             // CancelButtonControl
             // 
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
-            this.CancelButtonControl.Location = new System.Drawing.Point(14, 291);
+            this.CancelButtonControl.Location = new System.Drawing.Point(19, 268);
+            this.CancelButtonControl.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.Size = new System.Drawing.Size(160, 39);
             this.CancelButtonControl.TabIndex = 1;
-            this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OKButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
-            this.OKButton.Location = new System.Drawing.Point(323, 291);
+            this.OKButton.Location = new System.Drawing.Point(431, 268);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 30);
+            this.OKButton.Size = new System.Drawing.Size(160, 39);
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // NhaCungCapEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 330);
+            this.ClientSize = new System.Drawing.Size(608, 319);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
+            this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhaCungCapEditForm";
-            this.Text = "Nha Cung Cap Edit Form";
+            this.Text = "NHÀ CUNG CẤP";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextBox.Properties)).EndInit();

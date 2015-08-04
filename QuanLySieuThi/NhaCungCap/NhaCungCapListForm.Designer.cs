@@ -62,17 +62,17 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControl1.Location = new System.Drawing.Point(-1, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(722, 299);
+            this.layoutControl1.Size = new System.Drawing.Size(722, 254);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // NhaCungCapGridControl
             // 
-            this.NhaCungCapGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NhaCungCapGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.NhaCungCapGridControl.Location = new System.Drawing.Point(12, 12);
             this.NhaCungCapGridControl.MainView = this.GridView1;
             this.NhaCungCapGridControl.Name = "NhaCungCapGridControl";
-            this.NhaCungCapGridControl.Size = new System.Drawing.Size(698, 275);
+            this.NhaCungCapGridControl.Size = new System.Drawing.Size(698, 230);
             this.NhaCungCapGridControl.TabIndex = 4;
             this.NhaCungCapGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridView1});
@@ -101,7 +101,11 @@ namespace QuanLySieuThi.NhaCungCap
             // 
             // TenNhaCungCapColumn
             // 
-            this.TenNhaCungCapColumn.Caption = "Ten Nha Cung Cap";
+            this.TenNhaCungCapColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenNhaCungCapColumn.AppearanceCell.Options.UseFont = true;
+            this.TenNhaCungCapColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenNhaCungCapColumn.AppearanceHeader.Options.UseFont = true;
+            this.TenNhaCungCapColumn.Caption = "Tên Nhà Cung Cấp";
             this.TenNhaCungCapColumn.FieldName = "TenNhaCungCap";
             this.TenNhaCungCapColumn.Name = "TenNhaCungCapColumn";
             this.TenNhaCungCapColumn.OptionsColumn.AllowEdit = false;
@@ -112,7 +116,11 @@ namespace QuanLySieuThi.NhaCungCap
             // 
             // TenCongTyColumn
             // 
-            this.TenCongTyColumn.Caption = "Ten Cong Ty";
+            this.TenCongTyColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenCongTyColumn.AppearanceCell.Options.UseFont = true;
+            this.TenCongTyColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenCongTyColumn.AppearanceHeader.Options.UseFont = true;
+            this.TenCongTyColumn.Caption = "Tên Công Ty";
             this.TenCongTyColumn.FieldName = "TenCongTy";
             this.TenCongTyColumn.Name = "TenCongTyColumn";
             this.TenCongTyColumn.OptionsColumn.AllowEdit = false;
@@ -123,7 +131,11 @@ namespace QuanLySieuThi.NhaCungCap
             // 
             // DiaChiColumn
             // 
-            this.DiaChiColumn.Caption = "Dia Chi";
+            this.DiaChiColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaChiColumn.AppearanceCell.Options.UseFont = true;
+            this.DiaChiColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaChiColumn.AppearanceHeader.Options.UseFont = true;
+            this.DiaChiColumn.Caption = "Địa Chỉ";
             this.DiaChiColumn.FieldName = "DiaChi";
             this.DiaChiColumn.Name = "DiaChiColumn";
             this.DiaChiColumn.OptionsColumn.AllowEdit = false;
@@ -134,7 +146,11 @@ namespace QuanLySieuThi.NhaCungCap
             // 
             // SoDienThoaiColumn
             // 
-            this.SoDienThoaiColumn.Caption = "So Dien Thoai";
+            this.SoDienThoaiColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoDienThoaiColumn.AppearanceCell.Options.UseFont = true;
+            this.SoDienThoaiColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoDienThoaiColumn.AppearanceHeader.Options.UseFont = true;
+            this.SoDienThoaiColumn.Caption = "Số Điện Thoại";
             this.SoDienThoaiColumn.FieldName = "SoDienThoai";
             this.SoDienThoaiColumn.Name = "SoDienThoaiColumn";
             this.SoDienThoaiColumn.OptionsColumn.AllowEdit = false;
@@ -145,6 +161,10 @@ namespace QuanLySieuThi.NhaCungCap
             // 
             // EmailColumn
             // 
+            this.EmailColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailColumn.AppearanceCell.Options.UseFont = true;
+            this.EmailColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailColumn.AppearanceHeader.Options.UseFont = true;
             this.EmailColumn.Caption = "Email";
             this.EmailColumn.FieldName = "Email";
             this.EmailColumn.Name = "EmailColumn";
@@ -162,7 +182,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(722, 299);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(722, 254);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -170,42 +190,42 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem1.Control = this.NhaCungCapGridControl;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(702, 279);
+            this.layoutControlItem1.Size = new System.Drawing.Size(702, 234);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // CancelButtonControl
             // 
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
-            this.CancelButtonControl.Location = new System.Drawing.Point(12, 293);
+            this.CancelButtonControl.Location = new System.Drawing.Point(12, 249);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
             this.CancelButtonControl.TabIndex = 1;
-            this.CancelButtonControl.Text = "Thoat";
+            this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Appearance.Options.UseFont = true;
-            this.DeleteButton.Location = new System.Drawing.Point(138, 293);
+            this.DeleteButton.Location = new System.Drawing.Point(138, 249);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
+            this.DeleteButton.Size = new System.Drawing.Size(120, 26);
             this.DeleteButton.TabIndex = 2;
-            this.DeleteButton.Text = "Xoa";
+            this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OKButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
-            this.OKButton.Location = new System.Drawing.Point(589, 293);
+            this.OKButton.Location = new System.Drawing.Point(589, 249);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 30);
+            this.OKButton.Size = new System.Drawing.Size(120, 26);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -213,42 +233,42 @@ namespace QuanLySieuThi.NhaCungCap
             // EditButton
             // 
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(463, 293);
+            this.EditButton.Location = new System.Drawing.Point(463, 249);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 30);
+            this.EditButton.Size = new System.Drawing.Size(120, 26);
             this.EditButton.TabIndex = 4;
-            this.EditButton.Text = "Sua";
+            this.EditButton.Text = "Sửa";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(337, 293);
+            this.AddButton.Location = new System.Drawing.Point(337, 249);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 30);
+            this.AddButton.Size = new System.Drawing.Size(120, 26);
             this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Them";
+            this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // NhaCungCapListForm
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 334);
+            this.ClientSize = new System.Drawing.Size(723, 284);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
-            this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "NhaCungCapListForm";
-            this.Text = "Nha Cung Cap";
+            this.Text = "NHÀ CUNG CẤP";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapGridControl)).EndInit();
