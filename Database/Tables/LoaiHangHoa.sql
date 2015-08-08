@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[LoaiHangHoa]
 (
 	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
-    [TenLoaiHangHoa] VARCHAR(255) NOT NULL, 
+    [TenLoaiHangHoa] NVARCHAR(255) NOT NULL, 
     [ChungLoaiId] BIGINT NOT NULL,
 	[NgayTao] DATETIME2 NULL DEFAULT SYSDATETIME(), 
     [NguoiTaoId] BIGINT NULL,  

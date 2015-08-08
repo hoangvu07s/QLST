@@ -4,7 +4,7 @@
 	[HangHoaId] BIGINT NOT NULL,
 	[SoLuong] INT NOT NULL,
 	[DonGia] DECIMAL(18,0) NOT NULL, 
-	[TinhTrang] VARCHAR(255) NULL,
+	[TinhTrang] NVARCHAR(255) NULL,
     [ChietKhauPhanTram] DECIMAL NULL,
 	PRIMARY KEY([DoiTraHangHoaId], [HangHoaId]),
 	CONSTRAINT [FK_CTDoiTraHangHoa_DoiTraHangHoaId] FOREIGN KEY ([DoiTraHangHoaId]) REFERENCES [DoiTraHangHoa]([DoiTraHangHoaId]),
