@@ -99,13 +99,13 @@ namespace QuanLySieuThi.HangHoa
                     {
                         quayHang.NgayChinhSua = DateTime.Now;
                         quayHang.NgayTao = DateTime.Now;
-                        quayHang.NguoiChinhSuaId = CurrentUserId;
-                        quayHang.NguoiTaoId = CurrentUserId;
+                        quayHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        quayHang.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     }
                     else
                     {
                         quayHang.NgayChinhSua = DateTime.Now;
-                        quayHang.NguoiChinhSuaId = CurrentUserId;
+                        quayHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
                     quayHang.HoatDong = true;

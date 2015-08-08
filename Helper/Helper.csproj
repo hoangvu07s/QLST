@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CryptographyManager.cs" />
+    <Compile Include="CurrentFormInfo.cs" />
     <Compile Include="DataBinding.cs" />
     <Compile Include="Enum\TrangThaiDonHangType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

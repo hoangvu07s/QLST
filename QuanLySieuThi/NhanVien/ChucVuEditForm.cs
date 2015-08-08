@@ -90,13 +90,13 @@ namespace QuanLySieuThi.NhanVien
                     {
                         chucVu.NgayChinhSua = DateTime.Now;
                         chucVu.NgayTao = DateTime.Now;
-                        chucVu.NguoiChinhSuaId = CurrentUserId;
-                        chucVu.NguoiTaoId = CurrentUserId;
+                        chucVu.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        chucVu.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     }
                     else
                     {
                         chucVu.NgayChinhSua = DateTime.Now;
-                        chucVu.NguoiChinhSuaId = CurrentUserId;
+                        chucVu.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
                     chucVu.HoatDong = true;}

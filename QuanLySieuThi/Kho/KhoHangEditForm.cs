@@ -107,13 +107,13 @@ namespace QuanLySieuThi.Kho
                     {
                         khoHang.NgayChinhSua = DateTime.Now;
                         khoHang.NgayTao = DateTime.Now;
-                        khoHang.NguoiChinhSuaId = CurrentUserId;
-                        khoHang.NguoiTaoId = CurrentUserId;
+                        khoHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        khoHang.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     }
                     else
                     {
                         khoHang.NgayChinhSua = DateTime.Now;
-                        khoHang.NguoiChinhSuaId = CurrentUserId;
+                        khoHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
                     khoHang.HoatDong = true;

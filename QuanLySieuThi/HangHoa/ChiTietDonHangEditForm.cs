@@ -482,8 +482,8 @@ namespace QuanLySieuThi.HangHoa
                     donHang.TrangThaiDonHang = "Dang Cho";
                     donHang.NgayChinhSua = currentDateTime;
                     donHang.NgayTao = currentDateTime;
-                    donHang.NguoiChinhSuaId = CurrentUserId;
-                    donHang.NguoiTaoId = CurrentUserId;
+                    donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                    donHang.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     donHang.HoatDong = true;
 
                     _donHangService.Save();
@@ -504,8 +504,8 @@ namespace QuanLySieuThi.HangHoa
                             hangHoa.GiaBanRa = 0;
                             hangHoa.NgayChinhSua = currentDateTime;
                             hangHoa.NgayTao = currentDateTime;
-                            hangHoa.NguoiChinhSuaId = CurrentUserId;
-                            hangHoa.NguoiTaoId = CurrentUserId;
+                            hangHoa.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                            hangHoa.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                             hangHoa.HoatDong = true;
 
                             _hangHoaService.Save();

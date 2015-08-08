@@ -94,13 +94,13 @@ namespace QuanLySieuThi.NhaCungCap
                     {
                         nhaCungCap.NgayChinhSua = DateTime.Now;
                         nhaCungCap.NgayTao = DateTime.Now;
-                        nhaCungCap.NguoiChinhSuaId = CurrentUserId;
-                        nhaCungCap.NguoiTaoId = CurrentUserId;
+                        nhaCungCap.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        nhaCungCap.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     }
                     else
                     {
                         nhaCungCap.NgayChinhSua = DateTime.Now;
-                        nhaCungCap.NguoiChinhSuaId = CurrentUserId;
+                        nhaCungCap.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
                     nhaCungCap.HoatDong = true;

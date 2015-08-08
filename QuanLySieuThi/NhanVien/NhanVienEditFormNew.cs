@@ -127,13 +127,13 @@ namespace QuanLySieuThi.NhanVien
                     {
                         nhanVien.NgayChinhSua = DateTime.Now;
                         nhanVien.NgayTao = DateTime.Now;
-                        nhanVien.NguoiChinhSuaId = CurrentUserId;
-                        nhanVien.NguoiTaoId = CurrentUserId;
+                        nhanVien.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        nhanVien.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     }
                     else
                     {
                         nhanVien.NgayChinhSua = DateTime.Now;
-                        nhanVien.NguoiChinhSuaId = CurrentUserId;
+                        nhanVien.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
                     nhanVien.HoatDong = true;
