@@ -46,6 +46,7 @@
             this.KhoHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.NhapKhoButton = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,10 +62,11 @@
             this.QuanLyChungLoaiHangHoaButton,
             this.QuanLyDonHangButton,
             this.QuanLyKhoHangButton,
-            this.QuanLyHangHoaButton});
+            this.QuanLyHangHoaButton,
+            this.NhapKhoButton});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 10;
+            this.ribbon.MaxItemId = 11;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.nhanVienRibbonPage,
@@ -259,6 +261,7 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.QuanLyKhoHangButton);
+            this.ribbonPageGroup4.ItemLinks.Add(this.NhapKhoButton);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // ribbonStatusBar
@@ -268,6 +271,22 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
+            // 
+            // NhapKhoButton
+            // 
+            this.NhapKhoButton.Caption = "Nhập Kho";
+            this.NhapKhoButton.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.NhapKhoButton.Id = 10;
+            this.NhapKhoButton.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhapKhoButton.ItemAppearance.Disabled.Options.UseFont = true;
+            this.NhapKhoButton.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhapKhoButton.ItemAppearance.Hovered.Options.UseFont = true;
+            this.NhapKhoButton.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhapKhoButton.ItemAppearance.Normal.Options.UseFont = true;
+            this.NhapKhoButton.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhapKhoButton.ItemAppearance.Pressed.Options.UseFont = true;
+            this.NhapKhoButton.Name = "NhapKhoButton";
+            this.NhapKhoButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapKhoButton_ItemClick);
             // 
             // MainForm
             // 
@@ -309,5 +328,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage KhoHangRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem QuanLyHangHoaButton;
+        private DevExpress.XtraBars.BarButtonItem NhapKhoButton;
     }
 }
