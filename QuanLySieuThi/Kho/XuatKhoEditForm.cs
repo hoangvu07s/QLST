@@ -66,6 +66,7 @@ namespace QuanLySieuThi.Kho
                 KhoHangLookupEdit.Properties.DataSource = khoHangs;
                 KhoHangLookupEdit.Properties.DisplayMember = "TenKho";
                 KhoHangLookupEdit.Properties.ValueMember = "Id";
+                KhoHangLookupEdit.Properties.Columns.Clear();
                 KhoHangLookupEdit.Properties.Columns.Add(new LookUpColumnInfo("TenKho"));
             }
             catch (Exception ex)
@@ -81,6 +82,7 @@ namespace QuanLySieuThi.Kho
                 HangHoaLookupEdit.Properties.DataSource = hangHoas;
                 HangHoaLookupEdit.Properties.DisplayMember = "TenHangHoa";
                 HangHoaLookupEdit.Properties.ValueMember = "Id";
+                HangHoaLookupEdit.Properties.Columns.Clear();
                 HangHoaLookupEdit.Properties.Columns.Add(new LookUpColumnInfo("TenHangHoa"));
             }
             catch (Exception ex)
