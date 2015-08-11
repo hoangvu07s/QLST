@@ -25,6 +25,8 @@ namespace QuanLySieuThi.Kho
         private readonly ChiTietDonHangService _chiTietDonHangService;
         private readonly ChiTietNhapKhoService _chiTietNhapKhoService;
         private readonly DonHangService _donHangService;
+        private readonly TonKhoService _tonKhoService;
+
         private string _donHangId;
         private IList<ChiTietNhapKho> _chiTietNhapKhos;
 
@@ -41,6 +43,7 @@ namespace QuanLySieuThi.Kho
             _chiTietDonHangService = new ChiTietDonHangService(Entities);
             _chiTietNhapKhoService = new ChiTietNhapKhoService(Entities);
             _donHangService = new DonHangService(Entities);
+            _tonKhoService = new TonKhoService(Entities);
         }
 
         public override void LoadData(EventArgs e)
@@ -322,11 +325,11 @@ namespace QuanLySieuThi.Kho
 
                     if (soLuongInDonHang > soluongDaNhap)
                     {
-                        donHang.TrangThaiDonHang = "Chưa Hoàn Thành";
+                        donHang.TrangThaiDonHang = "Chua Hoan Thanh";
                     }
                     else if(soLuongInDonHang == soluongDaNhap)
                     {
-                        donHang.TrangThaiDonHang = "Hoàn Thành";
+                        donHang.TrangThaiDonHang = "Hoan Thanh";
                     }
 
                     donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
@@ -335,6 +338,26 @@ namespace QuanLySieuThi.Kho
                     _donHangService.Update(donHang);
 
                     _donHangService.Save();
+
+                    foreach (var chiTietNhapKho in _chiTietNhapKhos)
+                    {
+                        var tonKho = _tonKhoService.Get(KhoLookupEdit.EditValue.ToString().ToLong(),
+                            chiTietNhapKho.HangHoaId);
+                        if (tonKho == null)
+                        {
+                            tonKho = _tonKhoService.Add();
+                            tonKho.HangHoaId = chiTietNhapKho.HangHoaId;
+                            tonKho.KhoId = KhoLookupEdit.EditValue.ToString().ToLong();
+                            tonKho.SoLuongTon = chiTietNhapKho.SoLuong;
+                        }
+                        else
+                        {
+                            tonKho.SoLuongTon = tonKho.SoLuongTon + chiTietNhapKho.SoLuong;
+                        }
+
+                    }
+
+                    _tonKhoService.Save();
 
                     Close();
                 }
