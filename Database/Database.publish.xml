@@ -4,7 +4,7 @@
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseName>QuanLySieuThi</TargetDatabaseName>
     <DeployScriptFileName>Database.sql</DeployScriptFileName>
-    <TargetConnectionString>Data Source=VuDao;Persist Security Info=True;User ID=sa;Pooling=False</TargetConnectionString>
+    <TargetConnectionString>Data Source=ThanhTam;Persist Security Info=True;User ID=sa;Pooling=False</TargetConnectionString>
     <ProfileVersionNumber>1</ProfileVersionNumber>
   </PropertyGroup>
 </Project>
