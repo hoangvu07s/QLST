@@ -50,6 +50,7 @@
     <Compile Include="QuanLySieuThiHelper.cs" />
     <Compile Include="ValueObjects\ChiTietDonHang.cs" />
     <Compile Include="ValueObjects\ChiTietNhapKho.cs" />
+    <Compile Include="ValueObjects\ChiTietXuatKho.cs" />
     <Compile Include="ValueObjects\GioiTinh.cs" />
   </ItemGroup>
   <ItemGroup />

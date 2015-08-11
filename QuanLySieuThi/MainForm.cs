@@ -127,5 +127,18 @@ namespace QuanLySieuThi
             }
         }
 
+        private void XuatKhoButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var xuatKhoEditForm = new XuatKhoEditForm();
+                xuatKhoEditForm.ShowForm("OpenXuatKhoEditForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
     }
 }

@@ -74,6 +74,22 @@ namespace Service
             return null;
         }
 
+        public IList<NhapKho> Get(long khoId)
+        {
+            try
+            {
+                return
+                    Entities.NhapKhoes.Where(_ => _.KhoId == khoId && _.HoatDong.HasValue && _.HoatDong == true)
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

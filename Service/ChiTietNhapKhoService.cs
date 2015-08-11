@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Helper;
 using Model;
@@ -33,7 +34,7 @@ namespace Service
         {
             try
             {
-                return Entities.CT_NhapKho.Where(_ => _.NhapKhoId == nhapKhoId).ToList();
+                return Entities.CT_NhapKho.Where(_ => _.NhapKhoId == nhapKhoId).Include(_=>_.HangHoa).ToList();
             }
             catch (Exception ex)
             {
