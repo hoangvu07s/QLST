@@ -39,7 +39,6 @@ namespace Common.Forms
         public static Dictionary<string, Form> ListForms = new Dictionary<string, Form>();
         public object Entity { get; set; }
         public string EntityId;
-        public long? CurrentUserId { get; set; }
         public FormMode FormMode = FormMode.Add;
 
         private int _minimumSizeWidth;

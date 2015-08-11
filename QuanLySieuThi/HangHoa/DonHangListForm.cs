@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Helper;
 using Model;
@@ -17,12 +11,16 @@ namespace QuanLySieuThi.HangHoa
     {
         private DonHangService _donHangService;
         private object _sellRow;
+        private readonly bool _isSearchDonHang;
 
-        public DonHangListForm()
+        public static Guid MaDonHang;
+
+        public DonHangListForm(bool isSearchDonHang = false)
         {
             InitializeComponent();
             MinimumSizeWidth = 694;
             MinimumSizeHeight = 279;
+            _isSearchDonHang = isSearchDonHang;
         }
 
         public override void LoadData(EventArgs e)
@@ -46,12 +44,33 @@ namespace QuanLySieuThi.HangHoa
                 _donHangService = new DonHangService(Entities);
                 var donHangs = _donHangService.GetAll();
 
+                if (_isSearchDonHang)
+                {
+                    donHangs = donHangs.Where(_ => _.TrangThaiDonHang == "Dang Cho" || _.TrangThaiDonHang == "Chua Hoan Thanh").ToList();
+                }
+
                 DonHangGridControl.DataSource = donHangs;
                 DonHangGridControl.RefreshDataSource();
+
+                DisableControls();
             }
             catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void DisableControls()
+        {
+            if (_isSearchDonHang)
+            {
+                DeleteButton.Enabled = false;
+                AddButton.Enabled = false;
+                SelectButton.Enabled = true;
+            }
+            else
+            {
+                SelectButton.Enabled = false;
             }
         }
 
@@ -146,6 +165,34 @@ namespace QuanLySieuThi.HangHoa
         private void OKButton_Click(object sender, EventArgs e)
         {
             AcceptAndSavechange();
+        }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selRow = _sellRow as DonHang;
+                if (selRow != null) MaDonHang = selRow.DonHangId;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            try
+            {
+                var selRow = _sellRow as DonHang;
+                if (selRow != null) MaDonHang = selRow.DonHangId;
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
     }
 }

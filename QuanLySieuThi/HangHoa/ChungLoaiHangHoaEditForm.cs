@@ -92,13 +92,13 @@ namespace QuanLySieuThi.HangHoa
                     {
                         chungLoaiHangHoa.NgayChinhSua = DateTime.Now;
                         chungLoaiHangHoa.NgayTao = DateTime.Now;
-                        chungLoaiHangHoa.NguoiChinhSuaId = CurrentUserId;
-                        chungLoaiHangHoa.NguoiTaoId = CurrentUserId;
+                        chungLoaiHangHoa.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        chungLoaiHangHoa.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     }
                     else
                     {
                         chungLoaiHangHoa.NgayChinhSua = DateTime.Now;
-                        chungLoaiHangHoa.NguoiChinhSuaId = CurrentUserId;
+                        chungLoaiHangHoa.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
                     chungLoaiHangHoa.HoatDong = true;

@@ -44,6 +44,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
+            this.SelectButton = new Common.Controls.QButtonControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).BeginInit();
@@ -185,7 +186,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 200);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -198,7 +199,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 200);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(134, 26);
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Hủy Đơn Hàng";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -211,7 +212,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(697, 200);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 26);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -225,7 +226,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Location = new System.Drawing.Point(561, 200);
             this.EditButton.MinimumSize = new System.Drawing.Size(130, 0);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(130, 26);
+            this.EditButton.Size = new System.Drawing.Size(130, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Xem Chi Tiết";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -238,10 +239,22 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(435, 200);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 26);
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // SelectButton
+            // 
+            this.SelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SelectButton.Appearance.Options.UseFont = true;
+            this.SelectButton.Location = new System.Drawing.Point(309, 200);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(120, 30);
+            this.SelectButton.TabIndex = 6;
+            this.SelectButton.Text = "Chọn";
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // DonHangListForm
             // 
@@ -249,6 +262,7 @@ namespace QuanLySieuThi.HangHoa
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 234);
+            this.Controls.Add(this.SelectButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.OKButton);
@@ -284,5 +298,6 @@ namespace QuanLySieuThi.HangHoa
         private DevExpress.XtraGrid.Columns.GridColumn NguoiLapDonHangGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn NhaCungCapGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn TrangThaiDonHangColumn;
+        private Common.Controls.QButtonControl SelectButton;
     }
 }

@@ -70,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangNhapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhapForm.Designer.cs">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa\ChiTietDonHangEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     <Compile Include="Kho\NhapKhoEditForm.Designer.cs">
       <DependentUpon>NhapKhoEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\XuatKhoEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\XuatKhoEditForm.Designer.cs">
+      <DependentUpon>XuatKhoEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DangNhapForm.resx">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\ChiTietDonHangEditForm.resx">
       <DependentUpon>ChiTietDonHangEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\NhapKhoEditForm.resx">
       <DependentUpon>NhapKhoEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\XuatKhoEditForm.resx">
+      <DependentUpon>XuatKhoEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

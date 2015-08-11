@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[HangHoa]
 (
 	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
-    [TenHangHoa] VARCHAR(255) NOT NULL, 
+    [TenHangHoa] NVARCHAR(255) NOT NULL, 
     [LoaiHangHoaId] BIGINT NOT NULL, 
     [NhaCungCapId] BIGINT NOT NULL, 
 	[QuayHangId] BIGINT NOT NULL, 
@@ -9,7 +9,7 @@
     [CoTheTraLai] BIT NULL DEFAULT 0 ,
     [GiaNhapVao] DECIMAL NOT NULL, 
     [GiaBanRa] DECIMAL NOT NULL,
-	[HinhAnh] VARCHAR(MAX),
+	[HinhAnh] NVARCHAR(MAX),
 	[NgayTao] DATETIME2 NULL DEFAULT SYSDATETIME(), 
     [NguoiTaoId] BIGINT NULL, 
     [NgayChinhSua] DATETIME2 NULL DEFAULT SYSDATETIME(), 

@@ -53,17 +53,15 @@ namespace QuanLySieuThi.NhanVien
         {
             try
             {
-                if (CurrentUserId.HasValue)
+                var nhanVien = _nhanVienService.GetNhanVien(CurrentFormInfo.CurrentUserId);
+                if (nhanVien != null && nhanVien.TenDangNhap == "admin")
                 {
-                    var nhanVien = _nhanVienService.GetNhanVien(CurrentUserId.Value);
-                    if (nhanVien != null && nhanVien.TenDangNhap == "admin")
+                    foreach (var item in nhanViens)
                     {
-                        foreach (var item in nhanViens)
-                        {
-                            item.MatKhau = item.MatKhau.Decrypt();
-                        }
+                        item.MatKhau = item.MatKhau.Decrypt();
                     }
                 }
+
             }
             catch (Exception ex)
             {

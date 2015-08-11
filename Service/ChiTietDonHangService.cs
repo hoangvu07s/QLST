@@ -49,6 +49,38 @@ namespace Service
             return null;
         }
 
+        public IList<HangHoa> GetHangHoas(Guid donHangId)
+        {
+            try
+            {
+                return
+                    Entities.CT_DonHang.Where(_ => _.DonHangId == donHangId)
+                        .Include(_ => _.HangHoa)
+                        .Select(_ => _.HangHoa)
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public CT_DonHang Get(Guid donHangId, long hangHoaId)
+        {
+            try
+            {
+                return Entities.CT_DonHang.FirstOrDefault(_ => _.DonHangId == donHangId && _.HangHoaId == hangHoaId);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

@@ -1,11 +1,11 @@
 ﻿CREATE TABLE [dbo].[KhachHang]
 (
 	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
-    [TenKhachHang] VARCHAR(255) NOT NULL, 
-    [DiaChi] VARCHAR(MAX) NOT NULL, 
-    [SoDienThoai] VARCHAR(50) NOT NULL, 
+    [TenKhachHang] NVARCHAR(255) NOT NULL, 
+    [DiaChi] NVARCHAR(MAX) NOT NULL, 
+    [SoDienThoai] NVARCHAR(50) NOT NULL, 
     [Tuoi] INT NOT NULL, 
-    [Email] VARCHAR(50) NULL,
+    [Email] NVARCHAR(50) NULL,
 	[KhachHangThanThiet] BIT NOT NULL DEFAULT 1,
 	[NgayTao] DATETIME2 NULL DEFAULT SYSDATETIME(), 
     [NguoiTaoId] BIGINT NULL, 
