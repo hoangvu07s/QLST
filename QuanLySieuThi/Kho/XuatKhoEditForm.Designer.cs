@@ -32,7 +32,7 @@ namespace QuanLySieuThi.Kho
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.CTXuatKhoGridControl = new DevExpress.XtraGrid.GridControl();
-            this.CTXUatKhoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.CTXuatKhoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.HangHoaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongXuatKhoNummeric = new Common.Controls.QNummericControl();
@@ -53,7 +53,7 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTXuatKhoGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CTXUatKhoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CTXuatKhoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongXuatKhoNummeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongTonKhoNummeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HangHoaLookupEdit.Properties)).BeginInit();
@@ -86,29 +86,30 @@ namespace QuanLySieuThi.Kho
             // CTXuatKhoGridControl
             // 
             this.CTXuatKhoGridControl.Location = new System.Drawing.Point(12, 124);
-            this.CTXuatKhoGridControl.MainView = this.CTXUatKhoGridView;
+            this.CTXuatKhoGridControl.MainView = this.CTXuatKhoGridView;
             this.CTXuatKhoGridControl.Name = "CTXuatKhoGridControl";
             this.CTXuatKhoGridControl.Size = new System.Drawing.Size(742, 232);
             this.CTXuatKhoGridControl.TabIndex = 8;
             this.CTXuatKhoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.CTXUatKhoGridView});
+            this.CTXuatKhoGridView});
             // 
-            // CTXUatKhoGridView
+            // CTXuatKhoGridView
             // 
-            this.CTXUatKhoGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTXUatKhoGridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.CTXUatKhoGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTXUatKhoGridView.Appearance.Row.Options.UseFont = true;
-            this.CTXUatKhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.CTXuatKhoGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTXuatKhoGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.CTXuatKhoGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTXuatKhoGridView.Appearance.Row.Options.UseFont = true;
+            this.CTXuatKhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.HangHoaColumn,
             this.SoLuongColumn});
-            this.CTXUatKhoGridView.GridControl = this.CTXuatKhoGridControl;
-            this.CTXUatKhoGridView.Name = "CTXUatKhoGridView";
-            this.CTXUatKhoGridView.OptionsBehavior.Editable = false;
-            this.CTXUatKhoGridView.OptionsView.ColumnAutoWidth = false;
-            this.CTXUatKhoGridView.OptionsView.ShowAutoFilterRow = true;
-            this.CTXUatKhoGridView.OptionsView.ShowGroupPanel = false;
-            this.CTXUatKhoGridView.OptionsView.ShowIndicator = false;
+            this.CTXuatKhoGridView.GridControl = this.CTXuatKhoGridControl;
+            this.CTXuatKhoGridView.Name = "CTXuatKhoGridView";
+            this.CTXuatKhoGridView.OptionsBehavior.Editable = false;
+            this.CTXuatKhoGridView.OptionsView.ColumnAutoWidth = false;
+            this.CTXuatKhoGridView.OptionsView.ShowAutoFilterRow = true;
+            this.CTXuatKhoGridView.OptionsView.ShowGroupPanel = false;
+            this.CTXuatKhoGridView.OptionsView.ShowIndicator = false;
+            this.CTXuatKhoGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.CTXuatKhoGridView_FocusedRowChanged);
             // 
             // HangHoaColumn
             // 
@@ -267,6 +268,7 @@ namespace QuanLySieuThi.Kho
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // DeleteButton
             // 
@@ -278,6 +280,7 @@ namespace QuanLySieuThi.Kho
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AddButton
             // 
@@ -301,6 +304,7 @@ namespace QuanLySieuThi.Kho
             this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sửa";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // OKButton
             // 
@@ -312,6 +316,7 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 5;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // XuatKhoEditForm
             // 
@@ -329,7 +334,7 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CTXuatKhoGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CTXUatKhoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CTXuatKhoGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongXuatKhoNummeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongTonKhoNummeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HangHoaLookupEdit.Properties)).EndInit();
@@ -357,7 +362,7 @@ namespace QuanLySieuThi.Kho
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraGrid.GridControl CTXuatKhoGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView CTXUatKhoGridView;
+        private DevExpress.XtraGrid.Views.Grid.GridView CTXuatKhoGridView;
         private DevExpress.XtraGrid.Columns.GridColumn HangHoaColumn;
         private DevExpress.XtraGrid.Columns.GridColumn SoLuongColumn;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;

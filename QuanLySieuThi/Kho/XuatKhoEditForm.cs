@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,12 @@ namespace QuanLySieuThi.Kho
         private readonly NhapKhoService _nhapKhoService;
         private readonly ChiTietNhapKhoService _chiTietNhapKhoService;
         private readonly TonKhoService _tonKhoService;
+        private readonly XuatKhoService _xuatKhoService;
+        private readonly ChiTietXuatKhoService _chiTietXuatKhoService;
+        private readonly HangHoaService _hangHoaService;
 
-        private IList<ChiTietXuatKho> _chiTietXuatKhos; 
+        private IList<ChiTietXuatKho> _chiTietXuatKhos;
+        private object _selRow;
 
         public XuatKhoEditForm()
         {
@@ -34,6 +39,9 @@ namespace QuanLySieuThi.Kho
             _nhapKhoService = new NhapKhoService(Entities);
             _chiTietNhapKhoService = new ChiTietNhapKhoService(Entities);
             _tonKhoService = new TonKhoService(Entities);
+            _xuatKhoService = new XuatKhoService(Entities);
+            _chiTietXuatKhoService = new ChiTietXuatKhoService(Entities);
+            _hangHoaService = new HangHoaService(Entities);        
         }
 
         public override void LoadData(EventArgs e)
@@ -157,7 +165,7 @@ namespace QuanLySieuThi.Kho
             }
         }
 
-        private bool ValidateChiTietXuatKho(bool isUpdate = true)
+        private bool ValidateChiTietXuatKho(bool isUpdate = false)
         {
             try
             {
@@ -196,6 +204,140 @@ namespace QuanLySieuThi.Kho
 
                 return true;
 
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return false;
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ValidateChiTietXuatKho(true))
+                {
+                    var chiTietXuatKho = _selRow as ChiTietXuatKho;
+                    if (chiTietXuatKho != null)
+                    {
+                        chiTietXuatKho = _chiTietXuatKhos.FirstOrDefault(_ => _.HangHoaId == chiTietXuatKho.HangHoaId);
+                        if (chiTietXuatKho != null)
+                        {
+                            chiTietXuatKho.SoLuong = SoLuongXuatKhoNummeric.Text.ToInt();
+
+                            ShowDataToGrid();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void CTXuatKhoGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            try
+            {
+                _selRow = CTXuatKhoGridView.GetRow(e.FocusedRowHandle);
+
+                var chiTietXuatKho = _selRow as ChiTietXuatKho;
+                if (chiTietXuatKho != null)
+                {
+                    HangHoaLookupEdit.EditValue = chiTietXuatKho.HangHoaId;
+                    SoLuongXuatKhoNummeric.Text = chiTietXuatKho.SoLuong.ToString(CultureInfo.InvariantCulture);
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var chiTietXuatKho = _selRow as ChiTietXuatKho;
+                _chiTietXuatKhos.Remove(chiTietXuatKho);
+
+                ShowDataToGrid();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void CancelButtonControl_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ValidateXuatKho())
+                {
+                    var xuatKho = _xuatKhoService.Add();
+                    xuatKho.PhieuXuatKhoId = new Guid(QuanLySieuThiHelper.NextId());
+                    xuatKho.KhoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
+                    xuatKho.NhanVienId = CurrentFormInfo.CurrentUserId;
+                    xuatKho.NgayXuat = DateTime.Now;
+                    xuatKho.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                    xuatKho.NgayChinhSua = DateTime.Now;
+
+                    _xuatKhoService.Save();
+
+                    foreach (var chiTietXuatKho in _chiTietXuatKhos)
+                    {
+                        var ctXuatKho = _chiTietXuatKhoService.Add();
+                        ctXuatKho.XuatKhoId = xuatKho.PhieuXuatKhoId;
+                        ctXuatKho.HangHoaId = chiTietXuatKho.HangHoaId;
+                        ctXuatKho.SoLuong = chiTietXuatKho.SoLuong;
+
+                        var tonKho = _tonKhoService.Get(KhoHangLookupEdit.EditValue.ToString().ToLong(),
+                            chiTietXuatKho.HangHoaId);
+                        tonKho.SoLuongTon = tonKho.SoLuongTon - ctXuatKho.SoLuong;
+
+                        _tonKhoService.UpdateTonKho(tonKho);
+
+                        var hangHoa = _hangHoaService.Get(chiTietXuatKho.HangHoaId);
+                        if (!hangHoa.SoLuongTonQuay.HasValue)
+                        {
+                            hangHoa.SoLuongTonQuay = 0;
+                        }
+                        hangHoa.SoLuongTonQuay = hangHoa.SoLuongTonQuay + ctXuatKho.SoLuong;
+                        _hangHoaService.Update(hangHoa);
+                    }
+
+                    _chiTietXuatKhoService.Save();
+                    _tonKhoService.Save();
+                    _hangHoaService.Save();
+
+                    Close();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        public bool ValidateXuatKho()
+        {
+            try
+            {
+                if (_chiTietXuatKhos.Count <= 0)
+                {
+                    MessageBox.Show(@"Vui lòng nhập hàng hóa", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
             }
             catch (Exception ex)
             {

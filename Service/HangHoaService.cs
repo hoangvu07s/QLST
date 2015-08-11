@@ -145,6 +145,18 @@ namespace Service
             }
         }
 
+        public void Update(HangHoa hangHoa)
+        {
+            try
+            {
+                Entities.HangHoas.AddOrUpdate(hangHoa);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

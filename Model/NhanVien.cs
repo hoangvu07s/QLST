@@ -22,7 +22,6 @@ namespace Model
             this.ChungLoaiHangHoas1 = new HashSet<ChungLoaiHangHoa>();
             this.DoiTraHangHoas = new HashSet<DoiTraHangHoa>();
             this.DoiTraHangHoas1 = new HashSet<DoiTraHangHoa>();
-            this.HangHoaKhuyenMais = new HashSet<HangHoaKhuyenMai>();
             this.HoaDons = new HashSet<HoaDon>();
             this.HoaDons1 = new HashSet<HoaDon>();
             this.Khoes = new HashSet<Kho>();
@@ -77,7 +76,6 @@ namespace Model
         public virtual ICollection<ChungLoaiHangHoa> ChungLoaiHangHoas1 { get; set; }
         public virtual ICollection<DoiTraHangHoa> DoiTraHangHoas { get; set; }
         public virtual ICollection<DoiTraHangHoa> DoiTraHangHoas1 { get; set; }
-        public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual ICollection<HoaDon> HoaDons1 { get; set; }
         public virtual ICollection<Kho> Khoes { get; set; }
