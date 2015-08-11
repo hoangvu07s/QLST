@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Forms;
 using Helper;
@@ -15,8 +10,8 @@ namespace QuanLySieuThi.Kho
 {
     public partial class KhoHangEditForm
     {
-        private KhoHangService _khoHangService;
-        private NhanVienService _nhanVienService;
+        private readonly KhoHangService _khoHangService;
+        private readonly NhanVienService _nhanVienService;
         private IList<Model.NhanVien> _nhanViens;
 
         public KhoHangEditForm(long? khoId)
@@ -149,6 +144,21 @@ namespace QuanLySieuThi.Kho
                         MessageBox.Show(@"Vui lòng nhập Địa Chỉ Kho Hàng", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
+
+                    if (FormMode == FormMode.Add)
+                    {
+                        var khoHangs = _khoHangService.GetAll();
+                        if (
+                            khoHangs.Any(
+                                _ =>
+                                    _.TenKho == khoHang.TenKho && _.DiaChi == khoHang.DiaChi &&
+                                    _.SoDienThoai == khoHang.SoDienThoai))
+                        {
+                            MessageBox.Show(@"Tên Kho Hàng, Địa Chỉ và Số Điện Thoại Đã Tồn Tại", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+                    }
+                    
                 }
             }
             catch (Exception ex)
