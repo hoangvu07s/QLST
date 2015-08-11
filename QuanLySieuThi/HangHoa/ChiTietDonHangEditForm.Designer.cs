@@ -159,7 +159,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // TenHangHoaGridColumn
             // 
-            this.TenHangHoaGridColumn.Caption = "Ten Hang Hoa";
+            this.TenHangHoaGridColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenHangHoaGridColumn.AppearanceCell.Options.UseFont = true;
+            this.TenHangHoaGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenHangHoaGridColumn.AppearanceHeader.Options.UseFont = true;
+            this.TenHangHoaGridColumn.Caption = "Tên Hàng Hóa";
             this.TenHangHoaGridColumn.FieldName = "TenHangHoa";
             this.TenHangHoaGridColumn.Name = "TenHangHoaGridColumn";
             this.TenHangHoaGridColumn.OptionsColumn.AllowEdit = false;
@@ -170,7 +174,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // LoaiHangHoaGridColumn
             // 
-            this.LoaiHangHoaGridColumn.Caption = "Loai Hang Hoa";
+            this.LoaiHangHoaGridColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoaiHangHoaGridColumn.AppearanceCell.Options.UseFont = true;
+            this.LoaiHangHoaGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoaiHangHoaGridColumn.AppearanceHeader.Options.UseFont = true;
+            this.LoaiHangHoaGridColumn.Caption = "Loại Hàng Hóa";
             this.LoaiHangHoaGridColumn.FieldName = "TenLoaiHangHoa";
             this.LoaiHangHoaGridColumn.Name = "LoaiHangHoaGridColumn";
             this.LoaiHangHoaGridColumn.OptionsColumn.AllowEdit = false;
@@ -181,7 +189,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // NhaCungCapGridColumn
             // 
-            this.NhaCungCapGridColumn.Caption = "Nha Cung Cap";
+            this.NhaCungCapGridColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhaCungCapGridColumn.AppearanceCell.Options.UseFont = true;
+            this.NhaCungCapGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhaCungCapGridColumn.AppearanceHeader.Options.UseFont = true;
+            this.NhaCungCapGridColumn.Caption = "Nhà Cung Cấp";
             this.NhaCungCapGridColumn.FieldName = "TenNhaCungCap";
             this.NhaCungCapGridColumn.Name = "NhaCungCapGridColumn";
             this.NhaCungCapGridColumn.OptionsColumn.AllowEdit = false;
@@ -192,7 +204,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // QuayHangGridColumn
             // 
-            this.QuayHangGridColumn.Caption = "Quay Hang";
+            this.QuayHangGridColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuayHangGridColumn.AppearanceCell.Options.UseFont = true;
+            this.QuayHangGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuayHangGridColumn.AppearanceHeader.Options.UseFont = true;
+            this.QuayHangGridColumn.Caption = "Quầy Hàng";
             this.QuayHangGridColumn.FieldName = "TenQuayHang";
             this.QuayHangGridColumn.Name = "QuayHangGridColumn";
             this.QuayHangGridColumn.OptionsColumn.AllowEdit = false;
@@ -203,7 +219,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // SoLuongGridColumn
             // 
-            this.SoLuongGridColumn.Caption = "So Luong";
+            this.SoLuongGridColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoLuongGridColumn.AppearanceCell.Options.UseFont = true;
+            this.SoLuongGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoLuongGridColumn.AppearanceHeader.Options.UseFont = true;
+            this.SoLuongGridColumn.Caption = "Số Lượng";
             this.SoLuongGridColumn.FieldName = "SoLuong";
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
@@ -215,7 +235,11 @@ namespace QuanLySieuThi.HangHoa
             // 
             // DonGiaGridColumn
             // 
-            this.DonGiaGridColumn.Caption = "Don Gia";
+            this.DonGiaGridColumn.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonGiaGridColumn.AppearanceCell.Options.UseFont = true;
+            this.DonGiaGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonGiaGridColumn.AppearanceHeader.Options.UseFont = true;
+            this.DonGiaGridColumn.Caption = "Đơn Giá";
             this.DonGiaGridColumn.FieldName = "DonGia";
             this.DonGiaGridColumn.Name = "DonGiaGridColumn";
             this.DonGiaGridColumn.OptionsColumn.AllowEdit = false;
@@ -451,6 +475,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
+            this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 450);
             this.CancelButtonControl.Name = "CancelButtonControl";
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
@@ -463,6 +488,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Appearance.Options.UseFont = true;
+            this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 450);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(120, 26);
@@ -475,6 +501,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
+            this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(731, 450);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(120, 26);
@@ -487,6 +514,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Appearance.Options.UseFont = true;
+            this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.accept_icon;
             this.EditButton.Location = new System.Drawing.Point(605, 450);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(120, 26);
@@ -499,6 +527,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Appearance.Options.UseFont = true;
+            this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(479, 450);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 26);
@@ -519,7 +548,7 @@ namespace QuanLySieuThi.HangHoa
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTietDonHangEditForm";
             this.Text = "CHI TIẾT ĐƠN HÀNG";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

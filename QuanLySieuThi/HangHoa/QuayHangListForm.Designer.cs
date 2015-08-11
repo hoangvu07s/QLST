@@ -30,6 +30,7 @@ namespace QuanLySieuThi.HangHoa
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuayHangListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.QuayHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.GridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -65,7 +66,7 @@ namespace QuanLySieuThi.HangHoa
             // 
             // QuayHangGridControl
             // 
-            this.QuayHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuayHangGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.QuayHangGridControl.Location = new System.Drawing.Point(12, 12);
             this.QuayHangGridControl.MainView = this.GridView1;
             this.QuayHangGridControl.Name = "QuayHangGridControl";
@@ -132,6 +133,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
+            this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(16, 382);
             this.CancelButtonControl.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButtonControl.Name = "CancelButtonControl";
@@ -145,6 +147,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Appearance.Options.UseFont = true;
+            this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(184, 382);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteButton.Name = "DeleteButton";
@@ -158,6 +161,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
+            this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(788, 382);
             this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
@@ -171,6 +175,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Appearance.Options.UseFont = true;
+            this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.Cofigure_icon;
             this.EditButton.Location = new System.Drawing.Point(620, 382);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4);
             this.EditButton.Name = "EditButton";
@@ -184,6 +189,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Appearance.Options.UseFont = true;
+            this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(452, 382);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddButton.Name = "AddButton";
@@ -205,6 +211,7 @@ namespace QuanLySieuThi.HangHoa
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Name = "QuayHangListForm";
             this.Text = "QUẦY HÀNG";

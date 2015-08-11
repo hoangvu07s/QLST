@@ -183,6 +183,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
+            this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 200);
             this.CancelButtonControl.Name = "CancelButtonControl";
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
@@ -195,6 +196,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Appearance.Options.UseFont = true;
+            this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 200);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(120, 30);
@@ -207,6 +209,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
+            this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(697, 200);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(120, 30);
@@ -219,6 +222,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Appearance.Options.UseFont = true;
+            this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.folder_documents_icon;
             this.EditButton.Location = new System.Drawing.Point(561, 200);
             this.EditButton.MinimumSize = new System.Drawing.Size(130, 0);
             this.EditButton.Name = "EditButton";
@@ -232,6 +236,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Appearance.Options.UseFont = true;
+            this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(435, 200);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 30);
