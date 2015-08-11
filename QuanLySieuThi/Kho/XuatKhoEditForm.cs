@@ -346,7 +346,7 @@ namespace QuanLySieuThi.Kho
                 QuanLySieuThiHelper.LogError(ex);
             }
 
-            return false;
+            return true;
         }
     }
 }
