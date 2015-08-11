@@ -46,7 +46,7 @@ namespace QuanLySieuThi.HangHoa
 
                 if (_isSearchDonHang)
                 {
-                    donHangs = donHangs.Where(_ => _.TrangThaiDonHang == "Dang Cho").ToList();
+                    donHangs = donHangs.Where(_ => _.TrangThaiDonHang == "Dang Cho" || _.TrangThaiDonHang == "Chưa Hoàn Thành").ToList();
                 }
 
                 DonHangGridControl.DataSource = donHangs;

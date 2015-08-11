@@ -33,6 +33,8 @@ namespace QuanLySieuThi.Kho
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.SoLuongDaNhanNummeric = new Common.Controls.QNummericControl();
+            this.SoLuongDatHangNummeric = new Common.Controls.QNummericControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
@@ -52,6 +54,8 @@ namespace QuanLySieuThi.Kho
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.KhoLookupEdit = new Common.Controls.QLookupEditControl();
             this.SearchDonHangButton = new Common.Controls.QButtonControl();
             this.MaDonHangTextBox = new Common.Controls.QTextBoxControl();
@@ -62,16 +66,14 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
-            this.SoLuongDatHangNummeric = new Common.Controls.QNummericControl();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SoLuongDaNhanNummeric = new Common.Controls.QNummericControl();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDaNhanNummeric.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDatHangNummeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongNummeric.Properties)).BeginInit();
@@ -86,6 +88,8 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoLookupEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -93,10 +97,6 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDatHangNummeric.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDaNhanNummeric.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -144,6 +144,38 @@ namespace QuanLySieuThi.Kho
             this.layoutControl2.TabIndex = 2;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // SoLuongDaNhanNummeric
+            // 
+            this.SoLuongDaNhanNummeric.Location = new System.Drawing.Point(138, 68);
+            this.SoLuongDaNhanNummeric.Name = "SoLuongDaNhanNummeric";
+            this.SoLuongDaNhanNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SoLuongDaNhanNummeric.Properties.Appearance.Options.UseFont = true;
+            this.SoLuongDaNhanNummeric.Properties.EditFormat.FormatString = "d";
+            this.SoLuongDaNhanNummeric.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.SoLuongDaNhanNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongDaNhanNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongDaNhanNummeric.Properties.NullText = "0";
+            this.SoLuongDaNhanNummeric.Properties.ReadOnly = true;
+            this.SoLuongDaNhanNummeric.Size = new System.Drawing.Size(588, 24);
+            this.SoLuongDaNhanNummeric.StyleController = this.layoutControl2;
+            this.SoLuongDaNhanNummeric.TabIndex = 11;
+            // 
+            // SoLuongDatHangNummeric
+            // 
+            this.SoLuongDatHangNummeric.Location = new System.Drawing.Point(138, 40);
+            this.SoLuongDatHangNummeric.Name = "SoLuongDatHangNummeric";
+            this.SoLuongDatHangNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SoLuongDatHangNummeric.Properties.Appearance.Options.UseFont = true;
+            this.SoLuongDatHangNummeric.Properties.DisplayFormat.FormatString = "d";
+            this.SoLuongDatHangNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.SoLuongDatHangNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongDatHangNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongDatHangNummeric.Properties.NullText = "0";
+            this.SoLuongDatHangNummeric.Properties.ReadOnly = true;
+            this.SoLuongDatHangNummeric.Size = new System.Drawing.Size(588, 24);
+            this.SoLuongDatHangNummeric.StyleController = this.layoutControl2;
+            this.SoLuongDatHangNummeric.TabIndex = 10;
+            // 
             // DeleteButton
             // 
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -156,6 +188,7 @@ namespace QuanLySieuThi.Kho
             this.DeleteButton.StyleController = this.layoutControl2;
             this.DeleteButton.TabIndex = 9;
             this.DeleteButton.Text = "Xóa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // EditButton
             // 
@@ -169,6 +202,7 @@ namespace QuanLySieuThi.Kho
             this.EditButton.StyleController = this.layoutControl2;
             this.EditButton.TabIndex = 8;
             this.EditButton.Text = "Sửa";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
@@ -182,6 +216,7 @@ namespace QuanLySieuThi.Kho
             this.AddButton.StyleController = this.layoutControl2;
             this.AddButton.TabIndex = 7;
             this.AddButton.Text = "Thêm";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // CTNhapKhoGridControl
             // 
@@ -209,10 +244,12 @@ namespace QuanLySieuThi.Kho
             this.CTNhapKhoGridView.OptionsView.ShowAutoFilterRow = true;
             this.CTNhapKhoGridView.OptionsView.ShowGroupPanel = false;
             this.CTNhapKhoGridView.OptionsView.ShowIndicator = false;
+            this.CTNhapKhoGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.CTNhapKhoGridView_FocusedRowChanged);
             // 
             // TenHangHoaColumn
             // 
             this.TenHangHoaColumn.Caption = "Tên Hàng Hóa";
+            this.TenHangHoaColumn.FieldName = "TenHangHoa";
             this.TenHangHoaColumn.Name = "TenHangHoaColumn";
             this.TenHangHoaColumn.OptionsColumn.AllowEdit = false;
             this.TenHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -222,6 +259,7 @@ namespace QuanLySieuThi.Kho
             // SoLuongGridColumn
             // 
             this.SoLuongGridColumn.Caption = "Số Lượng";
+            this.SoLuongGridColumn.FieldName = "SoLuong";
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -234,6 +272,11 @@ namespace QuanLySieuThi.Kho
             this.SoLuongNummeric.Name = "SoLuongNummeric";
             this.SoLuongNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
+            this.SoLuongNummeric.Properties.EditFormat.FormatString = "d";
+            this.SoLuongNummeric.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(588, 24);
             this.SoLuongNummeric.StyleController = this.layoutControl2;
             this.SoLuongNummeric.TabIndex = 5;
@@ -246,9 +289,11 @@ namespace QuanLySieuThi.Kho
             this.HangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
             this.HangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HangHoaLookupEdit.Properties.NullText = "";
             this.HangHoaLookupEdit.Size = new System.Drawing.Size(588, 24);
             this.HangHoaLookupEdit.StyleController = this.layoutControl2;
             this.HangHoaLookupEdit.TabIndex = 4;
+            this.HangHoaLookupEdit.EditValueChanged += new System.EventHandler(this.HangHoaLookupEdit_EditValueChanged);
             // 
             // layoutControlGroup2
             // 
@@ -368,6 +413,28 @@ namespace QuanLySieuThi.Kho
             this.emptySpaceItem3.Size = new System.Drawing.Size(326, 28);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem11.Control = this.SoLuongDatHangNummeric;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(718, 28);
+            this.layoutControlItem11.Text = "Số Lượng Đặt Hàng";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(123, 17);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem12.Control = this.SoLuongDaNhanNummeric;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(718, 28);
+            this.layoutControlItem12.Text = "Số Lượng Đã Nhận";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(123, 17);
+            // 
             // KhoLookupEdit
             // 
             this.KhoLookupEdit.Location = new System.Drawing.Point(101, 40);
@@ -376,6 +443,7 @@ namespace QuanLySieuThi.Kho
             this.KhoLookupEdit.Properties.Appearance.Options.UseFont = true;
             this.KhoLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.KhoLookupEdit.Properties.NullText = "";
             this.KhoLookupEdit.Size = new System.Drawing.Size(653, 24);
             this.KhoLookupEdit.StyleController = this.layoutControl1;
             this.KhoLookupEdit.TabIndex = 3;
@@ -469,6 +537,7 @@ namespace QuanLySieuThi.Kho
             this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // OKButton
             // 
@@ -480,48 +549,7 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
-            // 
-            // SoLuongDatHangNummeric
-            // 
-            this.SoLuongDatHangNummeric.Location = new System.Drawing.Point(138, 40);
-            this.SoLuongDatHangNummeric.Name = "SoLuongDatHangNummeric";
-            this.SoLuongDatHangNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.SoLuongDatHangNummeric.Properties.Appearance.Options.UseFont = true;
-            this.SoLuongDatHangNummeric.Size = new System.Drawing.Size(588, 24);
-            this.SoLuongDatHangNummeric.StyleController = this.layoutControl2;
-            this.SoLuongDatHangNummeric.TabIndex = 10;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem11.Control = this.SoLuongDatHangNummeric;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(718, 28);
-            this.layoutControlItem11.Text = "Số Lượng Đặt Hàng";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(123, 17);
-            // 
-            // SoLuongDaNhanNummeric
-            // 
-            this.SoLuongDaNhanNummeric.Location = new System.Drawing.Point(138, 68);
-            this.SoLuongDaNhanNummeric.Name = "SoLuongDaNhanNummeric";
-            this.SoLuongDaNhanNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.SoLuongDaNhanNummeric.Properties.Appearance.Options.UseFont = true;
-            this.SoLuongDaNhanNummeric.Size = new System.Drawing.Size(588, 24);
-            this.SoLuongDaNhanNummeric.StyleController = this.layoutControl2;
-            this.SoLuongDaNhanNummeric.TabIndex = 11;
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem12.Control = this.SoLuongDaNhanNummeric;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(718, 28);
-            this.layoutControlItem12.Text = "Số Lượng Đã Nhận";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(123, 17);
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // NhapKhoEditForm
             // 
@@ -539,6 +567,8 @@ namespace QuanLySieuThi.Kho
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDaNhanNummeric.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDatHangNummeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongNummeric.Properties)).EndInit();
@@ -553,6 +583,8 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoLookupEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -560,10 +592,6 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDatHangNummeric.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoLuongDaNhanNummeric.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
 
         }

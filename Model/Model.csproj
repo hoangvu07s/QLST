@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChiTietDonHang.cs" />
     <Compile Include="ChucVu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

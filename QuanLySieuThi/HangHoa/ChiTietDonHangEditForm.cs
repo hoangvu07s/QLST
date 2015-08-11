@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Common.Forms;
 using DevExpress.XtraEditors.Controls;
 using Helper;
+using Helper.ValueObjects;
 using Model;
 using Service;
 

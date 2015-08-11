@@ -50,6 +50,7 @@
     <Compile Include="ChiTietDonHangService.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ChiTietNhapKhoService.cs" />
     <Compile Include="ChucVuService.cs" />
     <Compile Include="ChungLoaiHangHoaService.cs" />
     <Compile Include="DonHangService.cs" />
