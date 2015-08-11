@@ -140,5 +140,18 @@ namespace QuanLySieuThi
             }
         }
 
+        private void QuanLyChungLoaiHangHoaButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var chungLoaiHangHoa = new ChungLoaiHangHoaListForm();
+                chungLoaiHangHoa.ShowForm("OpenChungLoaiHangHoaLisForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
     }
 }
