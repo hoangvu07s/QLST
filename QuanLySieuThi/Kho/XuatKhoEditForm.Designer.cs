@@ -113,6 +113,7 @@ namespace QuanLySieuThi.Kho
             // HangHoaColumn
             // 
             this.HangHoaColumn.Caption = "Hàng Hóa";
+            this.HangHoaColumn.FieldName = "TenHangHoa";
             this.HangHoaColumn.Name = "HangHoaColumn";
             this.HangHoaColumn.OptionsColumn.AllowEdit = false;
             this.HangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -122,6 +123,7 @@ namespace QuanLySieuThi.Kho
             // SoLuongColumn
             // 
             this.SoLuongColumn.Caption = "Số Lượng";
+            this.SoLuongColumn.FieldName = "SoLuong";
             this.SoLuongColumn.Name = "SoLuongColumn";
             this.SoLuongColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
