@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
@@ -70,7 +71,10 @@ namespace Service
             try
             {
                 return Entities.QuayHangs.Where(
-                        _ => _.HoatDong.HasValue && _.HoatDong == true).ToList();
+                    _ => _.HoatDong.HasValue && _.HoatDong == true)
+                    .Include(_ => _.NhanVien)
+                    .Include(_ => _.NhanVien1)
+                    .ToList();
             }
             catch (Exception ex)
             {

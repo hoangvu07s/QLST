@@ -38,17 +38,17 @@ namespace Model
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<QuayHang> QuayHangs { get; set; }
         public virtual DbSet<TonKho> TonKhoes { get; set; }
-        public virtual DbSet<XuatKho> XuatKhoes { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<HangHoa> HangHoas { get; set; }
-        public virtual DbSet<CT_NhapKho> CT_NhapKho { get; set; }
         public virtual DbSet<CT_PhieuTraQuayHang> CT_PhieuTraQuayHang { get; set; }
         public virtual DbSet<CT_XuatKho> CT_XuatKho { get; set; }
         public virtual DbSet<DonHang> DonHangs { get; set; }
         public virtual DbSet<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
         public virtual DbSet<TheKhachHang> TheKhachHangs { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
-        public virtual DbSet<NhapKho> NhapKhoes { get; set; }
         public virtual DbSet<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
+        public virtual DbSet<NhapKho> NhapKhoes { get; set; }
+        public virtual DbSet<CT_NhapKho> CT_NhapKho { get; set; }
+        public virtual DbSet<XuatKho> XuatKhoes { get; set; }
     }
 }

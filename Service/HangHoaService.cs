@@ -91,6 +91,8 @@ namespace Service
                         .Include(_ => _.LoaiHangHoa)
                         .Include(_ => _.NhaCungCap)
                         .Include(_ => _.QuayHang)
+                        .Include(_=>_.NhanVien)
+                        .Include(_=>_.NhanVien1)
                         .ToList();
             }
             catch (Exception ex)

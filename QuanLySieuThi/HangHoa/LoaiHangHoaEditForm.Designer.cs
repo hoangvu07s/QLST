@@ -127,7 +127,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 147);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -140,7 +140,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(324, 147);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 26);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);

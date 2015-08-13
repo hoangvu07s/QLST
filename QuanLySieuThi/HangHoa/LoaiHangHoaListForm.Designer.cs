@@ -42,6 +42,10 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
+            this.NguoiTaoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayTaoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NguoiChinhSuaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayChinhSuaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoaiHangHoaGridControl)).BeginInit();
@@ -76,13 +80,17 @@ namespace QuanLySieuThi.HangHoa
             // 
             // GridView1
             // 
-            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridView1.Appearance.Row.Options.UseFont = true;
             this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenLoaiHangColumn,
-            this.TenChungLoaiColumn});
+            this.TenChungLoaiColumn,
+            this.NguoiTaoColumn,
+            this.NgayTaoColumn,
+            this.NguoiChinhSuaColumn,
+            this.NgayChinhSuaColumn});
             this.GridView1.GridControl = this.LoaiHangHoaGridControl;
             this.GridView1.Name = "GridView1";
             this.GridView1.OptionsBehavior.Editable = false;
@@ -151,7 +159,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 248);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -164,7 +172,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 248);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 26);
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -177,7 +185,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(591, 248);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 26);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -190,7 +198,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.Cofigure_icon;
             this.EditButton.Location = new System.Drawing.Point(465, 248);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 26);
+            this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sửa";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -203,10 +211,54 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(339, 248);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 26);
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // NguoiTaoColumn
+            // 
+            this.NguoiTaoColumn.Caption = "Người Tạo";
+            this.NguoiTaoColumn.FieldName = "NhanVien1.TenDangNhap";
+            this.NguoiTaoColumn.Name = "NguoiTaoColumn";
+            this.NguoiTaoColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiTaoColumn.Visible = true;
+            this.NguoiTaoColumn.VisibleIndex = 2;
+            this.NguoiTaoColumn.Width = 150;
+            // 
+            // NgayTaoColumn
+            // 
+            this.NgayTaoColumn.Caption = "Ngày Tạo";
+            this.NgayTaoColumn.FieldName = "NgayTao";
+            this.NgayTaoColumn.Name = "NgayTaoColumn";
+            this.NgayTaoColumn.OptionsColumn.AllowEdit = false;
+            this.NgayTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayTaoColumn.Visible = true;
+            this.NgayTaoColumn.VisibleIndex = 3;
+            this.NgayTaoColumn.Width = 150;
+            // 
+            // NguoiChinhSuaColumn
+            // 
+            this.NguoiChinhSuaColumn.Caption = "Người Chỉnh Sửa";
+            this.NguoiChinhSuaColumn.FieldName = "NhanVien.TenDangNhap";
+            this.NguoiChinhSuaColumn.Name = "NguoiChinhSuaColumn";
+            this.NguoiChinhSuaColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiChinhSuaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiChinhSuaColumn.Visible = true;
+            this.NguoiChinhSuaColumn.VisibleIndex = 4;
+            this.NguoiChinhSuaColumn.Width = 150;
+            // 
+            // NgayChinhSuaColumn
+            // 
+            this.NgayChinhSuaColumn.Caption = "Ngày Chỉnh Sửa";
+            this.NgayChinhSuaColumn.FieldName = "NgayChinhSua";
+            this.NgayChinhSuaColumn.Name = "NgayChinhSuaColumn";
+            this.NgayChinhSuaColumn.OptionsColumn.AllowEdit = false;
+            this.NgayChinhSuaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayChinhSuaColumn.Visible = true;
+            this.NgayChinhSuaColumn.VisibleIndex = 5;
+            this.NgayChinhSuaColumn.Width = 150;
             // 
             // LoaiHangHoaListForm
             // 
@@ -247,5 +299,9 @@ namespace QuanLySieuThi.HangHoa
         private Common.Controls.QButtonControl OKButton;
         private Common.Controls.QButtonControl EditButton;
         private Common.Controls.QButtonControl AddButton;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiTaoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayTaoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiChinhSuaColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayChinhSuaColumn;
     }
 }

@@ -80,9 +80,9 @@ namespace QuanLySieuThi.NhaCungCap
             // 
             // GridView1
             // 
-            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridView1.Appearance.Row.Options.UseFont = true;
             this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenNhaCungCapColumn,
@@ -203,7 +203,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 249);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -216,7 +216,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 249);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 26);
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -229,7 +229,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(589, 249);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 26);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -242,7 +242,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.Cofigure_icon;
             this.EditButton.Location = new System.Drawing.Point(463, 249);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 26);
+            this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sửa";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -255,7 +255,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(337, 249);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 26);
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);

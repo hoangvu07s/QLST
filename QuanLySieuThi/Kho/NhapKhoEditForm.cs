@@ -292,9 +292,7 @@ namespace QuanLySieuThi.Kho
                     nhapKho.PhieuNhapKhoId = new Guid(QuanLySieuThiHelper.NextId());
                     nhapKho.DonHangId = new Guid(MaDonHangTextBox.Text);
                     nhapKho.KhoId = KhoLookupEdit.EditValue.ToString().ToLong();
-                    nhapKho.NgayChinhSua = DateTime.Now;
                     nhapKho.NgayTao = DateTime.Now;
-                    nhapKho.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     nhapKho.NguoiTaoId = CurrentFormInfo.CurrentUserId;
                     nhapKho.HoatDong = true;
 

@@ -68,7 +68,12 @@ namespace Service
             {
                 return
                     Entities.LoaiHangHoas.Where(
-                        _ => _.HoatDong.HasValue && _.HoatDong == true).Include(_ => _.ChungLoaiHangHoa).ToList();
+                        _ => _.HoatDong.HasValue && _.HoatDong == true)
+                        .Include(_ => _.ChungLoaiHangHoa)
+                        .Include(_ => _.NhanVien)
+                        .Include(_ => _.NhanVien1)
+                        .ToList();
+
             }
             catch (Exception ex)
             {
@@ -98,7 +103,7 @@ namespace Service
             {
                 return
                     Entities.LoaiHangHoas.Where(
-                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true).Include(_=>_.NhanVien).Include(_=>_.NhanVien1).ToList();
             }
             catch (Exception ex)
             {

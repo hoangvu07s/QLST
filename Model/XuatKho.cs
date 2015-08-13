@@ -23,13 +23,10 @@ namespace Model
         public long KhoId { get; set; }
         public long NhanVienId { get; set; }
         public System.DateTime NgayXuat { get; set; }
-        public Nullable<System.DateTime> NgayChinhSua { get; set; }
-        public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
     
+        public virtual ICollection<CT_XuatKho> CT_XuatKho { get; set; }
         public virtual Kho Kho { get; set; }
         public virtual NhanVien NhanVien { get; set; }
-        public virtual NhanVien NhanVien1 { get; set; }
-        public virtual ICollection<CT_XuatKho> CT_XuatKho { get; set; }
     }
 }

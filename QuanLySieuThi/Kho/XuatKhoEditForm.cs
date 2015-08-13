@@ -290,8 +290,6 @@ namespace QuanLySieuThi.Kho
                     xuatKho.KhoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
                     xuatKho.NhanVienId = CurrentFormInfo.CurrentUserId;
                     xuatKho.NgayXuat = DateTime.Now;
-                    xuatKho.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
-                    xuatKho.NgayChinhSua = DateTime.Now;
 
                     _xuatKhoService.Save();
 

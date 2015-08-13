@@ -192,7 +192,7 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.OKButton.Appearance.Options.UseFont = true;
-            this.OKButton.Location = new System.Drawing.Point(323, 211);
+            this.OKButton.Location = new System.Drawing.Point(324, 211);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 2;

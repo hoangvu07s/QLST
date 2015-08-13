@@ -45,6 +45,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
             this.SelectButton = new Common.Controls.QButtonControl();
+            this.NgayLapColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).BeginInit();
@@ -79,15 +80,16 @@ namespace QuanLySieuThi.HangHoa
             // 
             // DonHangGridView
             // 
-            this.DonHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonHangGridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.DonHangGridView.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonHangGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonHangGridView.Appearance.Row.Options.UseFont = true;
             this.DonHangGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaDonHangGridColumn,
             this.NguoiLapDonHangGridColumn,
             this.NhaCungCapGridColumn,
-            this.TrangThaiDonHangColumn});
+            this.TrangThaiDonHangColumn,
+            this.NgayLapColumn});
             this.DonHangGridView.GridControl = this.DonHangGridControl;
             this.DonHangGridView.Name = "DonHangGridView";
             this.DonHangGridView.OptionsBehavior.Editable = false;
@@ -199,7 +201,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 200);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
+            this.DeleteButton.Size = new System.Drawing.Size(130, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Hủy Đơn Hàng";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -256,6 +258,17 @@ namespace QuanLySieuThi.HangHoa
             this.SelectButton.Text = "Chọn";
             this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
+            // NgayLapColumn
+            // 
+            this.NgayLapColumn.Caption = "Ngày Lập Đơn Hàng";
+            this.NgayLapColumn.FieldName = "NgayTao";
+            this.NgayLapColumn.Name = "NgayLapColumn";
+            this.NgayLapColumn.OptionsColumn.AllowEdit = false;
+            this.NgayLapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayLapColumn.Visible = true;
+            this.NgayLapColumn.VisibleIndex = 4;
+            this.NgayLapColumn.Width = 150;
+            // 
             // DonHangListForm
             // 
             this.Appearance.Options.UseFont = true;
@@ -299,5 +312,6 @@ namespace QuanLySieuThi.HangHoa
         private DevExpress.XtraGrid.Columns.GridColumn NhaCungCapGridColumn;
         private DevExpress.XtraGrid.Columns.GridColumn TrangThaiDonHangColumn;
         private Common.Controls.QButtonControl SelectButton;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayLapColumn;
     }
 }

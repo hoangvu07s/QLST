@@ -75,7 +75,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(604, 261);
+            this.layoutControl1.Size = new System.Drawing.Size(594, 261);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -85,7 +85,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTextBox.Properties.Appearance.Options.UseFont = true;
-            this.EmailTextBox.Size = new System.Drawing.Size(580, 24);
+            this.EmailTextBox.Size = new System.Drawing.Size(570, 24);
             this.EmailTextBox.StyleController = this.layoutControl1;
             this.EmailTextBox.TabIndex = 8;
             // 
@@ -95,7 +95,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.SoDienThoaiTextBox.Name = "SoDienThoaiTextBox";
             this.SoDienThoaiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoDienThoaiTextBox.Properties.Appearance.Options.UseFont = true;
-            this.SoDienThoaiTextBox.Size = new System.Drawing.Size(580, 24);
+            this.SoDienThoaiTextBox.Size = new System.Drawing.Size(570, 24);
             this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
             this.SoDienThoaiTextBox.TabIndex = 7;
             // 
@@ -105,7 +105,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.DiaChiTextBox.Name = "DiaChiTextBox";
             this.DiaChiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiaChiTextBox.Properties.Appearance.Options.UseFont = true;
-            this.DiaChiTextBox.Size = new System.Drawing.Size(580, 24);
+            this.DiaChiTextBox.Size = new System.Drawing.Size(570, 24);
             this.DiaChiTextBox.StyleController = this.layoutControl1;
             this.DiaChiTextBox.TabIndex = 6;
             // 
@@ -115,7 +115,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.TenCongTyTextBox.Name = "TenCongTyTextBox";
             this.TenCongTyTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenCongTyTextBox.Properties.Appearance.Options.UseFont = true;
-            this.TenCongTyTextBox.Size = new System.Drawing.Size(580, 24);
+            this.TenCongTyTextBox.Size = new System.Drawing.Size(570, 24);
             this.TenCongTyTextBox.StyleController = this.layoutControl1;
             this.TenCongTyTextBox.TabIndex = 5;
             // 
@@ -125,7 +125,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.TenNhaCungCapTextBox.Name = "TenNhaCungCapTextBox";
             this.TenNhaCungCapTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenNhaCungCapTextBox.Properties.Appearance.Options.UseFont = true;
-            this.TenNhaCungCapTextBox.Size = new System.Drawing.Size(580, 24);
+            this.TenNhaCungCapTextBox.Size = new System.Drawing.Size(570, 24);
             this.TenNhaCungCapTextBox.StyleController = this.layoutControl1;
             this.TenNhaCungCapTextBox.TabIndex = 4;
             // 
@@ -141,7 +141,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem5});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(604, 261);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(594, 261);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -151,7 +151,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem1.Control = this.TenNhaCungCapTextBox;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem1.Size = new System.Drawing.Size(574, 48);
             this.layoutControlItem1.Text = "Tên Nhà Cung Cấp";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(115, 17);
@@ -163,7 +163,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem2.Control = this.TenCongTyTextBox;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem2.Size = new System.Drawing.Size(574, 48);
             this.layoutControlItem2.Text = "Tên Công Ty";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(115, 17);
@@ -175,7 +175,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem3.Control = this.DiaChiTextBox;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem3.Size = new System.Drawing.Size(574, 48);
             this.layoutControlItem3.Text = "Địa Chỉ";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(115, 17);
@@ -187,7 +187,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem4.Control = this.SoDienThoaiTextBox;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(584, 48);
+            this.layoutControlItem4.Size = new System.Drawing.Size(574, 48);
             this.layoutControlItem4.Text = "Số Điện Thoại";
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(115, 17);
@@ -199,7 +199,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.layoutControlItem5.Control = this.EmailTextBox;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(584, 49);
+            this.layoutControlItem5.Size = new System.Drawing.Size(574, 49);
             this.layoutControlItem5.Text = "Email";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(115, 17);
@@ -210,10 +210,10 @@ namespace QuanLySieuThi.NhaCungCap
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
-            this.CancelButtonControl.Location = new System.Drawing.Point(19, 268);
+            this.CancelButtonControl.Location = new System.Drawing.Point(13, 260);
             this.CancelButtonControl.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(160, 39);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -224,10 +224,10 @@ namespace QuanLySieuThi.NhaCungCap
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
-            this.OKButton.Location = new System.Drawing.Point(431, 268);
+            this.OKButton.Location = new System.Drawing.Point(465, 260);
             this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(160, 39);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -237,7 +237,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 319);
+            this.ClientSize = new System.Drawing.Size(598, 303);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
