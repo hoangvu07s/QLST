@@ -190,6 +190,12 @@
     <Compile Include="NhaCungCap\NhaCungCapListForm.Designer.cs">
       <DependentUpon>NhaCungCapListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\ChiTietXuatKhoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\ChiTietXuatKhoForm.Designer.cs">
+      <DependentUpon>ChiTietXuatKhoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\ChucVuEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,12 @@
     </Compile>
     <Compile Include="NhanVien\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\XuatKhoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\XuatKhoListForm.Designer.cs">
+      <DependentUpon>XuatKhoListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -285,6 +297,9 @@
     <EmbeddedResource Include="NhaCungCap\NhaCungCapListForm.resx">
       <DependentUpon>NhaCungCapListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\ChiTietXuatKhoForm.resx">
+      <DependentUpon>ChiTietXuatKhoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\ChucVuEditForm.resx">
       <DependentUpon>ChucVuEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\XuatKhoListForm.resx">
+      <DependentUpon>XuatKhoListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

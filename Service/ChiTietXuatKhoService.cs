@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,20 @@ namespace Service
             try
             {
                 return Entities.CT_XuatKho.Add(new CT_XuatKho());
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<CT_XuatKho> Get(Guid xuatKhoId)
+        {
+            try
+            {
+                return Entities.CT_XuatKho.Where(_ => _.XuatKhoId == xuatKhoId).Include(_ => _.HangHoa).ToList();
             }
             catch (Exception ex)
             {
