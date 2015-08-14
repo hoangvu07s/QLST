@@ -90,6 +90,25 @@ namespace Service
             return null;
         }
 
+        public IList<NhapKho> GetAll()
+        {
+            try
+            {
+                return
+                    Entities.NhapKhoes.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
+                        .Include(_ => _.Kho)
+                        .Include(_ => _.NhanVien)
+                        .ToList();
+
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

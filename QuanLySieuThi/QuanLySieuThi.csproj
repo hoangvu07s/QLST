@@ -136,6 +136,12 @@
     <Compile Include="HangHoa\QuayHangListForm.Designer.cs">
       <DependentUpon>QuayHangListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\ChiTietNhapKhoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\ChiTietNhapKhoForm.Designer.cs">
+      <DependentUpon>ChiTietNhapKhoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\KhoHangEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="Kho\NhapKhoEditForm.Designer.cs">
       <DependentUpon>NhapKhoEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\NhapKhoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\NhapKhoListForm.Designer.cs">
+      <DependentUpon>NhapKhoListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Kho\XuatKhoEditForm.cs">
       <SubType>Form</SubType>
@@ -243,6 +255,9 @@
     <EmbeddedResource Include="HangHoa\QuayHangListForm.resx">
       <DependentUpon>QuayHangListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kho\ChiTietNhapKhoForm.resx">
+      <DependentUpon>ChiTietNhapKhoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kho\KhoHangEditForm.resx">
       <DependentUpon>KhoHangEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\NhapKhoEditForm.resx">
       <DependentUpon>NhapKhoEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\NhapKhoListForm.resx">
+      <DependentUpon>NhapKhoListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\XuatKhoEditForm.resx">
       <DependentUpon>XuatKhoEditForm.cs</DependentUpon>

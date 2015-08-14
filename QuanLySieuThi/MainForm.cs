@@ -145,5 +145,18 @@ namespace QuanLySieuThi
             }
         }
 
+        private void NhapKhoListButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var nhaoKhoListForm = new NhapKhoListForm();
+                nhaoKhoListForm.ShowForm("OpenNhapKhoListForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
     }
 }
