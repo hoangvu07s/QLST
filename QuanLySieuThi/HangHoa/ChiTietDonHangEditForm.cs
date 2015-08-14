@@ -20,7 +20,8 @@ namespace QuanLySieuThi.HangHoa
         private LoaiHangHoaService _loaiHangHoaService;
         private NhaCungCapService _nhaCungCapService;
         private QuayHangService _quayHangService;
-        private IList<ChiTietDonHang> _chiTietDonHangs; 
+        private IList<ChiTietDonHang> _chiTietDonHangs;
+        private Model.HangHoa hangHoa;
 
         private object _selRow;
 
@@ -446,12 +447,17 @@ namespace QuanLySieuThi.HangHoa
                     }
                     else
                     {
+                        
+                        
                         isValidated = ValidateSoLuongDonGia(soLuong, donGia);
+                       
+                        
                     }
                 }
                 if (isValidated)
                 {
-                    _chiTietDonHangs.Remove(chiTietDonHang);
+                    var chiTietDonHangTemp = _chiTietDonHangs.FirstOrDefault(_ => _.TenHangHoa == chiTietDonHang.TenHangHoa);
+                    _chiTietDonHangs.Remove(chiTietDonHangTemp);
                     chiTietDonHang = InitChiTietDonHang();
                     _chiTietDonHangs.Add(chiTietDonHang);
 
@@ -492,33 +498,21 @@ namespace QuanLySieuThi.HangHoa
                     // Save Hang Hoa
                     foreach (var chiTietDonHang in _chiTietDonHangs)
                     {
-                        var hangHoa = _hangHoaService.GetByTenHangHoaLoaiHangHoaNhaCungCap(chiTietDonHang.TenHangHoa,
-                            chiTietDonHang.LoaiHangHoaId, chiTietDonHang.NhaCungCapId);
-                        if (hangHoa == null)
-                        {
-                            hangHoa = _hangHoaService.AddHangHoa();
-                            hangHoa.TenHangHoa = chiTietDonHang.TenHangHoa;
-                            hangHoa.LoaiHangHoaId = chiTietDonHang.LoaiHangHoaId;
-                            hangHoa.NhaCungCapId = chiTietDonHang.NhaCungCapId;
-                            hangHoa.QuayHangId = chiTietDonHang.QuayHangId;
-                            hangHoa.GiaNhapVao = chiTietDonHang.DonGia;
-                            hangHoa.GiaBanRa = 0;
-                            hangHoa.NgayChinhSua = currentDateTime;
-                            hangHoa.NgayTao = currentDateTime;
-                            hangHoa.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
-                            hangHoa.NguoiTaoId = CurrentFormInfo.CurrentUserId;
-                            hangHoa.HoatDong = true;
 
-                            _hangHoaService.Save();
+                        var hanghoaInDatabase = _hangHoaService.GetByTenHangHoa(chiTietDonHang.TenHangHoa);
 
-                            // Save Chi Tiet Don Hang
-                            var ctDonHang = _chiTietDonHangService.AddChiTietDonHang();
-                            ctDonHang.HangHoaId = hangHoa.Id;
-                            ctDonHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
-                            ctDonHang.SoLuong = chiTietDonHang.SoLuong;
-                            ctDonHang.DonGia = chiTietDonHang.DonGia;
-                            _chiTietDonHangService.Save();
-                        }
+                        // Save Chi Tiet Don Hang
+                        var ctDonHang = _chiTietDonHangService.AddChiTietDonHang();
+                        ctDonHang.HangHoaId = hanghoaInDatabase.Id;
+                        ctDonHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
+                        ctDonHang.SoLuong = chiTietDonHang.SoLuong;
+                        ctDonHang.DonGia = chiTietDonHang.DonGia;
+                        _chiTietDonHangService.Save();
+
+                        hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
+
+                        _hangHoaService.Update(hanghoaInDatabase);
+                        _hangHoaService.Save();
                     }
                 }
                 
@@ -530,5 +524,35 @@ namespace QuanLySieuThi.HangHoa
             }
         }
 
+        private void SearchTenHangHoaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var hangHoaListForm = new HangHoaListForm(true);
+                hangHoaListForm.ShowForm("OpenHangHoaListForm");
+                hangHoaListForm.FormClosed += HangHoaListFormOnFormClosed;
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void HangHoaListFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
+        {
+            try
+            {
+                hangHoa = HangHoaListForm.HangHoa;
+
+                TenHangHoaTextBox.Text = hangHoa.TenHangHoa;
+                LoaiHangHoaLookupEdit.EditValue = hangHoa.LoaiHangHoaId;
+                NhaCungCapLookupEdit.EditValue = hangHoa.NhaCungCapId;
+                QuayHangLookupEdit.EditValue = hangHoa.QuayHangId;
+                DonGiaNummeric.Text = hangHoa.GiaNhapVao.ToString(CultureInfo.InvariantCulture);}
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
     }
 }

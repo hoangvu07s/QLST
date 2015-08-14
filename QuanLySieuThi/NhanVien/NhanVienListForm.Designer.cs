@@ -45,6 +45,10 @@ namespace QuanLySieuThi.NhanVien
             this.SoDienThoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DiaChiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmailColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NguoiTaoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayTaoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NguoiChinhSuaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayChinhSuaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -94,9 +98,9 @@ namespace QuanLySieuThi.NhanVien
             // 
             // GridView1
             // 
-            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridView1.Appearance.Row.Options.UseFont = true;
             this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.HoVaTenColumn,
@@ -107,7 +111,11 @@ namespace QuanLySieuThi.NhanVien
             this.ChucVuColumn,
             this.SoDienThoaiColumn,
             this.DiaChiColumn,
-            this.EmailColumn});
+            this.EmailColumn,
+            this.NguoiTaoColumn,
+            this.NgayTaoColumn,
+            this.NguoiChinhSuaColumn,
+            this.NgayChinhSuaColumn});
             this.GridView1.GridControl = this.NhanVienGridControl;
             this.GridView1.Name = "GridView1";
             this.GridView1.OptionsBehavior.Editable = false;
@@ -266,6 +274,50 @@ namespace QuanLySieuThi.NhanVien
             this.EmailColumn.VisibleIndex = 8;
             this.EmailColumn.Width = 100;
             // 
+            // NguoiTaoColumn
+            // 
+            this.NguoiTaoColumn.Caption = "Người Tạo";
+            this.NguoiTaoColumn.FieldName = "NhanVien2.TenDangNhap";
+            this.NguoiTaoColumn.Name = "NguoiTaoColumn";
+            this.NguoiTaoColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiTaoColumn.Visible = true;
+            this.NguoiTaoColumn.VisibleIndex = 9;
+            this.NguoiTaoColumn.Width = 150;
+            // 
+            // NgayTaoColumn
+            // 
+            this.NgayTaoColumn.Caption = "Ngày Tạo";
+            this.NgayTaoColumn.FieldName = "NgayTao";
+            this.NgayTaoColumn.Name = "NgayTaoColumn";
+            this.NgayTaoColumn.OptionsColumn.AllowEdit = false;
+            this.NgayTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayTaoColumn.Visible = true;
+            this.NgayTaoColumn.VisibleIndex = 10;
+            this.NgayTaoColumn.Width = 150;
+            // 
+            // NguoiChinhSuaColumn
+            // 
+            this.NguoiChinhSuaColumn.Caption = "Người Chỉnh Sửa";
+            this.NguoiChinhSuaColumn.FieldName = "NhanVien3.TenDangNhap";
+            this.NguoiChinhSuaColumn.Name = "NguoiChinhSuaColumn";
+            this.NguoiChinhSuaColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiChinhSuaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiChinhSuaColumn.Visible = true;
+            this.NguoiChinhSuaColumn.VisibleIndex = 11;
+            this.NguoiChinhSuaColumn.Width = 150;
+            // 
+            // NgayChinhSuaColumn
+            // 
+            this.NgayChinhSuaColumn.Caption = "Ngày Chỉnh Sửa";
+            this.NgayChinhSuaColumn.FieldName = "NgayChinhSua";
+            this.NgayChinhSuaColumn.Name = "NgayChinhSuaColumn";
+            this.NgayChinhSuaColumn.OptionsColumn.AllowEdit = false;
+            this.NgayChinhSuaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayChinhSuaColumn.Visible = true;
+            this.NgayChinhSuaColumn.VisibleIndex = 12;
+            this.NgayChinhSuaColumn.Width = 150;
+            // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
@@ -297,9 +349,9 @@ namespace QuanLySieuThi.NhanVien
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
-            this.CancelButtonControl.Location = new System.Drawing.Point(12, 408);
+            this.CancelButtonControl.Location = new System.Drawing.Point(12, 412);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 32);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -310,9 +362,9 @@ namespace QuanLySieuThi.NhanVien
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Appearance.Options.UseFont = true;
             this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
-            this.DeleteButton.Location = new System.Drawing.Point(138, 408);
+            this.DeleteButton.Location = new System.Drawing.Point(138, 412);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 32);
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -323,9 +375,9 @@ namespace QuanLySieuThi.NhanVien
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
-            this.OKButton.Location = new System.Drawing.Point(804, 407);
+            this.OKButton.Location = new System.Drawing.Point(804, 412);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 32);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -336,9 +388,9 @@ namespace QuanLySieuThi.NhanVien
             this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.Appearance.Options.UseFont = true;
             this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.Cofigure_icon;
-            this.EditButton.Location = new System.Drawing.Point(678, 408);
+            this.EditButton.Location = new System.Drawing.Point(678, 412);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 32);
+            this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Sửa";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -349,9 +401,9 @@ namespace QuanLySieuThi.NhanVien
             this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Appearance.Options.UseFont = true;
             this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
-            this.AddButton.Location = new System.Drawing.Point(552, 408);
+            this.AddButton.Location = new System.Drawing.Point(552, 412);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 32);
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -410,5 +462,9 @@ namespace QuanLySieuThi.NhanVien
         private DevExpress.XtraGrid.Columns.GridColumn DiaChiColumn;
         private DevExpress.XtraGrid.Columns.GridColumn EmailColumn;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiTaoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayTaoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiChinhSuaColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayChinhSuaColumn;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using Model;
@@ -51,7 +52,7 @@ namespace Service
         {
             try
             {
-                return Entities.ChucVus.Where(_ => _.HoatDong.HasValue && _.HoatDong == true).ToList();
+                return Entities.ChucVus.Where(_ => _.HoatDong.HasValue && _.HoatDong == true).Include(_=>_.NhanVien).Include(_=>_.NhanVien1).ToList();
             }
             catch (Exception ex)
             {

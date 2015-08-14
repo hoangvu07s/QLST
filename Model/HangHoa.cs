@@ -47,8 +47,6 @@ namespace Model
         public virtual ICollection<CT_DonHang> CT_DonHang { get; set; }
         public virtual ICollection<CT_HoaDon> CT_HoaDon { get; set; }
         public virtual LoaiHangHoa LoaiHangHoa { get; set; }
-        public virtual NhanVien NhanVien { get; set; }
-        public virtual NhanVien NhanVien1 { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual QuayHang QuayHang { get; set; }
         public virtual ICollection<TonKho> TonKhoes { get; set; }
@@ -57,5 +55,7 @@ namespace Model
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais { get; set; }
         public virtual ICollection<HangHoaKhuyenMai> HangHoaKhuyenMais1 { get; set; }
         public virtual ICollection<CT_NhapKho> CT_NhapKho { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual NhanVien NhanVien1 { get; set; }
     }
 }

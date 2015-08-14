@@ -1391,10 +1391,10 @@
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_ChucVu_NguoiChinhSua" FromRole="ChucVu" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_ChucVu_NguoiTao" FromRole="ChucVu" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanViens" Relationship="Self.FK_NhanVien_ChucVu" FromRole="ChucVu" ToRole="NhanVien" />
-        </EntityType>
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_ChucVu_NguoiChinhSua" FromRole="ChucVu" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_ChucVu_NguoiTao" FromRole="ChucVu" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanViens" Relationship="QuanLySieuThiModel.FK_NhanVien_ChucVu" FromRole="ChucVu" ToRole="NhanVien" />
+          </EntityType>
         <EntityType Name="ChungLoaiHangHoa">
           <Key>
             <PropertyRef Name="Id" />
@@ -1406,9 +1406,9 @@
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_ChungLoaiHangHoa_NguoiChinhSua" FromRole="ChungLoaiHangHoa" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_ChungLoaiHangHoa_NguoiTao" FromRole="ChungLoaiHangHoa" ToRole="NhanVien" />
           <NavigationProperty Name="LoaiHangHoas" Relationship="Self.FK_LoaiHangHoa_ChungLoai" FromRole="ChungLoaiHangHoa" ToRole="LoaiHangHoa" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_ChungLoaiHangHoa_NguoiChinhSua" FromRole="ChungLoaiHangHoa" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_ChungLoaiHangHoa_NguoiTao" FromRole="ChungLoaiHangHoa" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="CT_DoiTraHangHoa">
           <Key>
@@ -1462,8 +1462,8 @@
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="CT_DoiTraHangHoa" Relationship="Self.FK_CTDoiTraHangHoa_DoiTraHangHoaId" FromRole="DoiTraHangHoa" ToRole="CT_DoiTraHangHoa" />
           <NavigationProperty Name="HoaDon" Relationship="Self.FK_DoiTraHangHoa_HoaDon" FromRole="DoiTraHangHoa" ToRole="HoaDon" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_DoiTraHangHoa_NguoiChinhSua" FromRole="DoiTraHangHoa" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_DoiTraHangHoa_NhanVien" FromRole="DoiTraHangHoa" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_DoiTraHangHoa_NguoiChinhSua" FromRole="DoiTraHangHoa" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_DoiTraHangHoa_NhanVien" FromRole="DoiTraHangHoa" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -1478,9 +1478,9 @@
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="CT_HoaDon" Relationship="Self.FK_CTHoaDon_HoaDon" FromRole="HoaDon" ToRole="CT_HoaDon" />
           <NavigationProperty Name="DoiTraHangHoas" Relationship="Self.FK_DoiTraHangHoa_HoaDon" FromRole="HoaDon" ToRole="DoiTraHangHoa" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NguoiChinhSua" FromRole="HoaDon" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
           <NavigationProperty Name="KhachHang" Relationship="QuanLySieuThiModel.FK_HoaDon_KhachHang" FromRole="HoaDon" ToRole="KhachHang" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_HoaDon_NguoiChinhSua" FromRole="HoaDon" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="Kho">
           <Key>
@@ -1496,13 +1496,13 @@
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_Kho_NguoiChinhSua" FromRole="Kho" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_Kho_NguoiTao" FromRole="Kho" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien2" Relationship="Self.FK_Kho_NhanVien" FromRole="Kho" ToRole="NhanVien" />
           <NavigationProperty Name="TonKhoes" Relationship="Self.FK_TonKho_Kho" FromRole="Kho" ToRole="TonKho" />
           <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_Kho" FromRole="Kho" ToRole="PhieuTraQuayHang" />
           <NavigationProperty Name="NhapKhoes" Relationship="QuanLySieuThiModel.FK_NhapKho_Kho" FromRole="Kho" ToRole="NhapKho" />
           <NavigationProperty Name="XuatKhoes" Relationship="QuanLySieuThiModel.FK_XuatKho_Kho" FromRole="Kho" ToRole="XuatKho" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_Kho_NguoiChinhSua" FromRole="Kho" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_Kho_NguoiTao" FromRole="Kho" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien2" Relationship="QuanLySieuThiModel.FK_Kho_NhanVien" FromRole="Kho" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="LoaiHangHoa">
           <Key>
@@ -1517,9 +1517,9 @@
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="ChungLoaiHangHoa" Relationship="Self.FK_LoaiHangHoa_ChungLoai" FromRole="LoaiHangHoa" ToRole="ChungLoaiHangHoa" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_LoaiHangHoa_NguoiChinhSua" FromRole="LoaiHangHoa" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_LoaiHangHoa_NguoiTao" FromRole="LoaiHangHoa" ToRole="NhanVien" />
           <NavigationProperty Name="HangHoas" Relationship="QuanLySieuThiModel.FK_HangHoa_LoaiHangHoa" FromRole="LoaiHangHoa" ToRole="HangHoa" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_LoaiHangHoa_NguoiChinhSua" FromRole="LoaiHangHoa" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_LoaiHangHoa_NguoiTao" FromRole="LoaiHangHoa" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="NhaCungCap">
           <Key>
@@ -1536,67 +1536,11 @@
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK_NhaCungCap_NguoiChinhSua" FromRole="NhaCungCap" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_NhaCungCap_NguoiTao" FromRole="NhaCungCap" ToRole="NhanVien" />
           <NavigationProperty Name="HangHoas" Relationship="QuanLySieuThiModel.FK_HangHoa_NhaCungCap" FromRole="NhaCungCap" ToRole="HangHoa" />
           <NavigationProperty Name="DonHangs" Relationship="QuanLySieuThiModel.FK_DonHang_NhaCungCap" FromRole="NhaCungCap" ToRole="DonHang" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_NhaCungCap_NguoiChinhSua" FromRole="NhaCungCap" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_NhaCungCap_NguoiTao" FromRole="NhaCungCap" ToRole="NhanVien" />
         </EntityType>
-        <EntityType Name="NhanVien">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="HoVaTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
-          <Property Name="NgayThangNamSinh" Type="DateTime" Nullable="false" Precision="7" />
-          <Property Name="ChucVuId" Type="Int64" Nullable="false" />
-          <Property Name="SoDienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NgayTao" Type="DateTime" Precision="7" />
-          <Property Name="NguoiTaoId" Type="Int64" />
-          <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
-          <Property Name="NguoiChinhSuaId" Type="Int64" />
-          <Property Name="HoatDong" Type="Boolean" />
-          <NavigationProperty Name="ChucVus" Relationship="Self.FK_ChucVu_NguoiChinhSua" FromRole="NhanVien" ToRole="ChucVu" />
-          <NavigationProperty Name="ChucVus1" Relationship="Self.FK_ChucVu_NguoiTao" FromRole="NhanVien" ToRole="ChucVu" />
-          <NavigationProperty Name="ChucVu" Relationship="Self.FK_NhanVien_ChucVu" FromRole="NhanVien" ToRole="ChucVu" />
-          <NavigationProperty Name="ChungLoaiHangHoas" Relationship="Self.FK_ChungLoaiHangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="ChungLoaiHangHoa" />
-          <NavigationProperty Name="ChungLoaiHangHoas1" Relationship="Self.FK_ChungLoaiHangHoa_NguoiTao" FromRole="NhanVien" ToRole="ChungLoaiHangHoa" />
-          <NavigationProperty Name="DoiTraHangHoas" Relationship="Self.FK_DoiTraHangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="DoiTraHangHoa" />
-          <NavigationProperty Name="DoiTraHangHoas1" Relationship="Self.FK_DoiTraHangHoa_NhanVien" FromRole="NhanVien" ToRole="DoiTraHangHoa" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_NguoiChinhSua" FromRole="NhanVien" ToRole="HoaDon" />
-          <NavigationProperty Name="HoaDons1" Relationship="Self.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
-          <NavigationProperty Name="Khoes" Relationship="Self.FK_Kho_NguoiChinhSua" FromRole="NhanVien" ToRole="Kho" />
-          <NavigationProperty Name="Khoes1" Relationship="Self.FK_Kho_NguoiTao" FromRole="NhanVien" ToRole="Kho" />
-          <NavigationProperty Name="Khoes2" Relationship="Self.FK_Kho_NhanVien" FromRole="NhanVien" ToRole="Kho" />
-          <NavigationProperty Name="LoaiHangHoas" Relationship="Self.FK_LoaiHangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="LoaiHangHoa" />
-          <NavigationProperty Name="LoaiHangHoas1" Relationship="Self.FK_LoaiHangHoa_NguoiTao" FromRole="NhanVien" ToRole="LoaiHangHoa" />
-          <NavigationProperty Name="NhaCungCaps" Relationship="Self.FK_NhaCungCap_NguoiChinhSua" FromRole="NhanVien" ToRole="NhaCungCap" />
-          <NavigationProperty Name="NhaCungCaps1" Relationship="Self.FK_NhaCungCap_NguoiTao" FromRole="NhanVien" ToRole="NhaCungCap" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.FK_NhanVien_NguoiChinhSua" FromRole="NhanVien" ToRole="NhanVien1" />
-          <NavigationProperty Name="NhanVien2" Relationship="Self.FK_NhanVien_NguoiChinhSua" FromRole="NhanVien1" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien11" Relationship="Self.FK_NhanVien_NguoiTao" FromRole="NhanVien" ToRole="NhanVien1" />
-          <NavigationProperty Name="NhanVien3" Relationship="Self.FK_NhanVien_NguoiTao" FromRole="NhanVien1" ToRole="NhanVien" />
-          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="QuayHangs" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" FromRole="NhanVien" ToRole="QuayHang" />
-          <NavigationProperty Name="QuayHangs1" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiTao" FromRole="NhanVien" ToRole="QuayHang" />
-          <NavigationProperty Name="KhachHangs" Relationship="QuanLySieuThiModel.FK_KhachHang_NguoiChinhSua" FromRole="NhanVien" ToRole="KhachHang" />
-          <NavigationProperty Name="KhachHangs1" Relationship="QuanLySieuThiModel.FK_KhachHang_NguoiTao" FromRole="NhanVien" ToRole="KhachHang" />
-          <NavigationProperty Name="HangHoas" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="HangHoa" />
-          <NavigationProperty Name="HangHoas1" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiTao" FromRole="NhanVien" ToRole="HangHoa" />
-          <NavigationProperty Name="DonHangs" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiChinhSua" FromRole="NhanVien" ToRole="DonHang" />
-          <NavigationProperty Name="DonHangs1" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiTao" FromRole="NhanVien" ToRole="DonHang" />
-          <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua" FromRole="NhanVien" ToRole="PhieuTraQuayHang" />
-          <NavigationProperty Name="PhieuTraQuayHangs1" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien" FromRole="NhanVien" ToRole="PhieuTraQuayHang" />
-          <NavigationProperty Name="TheKhachHangs" Relationship="QuanLySieuThiModel.FK_TheKhachHang_NguoiChinhSua" FromRole="NhanVien" ToRole="TheKhachHang" />
-          <NavigationProperty Name="TheKhachHangs1" Relationship="QuanLySieuThiModel.FK_TheKhachHang_NguoiTao" FromRole="NhanVien" ToRole="TheKhachHang" />
-          <NavigationProperty Name="KhuyenMais" Relationship="QuanLySieuThiModel.FK_KhuyenMai_NguoiChinhSua" FromRole="NhanVien" ToRole="KhuyenMai" />
-          <NavigationProperty Name="KhuyenMais1" Relationship="QuanLySieuThiModel.FK_KhuyenMai_NguoiTao" FromRole="NhanVien" ToRole="KhuyenMai" />
-          <NavigationProperty Name="NhapKhoes" Relationship="QuanLySieuThiModel.FK_NhapKho_NhanVien" FromRole="NhanVien" ToRole="NhapKho" />
-          <NavigationProperty Name="XuatKhoes" Relationship="QuanLySieuThiModel.FK_XuatKho_NhanVien" FromRole="NhanVien" ToRole="XuatKho" />
-          </EntityType>
         <EntityType Name="QuayHang">
           <Key>
             <PropertyRef Name="Id" />
@@ -1608,10 +1552,10 @@
           <Property Name="NguoiTaoId" Type="Int64" />
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
-          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" FromRole="QuayHang" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiTao" FromRole="QuayHang" ToRole="NhanVien" />
           <NavigationProperty Name="HangHoas" Relationship="QuanLySieuThiModel.FK_HangHoa_QuayHang" FromRole="QuayHang" ToRole="HangHoa" />
           <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang" FromRole="QuayHang" ToRole="PhieuTraQuayHang" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" FromRole="QuayHang" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiTao" FromRole="QuayHang" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="TonKho">
           <Key>
@@ -1624,66 +1568,6 @@
           <NavigationProperty Name="Kho" Relationship="Self.FK_TonKho_Kho" FromRole="TonKho" ToRole="Kho" />
           <NavigationProperty Name="HangHoa" Relationship="QuanLySieuThiModel.FK_TonKho_HangHoa" FromRole="TonKho" ToRole="HangHoa" />
         </EntityType>
-        <Association Name="FK_ChucVu_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ChucVu">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ChucVu_NguoiTao">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ChucVu">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NhanVien_ChucVu">
-          <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="1" />
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ChucVu">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="NhanVien">
-              <PropertyRef Name="ChucVuId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ChungLoaiHangHoa_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="ChungLoaiHangHoa" Type="Self.ChungLoaiHangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ChungLoaiHangHoa">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ChungLoaiHangHoa_NguoiTao">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="ChungLoaiHangHoa" Type="Self.ChungLoaiHangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ChungLoaiHangHoa">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_LoaiHangHoa_ChungLoai">
           <End Role="ChungLoaiHangHoa" Type="Self.ChungLoaiHangHoa" Multiplicity="1" />
           <End Role="LoaiHangHoa" Type="Self.LoaiHangHoa" Multiplicity="*" />
@@ -1732,90 +1616,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DoiTraHangHoa_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="DoiTraHangHoa" Type="Self.DoiTraHangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="DoiTraHangHoa">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DoiTraHangHoa_NhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="DoiTraHangHoa" Type="Self.DoiTraHangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="DoiTraHangHoa">
-              <PropertyRef Name="NhanVienId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDon_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDon_NhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="NhanVienId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Kho_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Kho">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Kho_NguoiTao">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Kho">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Kho_NhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="Kho" Type="Self.Kho" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Kho">
-              <PropertyRef Name="NhanVienId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TonKho_Kho">
           <End Role="Kho" Type="Self.Kho" Multiplicity="1" />
           <End Role="TonKho" Type="Self.TonKho" Multiplicity="*" />
@@ -1825,78 +1625,6 @@
             </Principal>
             <Dependent Role="TonKho">
               <PropertyRef Name="KhoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_LoaiHangHoa_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="LoaiHangHoa" Type="Self.LoaiHangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="LoaiHangHoa">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_LoaiHangHoa_NguoiTao">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="LoaiHangHoa" Type="Self.LoaiHangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="LoaiHangHoa">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NhaCungCap_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="NhaCungCap">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NhaCungCap_NguoiTao">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="NhaCungCap">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NhanVien_NguoiChinhSua">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="NhanVien1" Type="Self.NhanVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="NhanVien1">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NhanVien_NguoiTao">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="NhanVien1" Type="Self.NhanVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="NhanVien1">
-              <PropertyRef Name="NguoiTaoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1911,29 +1639,8 @@
           <EntitySet Name="Khoes" EntityType="Self.Kho" />
           <EntitySet Name="LoaiHangHoas" EntityType="Self.LoaiHangHoa" />
           <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
-          <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="QuayHangs" EntityType="Self.QuayHang" />
           <EntitySet Name="TonKhoes" EntityType="Self.TonKho" />
-          <AssociationSet Name="FK_ChucVu_NguoiChinhSua" Association="Self.FK_ChucVu_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="ChucVu" EntitySet="ChucVus" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ChucVu_NguoiTao" Association="Self.FK_ChucVu_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="ChucVu" EntitySet="ChucVus" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NhanVien_ChucVu" Association="Self.FK_NhanVien_ChucVu">
-            <End Role="ChucVu" EntitySet="ChucVus" />
-            <End Role="NhanVien" EntitySet="NhanViens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ChungLoaiHangHoa_NguoiChinhSua" Association="Self.FK_ChungLoaiHangHoa_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="ChungLoaiHangHoa" EntitySet="ChungLoaiHangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ChungLoaiHangHoa_NguoiTao" Association="Self.FK_ChungLoaiHangHoa_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="ChungLoaiHangHoa" EntitySet="ChungLoaiHangHoas" />
-          </AssociationSet>
           <AssociationSet Name="FK_LoaiHangHoa_ChungLoai" Association="Self.FK_LoaiHangHoa_ChungLoai">
             <End Role="ChungLoaiHangHoa" EntitySet="ChungLoaiHangHoas" />
             <End Role="LoaiHangHoa" EntitySet="LoaiHangHoas" />
@@ -1950,82 +1657,14 @@
             <End Role="HoaDon" EntitySet="HoaDons" />
             <End Role="DoiTraHangHoa" EntitySet="DoiTraHangHoas" />
           </AssociationSet>
-          <AssociationSet Name="FK_DoiTraHangHoa_NguoiChinhSua" Association="Self.FK_DoiTraHangHoa_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="DoiTraHangHoa" EntitySet="DoiTraHangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DoiTraHangHoa_NhanVien" Association="Self.FK_DoiTraHangHoa_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="DoiTraHangHoa" EntitySet="DoiTraHangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDon_NguoiChinhSua" Association="Self.FK_HoaDon_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Kho_NguoiChinhSua" Association="Self.FK_Kho_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="Kho" EntitySet="Khoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Kho_NguoiTao" Association="Self.FK_Kho_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="Kho" EntitySet="Khoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Kho_NhanVien" Association="Self.FK_Kho_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="Kho" EntitySet="Khoes" />
-          </AssociationSet>
           <AssociationSet Name="FK_TonKho_Kho" Association="Self.FK_TonKho_Kho">
             <End Role="Kho" EntitySet="Khoes" />
             <End Role="TonKho" EntitySet="TonKhoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LoaiHangHoa_NguoiChinhSua" Association="Self.FK_LoaiHangHoa_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="LoaiHangHoa" EntitySet="LoaiHangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LoaiHangHoa_NguoiTao" Association="Self.FK_LoaiHangHoa_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="LoaiHangHoa" EntitySet="LoaiHangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NhaCungCap_NguoiChinhSua" Association="Self.FK_NhaCungCap_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NhaCungCap_NguoiTao" Association="Self.FK_NhaCungCap_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NhanVien_NguoiChinhSua" Association="Self.FK_NhanVien_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="NhanVien1" EntitySet="NhanViens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NhanVien_NguoiTao" Association="Self.FK_NhanVien_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="NhanVien1" EntitySet="NhanViens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_QuayHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="QuayHang" EntitySet="QuayHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_QuayHang_NguoiTao" Association="QuanLySieuThiModel.FK_QuayHang_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="QuayHang" EntitySet="QuayHangs" />
           </AssociationSet>
           <EntitySet Name="KhachHangs" EntityType="QuanLySieuThiModel.KhachHang" />
           <AssociationSet Name="FK_HoaDon_KhachHang" Association="QuanLySieuThiModel.FK_HoaDon_KhachHang">
             <End Role="KhachHang" EntitySet="KhachHangs" />
             <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KhachHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_KhachHang_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KhachHang_NguoiTao" Association="QuanLySieuThiModel.FK_KhachHang_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="KhachHang" EntitySet="KhachHangs" />
           </AssociationSet>
           <EntitySet Name="HangHoas" EntityType="QuanLySieuThiModel.HangHoa" />
           <AssociationSet Name="FK_CTDoiTraHangHoa_HangHoa" Association="QuanLySieuThiModel.FK_CTDoiTraHangHoa_HangHoa">
@@ -2042,14 +1681,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_HangHoa_LoaiHangHoa" Association="QuanLySieuThiModel.FK_HangHoa_LoaiHangHoa">
             <End Role="LoaiHangHoa" EntitySet="LoaiHangHoas" />
-            <End Role="HangHoa" EntitySet="HangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HangHoa_NguoiChinhSua" Association="QuanLySieuThiModel.FK_HangHoa_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="HangHoa" EntitySet="HangHoas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HangHoa_NguoiTao" Association="QuanLySieuThiModel.FK_HangHoa_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="HangHoa" EntitySet="HangHoas" />
           </AssociationSet>
           <AssociationSet Name="FK_HangHoa_NhaCungCap" Association="QuanLySieuThiModel.FK_HangHoa_NhaCungCap">
@@ -2085,14 +1716,6 @@
             <End Role="HangHoa" EntitySet="HangHoas" />
             <End Role="CT_XuatKho" EntitySet="CT_XuatKho" />
           </AssociationSet>
-          <AssociationSet Name="FK_DonHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_DonHang_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="DonHang" EntitySet="DonHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DonHang_NguoiTao" Association="QuanLySieuThiModel.FK_DonHang_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="DonHang" EntitySet="DonHangs" />
-          </AssociationSet>
           <AssociationSet Name="FK_DonHang_NhaCungCap" Association="QuanLySieuThiModel.FK_DonHang_NhaCungCap">
             <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
             <End Role="DonHang" EntitySet="DonHangs" />
@@ -2105,35 +1728,11 @@
             <End Role="Kho" EntitySet="Khoes" />
             <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
           </AssociationSet>
-          <AssociationSet Name="FK_PhieuTraQuayHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PhieuTraQuayHang_NhanVien" Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TheKhachHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="TheKhachHang" EntitySet="TheKhachHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TheKhachHang_NguoiTao" Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="TheKhachHang" EntitySet="TheKhachHangs" />
-          </AssociationSet>
           <AssociationSet Name="FK_PhieuTraQuayHang_QuayHang" Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang">
             <End Role="QuayHang" EntitySet="QuayHangs" />
             <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
           </AssociationSet>
           <EntitySet Name="KhuyenMais" EntityType="QuanLySieuThiModel.KhuyenMai" />
-          <AssociationSet Name="FK_KhuyenMai_NguoiChinhSua" Association="QuanLySieuThiModel.FK_KhuyenMai_NguoiChinhSua">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="KhuyenMai" EntitySet="KhuyenMais" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KhuyenMai_NguoiTao" Association="QuanLySieuThiModel.FK_KhuyenMai_NguoiTao">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="KhuyenMai" EntitySet="KhuyenMais" />
-          </AssociationSet>
           <EntitySet Name="HangHoaKhuyenMais" EntityType="QuanLySieuThiModel.HangHoaKhuyenMai" />
           <AssociationSet Name="FK_HangHoaKhuyenMai_HangHoa" Association="QuanLySieuThiModel.FK_HangHoaKhuyenMai_HangHoa">
             <End Role="HangHoa" EntitySet="HangHoas" />
@@ -2156,10 +1755,6 @@
             <End Role="Kho" EntitySet="Khoes" />
             <End Role="NhapKho" EntitySet="NhapKhoes" />
           </AssociationSet>
-          <AssociationSet Name="FK_NhapKho_NhanVien" Association="QuanLySieuThiModel.FK_NhapKho_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="NhapKho" EntitySet="NhapKhoes" />
-          </AssociationSet>
           <EntitySet Name="CT_NhapKho" EntityType="QuanLySieuThiModel.CT_NhapKho" />
           <AssociationSet Name="FK_CTNhapKho_HangHoa" Association="QuanLySieuThiModel.FK_CTNhapKho_HangHoa">
             <End Role="HangHoa" EntitySet="HangHoas" />
@@ -2178,35 +1773,144 @@
             <End Role="Kho" EntitySet="Khoes" />
             <End Role="XuatKho" EntitySet="XuatKhoes" />
           </AssociationSet>
+          <EntitySet Name="NhanViens" EntityType="QuanLySieuThiModel.NhanVien" />
+          <AssociationSet Name="FK_ChucVu_NguoiChinhSua" Association="QuanLySieuThiModel.FK_ChucVu_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="ChucVu" EntitySet="ChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChucVu_NguoiTao" Association="QuanLySieuThiModel.FK_ChucVu_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="ChucVu" EntitySet="ChucVus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_ChucVu" Association="QuanLySieuThiModel.FK_NhanVien_ChucVu">
+            <End Role="ChucVu" EntitySet="ChucVus" />
+            <End Role="NhanVien" EntitySet="NhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChungLoaiHangHoa_NguoiChinhSua" Association="QuanLySieuThiModel.FK_ChungLoaiHangHoa_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="ChungLoaiHangHoa" EntitySet="ChungLoaiHangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChungLoaiHangHoa_NguoiTao" Association="QuanLySieuThiModel.FK_ChungLoaiHangHoa_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="ChungLoaiHangHoa" EntitySet="ChungLoaiHangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoiTraHangHoa_NguoiChinhSua" Association="QuanLySieuThiModel.FK_DoiTraHangHoa_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="DoiTraHangHoa" EntitySet="DoiTraHangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoiTraHangHoa_NhanVien" Association="QuanLySieuThiModel.FK_DoiTraHangHoa_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="DoiTraHangHoa" EntitySet="DoiTraHangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_DonHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="DonHang" EntitySet="DonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DonHang_NguoiTao" Association="QuanLySieuThiModel.FK_DonHang_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="DonHang" EntitySet="DonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HangHoa_NguoiChinhSua" Association="QuanLySieuThiModel.FK_HangHoa_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="HangHoa" EntitySet="HangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HangHoa_NguoiTao" Association="QuanLySieuThiModel.FK_HangHoa_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="HangHoa" EntitySet="HangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_NguoiChinhSua" Association="QuanLySieuThiModel.FK_HoaDon_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_NhanVien" Association="QuanLySieuThiModel.FK_HoaDon_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KhachHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_KhachHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KhachHang_NguoiTao" Association="QuanLySieuThiModel.FK_KhachHang_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kho_NguoiChinhSua" Association="QuanLySieuThiModel.FK_Kho_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="Kho" EntitySet="Khoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kho_NguoiTao" Association="QuanLySieuThiModel.FK_Kho_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="Kho" EntitySet="Khoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kho_NhanVien" Association="QuanLySieuThiModel.FK_Kho_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="Kho" EntitySet="Khoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KhuyenMai_NguoiChinhSua" Association="QuanLySieuThiModel.FK_KhuyenMai_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="KhuyenMai" EntitySet="KhuyenMais" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KhuyenMai_NguoiTao" Association="QuanLySieuThiModel.FK_KhuyenMai_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="KhuyenMai" EntitySet="KhuyenMais" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoaiHangHoa_NguoiChinhSua" Association="QuanLySieuThiModel.FK_LoaiHangHoa_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="LoaiHangHoa" EntitySet="LoaiHangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoaiHangHoa_NguoiTao" Association="QuanLySieuThiModel.FK_LoaiHangHoa_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="LoaiHangHoa" EntitySet="LoaiHangHoas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhaCungCap_NguoiChinhSua" Association="QuanLySieuThiModel.FK_NhaCungCap_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhaCungCap_NguoiTao" Association="QuanLySieuThiModel.FK_NhaCungCap_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_NguoiChinhSua" Association="QuanLySieuThiModel.FK_NhanVien_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="NhanVien1" EntitySet="NhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhanVien_NguoiTao" Association="QuanLySieuThiModel.FK_NhanVien_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="NhanVien1" EntitySet="NhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhapKho_NhanVien" Association="QuanLySieuThiModel.FK_NhapKho_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="NhapKho" EntitySet="NhapKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuTraQuayHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuTraQuayHang_NhanVien" Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuayHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="QuayHang" EntitySet="QuayHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuayHang_NguoiTao" Association="QuanLySieuThiModel.FK_QuayHang_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="QuayHang" EntitySet="QuayHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TheKhachHang_NguoiChinhSua" Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiChinhSua">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="TheKhachHang" EntitySet="TheKhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TheKhachHang_NguoiTao" Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiTao">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="TheKhachHang" EntitySet="TheKhachHangs" />
+          </AssociationSet>
           <AssociationSet Name="FK_XuatKho_NhanVien" Association="QuanLySieuThiModel.FK_XuatKho_NhanVien">
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="XuatKho" EntitySet="XuatKhoes" />
           </AssociationSet>
           </EntityContainer>
-        <Association Name="FK_QuayHang_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="QuayHang">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_QuayHang_NguoiTao">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="QuayHang">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="KhachHang">
           <Key>
             <PropertyRef Name="Id" />
@@ -2224,9 +1928,9 @@
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="HoaDons" Relationship="QuanLySieuThiModel.FK_HoaDon_KhachHang" FromRole="KhachHang" ToRole="HoaDon" />
+          <NavigationProperty Name="TheKhachHangs" Relationship="QuanLySieuThiModel.FK_TheKhachHang_KhachHang" FromRole="KhachHang" ToRole="TheKhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_KhachHang_NguoiChinhSua" FromRole="KhachHang" ToRole="NhanVien" />
           <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_KhachHang_NguoiTao" FromRole="KhachHang" ToRole="NhanVien" />
-          <NavigationProperty Name="TheKhachHangs" Relationship="QuanLySieuThiModel.FK_TheKhachHang_KhachHang" FromRole="KhachHang" ToRole="TheKhachHang" />
         </EntityType>
         <Association Name="FK_HoaDon_KhachHang">
           <End Type="QuanLySieuThiModel.KhachHang" Role="KhachHang" Multiplicity="1" />
@@ -2237,30 +1941,6 @@
             </Principal>
             <Dependent Role="HoaDon">
               <PropertyRef Name="KhachHangId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KhachHang_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.KhachHang" Role="KhachHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="KhachHang">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KhachHang_NguoiTao">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.KhachHang" Role="KhachHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="KhachHang">
-              <PropertyRef Name="NguoiTaoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2287,8 +1967,6 @@
           <NavigationProperty Name="CT_DonHang" Relationship="QuanLySieuThiModel.FK_CTDonHang_HangHoa" FromRole="HangHoa" ToRole="CT_DonHang" />
           <NavigationProperty Name="CT_HoaDon" Relationship="QuanLySieuThiModel.FK_CTHoaDon_HangHoa" FromRole="HangHoa" ToRole="CT_HoaDon" />
           <NavigationProperty Name="LoaiHangHoa" Relationship="QuanLySieuThiModel.FK_HangHoa_LoaiHangHoa" FromRole="HangHoa" ToRole="LoaiHangHoa" />
-          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiChinhSua" FromRole="HangHoa" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiTao" FromRole="HangHoa" ToRole="NhanVien" />
           <NavigationProperty Name="NhaCungCap" Relationship="QuanLySieuThiModel.FK_HangHoa_NhaCungCap" FromRole="HangHoa" ToRole="NhaCungCap" />
           <NavigationProperty Name="QuayHang" Relationship="QuanLySieuThiModel.FK_HangHoa_QuayHang" FromRole="HangHoa" ToRole="QuayHang" />
           <NavigationProperty Name="TonKhoes" Relationship="QuanLySieuThiModel.FK_TonKho_HangHoa" FromRole="HangHoa" ToRole="TonKho" />
@@ -2297,6 +1975,8 @@
           <NavigationProperty Name="HangHoaKhuyenMais" Relationship="QuanLySieuThiModel.FK_HangHoaKhuyenMai_HangHoa" FromRole="HangHoa" ToRole="HangHoaKhuyenMai" />
           <NavigationProperty Name="HangHoaKhuyenMais1" Relationship="QuanLySieuThiModel.FK_HangHoaKhuyenMai_HangHoaTang" FromRole="HangHoa" ToRole="HangHoaKhuyenMai" />
           <NavigationProperty Name="CT_NhapKho" Relationship="QuanLySieuThiModel.FK_CTNhapKho_HangHoa" FromRole="HangHoa" ToRole="CT_NhapKho" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiChinhSua" FromRole="HangHoa" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiTao" FromRole="HangHoa" ToRole="NhanVien" />
         </EntityType>
         <Association Name="FK_CTDoiTraHangHoa_HangHoa">
           <End Type="QuanLySieuThiModel.HangHoa" Role="HangHoa" Multiplicity="1" />
@@ -2343,30 +2023,6 @@
             </Principal>
             <Dependent Role="HangHoa">
               <PropertyRef Name="LoaiHangHoaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HangHoa_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.HangHoa" Role="HangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="HangHoa">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HangHoa_NguoiTao">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.HangHoa" Role="HangHoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="HangHoa">
-              <PropertyRef Name="NguoiTaoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2444,10 +2100,10 @@
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="CT_DonHang" Relationship="QuanLySieuThiModel.FK_CTDonHang_DonHang" FromRole="DonHang" ToRole="CT_DonHang" />
-          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiChinhSua" FromRole="DonHang" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiTao" FromRole="DonHang" ToRole="NhanVien" />
           <NavigationProperty Name="NhaCungCap" Relationship="QuanLySieuThiModel.FK_DonHang_NhaCungCap" FromRole="DonHang" ToRole="NhaCungCap" />
           <NavigationProperty Name="NhapKhoes" Relationship="QuanLySieuThiModel.FK_NhapKho_DonHang" FromRole="DonHang" ToRole="NhapKho" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiChinhSua" FromRole="DonHang" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiTao" FromRole="DonHang" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="PhieuTraQuayHang">
           <Key>
@@ -2462,9 +2118,9 @@
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <NavigationProperty Name="CT_PhieuTraQuayHang" Relationship="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_PhieuTraQuayHang" FromRole="PhieuTraQuayHang" ToRole="CT_PhieuTraQuayHang" />
           <NavigationProperty Name="Kho" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_Kho" FromRole="PhieuTraQuayHang" ToRole="Kho" />
+          <NavigationProperty Name="QuayHang" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang" FromRole="PhieuTraQuayHang" ToRole="QuayHang" />
           <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua" FromRole="PhieuTraQuayHang" ToRole="NhanVien" />
           <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien" FromRole="PhieuTraQuayHang" ToRole="NhanVien" />
-          <NavigationProperty Name="QuayHang" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang" FromRole="PhieuTraQuayHang" ToRole="QuayHang" />
         </EntityType>
         <EntityType Name="TheKhachHang">
           <Key>
@@ -2530,30 +2186,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DonHang_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.DonHang" Role="DonHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="DonHang">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DonHang_NguoiTao">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.DonHang" Role="DonHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="DonHang">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_DonHang_NhaCungCap">
           <End Type="QuanLySieuThiModel.NhaCungCap" Role="NhaCungCap" Multiplicity="1" />
           <End Type="QuanLySieuThiModel.DonHang" Role="DonHang" Multiplicity="*" />
@@ -2590,54 +2222,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PhieuTraQuayHang_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.PhieuTraQuayHang" Role="PhieuTraQuayHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="PhieuTraQuayHang">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PhieuTraQuayHang_NhanVien">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-          <End Type="QuanLySieuThiModel.PhieuTraQuayHang" Role="PhieuTraQuayHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="PhieuTraQuayHang">
-              <PropertyRef Name="NhanVienId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TheKhachHang_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.TheKhachHang" Role="TheKhachHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TheKhachHang">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TheKhachHang_NguoiTao">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.TheKhachHang" Role="TheKhachHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TheKhachHang">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PhieuTraQuayHang_QuayHang">
           <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="1" />
           <End Type="QuanLySieuThiModel.PhieuTraQuayHang" Role="PhieuTraQuayHang" Multiplicity="*" />
@@ -2664,34 +2248,10 @@
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
+          <NavigationProperty Name="HangHoaKhuyenMais" Relationship="QuanLySieuThiModel.FK_HangHoaKhuyenMai_KhuyenMai" FromRole="KhuyenMai" ToRole="HangHoaKhuyenMai" />
           <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_KhuyenMai_NguoiChinhSua" FromRole="KhuyenMai" ToRole="NhanVien" />
           <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_KhuyenMai_NguoiTao" FromRole="KhuyenMai" ToRole="NhanVien" />
-          <NavigationProperty Name="HangHoaKhuyenMais" Relationship="QuanLySieuThiModel.FK_HangHoaKhuyenMai_KhuyenMai" FromRole="KhuyenMai" ToRole="HangHoaKhuyenMai" />
         </EntityType>
-        <Association Name="FK_KhuyenMai_NguoiChinhSua">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.KhuyenMai" Role="KhuyenMai" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="KhuyenMai">
-              <PropertyRef Name="NguoiChinhSuaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KhuyenMai_NguoiTao">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.KhuyenMai" Role="KhuyenMai" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="KhuyenMai">
-              <PropertyRef Name="NguoiTaoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="HangHoaKhuyenMai">
           <Key>
             <PropertyRef Name="HangHoaId" />
@@ -2755,8 +2315,8 @@
           <Property Name="HoatDong" Type="Boolean" />
           <NavigationProperty Name="DonHang" Relationship="QuanLySieuThiModel.FK_NhapKho_DonHang" FromRole="NhapKho" ToRole="DonHang" />
           <NavigationProperty Name="Kho" Relationship="QuanLySieuThiModel.FK_NhapKho_Kho" FromRole="NhapKho" ToRole="Kho" />
-          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_NhapKho_NhanVien" FromRole="NhapKho" ToRole="NhanVien" />
           <NavigationProperty Name="CT_NhapKho" Relationship="QuanLySieuThiModel.FK_CTNhapKho_NhapKho" FromRole="NhapKho" ToRole="CT_NhapKho" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_NhapKho_NhanVien" FromRole="NhapKho" ToRole="NhanVien" />
         </EntityType>
         <Association Name="FK_NhapKho_DonHang">
           <End Type="QuanLySieuThiModel.DonHang" Role="DonHang" Multiplicity="1" />
@@ -2779,18 +2339,6 @@
             </Principal>
             <Dependent Role="NhapKho">
               <PropertyRef Name="KhoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NhapKho_NhanVien">
-          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
-          <End Type="QuanLySieuThiModel.NhapKho" Role="NhapKho" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="NhapKho">
-              <PropertyRef Name="NguoiTaoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2864,6 +2412,458 @@
             </Principal>
             <Dependent Role="XuatKho">
               <PropertyRef Name="KhoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HoVaTen" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+          <Property Name="NgayThangNamSinh" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ChucVuId" Type="Int64" Nullable="false" />
+          <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="7" />
+          <Property Name="NguoiTaoId" Type="Int64" />
+          <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
+          <Property Name="NguoiChinhSuaId" Type="Int64" />
+          <Property Name="HoatDong" Type="Boolean" />
+          <NavigationProperty Name="ChucVus" Relationship="QuanLySieuThiModel.FK_ChucVu_NguoiChinhSua" FromRole="NhanVien" ToRole="ChucVu" />
+          <NavigationProperty Name="ChucVus1" Relationship="QuanLySieuThiModel.FK_ChucVu_NguoiTao" FromRole="NhanVien" ToRole="ChucVu" />
+          <NavigationProperty Name="ChucVu" Relationship="QuanLySieuThiModel.FK_NhanVien_ChucVu" FromRole="NhanVien" ToRole="ChucVu" />
+          <NavigationProperty Name="ChungLoaiHangHoas" Relationship="QuanLySieuThiModel.FK_ChungLoaiHangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="ChungLoaiHangHoa" />
+          <NavigationProperty Name="ChungLoaiHangHoas1" Relationship="QuanLySieuThiModel.FK_ChungLoaiHangHoa_NguoiTao" FromRole="NhanVien" ToRole="ChungLoaiHangHoa" />
+          <NavigationProperty Name="DoiTraHangHoas" Relationship="QuanLySieuThiModel.FK_DoiTraHangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="DoiTraHangHoa" />
+          <NavigationProperty Name="DoiTraHangHoas1" Relationship="QuanLySieuThiModel.FK_DoiTraHangHoa_NhanVien" FromRole="NhanVien" ToRole="DoiTraHangHoa" />
+          <NavigationProperty Name="DonHangs" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiChinhSua" FromRole="NhanVien" ToRole="DonHang" />
+          <NavigationProperty Name="DonHangs1" Relationship="QuanLySieuThiModel.FK_DonHang_NguoiTao" FromRole="NhanVien" ToRole="DonHang" />
+          <NavigationProperty Name="HangHoas" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="HangHoa" />
+          <NavigationProperty Name="HangHoas1" Relationship="QuanLySieuThiModel.FK_HangHoa_NguoiTao" FromRole="NhanVien" ToRole="HangHoa" />
+          <NavigationProperty Name="HoaDons" Relationship="QuanLySieuThiModel.FK_HoaDon_NguoiChinhSua" FromRole="NhanVien" ToRole="HoaDon" />
+          <NavigationProperty Name="HoaDons1" Relationship="QuanLySieuThiModel.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
+          <NavigationProperty Name="KhachHangs" Relationship="QuanLySieuThiModel.FK_KhachHang_NguoiChinhSua" FromRole="NhanVien" ToRole="KhachHang" />
+          <NavigationProperty Name="KhachHangs1" Relationship="QuanLySieuThiModel.FK_KhachHang_NguoiTao" FromRole="NhanVien" ToRole="KhachHang" />
+          <NavigationProperty Name="Khoes" Relationship="QuanLySieuThiModel.FK_Kho_NguoiChinhSua" FromRole="NhanVien" ToRole="Kho" />
+          <NavigationProperty Name="Khoes1" Relationship="QuanLySieuThiModel.FK_Kho_NguoiTao" FromRole="NhanVien" ToRole="Kho" />
+          <NavigationProperty Name="Khoes2" Relationship="QuanLySieuThiModel.FK_Kho_NhanVien" FromRole="NhanVien" ToRole="Kho" />
+          <NavigationProperty Name="KhuyenMais" Relationship="QuanLySieuThiModel.FK_KhuyenMai_NguoiChinhSua" FromRole="NhanVien" ToRole="KhuyenMai" />
+          <NavigationProperty Name="KhuyenMais1" Relationship="QuanLySieuThiModel.FK_KhuyenMai_NguoiTao" FromRole="NhanVien" ToRole="KhuyenMai" />
+          <NavigationProperty Name="LoaiHangHoas" Relationship="QuanLySieuThiModel.FK_LoaiHangHoa_NguoiChinhSua" FromRole="NhanVien" ToRole="LoaiHangHoa" />
+          <NavigationProperty Name="LoaiHangHoas1" Relationship="QuanLySieuThiModel.FK_LoaiHangHoa_NguoiTao" FromRole="NhanVien" ToRole="LoaiHangHoa" />
+          <NavigationProperty Name="NhaCungCaps" Relationship="QuanLySieuThiModel.FK_NhaCungCap_NguoiChinhSua" FromRole="NhanVien" ToRole="NhaCungCap" />
+          <NavigationProperty Name="NhaCungCaps1" Relationship="QuanLySieuThiModel.FK_NhaCungCap_NguoiTao" FromRole="NhanVien" ToRole="NhaCungCap" />
+          <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_NhanVien_NguoiChinhSua" FromRole="NhanVien" ToRole="NhanVien1" />
+          <NavigationProperty Name="NhanVien2" Relationship="QuanLySieuThiModel.FK_NhanVien_NguoiChinhSua" FromRole="NhanVien1" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien11" Relationship="QuanLySieuThiModel.FK_NhanVien_NguoiTao" FromRole="NhanVien" ToRole="NhanVien1" />
+          <NavigationProperty Name="NhanVien3" Relationship="QuanLySieuThiModel.FK_NhanVien_NguoiTao" FromRole="NhanVien1" ToRole="NhanVien" />
+          <NavigationProperty Name="NhapKhoes" Relationship="QuanLySieuThiModel.FK_NhapKho_NhanVien" FromRole="NhanVien" ToRole="NhapKho" />
+          <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua" FromRole="NhanVien" ToRole="PhieuTraQuayHang" />
+          <NavigationProperty Name="PhieuTraQuayHangs1" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien" FromRole="NhanVien" ToRole="PhieuTraQuayHang" />
+          <NavigationProperty Name="QuayHangs" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiChinhSua" FromRole="NhanVien" ToRole="QuayHang" />
+          <NavigationProperty Name="QuayHangs1" Relationship="QuanLySieuThiModel.FK_QuayHang_NguoiTao" FromRole="NhanVien" ToRole="QuayHang" />
+          <NavigationProperty Name="TheKhachHangs" Relationship="QuanLySieuThiModel.FK_TheKhachHang_NguoiChinhSua" FromRole="NhanVien" ToRole="TheKhachHang" />
+          <NavigationProperty Name="TheKhachHangs1" Relationship="QuanLySieuThiModel.FK_TheKhachHang_NguoiTao" FromRole="NhanVien" ToRole="TheKhachHang" />
+          <NavigationProperty Name="XuatKhoes" Relationship="QuanLySieuThiModel.FK_XuatKho_NhanVien" FromRole="NhanVien" ToRole="XuatKho" />
+        </EntityType>
+        <Association Name="FK_ChucVu_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.ChucVu" Role="ChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChucVu">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChucVu_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.ChucVu" Role="ChucVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChucVu">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_ChucVu">
+          <End Type="QuanLySieuThiModel.ChucVu" Role="ChucVu" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChucVu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="ChucVuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChungLoaiHangHoa_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.ChungLoaiHangHoa" Role="ChungLoaiHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChungLoaiHangHoa">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChungLoaiHangHoa_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.ChungLoaiHangHoa" Role="ChungLoaiHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChungLoaiHangHoa">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DoiTraHangHoa_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.DoiTraHangHoa" Role="DoiTraHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoiTraHangHoa">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DoiTraHangHoa_NhanVien">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.DoiTraHangHoa" Role="DoiTraHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoiTraHangHoa">
+              <PropertyRef Name="NhanVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonHang_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.DonHang" Role="DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DonHang_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.DonHang" Role="DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DonHang">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HangHoa_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.HangHoa" Role="HangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HangHoa">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HangHoa_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.HangHoa" Role="HangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HangHoa">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_NhanVien">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="NhanVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KhachHang_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.KhachHang" Role="KhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KhachHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KhachHang_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.KhachHang" Role="KhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KhachHang">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kho_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.Kho" Role="Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kho_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.Kho" Role="Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kho_NhanVien">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.Kho" Role="Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Kho">
+              <PropertyRef Name="NhanVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KhuyenMai_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.KhuyenMai" Role="KhuyenMai" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KhuyenMai">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KhuyenMai_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.KhuyenMai" Role="KhuyenMai" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KhuyenMai">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoaiHangHoa_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.LoaiHangHoa" Role="LoaiHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LoaiHangHoa">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoaiHangHoa_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.LoaiHangHoa" Role="LoaiHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LoaiHangHoa">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhaCungCap_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.NhaCungCap" Role="NhaCungCap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NhaCungCap">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhaCungCap_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.NhaCungCap" Role="NhaCungCap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NhaCungCap">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NhanVien1">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhanVien_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NhanVien1">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhapKho_NhanVien">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.NhapKho" Role="NhapKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NhapKho">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhieuTraQuayHang_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.PhieuTraQuayHang" Role="PhieuTraQuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PhieuTraQuayHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhieuTraQuayHang_NhanVien">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.PhieuTraQuayHang" Role="PhieuTraQuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PhieuTraQuayHang">
+              <PropertyRef Name="NhanVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuayHang_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuayHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuayHang_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.QuayHang" Role="QuayHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuayHang">
+              <PropertyRef Name="NguoiTaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TheKhachHang_NguoiChinhSua">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.TheKhachHang" Role="TheKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TheKhachHang">
+              <PropertyRef Name="NguoiChinhSuaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TheKhachHang_NguoiTao">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.TheKhachHang" Role="TheKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TheKhachHang">
+              <PropertyRef Name="NguoiTaoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3008,27 +3008,6 @@
                 <ScalarProperty Name="TenCongTy" ColumnName="TenCongTy" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
-                <ScalarProperty Name="NguoiTaoId" ColumnName="NguoiTaoId" />
-                <ScalarProperty Name="NgayChinhSua" ColumnName="NgayChinhSua" />
-                <ScalarProperty Name="NguoiChinhSuaId" ColumnName="NguoiChinhSuaId" />
-                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NhanViens">
-            <EntityTypeMapping TypeName="QuanLySieuThiModel.NhanVien">
-              <MappingFragment StoreEntitySet="NhanVien">
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
-                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
-                <ScalarProperty Name="NgayThangNamSinh" ColumnName="NgayThangNamSinh" />
-                <ScalarProperty Name="ChucVuId" ColumnName="ChucVuId" />
-                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
                 <ScalarProperty Name="NguoiTaoId" ColumnName="NguoiTaoId" />
@@ -3219,6 +3198,27 @@
                 <ScalarProperty Name="NhanVienId" ColumnName="NhanVienId" />
                 <ScalarProperty Name="KhoId" ColumnName="KhoId" />
                 <ScalarProperty Name="PhieuXuatKhoId" ColumnName="PhieuXuatKhoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanViens">
+            <EntityTypeMapping TypeName="QuanLySieuThiModel.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
+                <ScalarProperty Name="NguoiChinhSuaId" ColumnName="NguoiChinhSuaId" />
+                <ScalarProperty Name="NgayChinhSua" ColumnName="NgayChinhSua" />
+                <ScalarProperty Name="NguoiTaoId" ColumnName="NguoiTaoId" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="ChucVuId" ColumnName="ChucVuId" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+                <ScalarProperty Name="NgayThangNamSinh" ColumnName="NgayThangNamSinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

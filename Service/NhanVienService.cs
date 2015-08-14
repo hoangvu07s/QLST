@@ -22,6 +22,8 @@ namespace Service
                 return
                     Entities.NhanViens.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
                         .Include(_ => _.ChucVu)
+                        .Include(_=>_.NhanVien2)
+                        .Include(_=>_.NhanVien3)
                         .ToList();
             }
             catch (Exception ex)

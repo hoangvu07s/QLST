@@ -53,7 +53,7 @@ namespace QuanLySieuThi.NhanVien
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(457, 270);
+            this.layoutControl1.Size = new System.Drawing.Size(457, 71);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -75,7 +75,7 @@ namespace QuanLySieuThi.NhanVien
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(457, 270);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(457, 71);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -85,7 +85,7 @@ namespace QuanLySieuThi.NhanVien
             this.layoutControlItem1.Control = this.ChucVuTextBox;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(437, 250);
+            this.layoutControlItem1.Size = new System.Drawing.Size(437, 51);
             this.layoutControlItem1.Text = "Tên Chức Vụ";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(81, 17);
@@ -96,9 +96,9 @@ namespace QuanLySieuThi.NhanVien
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
-            this.CancelButtonControl.Location = new System.Drawing.Point(12, 261);
+            this.CancelButtonControl.Location = new System.Drawing.Point(12, 69);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -109,9 +109,9 @@ namespace QuanLySieuThi.NhanVien
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
-            this.OKButton.Location = new System.Drawing.Point(308, 261);
+            this.OKButton.Location = new System.Drawing.Point(324, 69);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 26);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -121,7 +121,7 @@ namespace QuanLySieuThi.NhanVien
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 301);
+            this.ClientSize = new System.Drawing.Size(456, 107);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);

@@ -29,8 +29,8 @@ namespace Model
     
         public virtual ICollection<CT_PhieuTraQuayHang> CT_PhieuTraQuayHang { get; set; }
         public virtual Kho Kho { get; set; }
+        public virtual QuayHang QuayHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
-        public virtual QuayHang QuayHang { get; set; }
     }
 }

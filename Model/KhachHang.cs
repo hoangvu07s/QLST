@@ -34,8 +34,8 @@ namespace Model
         public Nullable<bool> HoatDong { get; set; }
     
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual ICollection<TheKhachHang> TheKhachHangs { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
-        public virtual ICollection<TheKhachHang> TheKhachHangs { get; set; }
     }
 }

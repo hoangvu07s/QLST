@@ -33,12 +33,12 @@ namespace Model
         public Nullable<long> NguoiChinhSuaId { get; set; }
         public Nullable<bool> HoatDong { get; set; }
     
-        public virtual NhanVien NhanVien { get; set; }
-        public virtual NhanVien NhanVien1 { get; set; }
-        public virtual NhanVien NhanVien2 { get; set; }
         public virtual ICollection<TonKho> TonKhoes { get; set; }
         public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
         public virtual ICollection<NhapKho> NhapKhoes { get; set; }
         public virtual ICollection<XuatKho> XuatKhoes { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual NhanVien NhanVien1 { get; set; }
+        public virtual NhanVien NhanVien2 { get; set; }
     }
 }

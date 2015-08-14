@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using Helper;
@@ -88,7 +89,11 @@ namespace Service
         {
             try
             {
-                return Entities.NhaCungCaps.Where(_ => _.HoatDong.HasValue && _.HoatDong == true).ToList();
+                return
+                    Entities.NhaCungCaps.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
+                        .Include(_ => _.NhanVien)
+                        .Include(_ => _.NhanVien1)
+                        .ToList();
             }
             catch (Exception ex)
             {

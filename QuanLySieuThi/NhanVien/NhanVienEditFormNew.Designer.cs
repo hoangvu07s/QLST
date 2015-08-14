@@ -96,7 +96,7 @@ namespace QuanLySieuThi.NhanVien
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(652, 439);
+            this.layoutControl1.Size = new System.Drawing.Size(652, 409);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -224,7 +224,7 @@ namespace QuanLySieuThi.NhanVien
             this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(652, 439);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(652, 409);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -330,7 +330,7 @@ namespace QuanLySieuThi.NhanVien
             this.layoutControlItem9.Control = this.DiaChiTextBox;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 336);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(632, 83);
+            this.layoutControlItem9.Size = new System.Drawing.Size(632, 53);
             this.layoutControlItem9.Text = "Địa Chỉ";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(95, 17);
@@ -341,10 +341,10 @@ namespace QuanLySieuThi.NhanVien
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButtonControl.Appearance.Options.UseFont = true;
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
-            this.CancelButtonControl.Location = new System.Drawing.Point(16, 449);
+            this.CancelButtonControl.Location = new System.Drawing.Point(13, 405);
             this.CancelButtonControl.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(160, 39);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -355,10 +355,10 @@ namespace QuanLySieuThi.NhanVien
             this.OKButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKButton.Appearance.Options.UseFont = true;
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
-            this.OKButton.Location = new System.Drawing.Point(481, 449);
+            this.OKButton.Location = new System.Drawing.Point(524, 405);
             this.OKButton.Margin = new System.Windows.Forms.Padding(4);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(160, 39);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -368,7 +368,7 @@ namespace QuanLySieuThi.NhanVien
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 504);
+            this.ClientSize = new System.Drawing.Size(657, 448);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);

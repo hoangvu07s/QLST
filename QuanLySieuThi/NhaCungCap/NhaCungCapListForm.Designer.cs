@@ -46,6 +46,10 @@ namespace QuanLySieuThi.NhaCungCap
             this.OKButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
+            this.NguoiTaoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayTaoColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NguoiChinhSuaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayChinhSuaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NhaCungCapGridControl)).BeginInit();
@@ -89,7 +93,11 @@ namespace QuanLySieuThi.NhaCungCap
             this.TenCongTyColumn,
             this.DiaChiColumn,
             this.SoDienThoaiColumn,
-            this.EmailColumn});
+            this.EmailColumn,
+            this.NguoiTaoColumn,
+            this.NgayTaoColumn,
+            this.NguoiChinhSuaColumn,
+            this.NgayChinhSuaColumn});
             this.GridView1.GridControl = this.NhaCungCapGridControl;
             this.GridView1.Name = "GridView1";
             this.GridView1.OptionsBehavior.Editable = false;
@@ -260,6 +268,50 @@ namespace QuanLySieuThi.NhaCungCap
             this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // NguoiTaoColumn
+            // 
+            this.NguoiTaoColumn.Caption = "Người Tạo";
+            this.NguoiTaoColumn.FieldName = "NhanVien1.TenDangNhap";
+            this.NguoiTaoColumn.Name = "NguoiTaoColumn";
+            this.NguoiTaoColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiTaoColumn.Visible = true;
+            this.NguoiTaoColumn.VisibleIndex = 5;
+            this.NguoiTaoColumn.Width = 150;
+            // 
+            // NgayTaoColumn
+            // 
+            this.NgayTaoColumn.Caption = "Ngày Tạo";
+            this.NgayTaoColumn.FieldName = "NgayTao";
+            this.NgayTaoColumn.Name = "NgayTaoColumn";
+            this.NgayTaoColumn.OptionsColumn.AllowEdit = false;
+            this.NgayTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayTaoColumn.Visible = true;
+            this.NgayTaoColumn.VisibleIndex = 6;
+            this.NgayTaoColumn.Width = 150;
+            // 
+            // NguoiChinhSuaColumn
+            // 
+            this.NguoiChinhSuaColumn.Caption = "Người Chỉnh Sửa";
+            this.NguoiChinhSuaColumn.FieldName = "NhanVien.TenDangNhap";
+            this.NguoiChinhSuaColumn.Name = "NguoiChinhSuaColumn";
+            this.NguoiChinhSuaColumn.OptionsColumn.AllowEdit = false;
+            this.NguoiChinhSuaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NguoiChinhSuaColumn.Visible = true;
+            this.NguoiChinhSuaColumn.VisibleIndex = 7;
+            this.NguoiChinhSuaColumn.Width = 150;
+            // 
+            // NgayChinhSuaColumn
+            // 
+            this.NgayChinhSuaColumn.Caption = "Ngày Chỉnh Sửa";
+            this.NgayChinhSuaColumn.FieldName = "NgayChinhSua";
+            this.NgayChinhSuaColumn.Name = "NgayChinhSuaColumn";
+            this.NgayChinhSuaColumn.OptionsColumn.AllowEdit = false;
+            this.NgayChinhSuaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayChinhSuaColumn.Visible = true;
+            this.NgayChinhSuaColumn.VisibleIndex = 8;
+            this.NgayChinhSuaColumn.Width = 150;
+            // 
             // NhaCungCapListForm
             // 
             this.Appearance.Options.UseFont = true;
@@ -303,5 +355,9 @@ namespace QuanLySieuThi.NhaCungCap
         private Common.Controls.QButtonControl OKButton;
         private Common.Controls.QButtonControl EditButton;
         private Common.Controls.QButtonControl AddButton;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiTaoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayTaoColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NguoiChinhSuaColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayChinhSuaColumn;
     }
 }

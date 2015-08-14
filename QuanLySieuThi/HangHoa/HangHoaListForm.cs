@@ -9,12 +9,16 @@ namespace QuanLySieuThi.HangHoa
     {
         private HangHoaService _hangHoaService;
         private Object _selRow;
-        public HangHoaListForm()
+        private bool _isSearched;
+
+        public static Model.HangHoa HangHoa;
+        public HangHoaListForm(bool isSearched = false)
         {
             InitializeComponent();
 
             MinimumSizeWidth = 694;
             MinimumSizeHeight = 279;
+            _isSearched = isSearched;
         }
 
         public override void LoadData(EventArgs e)
@@ -40,6 +44,16 @@ namespace QuanLySieuThi.HangHoa
 
                 HangHoaGridControl.DataSource = hangHoas;
                 HangHoaGridControl.RefreshDataSource();
+
+                if (_isSearched)
+                {
+                    AddButton.Enabled = false;
+                    DeleteButton.Enabled = false;
+                }
+                else
+                {
+                    SelectButton.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -155,6 +169,33 @@ namespace QuanLySieuThi.HangHoa
             try
             {
                 _selRow = GridView1.GetRow(e.FocusedRowHandle);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HangHoa = _selRow as Model.HangHoa;
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            try
+            {
+                HangHoa = _selRow as Model.HangHoa;
             }
             catch (Exception ex)
             {

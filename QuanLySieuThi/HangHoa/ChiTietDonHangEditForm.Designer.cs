@@ -122,6 +122,7 @@ namespace QuanLySieuThi.HangHoa
             this.SearchTenHangHoaButton.StyleController = this.layoutControl1;
             this.SearchTenHangHoaButton.TabIndex = 12;
             this.SearchTenHangHoaButton.Text = "Tìm Hàng Hóa";
+            this.SearchTenHangHoaButton.Click += new System.EventHandler(this.SearchTenHangHoaButton_Click);
             // 
             // ChiTietDonHangGridControl
             // 
@@ -228,8 +229,6 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.SoLuongGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tong So Luong = {0}")});
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 4;
             // 
@@ -244,8 +243,6 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.Name = "DonGiaGridColumn";
             this.DonGiaGridColumn.OptionsColumn.AllowEdit = false;
             this.DonGiaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.DonGiaGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DonGia", "Tong Cong = {0:c2}")});
             this.DonGiaGridColumn.Visible = true;
             this.DonGiaGridColumn.VisibleIndex = 5;
             // 
@@ -288,6 +285,7 @@ namespace QuanLySieuThi.HangHoa
             this.QuayHangLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.QuayHangLookupEdit.Properties.NullText = "";
+            this.QuayHangLookupEdit.Properties.ReadOnly = true;
             this.QuayHangLookupEdit.Size = new System.Drawing.Size(745, 24);
             this.QuayHangLookupEdit.StyleController = this.layoutControl1;
             this.QuayHangLookupEdit.TabIndex = 8;
@@ -301,6 +299,7 @@ namespace QuanLySieuThi.HangHoa
             this.NhaCungCapLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NhaCungCapLookupEdit.Properties.NullText = "";
+            this.NhaCungCapLookupEdit.Properties.ReadOnly = true;
             this.NhaCungCapLookupEdit.Size = new System.Drawing.Size(745, 24);
             this.NhaCungCapLookupEdit.StyleController = this.layoutControl1;
             this.NhaCungCapLookupEdit.TabIndex = 7;
@@ -314,6 +313,7 @@ namespace QuanLySieuThi.HangHoa
             this.LoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LoaiHangHoaLookupEdit.Properties.NullText = "";
+            this.LoaiHangHoaLookupEdit.Properties.ReadOnly = true;
             this.LoaiHangHoaLookupEdit.Size = new System.Drawing.Size(745, 24);
             this.LoaiHangHoaLookupEdit.StyleController = this.layoutControl1;
             this.LoaiHangHoaLookupEdit.TabIndex = 6;
@@ -324,6 +324,7 @@ namespace QuanLySieuThi.HangHoa
             this.TenHangHoaTextBox.Name = "TenHangHoaTextBox";
             this.TenHangHoaTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenHangHoaTextBox.Properties.Appearance.Options.UseFont = true;
+            this.TenHangHoaTextBox.Properties.ReadOnly = true;
             this.TenHangHoaTextBox.Size = new System.Drawing.Size(323, 24);
             this.TenHangHoaTextBox.StyleController = this.layoutControl1;
             this.TenHangHoaTextBox.TabIndex = 5;
@@ -334,6 +335,7 @@ namespace QuanLySieuThi.HangHoa
             this.MaDonHangTextBox.Name = "MaDonHangTextBox";
             this.MaDonHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaDonHangTextBox.Properties.Appearance.Options.UseFont = true;
+            this.MaDonHangTextBox.Properties.ReadOnly = true;
             this.MaDonHangTextBox.Size = new System.Drawing.Size(324, 24);
             this.MaDonHangTextBox.StyleController = this.layoutControl1;
             this.MaDonHangTextBox.TabIndex = 4;
@@ -478,7 +480,7 @@ namespace QuanLySieuThi.HangHoa
             this.CancelButtonControl.Image = global::QuanLySieuThi.Properties.Resources.Actions_exit_icon__1_;
             this.CancelButtonControl.Location = new System.Drawing.Point(12, 450);
             this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 26);
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.TabIndex = 1;
             this.CancelButtonControl.Text = "Thoát";
             this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
@@ -491,7 +493,7 @@ namespace QuanLySieuThi.HangHoa
             this.DeleteButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_button_cancel_icon;
             this.DeleteButton.Location = new System.Drawing.Point(138, 450);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 26);
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Xóa";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -504,7 +506,7 @@ namespace QuanLySieuThi.HangHoa
             this.OKButton.Image = global::QuanLySieuThi.Properties.Resources.Alarm_Arrow_Down_icon__1_;
             this.OKButton.Location = new System.Drawing.Point(731, 450);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(120, 26);
+            this.OKButton.Size = new System.Drawing.Size(120, 30);
             this.OKButton.TabIndex = 3;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
@@ -517,7 +519,7 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton.Image = global::QuanLySieuThi.Properties.Resources.accept_icon;
             this.EditButton.Location = new System.Drawing.Point(605, 450);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 26);
+            this.EditButton.Size = new System.Drawing.Size(120, 30);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Cập Nhật";
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -530,7 +532,7 @@ namespace QuanLySieuThi.HangHoa
             this.AddButton.Image = global::QuanLySieuThi.Properties.Resources.Actions_edit_add_icon;
             this.AddButton.Location = new System.Drawing.Point(479, 450);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 26);
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Thêm";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
