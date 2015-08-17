@@ -110,8 +110,7 @@ namespace Service
                         .Include(_ => _.NhanVien1)
                         .Include(_ => _.HangHoas)
                         .Where(
-                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true &&
-                            _.HangHoas.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0)
+                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true)
                         .ToList();
             }
             catch (Exception ex)

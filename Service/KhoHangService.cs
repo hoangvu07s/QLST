@@ -28,8 +28,7 @@ namespace Service
                         .Include(_=>_.PhieuTraQuayHangs)
                         .Include(_ => _.NhapKhoes)
                         .Include(_ => _.XuatKhoes)
-                        .Where(_ => _.HoatDong.HasValue && _.HoatDong == true && _.NhapKhoes.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0 &&
-                            _.XuatKhoes.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0)
+                        .Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
                         .ToList();
             }
             catch (Exception ex)
