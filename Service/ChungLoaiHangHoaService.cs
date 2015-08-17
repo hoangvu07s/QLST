@@ -74,10 +74,11 @@ namespace Service
             try
             {
                 return
-                    Entities.ChungLoaiHangHoas.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
+                    Entities.ChungLoaiHangHoas
                         .Include(_ => _.NhanVien)
                         .Include(_ => _.NhanVien1)
-                        .Include(_ => _.LoaiHangHoas.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
+                        .Include(_ => _.LoaiHangHoas)
+                        .Where(_ => _.HoatDong.HasValue && _.HoatDong == true && _.LoaiHangHoas.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0)
                         .ToList();
             }
             catch (Exception ex)

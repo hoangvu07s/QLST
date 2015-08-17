@@ -22,12 +22,14 @@ namespace Service
             try
             {
                 return
-                    Entities.Khoes.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
+                    Entities.Khoes
                         .Include(_ => _.NhanVien2)
                         .Include(_=>_.TonKhoes)
                         .Include(_=>_.PhieuTraQuayHangs)
-                        .Include(_ => _.NhapKhoes.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
-                        .Include(_ => _.XuatKhoes.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
+                        .Include(_ => _.NhapKhoes)
+                        .Include(_ => _.XuatKhoes)
+                        .Where(_ => _.HoatDong.HasValue && _.HoatDong == true && _.NhapKhoes.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0 &&
+                            _.XuatKhoes.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0)
                         .ToList();
             }
             catch (Exception ex)
