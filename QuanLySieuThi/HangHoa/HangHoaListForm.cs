@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using Helper;
 using Service;
@@ -76,15 +77,8 @@ namespace QuanLySieuThi.HangHoa
                     var hangHoa = _hangHoaService.Get(selRow.Id);
                     if (hangHoa != null)
                     {
-                        if (hangHoa.CT_DoiTraHangHoa.Count > 0 ||
-                            hangHoa.CT_DonHang.Count > 0 ||
-                            hangHoa.CT_HoaDon.Count > 0 ||
-                            hangHoa.CT_NhapKho.Count > 0 ||
-                            hangHoa.CT_PhieuTraQuayHang.Count > 0 ||
-                            hangHoa.CT_XuatKho.Count > 0 ||
-                            hangHoa.HangHoaKhuyenMais.Count > 0 ||
-                            hangHoa.HangHoaKhuyenMais1.Count > 0 ||
-                            hangHoa.TonKhoes.Count > 0)
+                        if (hangHoa.SoLuongTonQuay != 0 ||                           
+                            hangHoa.TonKhoes.Any(_=>_.SoLuongTon != 0))
                         {
                             MessageBox.Show(
                             @"Hàng Hóa này hiện đang được sử dụng trong database. Bạn không thể xóa",
