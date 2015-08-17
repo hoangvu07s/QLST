@@ -171,5 +171,18 @@ namespace QuanLySieuThi
             }
         }
 
+        private void ThongKeHangHoaButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var thongKeHangHoa = new ThongKeHangHoaForm();
+                thongKeHangHoa.ShowForm("OpenThongKeHangHoa");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+        }
     }
 }

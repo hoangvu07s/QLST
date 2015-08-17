@@ -82,7 +82,7 @@ namespace QuanLySieuThi.HangHoa
                         {
                             hangHoa.SoLuongTonQuay = 0;
                         }
-                        if (hangHoa.SoLuongTonQuay != 0 ||                           
+                        if (hangHoa.SoLuongTonQuay != 0 &&                           
                             hangHoa.TonKhoes.Any(_=>_.SoLuongTon != 0))
                         {
                             MessageBox.Show(

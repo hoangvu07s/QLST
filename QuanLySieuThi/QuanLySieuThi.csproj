@@ -136,6 +136,12 @@
     <Compile Include="HangHoa\QuayHangListForm.Designer.cs">
       <DependentUpon>QuayHangListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangHoa\ThongKeHangHoaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\ThongKeHangHoaForm.Designer.cs">
+      <DependentUpon>ThongKeHangHoaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\ChiTietNhapKhoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\QuayHangListForm.resx">
       <DependentUpon>QuayHangListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HangHoa\ThongKeHangHoaForm.resx">
+      <DependentUpon>ThongKeHangHoaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\ChiTietNhapKhoForm.resx">
       <DependentUpon>ChiTietNhapKhoForm.cs</DependentUpon>

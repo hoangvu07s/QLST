@@ -44,6 +44,26 @@ namespace Service
             return null;
         }
 
+        public int GetSoLuongTonKho(long hangHoaId)
+        {
+            try
+            {
+                var soluong = Entities.TonKhoes.Where(_ => _.HangHoaId == hangHoaId).Sum(_ => _.SoLuongTon);
+                if (soluong == null)
+                {
+                    return 0;
+                }
+
+                return (int) soluong;
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return 0;
+        }
+
         public void UpdateTonKho(TonKho tonKho)
         {
             try

@@ -52,6 +52,7 @@
     <Compile Include="ValueObjects\ChiTietNhapKho.cs" />
     <Compile Include="ValueObjects\ChiTietXuatKho.cs" />
     <Compile Include="ValueObjects\GioiTinh.cs" />
+    <Compile Include="ValueObjects\ThongKeHangHoa.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
