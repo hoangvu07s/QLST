@@ -164,6 +164,7 @@ namespace QuanLySieuThi.HangHoa
             this.ExportButton.Size = new System.Drawing.Size(120, 30);
             this.ExportButton.TabIndex = 2;
             this.ExportButton.Text = "Xuất Excel file";
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // ThongKeHangHoaForm
             // 
