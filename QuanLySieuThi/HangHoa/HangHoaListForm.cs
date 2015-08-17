@@ -74,10 +74,15 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _selRow as Model.HangHoa;
                 if (selRow != null)
                 {
+                    
                     var hangHoa = _hangHoaService.Get(selRow.Id);
                     if (hangHoa != null)
                     {
-                        if (hangHoa.SoLuongTonQuay.ToString().ToInt() != 0 ||                           
+                        if (hangHoa.SoLuongTonQuay == null)
+                        {
+                            hangHoa.SoLuongTonQuay = 0;
+                        }
+                        if (hangHoa.SoLuongTonQuay != 0 ||                           
                             hangHoa.TonKhoes.Any(_=>_.SoLuongTon != 0))
                         {
                             MessageBox.Show(
