@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.Data.Linq;
 using DevExpress.XtraEditors.Controls;
 using Helper;
 using Helper.ValueObjects;
@@ -154,7 +147,8 @@ namespace QuanLySieuThi.Kho
                     {
                         HangHoaId = HangHoaLookupEdit.EditValue.ToString().ToLong(),
                         TenHangHoa = HangHoaLookupEdit.Text,
-                        SoLuong = SoLuongNummeric.Text.ToInt()
+                        SoLuong = SoLuongNummeric.Text.ToInt(),
+                        SoluongDatHang = SoLuongDatHangNummeric.Text.ToInt()
                     });
 
                     ShowDataToGrid();
