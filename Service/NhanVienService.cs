@@ -100,6 +100,173 @@ namespace Service
             return null;
         }
 
+        public IList<ChucVu> GetChucVus(long nhanVienId)
+        {
+            try
+            {
+                return
+                    Entities.ChucVus.Where(_ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true)
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<ChungLoaiHangHoa> GetChungLoaiHangHoas(long nhanVienId)
+        {
+            try
+            {
+                return
+                    Entities.ChungLoaiHangHoas.Where(
+                        _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<DonHang> GetDonHangs(long nhanVienId)
+        {
+            try
+            {
+                return Entities.DonHangs.Where(
+                        _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<HangHoa> GetHangHoas(long nhanVienId)
+        {
+            try
+            {
+                return Entities.HangHoas.Where(
+                        _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<HoaDon> GetHoaDons(long nhanVienId)
+        {
+            try
+            {
+                return Entities.HoaDons.Where(
+                        _ => _.NhanVienId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<Kho> GetKhos(long nhanVienId)
+        {
+            try
+            {
+                return Entities.Khoes.Where(
+                        _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<LoaiHangHoa> GetLoaiHangHoas(long nhanVienId)
+        {
+            try
+            {
+                return Entities.LoaiHangHoas.Where(
+                        _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<NhaCungCap> GetNhaCungCaps(long nhanVienId)
+        {
+            try
+            {
+                return Entities.NhaCungCaps.Where(
+                       _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<NhapKho> GetNhapKhos(long nhanVienId)
+        {
+            try
+            {
+                return Entities.NhapKhoes.Where(
+                       _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<QuayHang> GetQuayHangs(long nhanVienId)
+        {
+            try
+            {
+                return Entities.QuayHangs.Where(
+                      _ => _.NguoiTaoId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public IList<XuatKho> GetXuatKhos(long nhanVienId)
+        {
+            try
+            {
+                return Entities.XuatKhoes.Where(
+                      _ => _.NhanVienId == nhanVienId && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

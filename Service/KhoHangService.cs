@@ -24,6 +24,10 @@ namespace Service
                 return
                     Entities.Khoes.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
                         .Include(_ => _.NhanVien2)
+                        .Include(_=>_.TonKhoes)
+                        .Include(_=>_.PhieuTraQuayHangs)
+                        .Include(_ => _.NhapKhoes.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
+                        .Include(_ => _.XuatKhoes.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
                         .ToList();
             }
             catch (Exception ex)

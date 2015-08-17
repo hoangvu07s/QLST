@@ -66,14 +66,23 @@ namespace QuanLySieuThi.NhaCungCap
                 var selRow = _selRow as Model.NhaCungCap;
                 if (selRow != null)
                 {
-                    if (DialogResult.Yes ==
-                        MessageBox.Show(string.Format("Ban co muon xoa Nha Cung Cap '{0}' ?", selRow.TenNhaCungCap),
-                            @"Xac Nhan", MessageBoxButtons.YesNo))
+                    if (_nhaCungCapService.CountHangHoa(selRow.Id) > 0 ||
+                        _nhaCungCapService.CountDonHang(selRow.Id) > 0)
                     {
-                        _nhaCungCapService.Delete(selRow.Id);
-                        _nhaCungCapService.Save();
-                        ShowData();
+                        MessageBox.Show(@"Nhà Cung Cấp đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
                     }
+                    else
+                    {
+                        if (DialogResult.Yes ==
+                         MessageBox.Show(string.Format("Ban co muon xoa Nha Cung Cap '{0}' ?", selRow.TenNhaCungCap),
+                             @"Xac Nhan", MessageBoxButtons.YesNo))
+                        {
+                            _nhaCungCapService.Delete(selRow.Id);
+                            _nhaCungCapService.Save();
+                            ShowData();
+                        } 
+                    }
+                    
                 }
             }
             catch (Exception ex)

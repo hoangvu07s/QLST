@@ -77,6 +77,7 @@ namespace Service
                     Entities.ChungLoaiHangHoas.Where(_ => _.HoatDong.HasValue && _.HoatDong == true)
                         .Include(_ => _.NhanVien)
                         .Include(_ => _.NhanVien1)
+                        .Include(_ => _.LoaiHangHoas.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
                         .ToList();
             }
             catch (Exception ex)

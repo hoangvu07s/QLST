@@ -72,15 +72,22 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _selRow as LoaiHangHoa;
                 if (selRow != null)
                 {
-                    //TODO VuDao: Check loai hang hoa  duoc su dung trong database
-                    if (DialogResult.Yes ==
-                        MessageBox.Show(string.Format("Ban co muon xoa Loai Hang Hoa '{0}' ?", selRow.TenLoaiHangHoa),
-                            @"Xac Nhan", MessageBoxButtons.YesNo))
+                    if (selRow.HangHoas.Count > 0)
                     {
-                        _loaiHangHoaService.Delete(selRow.Id);
-                        _loaiHangHoaService.Save();
-                        ShowData();
+                        MessageBox.Show(@"Loại Hàng Hóa đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
                     }
+                    else
+                    {
+                        if (DialogResult.Yes ==
+                         MessageBox.Show(string.Format("Ban co muon xoa Loai Hang Hoa '{0}' ?", selRow.TenLoaiHangHoa),
+                             @"Xac Nhan", MessageBoxButtons.YesNo))
+                        {
+                            _loaiHangHoaService.Delete(selRow.Id);
+                            _loaiHangHoaService.Save();
+                            ShowData();
+                        } 
+                    }
+                    
                 }
             }
             catch (Exception ex)

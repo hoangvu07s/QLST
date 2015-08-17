@@ -103,6 +103,34 @@ namespace Service
             return null;
         }
 
+        public int CountHangHoa(long nhaCungCapId)
+        {
+            try
+            {
+                return Entities.HangHoas.Count(_ => _.NhaCungCapId == nhaCungCapId);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return 0;
+        }
+
+        public int CountDonHang(long nhaCungCapId)
+        {
+            try
+            {
+                return Entities.DonHangs.Count(_ => _.NhaCungCapId == nhaCungCapId);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return 0;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

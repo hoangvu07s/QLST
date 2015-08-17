@@ -65,7 +65,7 @@ namespace QuanLySieuThi.Kho
                     var kho = _khoHangService.Get(selRow.Id);
                     if (kho != null)
                     {
-                        if (kho.NhapKhoes.Count > 0 || kho.PhieuTraQuayHangs.Count > 0)
+                        if (kho.NhapKhoes.Count > 0 || kho.PhieuTraQuayHangs.Count > 0 || kho.TonKhoes.Count > 0 || kho.XuatKhoes.Count > 0)
                         {
                             MessageBox.Show(
                             @"Kho này hiện đang được sử dụng trong database. Bạn không thể xóa",

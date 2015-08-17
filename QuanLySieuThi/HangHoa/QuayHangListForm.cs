@@ -93,15 +93,21 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _selRow as QuayHang;
                 if (selRow != null)
                 {
-                    // TODO VuDao: Check quay hang dang duoc su dung trong database
-                    if (DialogResult.Yes ==
+                    if (selRow.HangHoas.Count > 0)
+                    {
+                        MessageBox.Show(@"Quầy Hàng đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        if (DialogResult.Yes ==
                         MessageBox.Show(string.Format("Ban co muon xoa Quay Hang '{0}' ?", selRow.TenQuay),
                             @"Xac Nhan", MessageBoxButtons.YesNo))
-                    {
-                        _quayHangService.Delete(selRow.Id);
-                        _quayHangService.Save();
-                        ShowData();
-                    }
+                        {
+                            _quayHangService.Delete(selRow.Id);
+                            _quayHangService.Save();
+                            ShowData();
+                        }
+                    }                   
                 }
             }
             catch (Exception ex)

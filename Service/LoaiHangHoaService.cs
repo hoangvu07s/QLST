@@ -72,6 +72,7 @@ namespace Service
                         .Include(_ => _.ChungLoaiHangHoa)
                         .Include(_ => _.NhanVien)
                         .Include(_ => _.NhanVien1)
+                        .Include(_ => _.HangHoas.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
                         .ToList();
 
             }
@@ -103,7 +104,11 @@ namespace Service
             {
                 return
                     Entities.LoaiHangHoas.Where(
-                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true).Include(_=>_.NhanVien).Include(_=>_.NhanVien1).ToList();
+                        _ => _.ChungLoaiId == chungLoaiHangHoaId && _.HoatDong.HasValue && _.HoatDong == true)
+                        .Include(_ => _.NhanVien)
+                        .Include(_ => _.NhanVien1)
+                        .Include(_ => _.HangHoas.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
+                        .ToList();
             }
             catch (Exception ex)
             {

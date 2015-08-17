@@ -71,7 +71,7 @@ namespace QuanLySieuThi.NhanVien
                     {
                         MessageBox.Show(
                             @"Chuc Vu ngay dang duoc su dung trong co so du lieu cua nhan vien. Ban khong the xoa",
-                            @"Thong Bao", MessageBoxButtons.OK);
+                            @"Thong Bao", MessageBoxButtons.OK);                       
                     }
                     else if(selRow.TenChucVu == "Admin")
                     {

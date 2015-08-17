@@ -9,7 +9,7 @@ namespace QuanLySieuThi.HangHoa
     public partial class ChungLoaiHangHoaListForm
     {
         private ChungLoaiHangHoaService _chungLoaiHangHoaService;
-        private Object _selRow;
+        private object _selRow;
 
         public ChungLoaiHangHoaListForm()
         {
@@ -64,14 +64,20 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _selRow as ChungLoaiHangHoa;
                 if (selRow != null)
                 {
-                    // TODO VuDao: check chung loai hang hoa dang duoc su dung trong database
-                    if (DialogResult.Yes ==
-                        MessageBox.Show(string.Format("Ban co muon xoa Chung Loai '{0}' ?", selRow.TenChungLoai),
-                            @"Xac Nhan", MessageBoxButtons.YesNo))
+                    if (selRow.LoaiHangHoas.Count > 0)
                     {
-                        _chungLoaiHangHoaService.Delete(selRow.Id);
-                        _chungLoaiHangHoaService.Save();
-                        ShowData();
+                        MessageBox.Show(@"Loại Hàng Hóa đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        if (DialogResult.Yes ==
+                         MessageBox.Show(string.Format("Ban co muon xoa Chung Loai '{0}' ?", selRow.TenChungLoai),
+                             @"Xac Nhan", MessageBoxButtons.YesNo))
+                        {
+                            _chungLoaiHangHoaService.Delete(selRow.Id);
+                            _chungLoaiHangHoaService.Save();
+                            ShowData();
+                        } 
                     }
                 }
             }

@@ -86,25 +86,41 @@ namespace QuanLySieuThi.NhanVien
                 var selRow = _selRow as Model.NhanVien;
                 if (selRow != null)
                 {
-                    var id = selRow.Id;
-                    // TODO VuDao: need to check nhan vien is used in database
-
-                    if (selRow.TenDangNhap == "admin")
+                    var id = selRow.Id;                   
+                    if (_nhanVienService.GetChucVus(id).Count > 0||
+                        _nhanVienService.GetChungLoaiHangHoas(id).Count > 0 ||
+                        _nhanVienService.GetDonHangs(id).Count > 0 ||
+                        _nhanVienService.GetHangHoas(id).Count > 0 ||
+                        _nhanVienService.GetHoaDons(id).Count > 0 ||
+                        _nhanVienService.GetKhos(id).Count > 0 ||
+                        _nhanVienService.GetLoaiHangHoas(id).Count > 0 ||
+                        _nhanVienService.GetNhaCungCaps(id).Count > 0 ||
+                        _nhanVienService.GetNhapKhos(id).Count > 0 ||
+                        _nhanVienService.GetQuayHangs(id).Count > 0 ||
+                        _nhanVienService.GetXuatKhos(id).Count > 0)
                     {
-                        MessageBox.Show(@"Ban khong the xoa tai khoan Admin", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Nhân Viên đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
                     }
                     else
                     {
-                        if (DialogResult.Yes ==
-                            MessageBox.Show(
-                                string.Format("Ban co muon xoa thong tin cua nhan vien: {0}", selRow.HoVaTen),
-                                @"Xac Nhan", MessageBoxButtons.YesNo))
+                        if (selRow.TenDangNhap == "admin")
                         {
-                            _nhanVienService.DeleteNhanVien(selRow.Id);
-                            _nhanVienService.Save();
-                            ShowData();
+                            MessageBox.Show(@"Ban khong the xoa tai khoan Admin", @"Thong Bao", MessageBoxButtons.OK);
                         }
-                    }
+                        else
+                        {
+                            if (DialogResult.Yes ==
+                                MessageBox.Show(
+                                    string.Format("Ban co muon xoa thong tin cua nhan vien: {0}", selRow.HoVaTen),
+                                    @"Xac Nhan", MessageBoxButtons.YesNo))
+                            {
+                                _nhanVienService.DeleteNhanVien(selRow.Id);
+                                _nhanVienService.Save();
+                                ShowData();
+                            }
+                        }
+
+                    }                    
                 }
             }
             catch (Exception ex)

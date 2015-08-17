@@ -74,6 +74,7 @@ namespace Service
                     _ => _.HoatDong.HasValue && _.HoatDong == true)
                     .Include(_ => _.NhanVien)
                     .Include(_ => _.NhanVien1)
+                    .Include(_ => _.HangHoas.Where(__ => __.HoatDong.HasValue && __.HoatDong == true))
                     .ToList();
             }
             catch (Exception ex)
