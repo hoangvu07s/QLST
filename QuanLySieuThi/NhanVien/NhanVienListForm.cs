@@ -87,22 +87,22 @@ namespace QuanLySieuThi.NhanVien
                 if (selRow != null)
                 {
                     var id = selRow.Id;                   
-                    if (_nhanVienService.GetChucVus(id).Count > 0||
-                        _nhanVienService.GetChungLoaiHangHoas(id).Count > 0 ||
-                        _nhanVienService.GetDonHangs(id).Count > 0 ||
-                        _nhanVienService.GetHangHoas(id).Count > 0 ||
-                        _nhanVienService.GetHoaDons(id).Count > 0 ||
-                        _nhanVienService.GetKhos(id).Count > 0 ||
-                        _nhanVienService.GetLoaiHangHoas(id).Count > 0 ||
-                        _nhanVienService.GetNhaCungCaps(id).Count > 0 ||
-                        _nhanVienService.GetNhapKhos(id).Count > 0 ||
-                        _nhanVienService.GetQuayHangs(id).Count > 0 ||
-                        _nhanVienService.GetXuatKhos(id).Count > 0)
-                    {
-                        MessageBox.Show(@"Nhân Viên đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
-                    }
-                    else
-                    {
+                    //if (_nhanVienService.GetChucVus(id).Count > 0||
+                    //    _nhanVienService.GetChungLoaiHangHoas(id).Count > 0 ||
+                    //    _nhanVienService.GetDonHangs(id).Count > 0 ||
+                    //    _nhanVienService.GetHangHoas(id).Count > 0 ||
+                    //    _nhanVienService.GetHoaDons(id).Count > 0 ||
+                    //    _nhanVienService.GetKhos(id).Count > 0 ||
+                    //    _nhanVienService.GetLoaiHangHoas(id).Count > 0 ||
+                    //    _nhanVienService.GetNhaCungCaps(id).Count > 0 ||
+                    //    _nhanVienService.GetNhapKhos(id).Count > 0 ||
+                    //    _nhanVienService.GetQuayHangs(id).Count > 0 ||
+                    //    _nhanVienService.GetXuatKhos(id).Count > 0)
+                    //{
+                    //    MessageBox.Show(@"Nhân Viên đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
+                    //}
+                    //else
+                    //{
                         if (selRow.TenDangNhap == "admin")
                         {
                             MessageBox.Show(@"Ban khong the xoa tai khoan Admin", @"Thong Bao", MessageBoxButtons.OK);
@@ -120,7 +120,7 @@ namespace QuanLySieuThi.NhanVien
                             }
                         }
 
-                    }                    
+                    //}                    
                 }
             }
             catch (Exception ex)
