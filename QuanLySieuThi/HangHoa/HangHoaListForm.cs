@@ -77,7 +77,7 @@ namespace QuanLySieuThi.HangHoa
                     var hangHoa = _hangHoaService.Get(selRow.Id);
                     if (hangHoa != null)
                     {
-                        if (hangHoa.SoLuongTonQuay != 0 ||                           
+                        if (hangHoa.SoLuongTonQuay.ToString().ToInt() != 0 ||                           
                             hangHoa.TonKhoes.Any(_=>_.SoLuongTon != 0))
                         {
                             MessageBox.Show(
