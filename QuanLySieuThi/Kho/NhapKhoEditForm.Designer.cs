@@ -41,6 +41,7 @@ namespace QuanLySieuThi.Kho
             this.CTNhapKhoGridControl = new DevExpress.XtraGrid.GridControl();
             this.CTNhapKhoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.TenHangHoaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoLuongDatHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongNummeric = new Common.Controls.QNummericControl();
             this.HangHoaLookupEdit = new Common.Controls.QLookupEditControl();
@@ -236,6 +237,7 @@ namespace QuanLySieuThi.Kho
             this.CTNhapKhoGridView.Appearance.Row.Options.UseFont = true;
             this.CTNhapKhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenHangHoaColumn,
+            this.SoLuongDatHangColumn,
             this.SoLuongGridColumn});
             this.CTNhapKhoGridView.GridControl = this.CTNhapKhoGridControl;
             this.CTNhapKhoGridView.Name = "CTNhapKhoGridView";
@@ -255,6 +257,18 @@ namespace QuanLySieuThi.Kho
             this.TenHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenHangHoaColumn.Visible = true;
             this.TenHangHoaColumn.VisibleIndex = 0;
+            this.TenHangHoaColumn.Width = 150;
+            // 
+            // SoLuongDatHangColumn
+            // 
+            this.SoLuongDatHangColumn.Caption = "Số Lượng Đặt Hàng";
+            this.SoLuongDatHangColumn.FieldName = "SoluongDatHang";
+            this.SoLuongDatHangColumn.Name = "SoLuongDatHangColumn";
+            this.SoLuongDatHangColumn.OptionsColumn.AllowEdit = false;
+            this.SoLuongDatHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.SoLuongDatHangColumn.Visible = true;
+            this.SoLuongDatHangColumn.VisibleIndex = 1;
+            this.SoLuongDatHangColumn.Width = 150;
             // 
             // SoLuongGridColumn
             // 
@@ -265,6 +279,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 1;
+            this.SoLuongGridColumn.Width = 150;
             // 
             // SoLuongNummeric
             // 
@@ -634,5 +649,6 @@ namespace QuanLySieuThi.Kho
         private Common.Controls.QNummericControl SoLuongDatHangNummeric;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraGrid.Columns.GridColumn SoLuongDatHangColumn;
     }
 }

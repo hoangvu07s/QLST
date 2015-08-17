@@ -125,7 +125,8 @@ namespace QuanLySieuThi.Kho
                 {
                     HangHoaId = chiTietDonHang.HangHoaId,
                     SoLuong = 0,
-                    TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa
+                    TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa,
+                    SoluongDatHang = chiTietDonHang.SoLuong
                 });
             }
 
