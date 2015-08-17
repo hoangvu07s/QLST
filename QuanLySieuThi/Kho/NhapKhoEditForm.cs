@@ -116,6 +116,20 @@ namespace QuanLySieuThi.Kho
             _donHangId = DonHangListForm.MaDonHang.ToString();
             MaDonHangTextBox.Text = _donHangId;
             LoadHangHoa();
+            var chiTietDonHangs = _chiTietDonHangService.GetByDonHangId(new Guid(_donHangId));
+
+            _chiTietNhapKhos = new List<ChiTietNhapKho>();
+            foreach (var chiTietDonHang in chiTietDonHangs)
+            {
+                _chiTietNhapKhos.Add(new ChiTietNhapKho
+                {
+                    HangHoaId = chiTietDonHang.HangHoaId,
+                    SoLuong = 0,
+                    TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa
+                });
+            }
+
+            ShowDataToGrid();
         }
 
         private void HangHoaLookupEdit_EditValueChanged(object sender, EventArgs e)
@@ -385,6 +399,12 @@ namespace QuanLySieuThi.Kho
                 if (_chiTietNhapKhos.Count <= 0)
                 {
                     MessageBox.Show(@"Vui lòng nhập hàng hóa", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
+                if (_chiTietNhapKhos.Any(_ => _.SoLuong == 0))
+                {
+                    MessageBox.Show(@"Số lượng phải nhập kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
                 }
 
