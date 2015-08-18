@@ -86,14 +86,22 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _sellRow as DonHang;
                 if (selRow != null)
                 {
-                    var donHang = _donHangService.Get(selRow.DonHangId);
-                    if (donHang != null)
+                    if (selRow.TrangThaiDonHang == "Hoan Thanh")
                     {
-                        donHang.TrangThaiDonHang = "Huy";
-                        _donHangService.Update(donHang);
-                        _donHangService.Save();
-                        ShowData();
+                        MessageBox.Show(@"Không được hủy đơn hàng đã Hoàn Thành", @"Thông Báo",
+                        MessageBoxButtons.OK);
                     }
+                    else
+                    {
+                        var donHang = _donHangService.Get(selRow.DonHangId);
+                        if (donHang != null)
+                        {
+                            donHang.TrangThaiDonHang = "Huy";
+                            _donHangService.Update(donHang);
+                            _donHangService.Save();
+                            ShowData();
+                        }
+                    }                  
                 }
             }
             catch (Exception ex)
