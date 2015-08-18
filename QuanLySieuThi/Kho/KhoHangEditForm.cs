@@ -147,6 +147,10 @@ namespace QuanLySieuThi.Kho
 
                     
                     var khoHangs = _khoHangService.GetAll();
+                    if (FormMode == FormMode.Edit)
+                    {
+                        khoHangs.Remove(khoHang);
+                    }
                     if (
                         khoHangs.Any(
                             _ =>
