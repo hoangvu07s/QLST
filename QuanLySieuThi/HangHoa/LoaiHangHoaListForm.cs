@@ -72,9 +72,11 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _selRow as LoaiHangHoa;
                 if (selRow != null)
                 {
-                    if (selRow.HangHoas.Count > 0)
+                    var id = selRow.Id;
+                    var HangHoa = _loaiHangHoaService.GetHangHoas(id);
+                    if (HangHoa.Count > 0)
                     {
-                        MessageBox.Show(@"Loại Hàng Hóa đã được sủ dụng trong cơ sở dữ liệu", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Loại Hàng Hóa vẫn còn hàng hóa . Bạn chỉ được xóa khi loại hàng hóa này không có mặt hàng nào.", @"Thong Bao", MessageBoxButtons.OK);
                     }
                     else
                     {

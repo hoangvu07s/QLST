@@ -73,8 +73,8 @@ namespace Service
                         .Include(_ => _.NhanVien1)
                         .Include(_ => _.HangHoas)
                         .Where(
-                        _ => _.HoatDong.HasValue && _.HoatDong == true &&
-                            _.HangHoas.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0)
+                        _ => _.HoatDong.HasValue && _.HoatDong == true /*&&
+                            _.HangHoas.Count(__ => __.HoatDong.HasValue && __.HoatDong == true) > 0*/)
                         .ToList();
 
             }
@@ -100,6 +100,22 @@ namespace Service
             return null;
         }
 
+        public IList<HangHoa> GetHangHoas(long loaiHangHoaId)
+        {
+            try
+            {
+                return
+                    Entities.HangHoas.Where(
+                        _ => _.LoaiHangHoaId == loaiHangHoaId && (_.HoatDong.HasValue && _.HoatDong == true)).ToList();
+            }
+            catch (Exception ex)
+            {
+                
+                QuanLySieuThiHelper.LogError(ex);
+            }
+            return null;
+            
+        }
         public IList<LoaiHangHoa> GetByChungLoaiHangHoaId(long chungLoaiHangHoaId)
         {
             try

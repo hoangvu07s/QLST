@@ -89,6 +89,23 @@ namespace Service
             return null;
         }
 
+        public IList<LoaiHangHoa> GetLoaiHangHoas(long ChungLoaiHangHoaId)
+        {
+            try
+            {
+                return
+                    Entities.LoaiHangHoas.Where(
+                        _ => _.ChungLoaiId == ChungLoaiHangHoaId && (_.HoatDong.HasValue && _.HoatDong == true))
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                
+                QuanLySieuThiHelper.LogError(ex);
+            }
+            return null;
+        }
+
         public ChungLoaiHangHoa GetByTenChungLoaiHangHoa(string tenChungLoaiHangHoa)
         {
             try

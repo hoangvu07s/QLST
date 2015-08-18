@@ -50,6 +50,7 @@ namespace QuanLySieuThi.HangHoa
         {
             try
             {
+
                 _chungLoaiHangHoas = _chungLoaiHangHoaService.GetAll();
 
                 if (string.IsNullOrEmpty(EntityId))

@@ -82,11 +82,11 @@ namespace QuanLySieuThi.HangHoa
                         {
                             hangHoa.SoLuongTonQuay = 0;
                         }
-                        if (hangHoa.SoLuongTonQuay != 0 &&                           
+                        if (hangHoa.SoLuongTonQuay != 0 ||                           
                             hangHoa.TonKhoes.Any(_=>_.SoLuongTon != 0))
                         {
                             MessageBox.Show(
-                            @"Hàng Hóa này hiện đang được sử dụng trong database. Bạn không thể xóa",
+                            @"Số lượng hàng hóa này hiện đang còn số lượng tồn. Bạn không thể xóa",
                             @"Thông Báo", MessageBoxButtons.OK);
                         }
                         else
