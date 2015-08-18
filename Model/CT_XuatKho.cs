@@ -17,7 +17,6 @@ namespace Model
         public System.Guid XuatKhoId { get; set; }
         public long HangHoaId { get; set; }
         public int SoLuong { get; set; }
-        public decimal DonGia { get; set; }
     
         public virtual HangHoa HangHoa { get; set; }
         public virtual XuatKho XuatKho { get; set; }

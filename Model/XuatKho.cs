@@ -25,8 +25,8 @@ namespace Model
         public System.DateTime NgayXuat { get; set; }
         public Nullable<bool> HoatDong { get; set; }
     
-        public virtual ICollection<CT_XuatKho> CT_XuatKho { get; set; }
         public virtual Kho Kho { get; set; }
         public virtual NhanVien NhanVien { get; set; }
+        public virtual ICollection<CT_XuatKho> CT_XuatKho { get; set; }
     }
 }
