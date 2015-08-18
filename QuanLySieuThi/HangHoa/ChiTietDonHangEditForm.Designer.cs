@@ -321,6 +321,7 @@ namespace QuanLySieuThi.HangHoa
             this.TenHangHoaTextBox.Name = "TenHangHoaTextBox";
             this.TenHangHoaTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenHangHoaTextBox.Properties.Appearance.Options.UseFont = true;
+            this.TenHangHoaTextBox.Properties.ReadOnly = true;
             this.TenHangHoaTextBox.Size = new System.Drawing.Size(323, 24);
             this.TenHangHoaTextBox.StyleController = this.layoutControl1;
             this.TenHangHoaTextBox.TabIndex = 5;
