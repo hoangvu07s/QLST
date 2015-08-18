@@ -285,6 +285,7 @@ namespace QuanLySieuThi.HangHoa
             this.QuayHangLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.QuayHangLookupEdit.Properties.NullText = "";
+            this.QuayHangLookupEdit.Properties.ReadOnly = true;
             this.QuayHangLookupEdit.Size = new System.Drawing.Size(745, 24);
             this.QuayHangLookupEdit.StyleController = this.layoutControl1;
             this.QuayHangLookupEdit.TabIndex = 8;
@@ -298,6 +299,7 @@ namespace QuanLySieuThi.HangHoa
             this.NhaCungCapLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NhaCungCapLookupEdit.Properties.NullText = "";
+            this.NhaCungCapLookupEdit.Properties.ReadOnly = true;
             this.NhaCungCapLookupEdit.Size = new System.Drawing.Size(745, 24);
             this.NhaCungCapLookupEdit.StyleController = this.layoutControl1;
             this.NhaCungCapLookupEdit.TabIndex = 7;
@@ -311,6 +313,7 @@ namespace QuanLySieuThi.HangHoa
             this.LoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LoaiHangHoaLookupEdit.Properties.NullText = "";
+            this.LoaiHangHoaLookupEdit.Properties.ReadOnly = true;
             this.LoaiHangHoaLookupEdit.Size = new System.Drawing.Size(745, 24);
             this.LoaiHangHoaLookupEdit.StyleController = this.layoutControl1;
             this.LoaiHangHoaLookupEdit.TabIndex = 6;
