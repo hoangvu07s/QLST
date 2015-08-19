@@ -19,6 +19,7 @@ namespace QuanLySieuThi.Kho
         private readonly ChiTietNhapKhoService _chiTietNhapKhoService;
         private readonly DonHangService _donHangService;
         private readonly TonKhoService _tonKhoService;
+        private readonly HangHoaService _hangHoaService;
 
         private string _donHangId;
         private IList<ChiTietNhapKho> _chiTietNhapKhos;
@@ -37,6 +38,7 @@ namespace QuanLySieuThi.Kho
             _chiTietNhapKhoService = new ChiTietNhapKhoService(Entities);
             _donHangService = new DonHangService(Entities);
             _tonKhoService = new TonKhoService(Entities);
+            _hangHoaService = new HangHoaService(Entities);
         }
 
         public override void LoadData(EventArgs e)
@@ -119,7 +121,8 @@ namespace QuanLySieuThi.Kho
                     HangHoaId = chiTietDonHang.HangHoaId,
                     SoLuong = 0,
                     TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa,
-                    SoluongDatHang = chiTietDonHang.SoLuong
+                    SoluongDatHang = chiTietDonHang.SoLuong,
+                    DonGia = 0
                 });
             }
 
@@ -148,7 +151,8 @@ namespace QuanLySieuThi.Kho
                         HangHoaId = HangHoaLookupEdit.EditValue.ToString().ToLong(),
                         TenHangHoa = HangHoaLookupEdit.Text,
                         SoLuong = SoLuongNummeric.Text.ToInt(),
-                        SoluongDatHang = SoLuongDatHangNummeric.Text.ToInt()
+                        SoluongDatHang = SoLuongDatHangNummeric.Text.ToInt(),
+                        DonGia = DonGiaNummeric.Text.ToDecimal()
                     });
 
                     ShowDataToGrid();
@@ -208,6 +212,12 @@ namespace QuanLySieuThi.Kho
                     }
                 }
 
+                if (DonGiaNummeric.Text.ToDecimal() <= 0)
+                {
+                    MessageBox.Show(@"Đơn giá phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
                 if (isUpdated == false)
                 {
                     if (_chiTietNhapKhos.Any(_ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong()))
@@ -241,6 +251,7 @@ namespace QuanLySieuThi.Kho
                         if (chiTietNhapKho != null)
                         {
                             chiTietNhapKho.SoLuong = SoLuongNummeric.Text.ToInt();
+                            chiTietNhapKho.DonGia = DonGiaNummeric.Text.ToDecimal();
                             ShowDataToGrid();
                         }
                     }
@@ -263,6 +274,7 @@ namespace QuanLySieuThi.Kho
                 {
                     HangHoaLookupEdit.EditValue = chiTietNhapKho.HangHoaId;
                     SoLuongNummeric.Text = chiTietNhapKho.SoLuong.ToString(CultureInfo.InvariantCulture);
+                    DonGiaNummeric.Text = chiTietNhapKho.DonGia.ToString(CultureInfo.InvariantCulture);
                 }
             }
             catch (Exception ex)
@@ -314,6 +326,7 @@ namespace QuanLySieuThi.Kho
                         ctNhapKho.NhapKhoId = nhapKho.PhieuNhapKhoId;
                         ctNhapKho.HangHoaId = chiTietNhapKho.HangHoaId;
                         ctNhapKho.SoLuong = chiTietNhapKho.SoLuong;
+                        ctNhapKho.DonGia = chiTietNhapKho.DonGia;
                     }
 
                     _chiTietNhapKhoService.Save();
@@ -366,6 +379,17 @@ namespace QuanLySieuThi.Kho
 
                     _tonKhoService.Save();
 
+
+                    foreach (var chiTietNhapKho in _chiTietNhapKhos)
+                    {
+                        var hangHoa = _hangHoaService.Get(chiTietNhapKho.HangHoaId);
+                        hangHoa.GiaNhapVao = chiTietNhapKho.DonGia;
+
+                        _hangHoaService.Update(hangHoa);
+                    }
+                    
+                    _hangHoaService.Save();
+
                     Close();
                 }
             }
@@ -399,7 +423,13 @@ namespace QuanLySieuThi.Kho
 
                 if (_chiTietNhapKhos.Any(_ => _.SoLuong == 0))
                 {
-                    MessageBox.Show(@"Số lượng phải nhập kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Số lượng nhập kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
+                if (_chiTietNhapKhos.Any(_ => _.DonGia <= 0))
+                {
+                    MessageBox.Show(@"Đơn giá nhập kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
                 }
 

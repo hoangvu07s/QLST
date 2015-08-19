@@ -88,12 +88,12 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiChinhSua" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_TheKhachHang_NguoiTao" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_XuatKho_NhanVien" />
-        <EntityTypeShape EntityType="QuanLySieuThiModel.CT_NhapKho" Width="1.5" PointX="23.25" PointY="40.875" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.CT_XuatKho" Width="1.5" PointX="15" PointY="43.5" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_CTNhapKho_HangHoa" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_CTNhapKho_NhapKho" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTXuatKho_HangHoa" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTXuatKho_XuatKho" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.CT_NhapKho" Width="1.5" PointX="23.25" PointY="40.875" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_CTNhapKho_HangHoa" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_CTNhapKho_NhapKho" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

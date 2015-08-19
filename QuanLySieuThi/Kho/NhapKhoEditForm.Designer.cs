@@ -67,6 +67,9 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
+            this.DonGiaNummeric = new Common.Controls.QNummericControl();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -98,6 +101,8 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -129,6 +134,7 @@ namespace QuanLySieuThi.Kho
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.DonGiaNummeric);
             this.layoutControl2.Controls.Add(this.SoLuongDaNhanNummeric);
             this.layoutControl2.Controls.Add(this.SoLuongDatHangNummeric);
             this.layoutControl2.Controls.Add(this.DeleteButton);
@@ -221,10 +227,10 @@ namespace QuanLySieuThi.Kho
             // 
             // CTNhapKhoGridControl
             // 
-            this.CTNhapKhoGridControl.Location = new System.Drawing.Point(12, 124);
+            this.CTNhapKhoGridControl.Location = new System.Drawing.Point(12, 152);
             this.CTNhapKhoGridControl.MainView = this.CTNhapKhoGridView;
             this.CTNhapKhoGridControl.Name = "CTNhapKhoGridControl";
-            this.CTNhapKhoGridControl.Size = new System.Drawing.Size(714, 102);
+            this.CTNhapKhoGridControl.Size = new System.Drawing.Size(714, 74);
             this.CTNhapKhoGridControl.TabIndex = 6;
             this.CTNhapKhoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CTNhapKhoGridView});
@@ -238,7 +244,8 @@ namespace QuanLySieuThi.Kho
             this.CTNhapKhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenHangHoaColumn,
             this.SoLuongDatHangColumn,
-            this.SoLuongGridColumn});
+            this.SoLuongGridColumn,
+            this.gridColumn1});
             this.CTNhapKhoGridView.GridControl = this.CTNhapKhoGridControl;
             this.CTNhapKhoGridView.Name = "CTNhapKhoGridView";
             this.CTNhapKhoGridView.OptionsBehavior.Editable = false;
@@ -278,7 +285,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongGridColumn.Visible = true;
-            this.SoLuongGridColumn.VisibleIndex = 1;
+            this.SoLuongGridColumn.VisibleIndex = 2;
             this.SoLuongGridColumn.Width = 150;
             // 
             // SoLuongNummeric
@@ -325,7 +332,8 @@ namespace QuanLySieuThi.Kho
             this.emptySpaceItem2,
             this.emptySpaceItem3,
             this.layoutControlItem11,
-            this.layoutControlItem12});
+            this.layoutControlItem12,
+            this.layoutControlItem13});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(738, 266);
@@ -356,9 +364,9 @@ namespace QuanLySieuThi.Kho
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.CTNhapKhoGridControl;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 140);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(718, 106);
+            this.layoutControlItem7.Size = new System.Drawing.Size(718, 78);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -566,6 +574,42 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
+            // DonGiaNummeric
+            // 
+            this.DonGiaNummeric.Location = new System.Drawing.Point(138, 124);
+            this.DonGiaNummeric.Name = "DonGiaNummeric";
+            this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.DonGiaNummeric.Properties.NullText = "0.00";
+            this.DonGiaNummeric.Size = new System.Drawing.Size(588, 24);
+            this.DonGiaNummeric.StyleController = this.layoutControl2;
+            this.DonGiaNummeric.TabIndex = 12;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem13.Control = this.DonGiaNummeric;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(718, 28);
+            this.layoutControlItem13.Text = "Đơn Giá";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(123, 17);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Đơn Giá";
+            this.gridColumn1.FieldName = "DonGia";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
+            // 
             // NhapKhoEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,6 +651,8 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -650,5 +696,8 @@ namespace QuanLySieuThi.Kho
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraGrid.Columns.GridColumn SoLuongDatHangColumn;
+        private Common.Controls.QNummericControl DonGiaNummeric;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

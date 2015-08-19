@@ -6,5 +6,6 @@
         public string TenHangHoa { get; set; }
         public int SoLuong { get; set; }
         public int SoluongDatHang { get; set; }
+        public decimal DonGia { get; set; }
     }
 }

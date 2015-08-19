@@ -48,7 +48,7 @@ namespace Model
         public virtual DbSet<NhapKho> NhapKhoes { get; set; }
         public virtual DbSet<XuatKho> XuatKhoes { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<CT_NhapKho> CT_NhapKho { get; set; }
         public virtual DbSet<CT_XuatKho> CT_XuatKho { get; set; }
+        public virtual DbSet<CT_NhapKho> CT_NhapKho { get; set; }
     }
 }

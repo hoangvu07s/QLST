@@ -4,7 +4,8 @@
 	[HangHoaId] BIGINT NOT NULL,
 
 	[SoLuong] INT NOT NULL DEFAULT 0,
-	PRIMARY KEY([NhapKhoId], [HangHoaId]),
+	[DonGia] DECIMAL NOT NULL, 
+    PRIMARY KEY([NhapKhoId], [HangHoaId]),
 	CONSTRAINT [FK_CTNhapKho_NhapKho] FOREIGN KEY ([NhapKhoId]) REFERENCES [NhapKho]([PhieuNhapKhoId]),
 	CONSTRAINT [FK_CTNhapKho_HangHoa] FOREIGN KEY ([HangHoaId]) REFERENCES [HangHoa]([Id])
 )

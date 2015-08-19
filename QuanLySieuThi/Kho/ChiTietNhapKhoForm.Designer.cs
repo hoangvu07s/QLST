@@ -38,6 +38,7 @@ namespace QuanLySieuThi.Kho
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.OKButton = new Common.Controls.QButtonControl();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridControl)).BeginInit();
@@ -77,7 +78,8 @@ namespace QuanLySieuThi.Kho
             this.CTNhapKhoGridView.Appearance.Row.Options.UseFont = true;
             this.CTNhapKhoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.HangHoaColumn,
-            this.SoLuongColumn});
+            this.SoLuongColumn,
+            this.gridColumn1});
             this.CTNhapKhoGridView.GridControl = this.CTNhapKhoGridControl;
             this.CTNhapKhoGridView.Name = "CTNhapKhoGridView";
             this.CTNhapKhoGridView.OptionsBehavior.Editable = false;
@@ -140,6 +142,16 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Đơn Giá";
+            this.gridColumn1.FieldName = "DonGia";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            // 
             // ChiTietNhapKhoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,5 +181,6 @@ namespace QuanLySieuThi.Kho
         private DevExpress.XtraGrid.Columns.GridColumn SoLuongColumn;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private Common.Controls.QButtonControl OKButton;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }
