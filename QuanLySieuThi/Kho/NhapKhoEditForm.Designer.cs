@@ -33,6 +33,7 @@ namespace QuanLySieuThi.Kho
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.DonGiaNummeric = new Common.Controls.QNummericControl();
             this.SoLuongDaNhanNummeric = new Common.Controls.QNummericControl();
             this.SoLuongDatHangNummeric = new Common.Controls.QNummericControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
@@ -43,6 +44,7 @@ namespace QuanLySieuThi.Kho
             this.TenHangHoaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongDatHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongNummeric = new Common.Controls.QNummericControl();
             this.HangHoaLookupEdit = new Common.Controls.QLookupEditControl();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -57,6 +59,7 @@ namespace QuanLySieuThi.Kho
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.KhoLookupEdit = new Common.Controls.QLookupEditControl();
             this.SearchDonHangButton = new Common.Controls.QButtonControl();
             this.MaDonHangTextBox = new Common.Controls.QTextBoxControl();
@@ -67,15 +70,13 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
-            this.DonGiaNummeric = new Common.Controls.QNummericControl();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongDaNhanNummeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongDatHangNummeric.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridControl)).BeginInit();
@@ -94,6 +95,7 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoLookupEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -101,8 +103,6 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -150,6 +150,22 @@ namespace QuanLySieuThi.Kho
             this.layoutControl2.Size = new System.Drawing.Size(738, 266);
             this.layoutControl2.TabIndex = 2;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // DonGiaNummeric
+            // 
+            this.DonGiaNummeric.Location = new System.Drawing.Point(138, 124);
+            this.DonGiaNummeric.Name = "DonGiaNummeric";
+            this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.DonGiaNummeric.Properties.NullText = "0.00";
+            this.DonGiaNummeric.Properties.ReadOnly = true;
+            this.DonGiaNummeric.Size = new System.Drawing.Size(588, 24);
+            this.DonGiaNummeric.StyleController = this.layoutControl2;
+            this.DonGiaNummeric.TabIndex = 12;
             // 
             // SoLuongDaNhanNummeric
             // 
@@ -287,6 +303,16 @@ namespace QuanLySieuThi.Kho
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 2;
             this.SoLuongGridColumn.Width = 150;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Đơn Giá";
+            this.gridColumn1.FieldName = "DonGia";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 3;
             // 
             // SoLuongNummeric
             // 
@@ -458,6 +484,17 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem12.Text = "Số Lượng Đã Nhận";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(123, 17);
             // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem13.Control = this.DonGiaNummeric;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(718, 28);
+            this.layoutControlItem13.Text = "Đơn Giá";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(123, 17);
+            // 
             // KhoLookupEdit
             // 
             this.KhoLookupEdit.Location = new System.Drawing.Point(101, 40);
@@ -574,42 +611,6 @@ namespace QuanLySieuThi.Kho
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
-            // DonGiaNummeric
-            // 
-            this.DonGiaNummeric.Location = new System.Drawing.Point(138, 124);
-            this.DonGiaNummeric.Name = "DonGiaNummeric";
-            this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
-            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
-            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
-            this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.DonGiaNummeric.Properties.NullText = "0.00";
-            this.DonGiaNummeric.Size = new System.Drawing.Size(588, 24);
-            this.DonGiaNummeric.StyleController = this.layoutControl2;
-            this.DonGiaNummeric.TabIndex = 12;
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem13.Control = this.DonGiaNummeric;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 112);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(718, 28);
-            this.layoutControlItem13.Text = "Đơn Giá";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(123, 17);
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Đơn Giá";
-            this.gridColumn1.FieldName = "DonGia";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
-            // 
             // NhapKhoEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -626,6 +627,7 @@ namespace QuanLySieuThi.Kho
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongDaNhanNummeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongDatHangNummeric.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTNhapKhoGridControl)).EndInit();
@@ -644,6 +646,7 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhoLookupEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaDonHangTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -651,8 +654,6 @@ namespace QuanLySieuThi.Kho
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DonGiaNummeric.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
