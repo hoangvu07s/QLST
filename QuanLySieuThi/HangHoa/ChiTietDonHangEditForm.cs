@@ -104,8 +104,11 @@ namespace QuanLySieuThi.HangHoa
                     }
 
                     LoadGridData();
-
-                    DisableControl();
+                    var donHang = _donHangService.Get(new Guid(EntityId));
+                    if (donHang.TrangThaiDonHang != "Dang Cho")
+                    {
+                        DisableControl();
+                    }                   
                 }
 
             }
