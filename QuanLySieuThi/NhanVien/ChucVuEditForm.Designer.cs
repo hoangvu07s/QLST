@@ -66,6 +66,7 @@ namespace QuanLySieuThi.NhanVien
             this.ChucVuTextBox.Size = new System.Drawing.Size(433, 24);
             this.ChucVuTextBox.StyleController = this.layoutControl1;
             this.ChucVuTextBox.TabIndex = 4;
+            this.ChucVuTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChucVuTextBox_KeyPress);
             // 
             // layoutControlGroup1
             // 

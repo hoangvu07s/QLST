@@ -80,6 +80,7 @@ namespace QuanLySieuThi.Kho
             this.SoDienThoaiTextBox.Size = new System.Drawing.Size(432, 24);
             this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
             this.SoDienThoaiTextBox.TabIndex = 7;
+            this.SoDienThoaiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoDienThoaiTextBox_KeyPress);
             // 
             // DiaChiTextBox
             // 
@@ -112,6 +113,7 @@ namespace QuanLySieuThi.Kho
             this.TenKhoHangTextBox.Size = new System.Drawing.Size(432, 24);
             this.TenKhoHangTextBox.StyleController = this.layoutControl1;
             this.TenKhoHangTextBox.TabIndex = 4;
+            this.TenKhoHangTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TenKhoHangTextBox_KeyPress);
             // 
             // layoutControlGroup1
             // 

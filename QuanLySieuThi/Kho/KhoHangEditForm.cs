@@ -170,5 +170,18 @@ namespace QuanLySieuThi.Kho
 
             return true;
         }
+
+        private void TenKhoHangTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void SoDienThoaiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

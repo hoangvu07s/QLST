@@ -156,5 +156,10 @@ namespace QuanLySieuThi.NhanVien
 
             return true;
         }
+
+        private void ChucVuTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
     }
 }

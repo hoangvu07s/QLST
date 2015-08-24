@@ -129,6 +129,8 @@ namespace QuanLySieuThi.NhanVien
             this.SoDienThoaiTextBox.Size = new System.Drawing.Size(311, 24);
             this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
             this.SoDienThoaiTextBox.TabIndex = 10;
+            this.SoDienThoaiTextBox.EditValueChanged += new System.EventHandler(this.SoDienThoaiTextBox_EditValueChanged);
+            this.SoDienThoaiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoDienThoaiTextBox_KeyPress);
             // 
             // ChucVuLookupEdit
             // 
@@ -207,6 +209,7 @@ namespace QuanLySieuThi.NhanVien
             this.HoVaTenTextBox.Size = new System.Drawing.Size(628, 24);
             this.HoVaTenTextBox.StyleController = this.layoutControl1;
             this.HoVaTenTextBox.TabIndex = 4;
+            this.HoVaTenTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HoVaTenTextBox_KeyPress);
             // 
             // layoutControlGroup1
             // 

@@ -98,6 +98,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.SoDienThoaiTextBox.Size = new System.Drawing.Size(570, 24);
             this.SoDienThoaiTextBox.StyleController = this.layoutControl1;
             this.SoDienThoaiTextBox.TabIndex = 7;
+            this.SoDienThoaiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoDienThoaiTextBox_KeyPress);
             // 
             // DiaChiTextBox
             // 
@@ -118,6 +119,8 @@ namespace QuanLySieuThi.NhaCungCap
             this.TenCongTyTextBox.Size = new System.Drawing.Size(570, 24);
             this.TenCongTyTextBox.StyleController = this.layoutControl1;
             this.TenCongTyTextBox.TabIndex = 5;
+            this.TenCongTyTextBox.EditValueChanged += new System.EventHandler(this.TenCongTyTextBox_EditValueChanged);
+            this.TenCongTyTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TenCongTyTextBox_KeyPress);
             // 
             // TenNhaCungCapTextBox
             // 
@@ -128,6 +131,7 @@ namespace QuanLySieuThi.NhaCungCap
             this.TenNhaCungCapTextBox.Size = new System.Drawing.Size(570, 24);
             this.TenNhaCungCapTextBox.StyleController = this.layoutControl1;
             this.TenNhaCungCapTextBox.TabIndex = 4;
+            this.TenNhaCungCapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TenNhaCungCapTextBox_KeyPress);
             // 
             // layoutControlGroup1
             // 

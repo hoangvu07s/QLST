@@ -235,5 +235,21 @@ namespace QuanLySieuThi.NhanVien
 
             return true;
         }
+
+        private void HoVaTenTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void SoDienThoaiTextBox_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SoDienThoaiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

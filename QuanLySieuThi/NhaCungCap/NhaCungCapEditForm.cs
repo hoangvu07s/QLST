@@ -188,5 +188,28 @@ namespace QuanLySieuThi.NhaCungCap
 
             return true;
         }
+
+        private void TenNhaCungCapTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void TenCongTyTextBox_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TenCongTyTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void SoDienThoaiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

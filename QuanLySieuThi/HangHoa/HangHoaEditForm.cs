@@ -152,6 +152,16 @@ namespace QuanLySieuThi.HangHoa
                         MessageBox.Show(@"Vui lòng lòng chọn Loại Hàng Hóa", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
+                    if (GiaNhapVaoNummeric.Text.ToDecimal() <= 0)
+                    {
+                        MessageBox.Show(@"Giá Nhập vào phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
+                        return false;
+                    }
+                    if (GiaBanRaNummeric.Text.ToDecimal() <= GiaNhapVaoNummeric.Text.ToDecimal() )
+                    {
+                        MessageBox.Show(@"Giá bán ra phải lớn hơn giá nhập vào", @"Thông Báo", MessageBoxButtons.OK);
+                        return false;
+                    }
 
                     if (hangHoa.NhaCungCapId == 0)
                     {
