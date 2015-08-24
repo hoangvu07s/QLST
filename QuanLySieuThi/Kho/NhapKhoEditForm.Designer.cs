@@ -162,6 +162,7 @@ namespace QuanLySieuThi.Kho
             this.DonGiaNummeric.Properties.Mask.EditMask = "n";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.NullText = "0.00";
+            this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(588, 24);
             this.DonGiaNummeric.StyleController = this.layoutControl2;
             this.DonGiaNummeric.TabIndex = 12;
@@ -525,7 +526,6 @@ namespace QuanLySieuThi.Kho
             this.MaDonHangTextBox.Name = "MaDonHangTextBox";
             this.MaDonHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.MaDonHangTextBox.Properties.Appearance.Options.UseFont = true;
-            this.MaDonHangTextBox.Properties.ReadOnly = true;
             this.MaDonHangTextBox.Size = new System.Drawing.Size(521, 24);
             this.MaDonHangTextBox.StyleController = this.layoutControl1;
             this.MaDonHangTextBox.TabIndex = 0;

@@ -122,7 +122,7 @@ namespace QuanLySieuThi.Kho
                     SoLuong = 0,
                     TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa,
                     SoluongDatHang = chiTietDonHang.SoLuong,
-                    DonGia = 0
+                    DonGia = chiTietDonHang.DonGia
                 });
             }
 
