@@ -108,7 +108,12 @@ namespace QuanLySieuThi.HangHoa
                     if (donHang.TrangThaiDonHang != "Dang Cho")
                     {
                         DisableControl();
-                    }                   
+                    }
+                    else
+                    {
+                        DeleteButton.Enabled = false;
+                        AddButton.Enabled = false;   
+                    }
                 }
 
             }
@@ -484,39 +489,63 @@ namespace QuanLySieuThi.HangHoa
             {
                 if (_chiTietDonHangs.Count > 0)
                 {
+                    
                     var currentDateTime = DateTime.Now;
-                    // Save Don Hang
-                    var donHang = _donHangService.AddDonHang();
-                    donHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
-                    donHang.NhaCungCapId = _chiTietDonHangs.First().NhaCungCapId;
-                    donHang.TrangThaiDonHang = "Dang Cho";
-                    donHang.NgayChinhSua = currentDateTime;
-                    donHang.NgayTao = currentDateTime;
-                    donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
-                    donHang.NguoiTaoId = CurrentFormInfo.CurrentUserId;
-                    donHang.HoatDong = true;
-
-                    _donHangService.Save();
-
-                    // Save Hang Hoa
-                    foreach (var chiTietDonHang in _chiTietDonHangs)
+                    var donHang = _donHangService.Get(new Guid(EntityId));
+                    if (donHang != null)
                     {
+                        donHang.NgayChinhSua = currentDateTime;
+                        donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        foreach (var chiTietDonHang in _chiTietDonHangs)
+                        {
+                            var hanghoaInDatabase = _hangHoaService.GetByTenHangHoa(chiTietDonHang.TenHangHoa);
+                            var ctDonHang = _chiTietDonHangService.Get(new Guid(EntityId), hanghoaInDatabase.Id);
+                            ctDonHang.SoLuong = chiTietDonHang.SoLuong;
+                            ctDonHang.DonGia = chiTietDonHang.DonGia;
+                            _chiTietDonHangService.Update(ctDonHang);
+                            _chiTietDonHangService.Save();
 
-                        var hanghoaInDatabase = _hangHoaService.GetByTenHangHoa(chiTietDonHang.TenHangHoa);
+                            hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
 
-                        // Save Chi Tiet Don Hang
-                        var ctDonHang = _chiTietDonHangService.AddChiTietDonHang();
-                        ctDonHang.HangHoaId = hanghoaInDatabase.Id;
-                        ctDonHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
-                        ctDonHang.SoLuong = chiTietDonHang.SoLuong;
-                        ctDonHang.DonGia = chiTietDonHang.DonGia;
-                        _chiTietDonHangService.Save();
-
-                        hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
-
-                        _hangHoaService.Update(hanghoaInDatabase);
-                        _hangHoaService.Save();
+                            _hangHoaService.Update(hanghoaInDatabase);
+                            _hangHoaService.Save();
+                        }
                     }
+                    else
+                    {
+                        // Save Don Hang
+                        donHang = _donHangService.AddDonHang();
+                        donHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
+                        donHang.NhaCungCapId = _chiTietDonHangs.First().NhaCungCapId;
+                        donHang.TrangThaiDonHang = "Dang Cho";
+                        donHang.NgayChinhSua = currentDateTime;
+                        donHang.NgayTao = currentDateTime;
+                        donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        donHang.NguoiTaoId = CurrentFormInfo.CurrentUserId;
+                        donHang.HoatDong = true;
+
+                        _donHangService.Save();
+
+                        // Save Hang Hoa
+                        foreach (var chiTietDonHang in _chiTietDonHangs)
+                        {
+                            var hanghoaInDatabase = _hangHoaService.GetByTenHangHoa(chiTietDonHang.TenHangHoa);
+
+                            // Save Chi Tiet Don Hang
+                            var ctDonHang = _chiTietDonHangService.AddChiTietDonHang();
+                            ctDonHang.HangHoaId = hanghoaInDatabase.Id;
+                            ctDonHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
+                            ctDonHang.SoLuong = chiTietDonHang.SoLuong;
+                            ctDonHang.DonGia = chiTietDonHang.DonGia;
+                            _chiTietDonHangService.Save();
+
+                            hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
+
+                            _hangHoaService.Update(hanghoaInDatabase);
+                            _hangHoaService.Save();
+                        }
+                    }
+                    
                 }
                 
                 Close();

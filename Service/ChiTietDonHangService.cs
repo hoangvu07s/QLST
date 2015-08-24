@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using Helper;
 using Model;
@@ -79,6 +80,18 @@ namespace Service
             }
 
             return null;
+        }
+
+        public void Update(CT_DonHang ctDonHang)
+        {
+            try
+            {
+                Entities.CT_DonHang.AddOrUpdate(ctDonHang);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
 
         public override void Save()
