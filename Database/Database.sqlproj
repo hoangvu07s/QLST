@@ -96,4 +96,7 @@
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="PreDeployment.sql" />
+  </ItemGroup>
 </Project>

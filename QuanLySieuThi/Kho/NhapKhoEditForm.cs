@@ -375,6 +375,8 @@ namespace QuanLySieuThi.Kho
                             tonKho.SoLuongTon = tonKho.SoLuongTon + chiTietNhapKho.SoLuong;
                         }
 
+                        tonKho.NgayTao = DateTime.Now;
+
                     }
 
                     _tonKhoService.Save();

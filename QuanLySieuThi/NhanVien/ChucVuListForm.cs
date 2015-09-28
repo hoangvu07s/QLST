@@ -33,8 +33,7 @@ namespace QuanLySieuThi.NhanVien
         }
         private void ShowData()
         {
-            try
-            {
+            try{
                 ResetEntities();
                 _chucVuService = new ChucVuService(Entities);
                 var chucVuList = _chucVuService.GetChucVus();

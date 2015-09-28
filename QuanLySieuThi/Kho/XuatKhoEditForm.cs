@@ -304,6 +304,7 @@ namespace QuanLySieuThi.Kho
                         var tonKho = _tonKhoService.Get(KhoHangLookupEdit.EditValue.ToString().ToLong(),
                             chiTietXuatKho.HangHoaId);
                         tonKho.SoLuongTon = tonKho.SoLuongTon - ctXuatKho.SoLuong;
+                        tonKho.NgayTao = DateTime.Now;
 
                         _tonKhoService.UpdateTonKho(tonKho);
 

@@ -40,6 +40,7 @@ namespace QuanLySieuThi.HangHoa
             this.QuayHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonGiaGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ThanhTienColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonGiaNummeric = new Common.Controls.QNummericControl();
             this.SoLuongNummeric = new Common.Controls.QNummericControl();
             this.QuayHangLookupEdit = new Common.Controls.QLookupEditControl();
@@ -137,9 +138,9 @@ namespace QuanLySieuThi.HangHoa
             // 
             // ChiTietDonHangGridView
             // 
-            this.ChiTietDonHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChiTietDonHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChiTietDonHangGridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.ChiTietDonHangGridView.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChiTietDonHangGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChiTietDonHangGridView.Appearance.Row.Options.UseFont = true;
             this.ChiTietDonHangGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenHangHoaGridColumn,
@@ -147,7 +148,8 @@ namespace QuanLySieuThi.HangHoa
             this.NhaCungCapGridColumn,
             this.QuayHangGridColumn,
             this.SoLuongGridColumn,
-            this.DonGiaGridColumn});
+            this.DonGiaGridColumn,
+            this.ThanhTienColumn});
             this.ChiTietDonHangGridView.GridControl = this.ChiTietDonHangGridControl;
             this.ChiTietDonHangGridView.Name = "ChiTietDonHangGridView";
             this.ChiTietDonHangGridView.OptionsBehavior.Editable = false;
@@ -229,8 +231,11 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.SoLuongGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:c2}")});
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 4;
+            this.SoLuongGridColumn.Width = 150;
             // 
             // DonGiaGridColumn
             // 
@@ -245,6 +250,19 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonGiaGridColumn.Visible = true;
             this.DonGiaGridColumn.VisibleIndex = 5;
+            // 
+            // ThanhTienColumn
+            // 
+            this.ThanhTienColumn.Caption = "Thành Tiền";
+            this.ThanhTienColumn.FieldName = "ThanhTien";
+            this.ThanhTienColumn.Name = "ThanhTienColumn";
+            this.ThanhTienColumn.OptionsColumn.AllowEdit = false;
+            this.ThanhTienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.ThanhTienColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "Tổng Thành Tiền = {0:c2}")});
+            this.ThanhTienColumn.Visible = true;
+            this.ThanhTienColumn.VisibleIndex = 6;
+            this.ThanhTienColumn.Width = 200;
             // 
             // DonGiaNummeric
             // 
@@ -616,5 +634,6 @@ namespace QuanLySieuThi.HangHoa
         private Common.Controls.QButtonControl SearchTenHangHoaButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn ThanhTienColumn;
     }
 }

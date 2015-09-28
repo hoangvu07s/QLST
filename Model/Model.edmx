@@ -313,6 +313,7 @@
           <Property Name="KhoId" Type="bigint" Nullable="false" />
           <Property Name="HangHoaId" Type="bigint" Nullable="false" />
           <Property Name="SoLuongTon" Type="bigint" />
+          <Property Name="NgayTao" Type="datetime2" Precision="7" />
         </EntityType>
         <EntityType Name="XuatKho">
           <Key>
@@ -1566,6 +1567,7 @@
           <Property Name="SoLuongTon" Type="Int64" />
           <NavigationProperty Name="Kho" Relationship="Self.FK_TonKho_Kho" FromRole="TonKho" ToRole="Kho" />
           <NavigationProperty Name="HangHoa" Relationship="QuanLySieuThiModel.FK_TonKho_HangHoa" FromRole="TonKho" ToRole="HangHoa" />
+          <Property Name="NgayTao" Type="DateTime" Precision="7" />
         </EntityType>
         <Association Name="FK_LoaiHangHoa_ChungLoai">
           <End Role="ChungLoaiHangHoa" Type="Self.ChungLoaiHangHoa" Multiplicity="1" />
@@ -3031,6 +3033,7 @@
           <EntitySetMapping Name="TonKhoes">
             <EntityTypeMapping TypeName="QuanLySieuThiModel.TonKho">
               <MappingFragment StoreEntitySet="TonKho">
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
                 <ScalarProperty Name="KhoId" ColumnName="KhoId" />
                 <ScalarProperty Name="HangHoaId" ColumnName="HangHoaId" />
                 <ScalarProperty Name="SoLuongTon" ColumnName="SoLuongTon" />

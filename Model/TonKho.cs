@@ -17,6 +17,7 @@ namespace Model
         public long KhoId { get; set; }
         public long HangHoaId { get; set; }
         public Nullable<long> SoLuongTon { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
     
         public virtual Kho Kho { get; set; }
         public virtual HangHoa HangHoa { get; set; }
