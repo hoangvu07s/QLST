@@ -32,8 +32,10 @@ namespace QuanLySieuThi
         {
             try
             {
-                var nhanvienListForm = new NhanVienListForm();
-                nhanvienListForm.ShowForm("OpenNhanVienListForm");
+                //var nhanvienListForm = new NhanVienListForm();
+                //nhanvienListForm.ShowForm("OpenNhanVienListForm");
+                var quanLyNhanVienForm = new QuanLyNhanVienForm();
+                quanLyNhanVienForm.ShowForm("OpenQuanLyNhanVienForm");
             }
             catch (Exception ex)
             {
@@ -183,6 +185,19 @@ namespace QuanLySieuThi
                 QuanLySieuThiHelper.LogError(ex);
             }
 
+        }
+
+        private void TraHangVeKhoButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var phieuTraHang = new PhieuTraQuayHangForm();
+                phieuTraHang.ShowForm("OpenPhieuTraQuayHang");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
 
         

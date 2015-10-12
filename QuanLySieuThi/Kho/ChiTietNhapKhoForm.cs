@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Helper;
 using Service;
 
@@ -15,7 +7,7 @@ namespace QuanLySieuThi.Kho
     public partial class ChiTietNhapKhoForm
     {
         private ChiTietNhapKhoService _chiTietNhapKhoService;
-        private Guid _nhapKhoId;
+        private readonly Guid _nhapKhoId;
         public ChiTietNhapKhoForm(Guid nhapKhoId)
         {
             InitializeComponent();

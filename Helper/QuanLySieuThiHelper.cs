@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using AutoMapper;
 
 namespace Helper
 {
@@ -13,6 +16,12 @@ namespace Helper
         public static void LogError(Exception ex)
         {
             Debug.WriteLine(ex.Message);
+        }
+
+        public static T DeepCopy<T>(this T instance)
+        {
+            Mapper.CreateMap<T, T>();
+            return Mapper.Map<T>(instance);
         }
 
         #region Extension method

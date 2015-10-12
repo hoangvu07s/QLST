@@ -29,6 +29,7 @@ namespace Helper
                 control.Properties.DataSource = dataSource;
                 control.Properties.ValueMember = valueMember;
                 control.Properties.DisplayMember = displayMember;
+                control.Properties.Columns.Clear();
                 foreach (var column in columnsName)
                 {
                     control.Properties.Columns.Add(new LookUpColumnInfo(column));

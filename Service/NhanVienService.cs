@@ -267,6 +267,18 @@ namespace Service
             return null;
         }
 
+        public void Update(NhanVien nhanVien)
+        {
+            try
+            {
+                Entities.NhanViens.AddOrUpdate(nhanVien);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace QuanLySieuThi.Kho
 {
     public partial class ChiTietPhieuTraQuayHangForm
     {
-        public ChiTietPhieuTraQuayHangForm()
+        public ChiTietPhieuTraQuayHangForm(string phieuTraQuayHangId)
         {
             InitializeComponent();
 
             MinimumSizeWidth = 626;
-            MinimumSizeHeight = 323; 
+            MinimumSizeHeight = 267;
+
+            EntityId = phieuTraQuayHangId;
         }
     }
 }

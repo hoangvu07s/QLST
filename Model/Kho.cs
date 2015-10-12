@@ -17,9 +17,9 @@ namespace Model
         public Kho()
         {
             this.TonKhoes = new HashSet<TonKho>();
-            this.PhieuTraQuayHangs = new HashSet<PhieuTraQuayHang>();
             this.NhapKhoes = new HashSet<NhapKho>();
             this.XuatKhoes = new HashSet<XuatKho>();
+            this.PhieuTraQuayHangs = new HashSet<PhieuTraQuayHang>();
         }
     
         public long Id { get; set; }
@@ -34,11 +34,11 @@ namespace Model
         public Nullable<bool> HoatDong { get; set; }
     
         public virtual ICollection<TonKho> TonKhoes { get; set; }
-        public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
         public virtual ICollection<NhapKho> NhapKhoes { get; set; }
         public virtual ICollection<XuatKho> XuatKhoes { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual NhanVien NhanVien1 { get; set; }
         public virtual NhanVien NhanVien2 { get; set; }
+        public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
     }
 }
