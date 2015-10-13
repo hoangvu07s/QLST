@@ -19,8 +19,8 @@ namespace QuanLySieuThi
         {
             try
             {
-                var chucVuListForm = new ChucVuListForm();
-                chucVuListForm.ShowForm("OpenChucVuListForm");
+                var quanLyChucVuForm = new QuanLyChucVuForm();
+                quanLyChucVuForm.ShowForm("OpenQuanLyChucVuForm");
             }
             catch (Exception ex)
             {
@@ -32,8 +32,6 @@ namespace QuanLySieuThi
         {
             try
             {
-                //var nhanvienListForm = new NhanVienListForm();
-                //nhanvienListForm.ShowForm("OpenNhanVienListForm");
                 var quanLyNhanVienForm = new QuanLyNhanVienForm();
                 quanLyNhanVienForm.ShowForm("OpenQuanLyNhanVienForm");
             }

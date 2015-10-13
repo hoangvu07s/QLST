@@ -99,7 +99,8 @@ namespace QuanLySieuThi.NhanVien
                         chucVu.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
                     }
 
-                    chucVu.HoatDong = true;}
+                    chucVu.HoatDong = true;
+                }
             }
             catch (Exception ex)
             {

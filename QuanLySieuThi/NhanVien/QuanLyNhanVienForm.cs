@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Migrations;
 using System.Windows.Forms;
 using Common.Forms;
 using Helper;
@@ -18,7 +17,7 @@ namespace QuanLySieuThi.NhanVien
         private IList<ChucVu> _chucVus;
         private Object _selRow;
 
-        private bool isSelectedRow = true;
+        private bool _isSelectedRow = true;
 
         public QuanLyNhanVienForm()
         {
@@ -144,7 +143,7 @@ namespace QuanLySieuThi.NhanVien
         {
             try
             {
-                if (isSelectedRow)
+                if (_isSelectedRow)
                 {
                     _selRow = nhanVienGridView.GetRow(e.FocusedRowHandle);
                     Entity = _selRow;
@@ -176,7 +175,7 @@ namespace QuanLySieuThi.NhanVien
             {
                 ReadOnlyControls(false);
 
-                isSelectedRow = false;
+                _isSelectedRow = false;
                 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
@@ -212,7 +211,7 @@ namespace QuanLySieuThi.NhanVien
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
 
-                isSelectedRow = false;
+                _isSelectedRow = false;
 
                 FormMode = FormMode.Add;
             }
@@ -324,7 +323,7 @@ namespace QuanLySieuThi.NhanVien
                 SaveButton.Enabled = false;
                 AddButton.Enabled = true;
 
-                isSelectedRow = true;
+                _isSelectedRow = true;
             }
         }
 

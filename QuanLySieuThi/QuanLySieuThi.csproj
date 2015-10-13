@@ -251,6 +251,12 @@
     <Compile Include="NhanVien\NhanVienListForm.Designer.cs">
       <DependentUpon>NhanVienListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\QuanLyChucVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\QuanLyChucVuForm.Designer.cs">
+      <DependentUpon>QuanLyChucVuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\QuanLyNhanVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\NhanVienListForm.resx">
       <DependentUpon>NhanVienListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\QuanLyChucVuForm.resx">
+      <DependentUpon>QuanLyChucVuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\QuanLyNhanVienForm.resx">
       <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>

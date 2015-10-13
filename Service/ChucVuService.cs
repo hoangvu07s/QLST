@@ -109,6 +109,18 @@ namespace Service
             return new List<NhanVien>();
         }
 
+        public void Update(ChucVu chucVu)
+        {
+            try
+            {
+                Entities.ChucVus.AddOrUpdate(chucVu);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();
