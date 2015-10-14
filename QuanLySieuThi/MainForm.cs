@@ -58,8 +58,8 @@ namespace QuanLySieuThi
         {
             try
             {
-                var quayHangListForm = new QuayHangListForm();
-                quayHangListForm.ShowForm("OpenQuayHangListForm");
+                var quanLyQuayHang = new QuanLyQuayHangForm();
+                quanLyQuayHang.ShowForm("OpenQuanLyQuayHangForm");
             }
             catch (Exception ex)
             {

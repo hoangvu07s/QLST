@@ -100,6 +100,19 @@ namespace Service
             return null;
         }
 
+        public void Update(QuayHang quayHang)
+        {
+            try
+            {
+                Entities.QuayHangs.AddOrUpdate(quayHang);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+
         public override void Save()
         {
             Entities.SaveChanges();
