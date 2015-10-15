@@ -136,8 +136,8 @@ namespace QuanLySieuThi
         {
             try
             {
-                var chungLoaiHangHoa = new ChungLoaiHangHoaListForm();
-                chungLoaiHangHoa.ShowForm("OpenChungLoaiHangHoaLisForm");
+                var quanLyChungLoaiHangHoa = new QuanLyChungLoaiHangHoa();
+                quanLyChungLoaiHangHoa.ShowForm("OpenQuanLyChungHoaiHangHoaForm");
             }
             catch (Exception ex)
             {

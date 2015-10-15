@@ -122,6 +122,19 @@ namespace Service
             return null;
         }
 
+        public void Update(ChungLoaiHangHoa chungLoaiHangHoa)
+        {
+            try
+            {
+                Entities.ChungLoaiHangHoas.AddOrUpdate(chungLoaiHangHoa);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

@@ -136,6 +136,18 @@ namespace Service
             return null;
         }
 
+        public void Update(LoaiHangHoa loaiHangHoa)
+        {
+            try
+            {
+                Entities.LoaiHangHoas.AddOrUpdate(loaiHangHoa);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();
