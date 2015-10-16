@@ -143,6 +143,12 @@
     <Compile Include="HangHoa\QuanLyChungLoaiHangHoa.Designer.cs">
       <DependentUpon>QuanLyChungLoaiHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangHoa\QuanLyHangHoaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\QuanLyHangHoaForm.Designer.cs">
+      <DependentUpon>QuanLyHangHoaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa\QuanLyLoaiHangHoaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,12 @@
     <Compile Include="Kho\PhieuTraQuayHangForm.Designer.cs">
       <DependentUpon>PhieuTraQuayHangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\QuanLyKhoHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\QuanLyKhoHangForm.Designer.cs">
+      <DependentUpon>QuanLyKhoHangForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\XuatKhoEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +250,12 @@
     </Compile>
     <Compile Include="NhaCungCap\NhaCungCapListForm.Designer.cs">
       <DependentUpon>NhaCungCapListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhaCungCap\QuanLyNhaCungCapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhaCungCap\QuanLyNhaCungCapForm.Designer.cs">
+      <DependentUpon>QuanLyNhaCungCapForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien\ChiTietXuatKhoForm.cs">
       <SubType>Form</SubType>
@@ -325,6 +343,9 @@
     <EmbeddedResource Include="HangHoa\QuanLyChungLoaiHangHoa.resx">
       <DependentUpon>QuanLyChungLoaiHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HangHoa\QuanLyHangHoaForm.resx">
+      <DependentUpon>QuanLyHangHoaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\QuanLyLoaiHangHoaForm.resx">
       <DependentUpon>QuanLyLoaiHangHoaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +382,9 @@
     <EmbeddedResource Include="Kho\PhieuTraQuayHangForm.resx">
       <DependentUpon>PhieuTraQuayHangForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kho\QuanLyKhoHangForm.resx">
+      <DependentUpon>QuanLyKhoHangForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kho\XuatKhoEditForm.resx">
       <DependentUpon>XuatKhoEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhaCungCap\NhaCungCapListForm.resx">
       <DependentUpon>NhaCungCapListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhaCungCap\QuanLyNhaCungCapForm.resx">
+      <DependentUpon>QuanLyNhaCungCapForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\ChiTietXuatKhoForm.resx">
       <DependentUpon>ChiTietXuatKhoForm.cs</DependentUpon>

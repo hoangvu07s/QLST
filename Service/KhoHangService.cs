@@ -90,6 +90,18 @@ namespace Service
             return null;
         }
 
+        public void Update(Kho kho)
+        {
+            try
+            {
+                Entities.Khoes.AddOrUpdate(kho);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

@@ -45,8 +45,8 @@ namespace QuanLySieuThi
         {
             try
             {
-                var nhaCungCapListForm = new NhaCungCapListForm();
-                nhaCungCapListForm.ShowForm("OpenNhaCungCapListForm");
+                var quanLyNhaCungCap = new QuanLyNhaCungCapForm();
+                quanLyNhaCungCap.ShowForm("OpenQuanLyNhaCungCapForm");
             }
             catch (Exception ex)
             {
@@ -84,8 +84,8 @@ namespace QuanLySieuThi
         {
             try
             {
-                var khoHangListForm = new KhoHangListForm();
-                khoHangListForm.ShowForm("OpenKhoHangListForm");
+                var quanLyKhoHangForm = new QuanLyKhoHangForm();
+                quanLyKhoHangForm.ShowForm("OpenQuanLyKhoHangForm");
             }
             catch (Exception ex)
             {
@@ -97,8 +97,8 @@ namespace QuanLySieuThi
         {
             try
             {
-                var hangHoaListForm = new HangHoaListForm();
-                hangHoaListForm.ShowForm("OpenHangHoaListForm");
+                var quanLyHangHoaForm = new QuanLyHangHoaForm();
+                quanLyHangHoaForm.ShowForm("OpenQuanLyHangHoaForm");
             }
             catch (Exception ex)
             {

@@ -131,6 +131,18 @@ namespace Service
             return 0;
         }
 
+        public void Update(NhaCungCap nhaCungCap)
+        {
+            try
+            {
+                Entities.NhaCungCaps.AddOrUpdate(nhaCungCap);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();
