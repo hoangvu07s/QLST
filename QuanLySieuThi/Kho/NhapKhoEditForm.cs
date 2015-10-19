@@ -187,9 +187,9 @@ namespace QuanLySieuThi.Kho
                     return false;
                 }
 
-                if (SoLuongNummeric.Text.ToInt() == 0)
+                if (SoLuongNummeric.Text.ToInt() <= 0)
                 {
-                    MessageBox.Show(@"Vui lòng nhập số lượng Hàng Hóa", @"Thông Báo", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng nhập số lượng Hàng Hóa lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
                 }
 
