@@ -168,7 +168,7 @@ namespace QuanLySieuThi.Kho
                             _ =>
                                 _.TenKho == khoHang.TenKho || _.DiaChi == khoHang.DiaChi || _.SoDienThoai == khoHang.SoDienThoai))
                     {
-                        MessageBox.Show(@"Tên Kho Hàng, Địa Chỉ và Số Điện Thoại Đã Tồn Tại", @"Thông Báo", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Tên Kho Hàng, Địa Chỉ hoặc Số Điện Thoại Đã Tồn Tại", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 

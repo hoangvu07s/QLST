@@ -183,7 +183,7 @@ namespace QuanLySieuThi.Kho
                     return false;
                 }
 
-                if (SoLuongXuatKhoNummeric.Text.ToInt() == 0)
+                if (SoLuongXuatKhoNummeric.Text.ToInt() <= 0)
                 {
                     MessageBox.Show(@"Số lượng xuất kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
