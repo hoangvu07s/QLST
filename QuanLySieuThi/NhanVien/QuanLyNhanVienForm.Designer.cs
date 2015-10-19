@@ -79,6 +79,9 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.RefreshButton = new Common.Controls.QButtonControl();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
@@ -120,6 +123,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -288,6 +293,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.RefreshButton);
             this.layoutControl2.Controls.Add(this.CancelButtonControl);
             this.layoutControl2.Controls.Add(this.DeleteButton);
             this.layoutControl2.Controls.Add(this.EditButton);
@@ -501,7 +507,9 @@
             this.layoutControlItem7,
             this.layoutControlItem9,
             this.layoutControlItem11,
-            this.layoutControlItem10});
+            this.layoutControlItem10,
+            this.layoutControlItem17,
+            this.emptySpaceItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 194);
@@ -532,9 +540,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(526, 140);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(660, 140);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(289, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(155, 34);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -713,6 +721,37 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.RefreshButton.Appearance.Options.UseFont = true;
+            this.RefreshButton.Location = new System.Drawing.Point(548, 152);
+            this.RefreshButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.RefreshButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(120, 30);
+            this.RefreshButton.StyleController = this.layoutControl2;
+            this.RefreshButton.TabIndex = 18;
+            this.RefreshButton.Text = "Làm mới";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.RefreshButton;
+            this.layoutControlItem17.Location = new System.Drawing.Point(536, 140);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem17.TextVisible = false;
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(526, 140);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // QuanLyNhanVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -762,6 +801,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -819,5 +860,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn SoDienThoaiColumn;
         private DevExpress.XtraGrid.Columns.GridColumn DiaChiColumn;
         private DevExpress.XtraGrid.Columns.GridColumn EmailColumn;
+        private Common.Controls.QButtonControl RefreshButton;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
     }
 }

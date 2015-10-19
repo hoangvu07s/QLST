@@ -40,6 +40,7 @@ namespace QuanLySieuThi.HangHoa
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                TenChungLoaiHangHoaLookupEdit.Properties.ReadOnly = true;
             }
             catch (Exception ex)
             {
@@ -71,6 +72,9 @@ namespace QuanLySieuThi.HangHoa
 
                 loaiHangHoaGridControl.DataSource = loaiHangHoas;
                 loaiHangHoaGridControl.RefreshDataSource();
+
+                var chungLoaiHangHoa = _chungLoaiHangHoaService.Get(_chungLoaiHangHoaId);
+                TenChungLoaiHangHoaLookupEdit.SelectedText = chungLoaiHangHoa.TenChungLoai;
             }
             catch (Exception ex)
             {
@@ -81,7 +85,7 @@ namespace QuanLySieuThi.HangHoa
         private void ReadOnlyControls(bool isReadOnly)
         {
             TenLoaiHangHoaTextBox.Properties.ReadOnly = isReadOnly;
-            TenChungLoaiHangHoaLookupEdit.Properties.ReadOnly = isReadOnly;
+            //TenChungLoaiHangHoaLookupEdit.Properties.ReadOnly = isReadOnly;
         }
 
         private void loaiHangHoaGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -113,6 +117,7 @@ namespace QuanLySieuThi.HangHoa
             try
             {
                 var loaiHangHoa = _loaiHangHoaService.Add();
+                loaiHangHoa.ChungLoaiId = _chungLoaiHangHoaId;
 
                 Entity = loaiHangHoa;
 
