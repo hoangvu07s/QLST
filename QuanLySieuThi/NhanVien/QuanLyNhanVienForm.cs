@@ -85,7 +85,7 @@ namespace QuanLySieuThi.NhanVien
                     nhanViensTemp.Add(nhanVien.DeepCopy());
                 }
 
-                CollectNhanViens(nhanViensTemp);
+                //CollectNhanViens(nhanViensTemp);
 
                 nhanVienGridControl.DataSource = nhanViensTemp;
                 nhanVienGridControl.RefreshDataSource();
@@ -395,6 +395,15 @@ namespace QuanLySieuThi.NhanVien
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            _isSelectedRow = true;
+            LoadData(e);
+            AddButton.Enabled = true;
+            EditButton.Enabled = true;
+            DeleteButton.Enabled = true;
         }
     }
 }
