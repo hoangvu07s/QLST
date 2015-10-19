@@ -76,6 +76,8 @@ namespace QuanLySieuThi.HangHoa
                 if (string.IsNullOrEmpty(EntityId))
                 {
                     MaDonHangTextBox.Text = QuanLySieuThiHelper.NextId();
+
+                    EntityId = MaDonHangTextBox.Text;
                 }
                 else
                 {
