@@ -283,16 +283,16 @@ namespace QuanLySieuThi.HangHoa
             try
             {
                 var isValidated = true;
-                if (soLuong.ToInt() == 0)
+                if (soLuong.ToInt() <= 0)
                 {
-                    MessageBox.Show(@"So luong phai lon hon 0", @"Thong Bao",
+                    MessageBox.Show(@"Số lượng phải lớn hơn 0", @"Thong Bao",
                         MessageBoxButtons.OK);
 
                     isValidated = false;
                 }
-                else if (donGia.ToDecimal() == 0)
+                else if (donGia.ToDecimal() <= 0)
                 {
-                    MessageBox.Show(@"Don gia phai lon hon 0", @"Thong Bao",
+                    MessageBox.Show(@"Đơn giá phải lớn hơn 0", @"Thong Bao",
                         MessageBoxButtons.OK);
 
                     isValidated = false;
