@@ -112,7 +112,7 @@ namespace QuanLySieuThi.Kho
             // nhanVienColumn
             // 
             this.nhanVienColumn.Caption = "Nhân Viên";
-            this.nhanVienColumn.FieldName = "TenDangNhap";
+            this.nhanVienColumn.FieldName = "NhanVien1.TenDangNhap";
             this.nhanVienColumn.Name = "nhanVienColumn";
             this.nhanVienColumn.OptionsColumn.AllowEdit = false;
             this.nhanVienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -123,7 +123,7 @@ namespace QuanLySieuThi.Kho
             // quayHangColumn
             // 
             this.quayHangColumn.Caption = "Quầy Hàng";
-            this.quayHangColumn.FieldName = "TenQuay";
+            this.quayHangColumn.FieldName = "QuayHang.TenQuay";
             this.quayHangColumn.Name = "quayHangColumn";
             this.quayHangColumn.OptionsColumn.AllowEdit = false;
             this.quayHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -134,7 +134,7 @@ namespace QuanLySieuThi.Kho
             // TenKhoColumn
             // 
             this.TenKhoColumn.Caption = "Tên Kho";
-            this.TenKhoColumn.FieldName = "TenKho";
+            this.TenKhoColumn.FieldName = "Kho.TenKho";
             this.TenKhoColumn.Name = "TenKhoColumn";
             this.TenKhoColumn.OptionsColumn.AllowEdit = false;
             this.TenKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;

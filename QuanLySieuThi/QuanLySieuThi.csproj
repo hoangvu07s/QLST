@@ -227,6 +227,12 @@
     <Compile Include="Kho\QuanLyKhoHangForm.Designer.cs">
       <DependentUpon>QuanLyKhoHangForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\QuanLyTraHangVeKhoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\QuanLyTraHangVeKhoForm.Designer.cs">
+      <DependentUpon>QuanLyTraHangVeKhoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\XuatKhoEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,6 +390,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\QuanLyKhoHangForm.resx">
       <DependentUpon>QuanLyKhoHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\QuanLyTraHangVeKhoForm.resx">
+      <DependentUpon>QuanLyTraHangVeKhoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\XuatKhoEditForm.resx">
       <DependentUpon>XuatKhoEditForm.cs</DependentUpon>
