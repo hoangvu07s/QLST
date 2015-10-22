@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Helper;
 using Service;
@@ -71,7 +64,7 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                var chiTietPhieuTraQuayHang = new ChiTietPhieuTraQuayHangForm(string.Empty);
+                var chiTietPhieuTraQuayHang = new QuanLyTraHangVeKhoForm(string.Empty);
                 chiTietPhieuTraQuayHang.ShowForm("AddChiTietPhieuTraQuayHang");
                 chiTietPhieuTraQuayHang.FormClosed += chiTietPhieuTraQuayHang_FormClosed;
             }
@@ -95,7 +88,7 @@ namespace QuanLySieuThi.Kho
 
         private void phieuTraHangGridControl_DoubleClick(object sender, EventArgs e)
         {
-
+            
         }
 
         private void XemChiTietButton_Click(object sender, EventArgs e)
@@ -105,7 +98,7 @@ namespace QuanLySieuThi.Kho
                 var selRow = _sellRow as Model.PhieuTraQuayHang;
                 if (selRow != null)
                 {
-                    var chiTietPhieuTraQuayHang = new ChiTietPhieuTraQuayHangForm(selRow.PhieuTraQuayHangId.ToString());
+                    var chiTietPhieuTraQuayHang = new QuanLyTraHangVeKhoForm(selRow.PhieuTraQuayHangId.ToString());
                     chiTietPhieuTraQuayHang.ShowForm(string.Format("ViewChiTietPhieuTraQuayHang : {0}", selRow.PhieuTraQuayHangId));
                     chiTietPhieuTraQuayHang.FormClosed += chiTietPhieuTraQuayHang_FormClosed;
                 }
@@ -130,7 +123,7 @@ namespace QuanLySieuThi.Kho
 
         private void phieuTraHangGridView_DoubleClick(object sender, EventArgs e)
         {
-            
+            XemChiTietButton_Click(sender, e);
         }
     }
 }

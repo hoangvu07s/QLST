@@ -1,26 +1,24 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Helper;
 using Model;
 
 namespace Service
 {
-    public class XuatKhoService: BaseService
+    public class ChiTietPhieuTraQuayHangService : BaseService
     {
-        public XuatKhoService(QuanLySieuThiEntities quanLySieuThiEntities)
+        public ChiTietPhieuTraQuayHangService(QuanLySieuThiEntities quanLySieuThiEntities)
         {
             Entities = quanLySieuThiEntities;
         }
 
-        public XuatKho Add()
+        public CT_PhieuTraQuayHang AddChiTietPhieuTraQuayHang(CT_PhieuTraQuayHang chiTietPhieuTraQuayHang)
         {
             try
             {
-                return Entities.XuatKhoes.Add(new XuatKho());
+                return Entities.CT_PhieuTraQuayHang.Add(chiTietPhieuTraQuayHang);
             }
             catch (Exception ex)
             {
@@ -30,28 +28,26 @@ namespace Service
             return null;
         }
 
-        public IList<XuatKho> GetAll()
+        public int TomSoLuongTraVeKho(long hangHoaId)
         {
+            int tongSoLuong = 0;
             try
             {
-                return Entities.XuatKhoes.Where(_ => _.HoatDong.HasValue && _.HoatDong == true).Include(_=>_.NhanVien).Include(_=>_.Kho).ToList();
+                tongSoLuong = Entities.CT_PhieuTraQuayHang.Where(_ => _.HangHoaId == hangHoaId).Sum(_ => _.SoLuong);
             }
             catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
 
-            return null;
+            return tongSoLuong;
         }
 
-        public IList<XuatKho> GetByKhoId(long khoId)
+        public IList<CT_PhieuTraQuayHang> Get(Guid maPhieuTraQuayHang)
         {
             try
             {
-                return
-                    Entities.XuatKhoes.Where(_ => _.KhoId == khoId && _.HoatDong.HasValue && _.HoatDong == true)
-                        .Include(_ => _.CT_XuatKho)
-                        .ToList();
+                return Entities.CT_PhieuTraQuayHang.Where(_ => _.PhieuTraQuayHangId == maPhieuTraQuayHang).ToList();
             }
             catch (Exception ex)
             {
@@ -64,6 +60,6 @@ namespace Service
         public override void Save()
         {
             Entities.SaveChanges();
-        }
+        } 
     }
 }
