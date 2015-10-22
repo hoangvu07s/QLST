@@ -64,6 +64,20 @@ namespace Service
             return 0;
         }
 
+        public TonKho GetByHangHoaIdKhoId(long hangHoaId, long khoId)
+        {
+            try
+            {
+                return Entities.TonKhoes.FirstOrDefault(_ => _.HangHoaId == hangHoaId && _.KhoId == khoId);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public void UpdateTonKho(TonKho tonKho)
         {
             try

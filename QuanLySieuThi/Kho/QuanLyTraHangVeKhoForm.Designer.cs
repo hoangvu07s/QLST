@@ -253,7 +253,7 @@
             // 
             // HangHoaLookupEdit
             // 
-            this.HangHoaLookupEdit.Location = new System.Drawing.Point(168, 96);
+            this.HangHoaLookupEdit.Location = new System.Drawing.Point(168, 68);
             this.HangHoaLookupEdit.Name = "HangHoaLookupEdit";
             this.HangHoaLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.HangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
@@ -267,7 +267,7 @@
             // 
             // QuayHangLookupEdit
             // 
-            this.QuayHangLookupEdit.Location = new System.Drawing.Point(168, 68);
+            this.QuayHangLookupEdit.Location = new System.Drawing.Point(168, 40);
             this.QuayHangLookupEdit.Name = "QuayHangLookupEdit";
             this.QuayHangLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.QuayHangLookupEdit.Properties.Appearance.Options.UseFont = true;
@@ -292,7 +292,7 @@
             // 
             // KhoLookupEdit
             // 
-            this.KhoLookupEdit.Location = new System.Drawing.Point(168, 40);
+            this.KhoLookupEdit.Location = new System.Drawing.Point(168, 96);
             this.KhoLookupEdit.Name = "KhoLookupEdit";
             this.KhoLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.KhoLookupEdit.Properties.Appearance.Options.UseFont = true;
@@ -320,7 +320,6 @@
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4,
-            this.layoutControlItem3,
             this.layoutControlItem5,
             this.layoutControlItem6,
             this.layoutControlItem7,
@@ -334,7 +333,8 @@
             this.emptySpaceItem3,
             this.emptySpaceItem4,
             this.emptySpaceItem5,
-            this.layoutControlItem16});
+            this.layoutControlItem16,
+            this.layoutControlItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 250);
@@ -356,7 +356,7 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.KhoLookupEdit;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(939, 28);
             this.layoutControlItem3.Text = "Kho";
@@ -378,7 +378,7 @@
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.QuayHangLookupEdit;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(939, 28);
             this.layoutControlItem6.Text = "Quầy Hàng";
@@ -389,7 +389,7 @@
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.HangHoaLookupEdit;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 84);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(939, 28);
             this.layoutControlItem7.Text = "Hàng Hóa";

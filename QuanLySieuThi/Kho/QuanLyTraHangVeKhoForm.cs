@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using Common.Forms;
-using DevExpress.Office.Utils;
 using DevExpress.XtraEditors.Controls;
 using Helper;
 using Model;
@@ -15,15 +14,18 @@ namespace QuanLySieuThi.Kho
     public partial class QuanLyTraHangVeKhoForm : QuanLySieuThiForm
     {
         private readonly PhieuTraQuayHangService _phieuTraQuayHangService;
-        private readonly KhoHangService _khoHangService;
         private readonly QuayHangService _quayHangService;
-        private readonly XuatKhoService _xuatKhoService;
         private readonly ChiTietXuatKhoService _chiTietXuatKhoService;
         private readonly HangHoaService _hangHoaService;
         private readonly ChiTietPhieuTraQuayHangService _chiTietPhieuTraQuayHangService;
+        private readonly ChiTietNhapKhoService _chiTietNhapKhoService;
+        private readonly TonKhoService _tonKhoService;
 
-        private IList<Model.Kho> _khos;
-        private IList<CT_PhieuTraQuayHang> _chiTietPhieuTraQuayHangs; 
+        //private IList<Model.Kho> _khos;
+        private IList<CT_PhieuTraQuayHang> _chiTietPhieuTraQuayHangs;
+        private IList<QuayHang> _quayHangs;
+        private bool _isSelectedKhoHang;
+        private long _khoId;
         public QuanLyTraHangVeKhoForm(string maPhieuTraQuayHang)
         {
             InitializeComponent();
@@ -33,12 +35,12 @@ namespace QuanLySieuThi.Kho
             EntityId = maPhieuTraQuayHang;
 
             _phieuTraQuayHangService = new PhieuTraQuayHangService(Entities);
-            _khoHangService = new KhoHangService(Entities);
             _quayHangService = new QuayHangService(Entities);
-            _xuatKhoService = new XuatKhoService(Entities);
             _hangHoaService = new HangHoaService(Entities);
             _chiTietXuatKhoService = new ChiTietXuatKhoService(Entities);
             _chiTietPhieuTraQuayHangService = new ChiTietPhieuTraQuayHangService(Entities);
+            _chiTietNhapKhoService = new ChiTietNhapKhoService(Entities);
+            _tonKhoService = new TonKhoService(Entities);
         }
 
         public override void LoadData(EventArgs e)
@@ -47,7 +49,7 @@ namespace QuanLySieuThi.Kho
 
             try
             {
-                _khos = _khoHangService.GetAll();
+                _quayHangs = _quayHangService.GetAll();
                 if (string.IsNullOrWhiteSpace(EntityId))
                 {
                     FormMode = FormMode.Add;
@@ -90,8 +92,8 @@ namespace QuanLySieuThi.Kho
             try
             {
                 DataBinding.BindEditor(MaPhieuTraQuayHangTextBox, "Text", Entity, "PhieuTraQuayHangId");
-                DataBinding.BindLookupEdit(KhoLookupEdit, "EditValue", Entity, _khos, "KhoId",
-                    "TenKho", "Id", "TenKho");
+                DataBinding.BindLookupEdit(QuayHangLookupEdit, "EditValue", Entity, _quayHangs, "QuayHangId",
+                    "TenQuay", "Id", "TenQuay");
             }
             catch (Exception ex)
             {
@@ -103,27 +105,20 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                IList<QuayHang> quayHangs = new List<QuayHang>();
-                var khoId = KhoLookupEdit.EditValue.ToString().ToLong();
-                if (khoId != 0)
+                if (KhoLookupEdit.EditValue.ToString().ToLong() != 0)
                 {
-                    var xuatKhos = _xuatKhoService.GetByKhoId(khoId);
-
-                    foreach (var xuatKho in xuatKhos)
+                    if ( _isSelectedKhoHang == false)
                     {
-                        foreach (var chiTietXuatKho in xuatKho.CT_XuatKho)
-                        {
-                            var hangHoa = _hangHoaService.Get(chiTietXuatKho.HangHoaId);
-
-                            quayHangs.Add(hangHoa.QuayHang);
-                        }
+                        _isSelectedKhoHang = true;
+                        _khoId = KhoLookupEdit.EditValue.ToString().ToLong();
                     }
-                }
-
-                DataBinding.BindLookupEdit(QuayHangLookupEdit, "EditValue", Entity, quayHangs.Distinct(), "QuayHangId",
-                    "TenQuay", "Id", "TenQuay");
-
-                _chiTietPhieuTraQuayHangs = new List<CT_PhieuTraQuayHang>();
+                    else
+                    {
+                        KhoLookupEdit.EditValue = _khoId;
+                        MessageBox.Show(@"Chỉ được chọn duy nhất một Kho Hàng", @"Thông Báo", MessageBoxButtons.OK);
+                        
+                    }
+                }          
             }
             catch (Exception ex)
             {
@@ -176,13 +171,16 @@ namespace QuanLySieuThi.Kho
 
                 if (hangHoaId != 0)
                 {
-                    var tongSoluongXuatKho = _chiTietXuatKhoService.TongSoLuongXuatKho(hangHoaId);
-                    var tongSoLuongTraVeKho = _chiTietPhieuTraQuayHangService.TomSoLuongTraVeKho(hangHoaId);
-
-                    SoLuongTonQuayNummeric.Text = (tongSoluongXuatKho - tongSoLuongTraVeKho).ToString(CultureInfo.InvariantCulture);
+                    var hangHoa = _hangHoaService.Get(hangHoaId);
+                    SoLuongTonQuayNummeric.Text = hangHoa.SoLuongTonQuay.ToString();
 
                     SoLuongNummeric.Text = string.Empty;
                     LyDoTextBox.Text = string.Empty;
+
+                    // load Kho hang
+                    var khoHangs = _chiTietNhapKhoService.GetKhos(hangHoaId);
+                    DataBinding.BindLookupEdit(KhoLookupEdit, "EditValue", Entity, khoHangs, "KhoId",
+                    "TenKho", "Id", "TenKho");
                 }
             }
             catch (Exception ex)
@@ -369,6 +367,32 @@ namespace QuanLySieuThi.Kho
                         }
 
                         _chiTietPhieuTraQuayHangService.Save();
+
+                        // Update So luong ton quay trong Hang Hoa
+                        foreach (var chiTietPhieuTraQuayHang in _chiTietPhieuTraQuayHangs)
+                        {
+                            var hangHoa = _hangHoaService.Get(chiTietPhieuTraQuayHang.HangHoaId);
+                            hangHoa.SoLuongTonQuay = hangHoa.SoLuongTonQuay - chiTietPhieuTraQuayHang.SoLuong;
+                            hangHoa.NgayChinhSua = DateTime.Now;
+                            hangHoa.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+
+                            _hangHoaService.Update(hangHoa);
+                        }
+
+                        _hangHoaService.Save();
+
+                        // Update to luong ton kho trong ban ton kho
+                        foreach (var chiTietPhieuTraQuayHang in _chiTietPhieuTraQuayHangs)
+                        {
+                            var tonKho = _tonKhoService.GetByHangHoaIdKhoId(chiTietPhieuTraQuayHang.HangHoaId,
+                                phieuTraQuayHang.KhoId);
+
+                            tonKho.SoLuongTon = tonKho.SoLuongTon + chiTietPhieuTraQuayHang.SoLuong;
+
+                            _tonKhoService.UpdateTonKho(tonKho);
+                        }
+
+                        _tonKhoService.Save();
 
                         Close();
                     }

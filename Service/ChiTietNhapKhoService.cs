@@ -44,6 +44,24 @@ namespace Service
             return null;
         }
 
+        public IList<Kho> GetKhos(long hangHoaId)
+        {
+            try
+            {
+                return
+                    Entities.CT_NhapKho.Where(_ => _.HangHoaId == hangHoaId)
+                        .Include(_ => _.NhapKho.Kho)
+                        .Select(_ => _.NhapKho.Kho)
+                        .ToList().Distinct().ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();
