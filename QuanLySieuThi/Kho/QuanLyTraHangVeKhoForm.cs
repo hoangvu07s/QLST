@@ -142,7 +142,7 @@ namespace QuanLySieuThi.Kho
                     hangHoas = _chiTietXuatKhoService.GetHangHoaByQuayHang(quayHangId);
                 }
 
-                LoadHangHoa(hangHoas);
+                LoadHangHoa(hangHoas.Distinct());
 
                 _chiTietPhieuTraQuayHangs = new List<CT_PhieuTraQuayHang>();
             }
@@ -152,7 +152,7 @@ namespace QuanLySieuThi.Kho
             }
         }
 
-        private void LoadHangHoa(IList<Model.HangHoa> hangHoas)
+        private void LoadHangHoa(IEnumerable<Model.HangHoa> hangHoas)
         {
             try
             {
