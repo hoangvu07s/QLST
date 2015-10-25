@@ -179,6 +179,12 @@
     <Compile Include="HangHoa\ThongKeHangHoaForm.Designer.cs">
       <DependentUpon>ThongKeHangHoaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\QuanLyKhachHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\QuanLyKhachHangForm.Designer.cs">
+      <DependentUpon>QuanLyKhachHangForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\ChiTietNhapKhoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\ThongKeHangHoaForm.resx">
       <DependentUpon>ThongKeHangHoaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\QuanLyKhachHangForm.resx">
+      <DependentUpon>QuanLyKhachHangForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\ChiTietNhapKhoForm.resx">
       <DependentUpon>ChiTietNhapKhoForm.cs</DependentUpon>

@@ -42,6 +42,8 @@
             this.NhapKhoListButton = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ThongKeHangHoaButton = new DevExpress.XtraBars.BarButtonItem();
+            this.TraHangVeKhoButton = new DevExpress.XtraBars.BarButtonItem();
+            this.QuanLyKhachHangBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.nhanVienRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.HangHoaRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -50,8 +52,9 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.KhoHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.KhachHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.TraHangVeKhoButton = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,16 +76,18 @@
             this.NhapKhoListButton,
             this.barButtonItem1,
             this.ThongKeHangHoaButton,
-            this.TraHangVeKhoButton});
+            this.TraHangVeKhoButton,
+            this.QuanLyKhachHangBarButton});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 21;
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.nhanVienRibbonPage,
             this.HangHoaRibbonPage,
             this.NhaCungCapRibbonPage,
-            this.KhoHangRibbonPage});
+            this.KhoHangRibbonPage,
+            this.KhachHangRibbonPage});
             this.ribbon.Size = new System.Drawing.Size(873, 148);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -294,6 +299,38 @@
             this.ThongKeHangHoaButton.Name = "ThongKeHangHoaButton";
             this.ThongKeHangHoaButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThongKeHangHoaButton_ItemClick);
             // 
+            // TraHangVeKhoButton
+            // 
+            this.TraHangVeKhoButton.Caption = "Trả Hàng Về Kho";
+            this.TraHangVeKhoButton.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.TraHangVeKhoButton.Id = 20;
+            this.TraHangVeKhoButton.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TraHangVeKhoButton.ItemAppearance.Disabled.Options.UseFont = true;
+            this.TraHangVeKhoButton.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TraHangVeKhoButton.ItemAppearance.Hovered.Options.UseFont = true;
+            this.TraHangVeKhoButton.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TraHangVeKhoButton.ItemAppearance.Normal.Options.UseFont = true;
+            this.TraHangVeKhoButton.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TraHangVeKhoButton.ItemAppearance.Pressed.Options.UseFont = true;
+            this.TraHangVeKhoButton.Name = "TraHangVeKhoButton";
+            this.TraHangVeKhoButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.TraHangVeKhoButton_ItemClick);
+            // 
+            // QuanLyKhachHangBarButton
+            // 
+            this.QuanLyKhachHangBarButton.Caption = "Quản Lý Khách Hàng";
+            this.QuanLyKhachHangBarButton.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.QuanLyKhachHangBarButton.Id = 22;
+            this.QuanLyKhachHangBarButton.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyKhachHangBarButton.ItemAppearance.Disabled.Options.UseFont = true;
+            this.QuanLyKhachHangBarButton.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyKhachHangBarButton.ItemAppearance.Hovered.Options.UseFont = true;
+            this.QuanLyKhachHangBarButton.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyKhachHangBarButton.ItemAppearance.Normal.Options.UseFont = true;
+            this.QuanLyKhachHangBarButton.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyKhachHangBarButton.ItemAppearance.Pressed.Options.UseFont = true;
+            this.QuanLyKhachHangBarButton.Name = "QuanLyKhachHangBarButton";
+            this.QuanLyKhachHangBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.QuanLyKhachHangBarButton_ItemClick);
+            // 
             // nhanVienRibbonPage
             // 
             this.nhanVienRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,6 +397,20 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.TraHangVeKhoButton);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
+            // KhachHangRibbonPage
+            // 
+            this.KhachHangRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachHangRibbonPage.Appearance.Options.UseFont = true;
+            this.KhachHangRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5});
+            this.KhachHangRibbonPage.Name = "KhachHangRibbonPage";
+            this.KhachHangRibbonPage.Text = "Khách Hàng";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.QuanLyKhachHangBarButton);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 660);
@@ -367,22 +418,6 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
-            // 
-            // TraHangVeKhoButton
-            // 
-            this.TraHangVeKhoButton.Caption = "Trả Hàng Về Kho";
-            this.TraHangVeKhoButton.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.TraHangVeKhoButton.Id = 20;
-            this.TraHangVeKhoButton.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TraHangVeKhoButton.ItemAppearance.Disabled.Options.UseFont = true;
-            this.TraHangVeKhoButton.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TraHangVeKhoButton.ItemAppearance.Hovered.Options.UseFont = true;
-            this.TraHangVeKhoButton.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TraHangVeKhoButton.ItemAppearance.Normal.Options.UseFont = true;
-            this.TraHangVeKhoButton.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TraHangVeKhoButton.ItemAppearance.Pressed.Options.UseFont = true;
-            this.TraHangVeKhoButton.Name = "TraHangVeKhoButton";
-            this.TraHangVeKhoButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.TraHangVeKhoButton_ItemClick);
             // 
             // MainForm
             // 
@@ -430,5 +465,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem ThongKeHangHoaButton;
         private DevExpress.XtraBars.BarButtonItem TraHangVeKhoButton;
+        private DevExpress.XtraBars.BarButtonItem QuanLyKhachHangBarButton;
+        private DevExpress.XtraBars.Ribbon.RibbonPage KhachHangRibbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }

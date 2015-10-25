@@ -2,6 +2,7 @@
 using DevExpress.XtraBars;
 using Helper;
 using QuanLySieuThi.HangHoa;
+using QuanLySieuThi.KhachHang;
 using QuanLySieuThi.Kho;
 using QuanLySieuThi.NhaCungCap;
 using QuanLySieuThi.NhanVien;
@@ -191,6 +192,19 @@ namespace QuanLySieuThi
             {
                 var phieuTraHang = new PhieuTraQuayHangForm();
                 phieuTraHang.ShowForm("OpenPhieuTraQuayHang");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void QuanLyKhachHangBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var quanLyKhachHang = new QuanLyKhachHangForm();
+                quanLyKhachHang.ShowForm("OpenQuanLyKhachHang");
             }
             catch (Exception ex)
             {

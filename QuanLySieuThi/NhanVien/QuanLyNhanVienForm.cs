@@ -230,49 +230,49 @@ namespace QuanLySieuThi.NhanVien
                 {
                     if (string.IsNullOrEmpty(nhanVien.HoVaTen))
                     {
-                        MessageBox.Show(@"Vui lòng nhập họ tên.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng nhập họ tên.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (string.IsNullOrEmpty(nhanVien.TenDangNhap))
                     {
-                        MessageBox.Show(@"Vui lòng nhập Tên đăng nhập.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng nhập Tên đăng nhập.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (string.IsNullOrEmpty(nhanVien.MatKhau))
                     {
-                        MessageBox.Show(@"Vui lòng nhập mật khẩu.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng nhập mật khẩu.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (nhanVien.ChucVuId == 0)
                     {
-                        MessageBox.Show(@"Vui lòng chọn chức vụ.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng chọn chức vụ.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (string.IsNullOrEmpty(nhanVien.Email))
                     {
-                        MessageBox.Show(@"Vui lòng nhập Email", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng nhập Email", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (string.IsNullOrEmpty(nhanVien.DiaChi))
                     {
-                        MessageBox.Show(@"Vui lòng nhập địa chỉ.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng nhập địa chỉ.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (nhanVien.NgayThangNamSinh >= DateTime.Now)
                     {
-                        MessageBox.Show(@"Ngày tháng năm sinh không được lớn hơn hiện tại.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Ngày tháng năm sinh không được lớn hơn hiện tại.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
                     if (string.IsNullOrEmpty(nhanVien.SoDienThoai))
                     {
-                        MessageBox.Show(@"Vui lòng nhập số điện thoại.", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Vui lòng nhập số điện thoại.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
@@ -283,7 +283,7 @@ namespace QuanLySieuThi.NhanVien
                         {
                             MessageBox.Show(
                                 @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
-                                @"Thong Bao", MessageBoxButtons.OK);
+                                @"Thông Báo", MessageBoxButtons.OK);
 
                             return false;
                         }
@@ -295,7 +295,7 @@ namespace QuanLySieuThi.NhanVien
                         {
                             MessageBox.Show(
                                 @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
-                                @"Thong Bao", MessageBoxButtons.OK);
+                                @"Thông Báo", MessageBoxButtons.OK);
 
                             return false;
                         }
@@ -373,14 +373,14 @@ namespace QuanLySieuThi.NhanVien
                     //{
                     if (selRow.TenDangNhap == "admin")
                     {
-                        MessageBox.Show(@"Bạn không thể xóa tài khoản Admin", @"Thong Bao", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Bạn không thể xóa tài khoản Admin", @"Thông Báo", MessageBoxButtons.OK);
                     }
                     else
                     {
                         if (DialogResult.Yes ==
                             MessageBox.Show(
                                 string.Format("Bạn có muốn xóa thông tin nhân viên : {0}", selRow.HoVaTen),
-                                @"Xac Nhan", MessageBoxButtons.YesNo))
+                                @"Xác Nhận", MessageBoxButtons.YesNo))
                         {
                             _nhanVienService.DeleteNhanVien(selRow.Id);
                             _nhanVienService.Save();

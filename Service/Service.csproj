@@ -60,6 +60,7 @@
     <Compile Include="ChungLoaiHangHoaService.cs" />
     <Compile Include="DonHangService.cs" />
     <Compile Include="HangHoaService.cs" />
+    <Compile Include="KhachHangService.cs" />
     <Compile Include="KhoHangService.cs" />
     <Compile Include="LoaiHangHoaService.cs" />
     <Compile Include="NhaCungCapService.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="PhieuTraQuayHangService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuayHangService.cs" />
+    <Compile Include="TheKhachHangService.cs" />
     <Compile Include="TonKhoService.cs" />
     <Compile Include="XuatKhoService.cs" />
   </ItemGroup>
