@@ -55,6 +55,7 @@
             this.KhachHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.QuanLyHoaDonButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,10 +78,11 @@
             this.barButtonItem1,
             this.ThongKeHangHoaButton,
             this.TraHangVeKhoButton,
-            this.QuanLyKhachHangBarButton});
+            this.QuanLyKhachHangBarButton,
+            this.QuanLyHoaDonButtonItem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.nhanVienRibbonPage,
@@ -409,6 +411,7 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.QuanLyKhachHangBarButton);
+            this.ribbonPageGroup5.ItemLinks.Add(this.QuanLyHoaDonButtonItem);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonStatusBar
@@ -418,6 +421,22 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
+            // 
+            // QuanLyHoaDonButtonItem
+            // 
+            this.QuanLyHoaDonButtonItem.Caption = "Quản Lý Hóa Đơn";
+            this.QuanLyHoaDonButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.QuanLyHoaDonButtonItem.Id = 23;
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Disabled.Options.UseFont = true;
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Hovered.Options.UseFont = true;
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Normal.Options.UseFont = true;
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuanLyHoaDonButtonItem.ItemAppearance.Pressed.Options.UseFont = true;
+            this.QuanLyHoaDonButtonItem.Name = "QuanLyHoaDonButtonItem";
+            this.QuanLyHoaDonButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.QuanLyHoaDonButtonItem_ItemClick);
             // 
             // MainForm
             // 
@@ -468,5 +487,6 @@
         private DevExpress.XtraBars.BarButtonItem QuanLyKhachHangBarButton;
         private DevExpress.XtraBars.Ribbon.RibbonPage KhachHangRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem QuanLyHoaDonButtonItem;
     }
 }

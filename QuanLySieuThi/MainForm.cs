@@ -212,6 +212,19 @@ namespace QuanLySieuThi
             }
         }
 
+        private void QuanLyHoaDonButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var quanLyHoaDon = new QuanLyHoaDonForm();
+                quanLyHoaDon.ShowForm("OpenQuanLyHoaDonForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         
     }
 }
