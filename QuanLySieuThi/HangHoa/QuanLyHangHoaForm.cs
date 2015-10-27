@@ -21,14 +21,21 @@ namespace QuanLySieuThi.HangHoa
 
         private IList<LoaiHangHoa> _loaiHangHoas;
         private IList<Model.NhaCungCap> _nhaCungCaps;
-        private IList<QuayHang> _quayHangs; 
+        private IList<QuayHang> _quayHangs;
 
-        public QuanLyHangHoaForm()
+        public Model.HangHoa HangHoa;
+
+        private bool _isSearchForm;
+        private bool _isValidate = true;
+
+        public QuanLyHangHoaForm(bool isSearchForm = false)
         {
             InitializeComponent();
 
             MinimumSizeWidth = 1003;
-            MinimumSizeHeight = 602; 
+            MinimumSizeHeight = 602;
+
+            _isSearchForm = isSearchForm;
         }
 
         public override void LoadData(EventArgs e)
@@ -49,6 +56,27 @@ namespace QuanLySieuThi.HangHoa
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+
+                if (_isSearchForm)
+                {
+                    TenHangHoaTextBox.Enabled = false;
+                    NhaCungCapLookupEdit.Enabled = false;
+                    LoaiHangHoaLookupEdit.Enabled = false;
+                    QuayHangLookupEdit.Enabled = false;
+                    TraLaiCheckEdit.Enabled = false;
+                    GiaNhapVaoNummeric.Enabled = false;
+                    GiaBanRaNummeric.Enabled = false;
+                    AddButton.Enabled = false;
+                    SaveButton.Enabled = false;
+                    EditButton.Enabled = false;
+                    DeleteButton.Enabled = false;
+                    RefreshButton.Enabled = false;
+                    SelectButton.Enabled = true;
+                }
+                else
+                {
+                    SelectButton.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -156,68 +184,76 @@ namespace QuanLySieuThi.HangHoa
         {
             try
             {
-                var hangHoa = Entity as Model.HangHoa;
-                if (hangHoa != null)
+                if (_isValidate)
                 {
-                    if (string.IsNullOrEmpty(hangHoa.TenHangHoa))
+                    var hangHoa = Entity as Model.HangHoa;
+                    if (hangHoa != null)
                     {
-                        MessageBox.Show(@"Vui lòng nhập Tên Hàng Hóa", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (hangHoa.LoaiHangHoaId == 0)
-                    {
-                        MessageBox.Show(@"Vui lòng lòng chọn Loại Hàng Hóa", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-                    if (GiaNhapVaoNummeric.Text.ToDecimal() <= 0)
-                    {
-                        MessageBox.Show(@"Giá Nhập vào phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-                    if (GiaBanRaNummeric.Text.ToDecimal() <= GiaNhapVaoNummeric.Text.ToDecimal())
-                    {
-                        MessageBox.Show(@"Giá bán ra phải lớn hơn giá nhập vào", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (hangHoa.NhaCungCapId == 0)
-                    {
-                        MessageBox.Show(@"Vui lòng lòng chọn Nhà Cung Cấp", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (hangHoa.QuayHangId == 0)
-                    {
-                        MessageBox.Show(@"Vui lòng lòng chọn Quầy Hàng", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (FormMode == FormMode.Add)
-                    {
-                        var hangHoaInDatabase = _hangHoaService.GetByTenHangHoa(hangHoa.TenHangHoa);
-                        if (hangHoaInDatabase != null)
+                        if (string.IsNullOrEmpty(hangHoa.TenHangHoa))
                         {
-                            MessageBox.Show(
-                                @"Tên Hàng Hóa đã tồn tại trong cơ sở dữ liệu",
-                                @"Thông Báo", MessageBoxButtons.OK);
-
+                            MessageBox.Show(@"Vui lòng nhập Tên Hàng Hóa", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
                         }
-                    }
-                    else if (FormMode == FormMode.Edit)
-                    {
-                        var hangHoaInDatabase = _hangHoaService.GetByTenHangHoa(hangHoa.TenHangHoa);
-                        if (hangHoaInDatabase != null && hangHoaInDatabase.Id != hangHoa.Id)
-                        {
-                            MessageBox.Show(
-                                @"Tên Hàng Hóa đã tồn tại trong cơ sở dữ liệu",
-                                @"Thông Báo", MessageBoxButtons.OK);
 
+                        if (hangHoa.LoaiHangHoaId == 0)
+                        {
+                            MessageBox.Show(@"Vui lòng lòng chọn Loại Hàng Hóa", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
+                        }
+                        if (GiaNhapVaoNummeric.Text.ToDecimal() <= 0)
+                        {
+                            MessageBox.Show(@"Giá Nhập vào phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+                        if (GiaBanRaNummeric.Text.ToDecimal() <= GiaNhapVaoNummeric.Text.ToDecimal())
+                        {
+                            MessageBox.Show(@"Giá bán ra phải lớn hơn giá nhập vào", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (hangHoa.NhaCungCapId == 0)
+                        {
+                            MessageBox.Show(@"Vui lòng lòng chọn Nhà Cung Cấp", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (hangHoa.QuayHangId == 0)
+                        {
+                            MessageBox.Show(@"Vui lòng lòng chọn Quầy Hàng", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (FormMode == FormMode.Add)
+                        {
+                            var hangHoaInDatabase = _hangHoaService.GetByTenHangHoa(hangHoa.TenHangHoa);
+                            if (hangHoaInDatabase != null)
+                            {
+                                MessageBox.Show(
+                                    @"Tên Hàng Hóa đã tồn tại trong cơ sở dữ liệu",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+
+                                return false;
+                            }
+                        }
+                        else if (FormMode == FormMode.Edit)
+                        {
+                            var hangHoaInDatabase = _hangHoaService.GetByTenHangHoa(hangHoa.TenHangHoa);
+                            if (hangHoaInDatabase != null && hangHoaInDatabase.Id != hangHoa.Id)
+                            {
+                                MessageBox.Show(
+                                    @"Tên Hàng Hóa đã tồn tại trong cơ sở dữ liệu",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+
+                                return false;
+                            }
                         }
                     }
                 }
+                else
+                {
+                    _isValidate = true;
+                }
+                
             }
             catch (Exception ex)
             {
@@ -349,6 +385,14 @@ namespace QuanLySieuThi.HangHoa
             AddButton.Enabled = true;
             EditButton.Enabled = true;
             DeleteButton.Enabled = true;
+        }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            var hangHoa = _selRow as Model.HangHoa;
+            HangHoa = hangHoa;
+            _isValidate = false;
+            Close();
         }
     }
 }

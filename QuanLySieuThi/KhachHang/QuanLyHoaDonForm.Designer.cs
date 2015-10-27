@@ -37,7 +37,7 @@
             this.HoaDonGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaHoaDonColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KhachHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NhanVienColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NgayLapColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TrangThaiHoaDonColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -93,6 +93,7 @@
             this.OKButton.StyleController = this.layoutControl1;
             this.OKButton.TabIndex = 8;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // ViewButton
             // 
@@ -106,6 +107,7 @@
             this.ViewButton.StyleController = this.layoutControl1;
             this.ViewButton.TabIndex = 7;
             this.ViewButton.Text = "Chi Tiết Hóa Đơn";
+            this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
             // 
             // DeleteButton
             // 
@@ -119,6 +121,7 @@
             this.DeleteButton.StyleController = this.layoutControl1;
             this.DeleteButton.TabIndex = 6;
             this.DeleteButton.Text = "Hủy Hóa Đơn";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AddButton
             // 
@@ -155,7 +158,7 @@
             this.HoaDonGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaHoaDonColumn,
             this.KhachHangColumn,
-            this.gridColumn1,
+            this.NhanVienColumn,
             this.NgayLapColumn,
             this.TrangThaiHoaDonColumn});
             this.HoaDonGridView.GridControl = this.HoaDonGridControl;
@@ -165,6 +168,8 @@
             this.HoaDonGridView.OptionsView.ShowAutoFilterRow = true;
             this.HoaDonGridView.OptionsView.ShowGroupPanel = false;
             this.HoaDonGridView.OptionsView.ShowIndicator = false;
+            this.HoaDonGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.HoaDonGridView_FocusedRowChanged);
+            this.HoaDonGridView.DoubleClick += new System.EventHandler(this.HoaDonGridView_DoubleClick);
             // 
             // MaHoaDonColumn
             // 
@@ -188,16 +193,16 @@
             this.KhachHangColumn.VisibleIndex = 1;
             this.KhachHangColumn.Width = 200;
             // 
-            // gridColumn1
+            // NhanVienColumn
             // 
-            this.gridColumn1.Caption = "Nhân Viên Lập Hóa Đơn";
-            this.gridColumn1.FieldName = "NhanVien.HoVaTen";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 250;
+            this.NhanVienColumn.Caption = "Nhân Viên Lập Hóa Đơn";
+            this.NhanVienColumn.FieldName = "NhanVien1.HoVaTen";
+            this.NhanVienColumn.Name = "NhanVienColumn";
+            this.NhanVienColumn.OptionsColumn.AllowEdit = false;
+            this.NhanVienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NhanVienColumn.Visible = true;
+            this.NhanVienColumn.VisibleIndex = 2;
+            this.NhanVienColumn.Width = 250;
             // 
             // NgayLapColumn
             // 
@@ -360,7 +365,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraGrid.Columns.GridColumn MaHoaDonColumn;
         private DevExpress.XtraGrid.Columns.GridColumn KhachHangColumn;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn NhanVienColumn;
         private DevExpress.XtraGrid.Columns.GridColumn NgayLapColumn;
         private DevExpress.XtraGrid.Columns.GridColumn TrangThaiHoaDonColumn;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;

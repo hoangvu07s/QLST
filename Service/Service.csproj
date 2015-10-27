@@ -53,6 +53,7 @@
     <Compile Include="ChiTietDonHangService.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ChiTietHoaDonService.cs" />
     <Compile Include="ChiTietNhapKhoService.cs" />
     <Compile Include="ChiTietPhieuTraQuayHangService.cs" />
     <Compile Include="ChiTietXuatKhoService.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="ChungLoaiHangHoaService.cs" />
     <Compile Include="DonHangService.cs" />
     <Compile Include="HangHoaService.cs" />
+    <Compile Include="HoaDonService.cs" />
     <Compile Include="KhachHangService.cs" />
     <Compile Include="KhoHangService.cs" />
     <Compile Include="LoaiHangHoaService.cs" />

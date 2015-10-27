@@ -10,17 +10,21 @@ namespace QuanLySieuThi.KhachHang
     {
         private KhachHangService _khachHangService;
         private TheKhachHangService _theKhachHangService;
+        public Model.KhachHang KhachHang;
 
         private Object _selRow;
 
         private bool _isSelectedRow = true;
+        private bool _isSearched;
 
-        public QuanLyKhachHangForm()
+        public QuanLyKhachHangForm(bool isSearched = false)
         {
             InitializeComponent();
 
             MinimumSizeWidth = 1003;
-            MinimumSizeHeight = 602; 
+            MinimumSizeHeight = 602;
+
+            _isSearched = isSearched;
         }
 
         public override void LoadData(EventArgs e)
@@ -35,6 +39,28 @@ namespace QuanLySieuThi.KhachHang
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+
+                if (_isSearched)
+                {
+                    TenKhachHangTextBox.Enabled = false;
+                    DiaChiTextBox.Enabled = false;
+                    SoDienThoaiTextBox.Enabled = false;
+                    TuoiTextBox.Enabled = false;
+                    EmailTextBox.Enabled = false;
+                    KhachHangThanThietCheckEdit.Enabled = false;
+                    TheKhachHangTextBox.Enabled = false;
+                    DiemTichLuyTextBox.Enabled = false;
+                    AddButton.Enabled = false;
+                    SaveButton.Enabled = false;
+                    EditButton.Enabled = false;
+                    DeleteButton.Enabled = false;
+                    RefreshButton.Enabled = false;
+                    SelectButton.Enabled = true;
+                }
+                else
+                {
+                    SelectButton.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -304,6 +330,24 @@ namespace QuanLySieuThi.KhachHang
             AddButton.Enabled = true;
             EditButton.Enabled = true;
             DeleteButton.Enabled = true;
+        }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var khachHang = _selRow as Model.KhachHang;
+                if (khachHang != null)
+                {
+                    KhachHang = khachHang;
+                }
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
     }
 }
