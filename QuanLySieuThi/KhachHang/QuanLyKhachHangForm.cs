@@ -184,22 +184,22 @@ namespace QuanLySieuThi.KhachHang
         {
             try
             {
-                var khacHang = Entity as Model.KhachHang;
-                if (khacHang != null)
+                var khachHang = Entity as Model.KhachHang;
+                if (khachHang != null)
                 {
-                    if (string.IsNullOrEmpty(khacHang.TenKhachHang))
+                    if (string.IsNullOrEmpty(khachHang.TenKhachHang))
                     {
                         MessageBox.Show(@"Vui lòng nhập Tên Khách Hàng.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
-                    if (string.IsNullOrEmpty(khacHang.DiaChi))
+                    if (string.IsNullOrEmpty(khachHang.DiaChi))
                     {
                         MessageBox.Show(@"Vui lòng nhập Địa Chỉ.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
                     }
 
-                    if (string.IsNullOrEmpty(khacHang.SoDienThoai))
+                    if (string.IsNullOrEmpty(khachHang.SoDienThoai))
                     {
                         MessageBox.Show(@"Vui lòng nhập Số Điện Thoại.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
@@ -209,6 +209,29 @@ namespace QuanLySieuThi.KhachHang
                     {
                         MessageBox.Show(@"Nhập Tuổi không đúng, mời nhập lại.", @"Thông Báo", MessageBoxButtons.OK);
                         return false;
+                    }
+
+                    if (FormMode == FormMode.Add)
+                    {
+                        var khachHangs = _khachHangService.GetKhachHangsBySoDienThoai(khachHang.SoDienThoai);
+                        if (khachHangs.Count > 0)
+                        {
+                            MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+                    }
+
+                    if (FormMode == FormMode.Edit)
+                    {
+                        var khachHangs = _khachHangService.GetKhachHangsBySoDienThoai(khachHang.SoDienThoai);
+                        var khachHangInDatabase = _khachHangService.Get(khachHang.Id);
+                        khachHangs.Remove(khachHangInDatabase);
+
+                        if (khachHangs.Count > 0)
+                        {
+                            MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
                     }
                 }
             }

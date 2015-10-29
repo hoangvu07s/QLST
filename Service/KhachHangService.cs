@@ -28,6 +28,36 @@ namespace Service
             return null;
         }
 
+        public IList<KhachHang> GetKhachHangsBySoDienThoai(string soDienThoai)
+        {
+            try
+            {
+                return
+                    Entities.KhachHangs.Where(
+                        _ => _.SoDienThoai == soDienThoai && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
+        public KhachHang Get(long khachHangId)
+        {
+            try
+            {
+                return Entities.KhachHangs.FirstOrDefault(_ => _.Id == khachHangId);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public KhachHang Add()
         {
             try
