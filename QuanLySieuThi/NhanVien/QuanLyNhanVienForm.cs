@@ -287,6 +287,13 @@ namespace QuanLySieuThi.NhanVien
 
                             return false;
                         }
+
+                        var nhanViens = _nhanVienService.GetNhanViensBySoDitenThoai(nhanVien.SoDienThoai);
+                        if (nhanViens.Count > 0)
+                        {
+                            MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
                     }
                     else
                     {
@@ -297,6 +304,16 @@ namespace QuanLySieuThi.NhanVien
                                 @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
                                 @"Thông Báo", MessageBoxButtons.OK);
 
+                            return false;
+                        }
+
+                        var nhanViens = _nhanVienService.GetNhanViensBySoDitenThoai(nhanVien.SoDienThoai);
+                        nhanVienInDatabase = _nhanVienService.GetNhanVien(nhanVien.Id);
+                        nhanViens.Remove(nhanVienInDatabase);
+
+                        if (nhanViens.Count > 0)
+                        {
+                            MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
                         }
                     }

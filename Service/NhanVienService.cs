@@ -267,6 +267,22 @@ namespace Service
             return null;
         }
 
+        public IList<NhanVien> GetNhanViensBySoDitenThoai(string soDienThoai)
+        {
+            try
+            {
+                return
+                    Entities.NhanViens.Where(
+                        _ => _.SoDienThoai == soDienThoai && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public void Update(NhanVien nhanVien)
         {
             try
