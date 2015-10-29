@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using Helper;
 using Model;
@@ -56,6 +57,19 @@ namespace Service
             }
 
             return null;
+        }
+
+        public void Delete(TheKhachHang theKhachHang)
+        {
+            try
+            {
+                theKhachHang.HoatDong = false;
+                Entities.TheKhachHangs.AddOrUpdate(theKhachHang);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
 
         public override void Save()

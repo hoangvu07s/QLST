@@ -336,6 +336,13 @@ namespace QuanLySieuThi.KhachHang
                         selRow.NgayChinhSua = DateTime.Now;
                         _khachHangService.Delete(selRow);
                         _khachHangService.Save();
+
+                        var theKhachHang = _theKhachHangService.GetByKhachHangId(selRow.Id);
+                        theKhachHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
+                        theKhachHang.NgayChinhSua = DateTime.Now;
+                        _theKhachHangService.Delete(theKhachHang);
+                        _theKhachHangService.Save();
+
                         ShowData();
                     }
                 }
