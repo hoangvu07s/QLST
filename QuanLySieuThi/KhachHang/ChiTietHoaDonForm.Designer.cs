@@ -66,6 +66,7 @@
             this.HangHoaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonGiaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ThanhTienColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -515,12 +516,14 @@
             this.ChiTietHoaDonGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.HangHoaColumn,
             this.SoLuongColumn,
-            this.DonGiaColumn});
+            this.DonGiaColumn,
+            this.ThanhTienColumn});
             this.ChiTietHoaDonGridView.GridControl = this.ChiTietHoaDonGridControl;
             this.ChiTietHoaDonGridView.Name = "ChiTietHoaDonGridView";
             this.ChiTietHoaDonGridView.OptionsBehavior.Editable = false;
             this.ChiTietHoaDonGridView.OptionsView.ColumnAutoWidth = false;
             this.ChiTietHoaDonGridView.OptionsView.ShowAutoFilterRow = true;
+            this.ChiTietHoaDonGridView.OptionsView.ShowFooter = true;
             this.ChiTietHoaDonGridView.OptionsView.ShowGroupPanel = false;
             this.ChiTietHoaDonGridView.OptionsView.ShowIndicator = false;
             this.ChiTietHoaDonGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.ChiTietHoaDonGridView_FocusedRowChanged);
@@ -543,9 +546,11 @@
             this.SoLuongColumn.Name = "SoLuongColumn";
             this.SoLuongColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.SoLuongColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:c2}")});
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 1;
-            this.SoLuongColumn.Width = 100;
+            this.SoLuongColumn.Width = 200;
             // 
             // DonGiaColumn
             // 
@@ -557,6 +562,19 @@
             this.DonGiaColumn.Visible = true;
             this.DonGiaColumn.VisibleIndex = 2;
             this.DonGiaColumn.Width = 100;
+            // 
+            // ThanhTienColumn
+            // 
+            this.ThanhTienColumn.Caption = "Thành Tiền";
+            this.ThanhTienColumn.FieldName = "TongTien";
+            this.ThanhTienColumn.Name = "ThanhTienColumn";
+            this.ThanhTienColumn.OptionsColumn.AllowEdit = false;
+            this.ThanhTienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.ThanhTienColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTien", "Tổng Thành Tiền = {0:c2}")});
+            this.ThanhTienColumn.Visible = true;
+            this.ThanhTienColumn.VisibleIndex = 3;
+            this.ThanhTienColumn.Width = 200;
             // 
             // layoutControlGroup1
             // 
@@ -677,5 +695,6 @@
         private Common.Controls.QTextBoxControl TenKhachHangTextBox;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraGrid.Columns.GridColumn ThanhTienColumn;
     }
 }
