@@ -193,13 +193,13 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(SoLuongNummeric.Text) || SoLuongNummeric.Text.ToInt() == 0)
+                if (string.IsNullOrWhiteSpace(SoLuongNummeric.Text) || SoLuongNummeric.Text.ToInt() <= 0)
                 {
                     MessageBox.Show(@"Số Lượng trả về kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else if (SoLuongNummeric.Text.ToInt() > SoLuongTonQuayNummeric.Text.ToInt())
                 {
-                    MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng tông quầy", @"Thông Báo", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng tồn quầy", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else if (_chiTietPhieuTraQuayHangs.Any(_ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong()))
                 {
@@ -247,13 +247,13 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(SoLuongNummeric.Text) || SoLuongNummeric.Text.ToInt() == 0)
+                if (string.IsNullOrWhiteSpace(SoLuongNummeric.Text) || SoLuongNummeric.Text.ToInt() <= 0)
                 {
                     MessageBox.Show(@"Số Lượng trả về kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else if (SoLuongNummeric.Text.ToInt() > SoLuongTonQuayNummeric.Text.ToInt())
                 {
-                    MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng tông quầy", @"Thông Báo", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng tồn quầy", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else
                 {

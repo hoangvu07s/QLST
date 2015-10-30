@@ -120,7 +120,7 @@ namespace QuanLySieuThi.HangHoa
                     if (string.IsNullOrEmpty(chungLoaiHangHoa.TenChungLoai))
                     {
                         MessageBox.Show(
-                                @"Vui long nhap Ten Chung Loai Hang Hoa",
+                                @"Vui lòng nhập tên Chủng loại hàng hóa.",
                                 @"Thong Bao", MessageBoxButtons.OK);
 
                         return false;
@@ -133,7 +133,7 @@ namespace QuanLySieuThi.HangHoa
                         if (chungLoaiHangHoaInDatabase != null)
                         {
                             MessageBox.Show(
-                                @"Ten Chung Loai Hang Hoa da ton tai trong co so du lieu",
+                                @"Tên chủng loại hàng hóa đã tồn tại trong cơ sở dữ liệu.",
                                 @"Thong Bao", MessageBoxButtons.OK);
 
                             return false;
@@ -146,7 +146,7 @@ namespace QuanLySieuThi.HangHoa
                         if (chungLoaiHangHoaInDatabase != null && chungLoaiHangHoaInDatabase.Id != chungLoaiHangHoa.Id)
                         {
                             MessageBox.Show(
-                                @"Ten Chung Loai da ton tai trong co so du lieu",
+                                @"Tên chủng loại hàng hóa đã tồn tại trong cơ sở dữ liệu.",
                                 @"Thong Bao", MessageBoxButtons.OK);
 
                             return false;

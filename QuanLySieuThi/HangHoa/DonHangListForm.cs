@@ -86,9 +86,9 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _sellRow as DonHang;
                 if (selRow != null)
                 {
-                    if (selRow.TrangThaiDonHang == "Hoan Thanh")
+                    if (selRow.TrangThaiDonHang == "Hoan Thanh" || selRow.TrangThaiDonHang == "Chua Hoan Thanh")
                     {
-                        MessageBox.Show(@"Không được hủy đơn hàng đã Hoàn Thành", @"Thông Báo",
+                        MessageBox.Show(@"Không được hủy đơn hàng đã Hoàn Thành hoặc chưa Hoàn Thành.", @"Thông Báo",
                         MessageBoxButtons.OK);
                     }
                     else

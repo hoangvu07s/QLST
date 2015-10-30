@@ -423,7 +423,7 @@ namespace QuanLySieuThi.Kho
                     return false;
                 }
 
-                if (_chiTietNhapKhos.Any(_ => _.SoLuong == 0))
+                if (_chiTietNhapKhos.Any(_ => _.SoLuong <= 0))
                 {
                     MessageBox.Show(@"Số lượng nhập kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
