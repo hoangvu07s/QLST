@@ -32,11 +32,9 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_HangHoa_NhaCungCap" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_HangHoa_QuayHang" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_TonKho_HangHoa" />
-        <EntityTypeShape EntityType="QuanLySieuThiModel.CT_PhieuTraQuayHang" Width="1.5" PointX="21" PointY="37.125" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.DonHang" Width="1.5" PointX="12.75" PointY="46.375" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.TheKhachHang" Width="1.5" PointX="10.5" PointY="32.875" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTDonHang_DonHang" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_HangHoa" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_DonHang_NhaCungCap" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_TheKhachHang_KhachHang" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.KhuyenMai" Width="1.5" PointX="5.25" PointY="26.5" />
@@ -89,11 +87,13 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTNhapKho_HangHoa" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTNhapKho_NhapKho" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.PhieuTraQuayHang" Width="1.5" PointX="12.75" PointY="34.375" />
-        <AssociationConnector Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_PhieuTraQuayHang" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_Kho" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_PhieuTraQuayHang_QuayHang" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.CT_PhieuTraQuayHang" Width="1.5" PointX="18" PointY="40.75" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_HangHoa" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_PhieuTraQuayHang" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
