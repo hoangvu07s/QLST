@@ -46,7 +46,7 @@ namespace QuanLySieuThi.HangHoa
 
                 if (_isSearchDonHang)
                 {
-                    donHangs = donHangs.Where(_ => _.TrangThaiDonHang == "Dang Cho" || _.TrangThaiDonHang == "Chua Hoan Thanh").ToList();
+                    donHangs = donHangs.Where(_ => _.TrangThaiDonHang == "Đang Chờ" || _.TrangThaiDonHang == "Chưa Hoàn Thành").ToList();
                 }
 
                 DonHangGridControl.DataSource = donHangs;
@@ -86,7 +86,7 @@ namespace QuanLySieuThi.HangHoa
                 var selRow = _sellRow as DonHang;
                 if (selRow != null)
                 {
-                    if (selRow.TrangThaiDonHang == "Hoan Thanh" || selRow.TrangThaiDonHang == "Chua Hoan Thanh")
+                    if (selRow.TrangThaiDonHang == "Hoàn Thành" || selRow.TrangThaiDonHang == "Chưa Hoàn Thành")
                     {
                         MessageBox.Show(@"Không được hủy đơn hàng đã Hoàn Thành hoặc chưa Hoàn Thành.", @"Thông Báo",
                         MessageBoxButtons.OK);
@@ -96,7 +96,7 @@ namespace QuanLySieuThi.HangHoa
                         var donHang = _donHangService.Get(selRow.DonHangId);
                         if (donHang != null)
                         {
-                            donHang.TrangThaiDonHang = "Huy";
+                            donHang.TrangThaiDonHang = "Hủy";
                             _donHangService.Update(donHang);
                             _donHangService.Save();
                             ShowData();

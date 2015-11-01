@@ -345,11 +345,11 @@ namespace QuanLySieuThi.Kho
 
                     if (soLuongInDonHang > soluongDaNhap)
                     {
-                        donHang.TrangThaiDonHang = "Chua Hoan Thanh";
+                        donHang.TrangThaiDonHang = "Chưa Hoàn Thành";
                     }
                     else if(soLuongInDonHang == soluongDaNhap)
                     {
-                        donHang.TrangThaiDonHang = "Hoan Thanh";
+                        donHang.TrangThaiDonHang = "Hoàn Thành";
                     }
 
                     donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;

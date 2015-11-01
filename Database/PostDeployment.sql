@@ -64,3 +64,8 @@ GO
 
 SET IDENTITY_INSERT NhanVien ON;
 GO
+
+Update DonHang set TrangThaiDonHang = 'Hoàn Thành' where TrangThaiDonHang = 'Hoan Thanh'
+Update DonHang set TrangThaiDonHang = 'Chưa Hoàn Thành' where TrangThaiDonHang = 'Chua Hoan Thanh'
+Update DonHang set TrangThaiDonHang = 'Đang Chờ' where TrangThaiDonHang = 'Dang Cho'
+Update DonHang set TrangThaiDonHang = 'Hủy' where TrangThaiDonHang = 'Huy'

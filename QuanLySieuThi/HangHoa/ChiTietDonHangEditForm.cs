@@ -107,7 +107,7 @@ namespace QuanLySieuThi.HangHoa
 
                     LoadGridData();
                     var donHang = _donHangService.Get(new Guid(EntityId));
-                    if (donHang.TrangThaiDonHang != "Dang Cho")
+                    if (donHang.TrangThaiDonHang != "Đang Chờ")
                     {
                         DisableControl();
                     }
@@ -519,7 +519,7 @@ namespace QuanLySieuThi.HangHoa
                         donHang = _donHangService.AddDonHang();
                         donHang.DonHangId = new Guid(_chiTietDonHangs.First().MaDonHang);
                         donHang.NhaCungCapId = _chiTietDonHangs.First().NhaCungCapId;
-                        donHang.TrangThaiDonHang = "Dang Cho";
+                        donHang.TrangThaiDonHang = "Đang Chờ";
                         donHang.NgayChinhSua = currentDateTime;
                         donHang.NgayTao = currentDateTime;
                         donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
