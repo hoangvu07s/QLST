@@ -70,6 +70,8 @@
           <Property Name="HangHoaId" Type="bigint" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NgaySanXuat" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="HanSuDung" Type="datetime2" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="CT_PhieuTraQuayHang">
           <Key>
@@ -2752,6 +2754,8 @@
           <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <NavigationProperty Name="HangHoa" Relationship="QuanLySieuThiModel.FK_CTNhapKho_HangHoa" FromRole="CT_NhapKho" ToRole="HangHoa" />
           <NavigationProperty Name="NhapKho" Relationship="QuanLySieuThiModel.FK_CTNhapKho_NhapKho" FromRole="CT_NhapKho" ToRole="NhapKho" />
+          <Property Name="NgaySanXuat" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="HanSuDung" Type="DateTime" Nullable="false" Precision="7" />
         </EntityType>
         <Association Name="FK_CTNhapKho_HangHoa">
           <End Type="QuanLySieuThiModel.HangHoa" Role="HangHoa" Multiplicity="1" />
@@ -3191,6 +3195,8 @@
           <EntitySetMapping Name="CT_NhapKho">
             <EntityTypeMapping TypeName="QuanLySieuThiModel.CT_NhapKho">
               <MappingFragment StoreEntitySet="CT_NhapKho">
+                <ScalarProperty Name="HanSuDung" ColumnName="HanSuDung" />
+                <ScalarProperty Name="NgaySanXuat" ColumnName="NgaySanXuat" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="HangHoaId" ColumnName="HangHoaId" />

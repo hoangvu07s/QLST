@@ -18,6 +18,8 @@ namespace Model
         public long HangHoaId { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
+        public System.DateTime NgaySanXuat { get; set; }
+        public System.DateTime HanSuDung { get; set; }
     
         public virtual HangHoa HangHoa { get; set; }
         public virtual NhapKho NhapKho { get; set; }
