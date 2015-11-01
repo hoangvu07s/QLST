@@ -189,32 +189,32 @@ namespace QuanLySieuThi.HangHoa
                 var isValidedValue = true;
                 if (string.IsNullOrEmpty(TenHangHoaTextBox.Text))
                 {
-                    MessageBox.Show(@"Vui long nhap Ten Hang Hoa", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng nhập tên hàng hóa.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(NhaCungCapLookupEdit.Text))
                 {
-                    MessageBox.Show(@"Vui long chon Nha Cung Cap", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng chọn nhà cung cấp.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(QuayHangLookupEdit.Text))
                 {
-                    MessageBox.Show(@"Vui long chon Quay Hang", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng chọn quầy hàng.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(LoaiHangHoaLookupEdit.Text))
                 {
-                    MessageBox.Show(@"Vui long chon Loai Hang Hoa", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng chọn loại hàng hóa.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(SoLuongNummeric.Text))
                 {
-                    MessageBox.Show(@"Vui long nhap So Luong", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng nhập số lượng.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(DonGiaNummeric.Text))
                 {
-                    MessageBox.Show(@"Vui long nhap Don Gia", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng nhập đơn giá.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
 
@@ -244,7 +244,7 @@ namespace QuanLySieuThi.HangHoa
                                 _.TenHangHoa == tenHangHoa && _.TenNhaCungCap == nhaCungCap &&
                                 _.TenLoaiHangHoa == loaiHang) > 0)
                         {
-                            MessageBox.Show(@"Ten Hang Hoa, Loai Hang Hoa, Nha Cung Cap da ton tai trong don hang",
+                            MessageBox.Show(@"Tên hàng hóa, Loại hàng hóa, Nhà cung cấp đã tồn tại trong đơn hàng.",
                                 @"Thong Bao",
                                 MessageBoxButtons.OK);
                             isValidated = false;
@@ -252,7 +252,7 @@ namespace QuanLySieuThi.HangHoa
                     }
                     else
                     {
-                        MessageBox.Show(@"Hang Hoa phai co Loai Hang hoa nhu trong chi tiet don hang",
+                        MessageBox.Show(@"Hàng hóa phải có loại hàng hóa như trong chi tiết đơn hàng.",
                             @"Thong Bao",
                             MessageBoxButtons.OK);
                         isValidated = false;
@@ -262,7 +262,7 @@ namespace QuanLySieuThi.HangHoa
 
                 if (_chiTietDonHangs.Count(_ => _.TenNhaCungCap == nhaCungCap) < _chiTietDonHangs.Count)
                 {
-                    MessageBox.Show(@"Chi cho phep lap don hang voi mot nha cung cap",
+                    MessageBox.Show(@"Chỉ cho phép lập đơn hàng với một Nhà cung cấp.",
                             @"Thong Bao",
                             MessageBoxButtons.OK);
                     isValidated = false;

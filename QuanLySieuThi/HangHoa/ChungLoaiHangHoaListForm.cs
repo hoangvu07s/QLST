@@ -73,7 +73,7 @@ namespace QuanLySieuThi.HangHoa
                     else
                     {
                         if (DialogResult.Yes ==
-                         MessageBox.Show(string.Format("Ban co muon xoa Chung Loai '{0}' ?", selRow.TenChungLoai),
+                         MessageBox.Show(string.Format("Bạn có muốn xóa chủng loại '{0}' ?", selRow.TenChungLoai),
                              @"Xac Nhan", MessageBoxButtons.YesNo))
                         {
                             _chungLoaiHangHoaService.Delete(selRow.Id);

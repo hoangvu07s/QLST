@@ -191,7 +191,7 @@ namespace QuanLySieuThi.Kho
 
                 if (SoLuongXuatKhoNummeric.Text.ToInt() > SoLuongTonKhoNummeric.Text.ToInt())
                 {
-                    MessageBox.Show(@"Số lượng xuất kho phải bé hơn số lượng tồn kho", @"Thông Báo", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Số lượng xuất kho phải bé hơn hoặc bằng số lượng tồn kho", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
                 }
 

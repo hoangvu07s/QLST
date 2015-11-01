@@ -155,7 +155,7 @@ namespace QuanLySieuThi.KhachHang
                     else if (SoLuongDatMuaNummeric.Text.ToInt() > SoLuongTonKhoNummeric.Text.ToInt())
                     {
                         MessageBox.Show(
-                                    @"Số lượng đặt mua phải bé hơn số lượng tồn quầy",
+                                    @"Số lượng đặt mua phải bé hơn hoặc bằng số lượng tồn quầy",
                                     @"Thông Báo", MessageBoxButtons.OK);
                     }
                     else if (string.IsNullOrWhiteSpace(HangHoaTextBox.Text))
