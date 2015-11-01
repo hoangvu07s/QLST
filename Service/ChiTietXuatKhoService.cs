@@ -78,6 +78,27 @@ namespace Service
             return tongSoLuong;
         }
 
+        public int TongSoLuongTuKhoToiQuay(long khoId, long hangHoaId)
+        {
+            int tongSoLuong = 0;
+            try
+            {
+                var chiTietXuatKhos = Entities.XuatKhoes.Where(_ => _.KhoId == khoId)
+                        .Include(_ => _.CT_XuatKho)
+                        .SelectMany(_ => _.CT_XuatKho.Where(__=>__.HangHoaId == hangHoaId))
+                        .ToList().Distinct().ToList();
+
+                tongSoLuong = chiTietXuatKhos.Sum(_ => _.SoLuong);
+
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return tongSoLuong;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

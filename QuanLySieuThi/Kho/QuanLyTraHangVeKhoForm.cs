@@ -110,7 +110,7 @@ namespace QuanLySieuThi.Kho
                     if ( _isSelectedKhoHang == false)
                     {
                         _isSelectedKhoHang = true;
-                        _khoId = KhoLookupEdit.EditValue.ToString().ToLong();
+                        _khoId = KhoLookupEdit.EditValue.ToString().ToLong();                        
                     }
                     else
                     {
@@ -118,7 +118,24 @@ namespace QuanLySieuThi.Kho
                         MessageBox.Show(@"Chỉ được chọn duy nhất một Kho Hàng", @"Thông Báo", MessageBoxButtons.OK);
                         
                     }
+
+                    LoadSoLuongKhoXuatToiQuay();
                 }          
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void LoadSoLuongKhoXuatToiQuay()
+        {
+            try
+            {
+                var soLuongXuatKhoToiQuay = _chiTietXuatKhoService.TongSoLuongTuKhoToiQuay(_khoId,
+                        HangHoaLookupEdit.EditValue.ToString().ToLong());
+
+                SoLuongKhoXuatToiQuayNummeric.Text = soLuongXuatKhoToiQuay.ToString(CultureInfo.InvariantCulture);
             }
             catch (Exception ex)
             {
@@ -181,6 +198,11 @@ namespace QuanLySieuThi.Kho
                     var khoHangs = _chiTietNhapKhoService.GetKhos(hangHoaId);
                     DataBinding.BindLookupEdit(KhoLookupEdit, "EditValue", Entity, khoHangs, "KhoId",
                     "TenKho", "Id", "TenKho");
+
+                    if (_khoId != 0)
+                    {
+                        LoadSoLuongKhoXuatToiQuay();
+                    }
                 }
             }
             catch (Exception ex)
@@ -204,6 +226,10 @@ namespace QuanLySieuThi.Kho
                 else if (_chiTietPhieuTraQuayHangs.Any(_ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong()))
                 {
                     MessageBox.Show(@"Hàng Hóa đã được thêm vào danh sách", @"Thông Báo", MessageBoxButtons.OK);
+                }
+                else if (SoLuongNummeric.Text.ToInt() > SoLuongKhoXuatToiQuayNummeric.Text.ToInt())
+                {
+                    MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng từ kho xuất tới quầy", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -254,6 +280,10 @@ namespace QuanLySieuThi.Kho
                 else if (SoLuongNummeric.Text.ToInt() > SoLuongTonQuayNummeric.Text.ToInt())
                 {
                     MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng tồn quầy", @"Thông Báo", MessageBoxButtons.OK);
+                }
+                else if (SoLuongNummeric.Text.ToInt() > SoLuongKhoXuatToiQuayNummeric.Text.ToInt())
+                {
+                    MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng từ kho xuất tới quầy", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else
                 {
