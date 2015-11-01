@@ -44,7 +44,7 @@ namespace QuanLySieuThi.Kho
             this.TenHangHoaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongDatHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DonGiaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongNummeric = new Common.Controls.QNummericControl();
             this.HangHoaLookupEdit = new Common.Controls.QLookupEditControl();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -261,7 +261,7 @@ namespace QuanLySieuThi.Kho
             this.TenHangHoaColumn,
             this.SoLuongDatHangColumn,
             this.SoLuongGridColumn,
-            this.gridColumn1});
+            this.DonGiaColumn});
             this.CTNhapKhoGridView.GridControl = this.CTNhapKhoGridControl;
             this.CTNhapKhoGridView.Name = "CTNhapKhoGridView";
             this.CTNhapKhoGridView.OptionsBehavior.Editable = false;
@@ -304,15 +304,15 @@ namespace QuanLySieuThi.Kho
             this.SoLuongGridColumn.VisibleIndex = 2;
             this.SoLuongGridColumn.Width = 150;
             // 
-            // gridColumn1
+            // DonGiaColumn
             // 
-            this.gridColumn1.Caption = "Đơn Giá";
-            this.gridColumn1.FieldName = "DonGia";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
+            this.DonGiaColumn.Caption = "Đơn Giá";
+            this.DonGiaColumn.FieldName = "DonGia";
+            this.DonGiaColumn.Name = "DonGiaColumn";
+            this.DonGiaColumn.OptionsColumn.AllowEdit = false;
+            this.DonGiaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.DonGiaColumn.Visible = true;
+            this.DonGiaColumn.VisibleIndex = 3;
             // 
             // SoLuongNummeric
             // 
@@ -699,6 +699,6 @@ namespace QuanLySieuThi.Kho
         private DevExpress.XtraGrid.Columns.GridColumn SoLuongDatHangColumn;
         private Common.Controls.QNummericControl DonGiaNummeric;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn DonGiaColumn;
     }
 }

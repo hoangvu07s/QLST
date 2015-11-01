@@ -116,10 +116,11 @@ namespace QuanLySieuThi.Kho
             _chiTietNhapKhos = new List<ChiTietNhapKho>();
             foreach (var chiTietDonHang in chiTietDonHangs)
             {
+                var soLuongDaNhan = _nhapKhoService.GetSoluongNhapKho(new Guid(_donHangId), chiTietDonHang.HangHoaId);
                 _chiTietNhapKhos.Add(new ChiTietNhapKho
                 {
                     HangHoaId = chiTietDonHang.HangHoaId,
-                    SoLuong = 0,
+                    SoLuong = chiTietDonHang.SoLuong - soLuongDaNhan,
                     TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa,
                     SoluongDatHang = chiTietDonHang.SoLuong,
                     DonGia = chiTietDonHang.DonGia
