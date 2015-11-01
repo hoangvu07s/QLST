@@ -83,11 +83,14 @@ namespace QuanLySieuThi.Kho
             }
         }
 
-        private void LoadHangHoa()
+        private void LoadHangHoa(IList<Model.HangHoa> hangHoas )
         {
             try
             {
-                var hangHoas = _chiTietDonHangService.GetHangHoas(new Guid(_donHangId));
+                if (hangHoas == null || hangHoas.Count == 0)
+                {
+                   hangHoas = _chiTietDonHangService.GetHangHoas(new Guid(_donHangId)); 
+                }                
                 HangHoaLookupEdit.Properties.DataSource = hangHoas;
                 HangHoaLookupEdit.Properties.DisplayMember = "TenHangHoa";
                 HangHoaLookupEdit.Properties.ValueMember = "Id";
@@ -110,22 +113,29 @@ namespace QuanLySieuThi.Kho
         {
             _donHangId = DonHangListForm.MaDonHang.ToString();
             MaDonHangTextBox.Text = _donHangId;
-            LoadHangHoa();
+            
             var chiTietDonHangs = _chiTietDonHangService.GetByDonHangId(new Guid(_donHangId));
 
             _chiTietNhapKhos = new List<ChiTietNhapKho>();
+            var hangHoas = new List<Model.HangHoa>();
             foreach (var chiTietDonHang in chiTietDonHangs)
             {
                 var soLuongDaNhan = _nhapKhoService.GetSoluongNhapKho(new Guid(_donHangId), chiTietDonHang.HangHoaId);
-                _chiTietNhapKhos.Add(new ChiTietNhapKho
+                if (soLuongDaNhan < chiTietDonHang.SoLuong)
                 {
-                    HangHoaId = chiTietDonHang.HangHoaId,
-                    SoLuong = chiTietDonHang.SoLuong - soLuongDaNhan,
-                    TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa,
-                    SoluongDatHang = chiTietDonHang.SoLuong,
-                    DonGia = chiTietDonHang.DonGia
-                });
+                    hangHoas.Add(chiTietDonHang.HangHoa);
+                    _chiTietNhapKhos.Add(new ChiTietNhapKho
+                    {
+                        HangHoaId = chiTietDonHang.HangHoaId,
+                        SoLuong = chiTietDonHang.SoLuong - soLuongDaNhan,
+                        TenHangHoa = chiTietDonHang.HangHoa.TenHangHoa,
+                        SoluongDatHang = chiTietDonHang.SoLuong,
+                        DonGia = chiTietDonHang.DonGia
+                    });
+                }                
             }
+
+            LoadHangHoa(hangHoas);
 
             ShowDataToGrid();
         }
