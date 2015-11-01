@@ -72,6 +72,18 @@ namespace Service
             }
         }
 
+        public void Update(TheKhachHang theKhachHang)
+        {
+            try
+            {
+                Entities.TheKhachHangs.AddOrUpdate(theKhachHang);
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

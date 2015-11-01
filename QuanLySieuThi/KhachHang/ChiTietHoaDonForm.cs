@@ -16,6 +16,7 @@ namespace QuanLySieuThi.KhachHang
         private ChiTietHoaDonService _chiTietHoaDonService;
         private HoaDonService _hoaDonService;
         private HangHoaService _hangHoaService;
+        private TheKhachHangService _theKhachHangService;
 
         private QuanLyHangHoaForm _quanLyHangHoaForm;
         private QuanLyKhachHangForm _quanLyKhachHangForm;
@@ -43,6 +44,7 @@ namespace QuanLySieuThi.KhachHang
                 _chiTietHoaDonService = new ChiTietHoaDonService(Entities);
                 _hoaDonService = new HoaDonService(Entities);
                 _hangHoaService = new HangHoaService(Entities);
+                _theKhachHangService = new TheKhachHangService(Entities);
 
                 if (!_maHoaDon.HasValue)
                 {
@@ -325,6 +327,36 @@ namespace QuanLySieuThi.KhachHang
                         }
 
                         _hangHoaService.Save();
+
+                        // update Diem Tich Luy
+                        var theKhachHang = _theKhachHangService.GetByKhachHangId(_khachHang.Id);
+                        var tongThanhTien = _chiTietHoaDons.Sum(_ => _.TongTien);
+                        if (tongThanhTien <= 300)
+                        {
+                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 10;
+                        }
+                        else if (tongThanhTien > 300 && tongThanhTien <= 500)
+                        {
+                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 20;
+                        }
+                        else
+                        {
+                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 30;
+                        }
+
+                        _theKhachHangService.Update(theKhachHang);
+
+                        _theKhachHangService.Save();
+
+                        if (theKhachHang.DiemTichLuy >= 500 && _khachHang.KhachHangThanThiet == false)
+                        {
+                            _khachHang.KhachHangThanThiet = true;
+
+                            var khachHangService = new KhachHangService(Entities);
+                            khachHangService.Update(_khachHang);
+
+                            khachHangService.Save();
+                        }
 
                         Close();
                     }
