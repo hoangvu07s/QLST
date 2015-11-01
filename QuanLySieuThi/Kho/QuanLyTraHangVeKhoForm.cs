@@ -108,8 +108,7 @@ namespace QuanLySieuThi.Kho
                 if (KhoLookupEdit.EditValue.ToString().ToLong() != 0)
                 {
                     if ( _isSelectedKhoHang == false)
-                    {
-                        _isSelectedKhoHang = true;
+                    {                        
                         _khoId = KhoLookupEdit.EditValue.ToString().ToLong();                        
                     }
                     else
@@ -248,6 +247,8 @@ namespace QuanLySieuThi.Kho
                     _chiTietPhieuTraQuayHangs.Add(chiTietTraHang);
 
                     LoadGridData();
+
+                    _isSelectedKhoHang = true;
                 }
             }
             catch (Exception ex)
@@ -286,7 +287,7 @@ namespace QuanLySieuThi.Kho
                     MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng từ kho xuất tới quầy", @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else
-                {
+                {                    
                     var chiTietPhieuTraQuayHang =
                         _chiTietPhieuTraQuayHangs.FirstOrDefault(
                             _ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong());
@@ -296,7 +297,7 @@ namespace QuanLySieuThi.Kho
                         chiTietPhieuTraQuayHang.SoLuong = SoLuongNummeric.Text.ToInt();
                         chiTietPhieuTraQuayHang.LyDo = LyDoTextBox.Text;
 
-                        LoadGridData();
+                        LoadGridData();                        
                     }
                     else
                     {
@@ -340,6 +341,10 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
+                if (_chiTietPhieuTraQuayHangs.Count > 1)
+                {
+                    _isSelectedKhoHang = true;
+                }
                 var selRow = TraHangVeKhoGridView.GetRow(e.FocusedRowHandle);
                 var chiTietPhieuTraQuayHang = selRow as CT_PhieuTraQuayHang;
 
