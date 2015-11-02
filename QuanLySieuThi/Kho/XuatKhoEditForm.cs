@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.Controls;
 using Helper;
@@ -28,6 +22,7 @@ namespace QuanLySieuThi.Kho
 
         private IList<ChiTietXuatKho> _chiTietXuatKhos;
         private object _selRow;
+        private bool _isSelected = false;
 
         public XuatKhoEditForm()
         {
@@ -95,19 +90,27 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                IList<Model.HangHoa> hangHoas = new List<Model.HangHoa>();
-                var khoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
-                var nhapKhos = _nhapKhoService.Get(khoId);// lấy các phiếu nhập kho của khoId
-                foreach (var nhapKho in nhapKhos)
+                if (_isSelected)
                 {
-                    var chiTietNhapKhos = _chiTietNhapKhoService.Get(nhapKho.PhieuNhapKhoId);
-                    foreach (var chiTietNhapKho in chiTietNhapKhos)
-                    {
-                        hangHoas.Add(chiTietNhapKho.HangHoa);// lấy các hàng hóa của phiếu nhập kho vào list
-                    }
+                    MessageBox.Show(@"Chỉ được xuất cho một kho Hàng duy nhất", @"Thông Báo", MessageBoxButtons.OK);
                 }
+                else
+                {
+                    IList<Model.HangHoa> hangHoas = new List<Model.HangHoa>();
+                    var khoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
+                    var nhapKhos = _nhapKhoService.Get(khoId);
+                    foreach (var nhapKho in nhapKhos)
+                    {
+                        var chiTietNhapKhos = _chiTietNhapKhoService.Get(nhapKho.PhieuNhapKhoId);
+                        foreach (var chiTietNhapKho in chiTietNhapKhos)
+                        {
+                            hangHoas.Add(chiTietNhapKho.HangHoa);
+                        }
+                    }
 
-                LoadHangHoa(hangHoas.Distinct().ToList());
+                    LoadHangHoa(hangHoas.Distinct().ToList());
+                }
+                
             }
             catch (Exception ex)
             {
@@ -146,6 +149,8 @@ namespace QuanLySieuThi.Kho
                     });
 
                     ShowDataToGrid();
+
+                    _isSelected = true;
                 }
             }
             catch (Exception ex)
@@ -214,7 +219,7 @@ namespace QuanLySieuThi.Kho
 
             return false;
         }
-        // sửa số lượng xuất kho.
+
         private void EditButton_Click(object sender, EventArgs e)
         {
             try
@@ -223,7 +228,7 @@ namespace QuanLySieuThi.Kho
                 {
                     var chiTietXuatKho = _selRow as ChiTietXuatKho;
                     if (chiTietXuatKho != null)
-                    {// _chiTietXuatKhos : giá trị nhập vào.
+                    {
                         chiTietXuatKho = _chiTietXuatKhos.FirstOrDefault(_ => _.HangHoaId == chiTietXuatKho.HangHoaId);
                         if (chiTietXuatKho != null)
                         {
@@ -251,6 +256,8 @@ namespace QuanLySieuThi.Kho
                 {
                     HangHoaLookupEdit.EditValue = chiTietXuatKho.HangHoaId;
                     SoLuongXuatKhoNummeric.Text = chiTietXuatKho.SoLuong.ToString(CultureInfo.InvariantCulture);
+
+                    _isSelected = true;
                 }
             }
             catch (Exception ex)
