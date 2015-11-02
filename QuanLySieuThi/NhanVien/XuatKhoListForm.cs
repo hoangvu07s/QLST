@@ -63,7 +63,7 @@ namespace QuanLySieuThi.NhanVien
         {
             SelectButton_Click(sender,e);
         }
-
+        // xem chi tiết phiếu xuất kho
         private void SelectButton_Click(object sender, EventArgs e)
         {
             try

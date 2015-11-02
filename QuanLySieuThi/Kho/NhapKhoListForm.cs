@@ -60,7 +60,7 @@ namespace QuanLySieuThi.Kho
         {
             Close();
         }
-
+        // Xem chi tiết nhập kho
         private void SelectButton_Click(object sender, EventArgs e)
         {
             var selRow = _selRow as NhapKho;

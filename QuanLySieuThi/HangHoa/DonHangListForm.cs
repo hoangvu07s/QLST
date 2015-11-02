@@ -78,7 +78,7 @@ namespace QuanLySieuThi.HangHoa
         {
             Cancel();
         }
-
+            // Hủy đơn hàng
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             try
@@ -121,7 +121,7 @@ namespace QuanLySieuThi.HangHoa
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+            // Xem chi tiết đơn hàng
         private void EditButton_Click(object sender, EventArgs e)
         {
             try

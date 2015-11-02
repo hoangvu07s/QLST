@@ -97,13 +97,13 @@ namespace QuanLySieuThi.Kho
             {
                 IList<Model.HangHoa> hangHoas = new List<Model.HangHoa>();
                 var khoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
-                var nhapKhos = _nhapKhoService.Get(khoId);
+                var nhapKhos = _nhapKhoService.Get(khoId);// lấy các phiếu nhập kho của khoId
                 foreach (var nhapKho in nhapKhos)
                 {
                     var chiTietNhapKhos = _chiTietNhapKhoService.Get(nhapKho.PhieuNhapKhoId);
                     foreach (var chiTietNhapKho in chiTietNhapKhos)
                     {
-                        hangHoas.Add(chiTietNhapKho.HangHoa);
+                        hangHoas.Add(chiTietNhapKho.HangHoa);// lấy các hàng hóa của phiếu nhập kho vào list
                     }
                 }
 
@@ -214,7 +214,7 @@ namespace QuanLySieuThi.Kho
 
             return false;
         }
-
+        // sửa số lượng xuất kho.
         private void EditButton_Click(object sender, EventArgs e)
         {
             try
@@ -223,7 +223,7 @@ namespace QuanLySieuThi.Kho
                 {
                     var chiTietXuatKho = _selRow as ChiTietXuatKho;
                     if (chiTietXuatKho != null)
-                    {
+                    {// _chiTietXuatKhos : giá trị nhập vào.
                         chiTietXuatKho = _chiTietXuatKhos.FirstOrDefault(_ => _.HangHoaId == chiTietXuatKho.HangHoaId);
                         if (chiTietXuatKho != null)
                         {
