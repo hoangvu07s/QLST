@@ -507,7 +507,7 @@ namespace QuanLySieuThi.HangHoa
                             _chiTietDonHangService.Update(ctDonHang);
                             _chiTietDonHangService.Save();
 
-                            hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
+                            hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia; // chỉnh sửa giá nhập vào trên đơn hàng của hàng hóa
 
                             _hangHoaService.Update(hanghoaInDatabase);
                             _hangHoaService.Save();

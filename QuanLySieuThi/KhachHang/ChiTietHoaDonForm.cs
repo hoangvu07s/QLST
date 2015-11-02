@@ -331,11 +331,11 @@ namespace QuanLySieuThi.KhachHang
                         // update Diem Tich Luy
                         var theKhachHang = _theKhachHangService.GetByKhachHangId(_khachHang.Id);
                         var tongThanhTien = _chiTietHoaDons.Sum(_ => _.TongTien);
-                        if (tongThanhTien <= 300)
+                        if (tongThanhTien <= 300000)
                         {
                             theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 10;
                         }
-                        else if (tongThanhTien > 300 && tongThanhTien <= 500)
+                        else if (tongThanhTien > 300000 && tongThanhTien <= 500000)
                         {
                             theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 20;
                         }
