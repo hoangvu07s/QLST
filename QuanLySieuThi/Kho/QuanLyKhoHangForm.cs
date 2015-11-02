@@ -157,6 +157,12 @@ namespace QuanLySieuThi.Kho
                         return false;
                     }
 
+                    if (string.IsNullOrEmpty(khoHang.SoDienThoai))
+                    {
+                        MessageBox.Show(@"Vui lòng nhập số điện thoại liên lạc.", @"Thông Báo", MessageBoxButtons.OK);
+                        return false;
+                        
+                    }
 
                     var khoHangs = _khoHangService.GetAll();
                     if (FormMode == FormMode.Edit)
