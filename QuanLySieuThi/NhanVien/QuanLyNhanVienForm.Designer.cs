@@ -43,6 +43,7 @@
             this.EmailColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.RefreshButton = new Common.Controls.QButtonControl();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
             this.EditButton = new Common.Controls.QButtonControl();
@@ -76,12 +77,11 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.RefreshButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
@@ -120,11 +120,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -316,6 +316,20 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.RefreshButton.Appearance.Options.UseFont = true;
+            this.RefreshButton.Location = new System.Drawing.Point(548, 152);
+            this.RefreshButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.RefreshButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(120, 30);
+            this.RefreshButton.StyleController = this.layoutControl2;
+            this.RefreshButton.TabIndex = 18;
+            this.RefreshButton.Text = "Làm mới";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // CancelButtonControl
             // 
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -420,6 +434,7 @@
             this.MatKhauTextBox.Name = "MatKhauTextBox";
             this.MatKhauTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.MatKhauTextBox.Properties.Appearance.Options.UseFont = true;
+            this.MatKhauTextBox.Properties.PasswordChar = '*';
             this.MatKhauTextBox.Size = new System.Drawing.Size(339, 24);
             this.MatKhauTextBox.StyleController = this.layoutControl2;
             this.MatKhauTextBox.TabIndex = 8;
@@ -691,6 +706,23 @@
             this.layoutControlItem10.Text = "Địa Chỉ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(136, 17);
             // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.RefreshButton;
+            this.layoutControlItem17.Location = new System.Drawing.Point(536, 140);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem17.TextVisible = false;
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(526, 140);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -720,37 +752,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(967, 322);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // RefreshButton
-            // 
-            this.RefreshButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.RefreshButton.Appearance.Options.UseFont = true;
-            this.RefreshButton.Location = new System.Drawing.Point(548, 152);
-            this.RefreshButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.RefreshButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(120, 30);
-            this.RefreshButton.StyleController = this.layoutControl2;
-            this.RefreshButton.TabIndex = 18;
-            this.RefreshButton.Text = "Làm mới";
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.RefreshButton;
-            this.layoutControlItem17.Location = new System.Drawing.Point(536, 140);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(124, 34);
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem17.TextVisible = false;
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(526, 140);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 34);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // QuanLyNhanVienForm
             // 
@@ -798,11 +799,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
