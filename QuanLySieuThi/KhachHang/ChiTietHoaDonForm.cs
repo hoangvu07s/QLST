@@ -331,24 +331,28 @@ namespace QuanLySieuThi.KhachHang
                         // update Diem Tich Luy
                         var theKhachHang = _theKhachHangService.GetByKhachHangId(_khachHang.Id);
                         var tongThanhTien = _chiTietHoaDons.Sum(_ => _.TongTien);
+                        if (!theKhachHang.DiemTichLuy.HasValue)
+                        {
+                            theKhachHang.DiemTichLuy = 0;
+                        }
                         if (tongThanhTien <= 300000)
                         {
-                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy.ToString().ToInt() + 10;
+                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 10;
                         }
                         else if (tongThanhTien > 300000 && tongThanhTien <= 500000)
                         {
-                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy.ToString().ToInt() + 20;
+                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 20;
                         }
                         else
                         {
-                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy.ToString().ToInt() + 30;
+                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 30;
                         }
 
                         _theKhachHangService.Update(theKhachHang);
 
                         _theKhachHangService.Save();
 
-                        if (theKhachHang.DiemTichLuy.ToString().ToInt() >= 500 && _khachHang.KhachHangThanThiet == false)
+                        if (theKhachHang.DiemTichLuy != null && (theKhachHang.DiemTichLuy.Value >= 500 && _khachHang.KhachHangThanThiet == false))
                         {
                             _khachHang.KhachHangThanThiet = true;
 
