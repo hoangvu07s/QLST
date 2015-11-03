@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.SelectButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.ViewButton = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
@@ -50,6 +51,8 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoaDonGridControl)).BeginInit();
@@ -64,10 +67,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.SelectButton);
             this.layoutControl1.Controls.Add(this.OKButton);
             this.layoutControl1.Controls.Add(this.ViewButton);
             this.layoutControl1.Controls.Add(this.DeleteButton);
@@ -80,6 +86,20 @@
             this.layoutControl1.Size = new System.Drawing.Size(987, 563);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // SelectButton
+            // 
+            this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SelectButton.Appearance.Options.UseFont = true;
+            this.SelectButton.Location = new System.Drawing.Point(453, 521);
+            this.SelectButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.SelectButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(120, 30);
+            this.SelectButton.StyleController = this.layoutControl1;
+            this.SelectButton.TabIndex = 9;
+            this.SelectButton.Text = "Chọn";
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // OKButton
             // 
@@ -244,7 +264,9 @@
             this.layoutControlItem5,
             this.emptySpaceItem1,
             this.emptySpaceItem2,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.layoutControlItem6,
+            this.emptySpaceItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(987, 563);
@@ -300,7 +322,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(124, 509);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(451, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(317, 34);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -318,6 +340,23 @@
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(10, 34);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.SelectButton;
+            this.layoutControlItem6.Location = new System.Drawing.Point(441, 509);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(565, 509);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // QuanLyHoaDonForm
             // 
@@ -341,6 +380,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +410,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn NgayLapColumn;
         private DevExpress.XtraGrid.Columns.GridColumn TrangThaiHoaDonColumn;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private Common.Controls.QButtonControl SelectButton;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
     }
 }

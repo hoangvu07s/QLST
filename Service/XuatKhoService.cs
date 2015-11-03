@@ -61,6 +61,29 @@ namespace Service
             return null;
         }
 
+        public IList<XuatKho> GetByXuatKhoIds(IList<Guid> xuatKhoIds)
+        {
+            IList<XuatKho> xuatKhos = new List<XuatKho>();
+            try
+            {               
+                foreach (var xuatKhoId in xuatKhoIds)
+                {
+                    var xuatKho =
+                        Entities.XuatKhoes.Include(_ => _.Kho).FirstOrDefault(_ => _.PhieuXuatKhoId == xuatKhoId);
+                    if (xuatKho != null)
+                    {
+                        xuatKhos.Add(xuatKho);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return xuatKhos.Distinct().ToList();
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="ChiTietDoiTraHangHoaService.cs" />
     <Compile Include="ChiTietDonHangService.cs">
       <SubType>Code</SubType>
     </Compile>

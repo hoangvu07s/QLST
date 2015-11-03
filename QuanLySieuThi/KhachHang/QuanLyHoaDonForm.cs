@@ -14,12 +14,16 @@ namespace QuanLySieuThi.KhachHang
         private HangHoaService _hangHoaService;
 
         private Object _selRow;
+        private bool _isSearched;
 
-        public QuanLyHoaDonForm()
+        public HoaDon HoaDon;
+
+        public QuanLyHoaDonForm(bool isSearched = false)
         {
             InitializeComponent();
             MinimumSizeWidth = 1003;
             MinimumSizeHeight = 602;
+            _isSearched = isSearched;
         }
 
         public override void LoadData(EventArgs e)
@@ -30,10 +34,30 @@ namespace QuanLySieuThi.KhachHang
                 _hoaDonService = new HoaDonService(Entities);
 
                 ShowData();
+
+                EnableButton();
             }
             catch (Exception ex)
             {
                 QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void EnableButton()
+        {
+            if (_isSearched)
+            {
+                SelectButton.Enabled = true;
+                AddButton.Enabled = false;
+                DeleteButton.Enabled = false;
+                ViewButton.Enabled = false;
+            }
+            else
+            {
+                SelectButton.Enabled = false;
+                AddButton.Enabled = true;
+                DeleteButton.Enabled = true;
+                ViewButton.Enabled = true;
             }
         }
 
@@ -180,6 +204,25 @@ namespace QuanLySieuThi.KhachHang
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
+        }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var hoaDon = _selRow as HoaDon;
+                if (hoaDon != null)
+                {
+                    HoaDon = hoaDon;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            Close();
         }
     }
 }

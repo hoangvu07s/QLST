@@ -99,6 +99,20 @@ namespace Service
             return tongSoLuong;
         }
 
+        public IList<CT_XuatKho> GetByHangHoaId(long hangHoaId)
+        {
+            try
+            {
+                return Entities.CT_XuatKho.Where(_ => _.HangHoaId == hangHoaId).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();
