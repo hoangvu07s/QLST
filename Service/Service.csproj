@@ -60,6 +60,7 @@
     <Compile Include="ChiTietXuatKhoService.cs" />
     <Compile Include="ChucVuService.cs" />
     <Compile Include="ChungLoaiHangHoaService.cs" />
+    <Compile Include="DoiTraHangHoaService.cs" />
     <Compile Include="DonHangService.cs" />
     <Compile Include="HangHoaService.cs" />
     <Compile Include="HoaDonService.cs" />

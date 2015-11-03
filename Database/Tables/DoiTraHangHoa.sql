@@ -4,7 +4,7 @@
     [HoaDonId] UNIQUEIDENTIFIER NOT NULL, 
 	[NhanVienId] BIGINT NOT NULL,
 	[NgayLap] DATETIME2 NOT NULL,
-    [TongTienTraLai] DECIMAL NOT NULL,
+    [TongTienTraLai] DECIMAL(18, 2) NOT NULL,
     [NgayChinhSua] DATETIME2 NULL DEFAULT SYSDATETIME(), 
     [NguoiChinhSuaId] BIGINT NULL, 
     [HoatDong] BIT NULL DEFAULT 1, 

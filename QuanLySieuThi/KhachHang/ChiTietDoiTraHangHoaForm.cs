@@ -23,11 +23,14 @@ namespace QuanLySieuThi.KhachHang
         private QuanLyHoaDonForm _quanLyHoaDonForm;
         private ChiTietXuatKhoService _chiTietXuatKhoService;
         private XuatKhoService _xuatKhoService;
+        private DoiTraHangHoaService _doiTraHangHoaService;
+        private TonKhoService _tonKhoService;
 
         private Guid? _maDoiTraHangHoa;
         private IList<CT_DoiTraHangHoa> _chiTietDoiTraHangHoas;
         private HoaDon _hoaDon;
-        private IList<Model.HangHoa> _hangHoa;
+        private IList<Model.HangHoa> _hangHoas;
+        private Object _selRow;
 
         public ChiTietDoiTraHangHoaForm(Guid? maDoiTraHangHoa)
         {
@@ -48,6 +51,8 @@ namespace QuanLySieuThi.KhachHang
                 _chiTietHoaDonService = new ChiTietHoaDonService(Entities);
                 _chiTietXuatKhoService = new ChiTietXuatKhoService(Entities);
                 _xuatKhoService = new XuatKhoService(Entities);
+                _doiTraHangHoaService = new DoiTraHangHoaService(Entities);
+                _tonKhoService = new TonKhoService(Entities);
 
                 if (!_maDoiTraHangHoa.HasValue)
                 {
@@ -97,6 +102,7 @@ namespace QuanLySieuThi.KhachHang
                 KhoLookupEdit.Enabled = isEnabled;
                 DonGiaNummeric.Enabled = isEnabled;
                 SoLuongNummeric.Enabled = isEnabled;
+                SoLuongTraLaiNummeric.Enabled = isEnabled;
                 AddButton.Enabled = isEnabled;
                 SaveButton.Enabled = isEnabled;
                 EditButton.Enabled = isEnabled;
@@ -152,10 +158,10 @@ namespace QuanLySieuThi.KhachHang
             try
             {
                 var chiTietHoaDon = _chiTietHoaDonService.GetByHoaDonId(_hoaDon.HoaDonId);
-                _hangHoa = chiTietHoaDon.Where(_ => _.HangHoa.CoTheTraLai == true).Select(_ => _.HangHoa).ToList();
+                _hangHoas = chiTietHoaDon.Where(_ => _.HangHoa.CoTheTraLai == true).Select(_ => _.HangHoa).ToList();
 
                 HangHoaLookupEdit.Properties.Columns.Clear();
-                HangHoaLookupEdit.Properties.DataSource = _hangHoa;
+                HangHoaLookupEdit.Properties.DataSource = _hangHoas;
                 HangHoaLookupEdit.Properties.DisplayMember = "TenHangHoa";
                 HangHoaLookupEdit.Properties.ValueMember = "Id";
                 HangHoaLookupEdit.Properties.Columns.Add(new LookUpColumnInfo("TenHangHoa"));
@@ -208,6 +214,289 @@ namespace QuanLySieuThi.KhachHang
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_hoaDon != null)
+                {
+                    if (HangHoaLookupEdit.EditValue == null)
+                    {
+                        MessageBox.Show(
+                                    @"Vui lòng chọn Hàng Hóa",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if(KhoLookupEdit.EditValue == null)
+                    {
+                        MessageBox.Show(
+                                    @"Vui lòng chọn Kho",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (SoLuongTraLaiNummeric.Text.ToInt() <= 0)
+                    {
+                        MessageBox.Show(
+                                    @"Số lượng trả lại phải lớn hơn 0",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (SoLuongTraLaiNummeric.Text.ToInt() > SoLuongNummeric.Text.ToInt())
+                    {
+                        MessageBox.Show(
+                                    @"Số lượng trả lại phải bé hơn số lượng đặt mua",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if(string.IsNullOrEmpty(ChietKhauNummeric.Text))
+                    {
+                        MessageBox.Show(
+                                    @"Vui lòng nhập số phần trăm chiết khấu",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (ChietKhauNummeric.Text.ToDecimal() < 0)
+                    {
+                        MessageBox.Show(
+                                    @"Phần trăm chiết khấu phải lớn hơn 0",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (ChietKhauNummeric.Text.ToDecimal() > 100)
+                    {
+                        MessageBox.Show(
+                                    @"Phần trăm chiết khấu phải bé hơn 100",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (
+                        _chiTietDoiTraHangHoas.Any(
+                            _ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong()))
+                    {
+                        MessageBox.Show(
+                                    @"Hàng Hóa đã có sẵn trong danh sách đổi trả Hàng Hóa",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        var chiTietDoiTraHangHoa = new CT_DoiTraHangHoa
+                        {
+                            DoiTraHangHoaId = _maDoiTraHangHoa.Value,
+                            HangHoaId = HangHoaLookupEdit.EditValue.ToString().ToLong(),
+                            SoLuong = SoLuongTraLaiNummeric.Text.ToInt(),
+                            DonGia = DonGiaNummeric.Text.ToDecimal(),
+                            TinhTrang = TinhTrangTextBox.Text,
+                            ChietKhauPhanTram = ChietKhauNummeric.Text.ToDecimal(),
+                            KhoId = KhoLookupEdit.EditValue.ToString().ToLong(),
+                            TenKho = KhoLookupEdit.Text,
+                            HangHoa = new Model.HangHoa
+                            {
+                                TenHangHoa = HangHoaLookupEdit.Text
+                            
+                            }
+                        };
+
+                        _chiTietDoiTraHangHoas.Add(chiTietDoiTraHangHoa);
+
+                        ShowData();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var chiTietDoiTraHangHoa = _selRow as CT_DoiTraHangHoa;
+                var chiTietDoiTraHangHoaInList =
+                    _chiTietDoiTraHangHoas.FirstOrDefault(_ => chiTietDoiTraHangHoa != null && _.HangHoaId == chiTietDoiTraHangHoa.HangHoaId);
+                IList<CT_DoiTraHangHoa> chiTietDoiTraHangHoaTemp = _chiTietDoiTraHangHoas.ToList().Select(item => item.DeepCopy()).ToList();
+                if (chiTietDoiTraHangHoaInList != null)
+                {
+                    chiTietDoiTraHangHoaTemp.Remove(chiTietDoiTraHangHoaTemp.FirstOrDefault(_ => chiTietDoiTraHangHoa != null && _.HangHoaId == chiTietDoiTraHangHoa.HangHoaId));
+                    if (HangHoaLookupEdit.EditValue == null)
+                    {
+                        MessageBox.Show(
+                                    @"Vui lòng chọn Hàng Hóa",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (KhoLookupEdit.EditValue == null)
+                    {
+                        MessageBox.Show(
+                                    @"Vui lòng chọn Kho",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (SoLuongTraLaiNummeric.Text.ToInt() <= 0)
+                    {
+                        MessageBox.Show(
+                                    @"Số lượng trả lại phải lớn hơn 0",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (SoLuongTraLaiNummeric.Text.ToInt() > SoLuongNummeric.Text.ToInt())
+                    {
+                        MessageBox.Show(
+                                    @"Số lượng trả lại phải bé hơn số lượng đặt mua",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (string.IsNullOrEmpty(ChietKhauNummeric.Text))
+                    {
+                        MessageBox.Show(
+                                    @"Vui lòng nhập số phần trăm chiết khấu",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (ChietKhauNummeric.Text.ToDecimal() < 0)
+                    {
+                        MessageBox.Show(
+                                    @"Phần trăm chiết khấu phải lớn hơn 0",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (ChietKhauNummeric.Text.ToDecimal() > 100)
+                    {
+                        MessageBox.Show(
+                                    @"Phần trăm chiết khấu phải bé hơn 100",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else if (
+                        chiTietDoiTraHangHoaTemp.Any(
+                            _ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong()))
+                    {
+                        MessageBox.Show(
+                                    @"Hàng Hóa đã có sẵn trong danh sách đổi trả Hàng Hóa",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        _chiTietDoiTraHangHoas.Remove(chiTietDoiTraHangHoaInList);
+                        chiTietDoiTraHangHoaInList.HangHoaId = HangHoaLookupEdit.EditValue.ToString().ToLong();
+                        chiTietDoiTraHangHoaInList.SoLuong = SoLuongTraLaiNummeric.Text.ToInt();
+                        chiTietDoiTraHangHoaInList.DonGia = DonGiaNummeric.Text.ToDecimal();
+                        chiTietDoiTraHangHoaInList.TinhTrang = TinhTrangTextBox.Text;
+                        chiTietDoiTraHangHoaInList.ChietKhauPhanTram = ChietKhauNummeric.Text.ToDecimal();
+                        chiTietDoiTraHangHoaInList.KhoId = KhoLookupEdit.EditValue.ToString().ToLong();
+                        chiTietDoiTraHangHoaInList.TenKho = KhoLookupEdit.Text;
+                        chiTietDoiTraHangHoaInList.HangHoa = new Model.HangHoa
+                        {
+                            TenHangHoa = HangHoaLookupEdit.Text
+
+                        };
+
+                        _chiTietDoiTraHangHoas.Add(chiTietDoiTraHangHoaInList);
+
+                        ShowData();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void ChiTietTraHangGridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            try
+            {
+                _selRow = ChiTietTraHangGridView.GetRow(e.FocusedRowHandle);
+
+                var chiTietTraHang = _selRow as CT_DoiTraHangHoa;
+
+                if (chiTietTraHang != null)
+                {
+                    HangHoaLookupEdit.EditValue = chiTietTraHang.HangHoaId;
+                    KhoLookupEdit.EditValue = chiTietTraHang.KhoId;
+                    SoLuongTraLaiNummeric.Text = chiTietTraHang.SoLuong.ToString(CultureInfo.InvariantCulture);
+                    DonGiaNummeric.Text = chiTietTraHang.DonGia.ToString(CultureInfo.InvariantCulture);
+                    TinhTrangTextBox.Text = chiTietTraHang.TinhTrang;
+                    ChietKhauNummeric.Text = chiTietTraHang.ChietKhauPhanTram.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var chiTietDoiTraHangHoa = _selRow as CT_DoiTraHangHoa;
+                var chiTietDoiTraHangHoaInList =
+                    _chiTietDoiTraHangHoas.FirstOrDefault(_ => chiTietDoiTraHangHoa != null && _.HangHoaId == chiTietDoiTraHangHoa.HangHoaId);
+
+                if (chiTietDoiTraHangHoaInList != null)
+                {
+                    _chiTietDoiTraHangHoas.Remove(chiTietDoiTraHangHoaInList);
+
+                    ShowData();
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // save Doi Tra Hang Hoa
+                var doiTraHangHoa = new DoiTraHangHoa
+                {
+                    DoiTraHangHoaId = _maDoiTraHangHoa.Value,
+                    HoaDonId = _hoaDon.HoaDonId,
+                    NhanVienId = CurrentFormInfo.CurrentUserId,
+                    NgayLap = DateTime.Now,
+                    TongTienTraLai = _chiTietDoiTraHangHoas.Sum(_ => _.TongTienTraLai),
+                    NgayChinhSua = DateTime.Now,
+                    NguoiChinhSuaId = CurrentFormInfo.CurrentUserId,
+                    HoatDong = true
+                };
+
+                doiTraHangHoa = _doiTraHangHoaService.Add(doiTraHangHoa);
+                _doiTraHangHoaService.Save();
+
+                // save chiTiet doi Tra Hang Hoa
+                foreach (var chiTietDoiTraHangHoa in _chiTietDoiTraHangHoas)
+                {
+                    var chiTietDoiTraHangHoaToDatabase = new CT_DoiTraHangHoa
+                    {
+                        DoiTraHangHoaId = doiTraHangHoa.DoiTraHangHoaId,
+                        HangHoaId = chiTietDoiTraHangHoa.HangHoaId,
+                        SoLuong = chiTietDoiTraHangHoa.SoLuong,
+                        DonGia = chiTietDoiTraHangHoa.DonGia,
+                        TinhTrang = chiTietDoiTraHangHoa.TinhTrang,
+                        ChietKhauPhanTram = chiTietDoiTraHangHoa.ChietKhauPhanTram
+                    };
+
+                    _chiTietDoiTraHangHoaService.Add(chiTietDoiTraHangHoaToDatabase);
+                }
+
+                _chiTietDoiTraHangHoaService.Save();
+
+                // Update Ton kho
+                foreach (var chiTietDoiTraHangHoa in _chiTietDoiTraHangHoas)
+                {
+                    var tonKho = _tonKhoService.GetByHangHoaIdKhoId(chiTietDoiTraHangHoa.HangHoaId, chiTietDoiTraHangHoa.KhoId);
+                    tonKho.SoLuongTon = tonKho.SoLuongTon + chiTietDoiTraHangHoa.SoLuong;
+
+                    _tonKhoService.UpdateTonKho(tonKho);
+                }
+
+                _tonKhoService.Save();
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void CancelButtonControl_Click(object sender, EventArgs e)
+        {
+            Cancel();
         }
     }
 }

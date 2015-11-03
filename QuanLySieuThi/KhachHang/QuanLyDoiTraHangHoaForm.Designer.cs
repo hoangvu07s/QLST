@@ -85,6 +85,7 @@
             this.OKButton.StyleController = this.layoutControl1;
             this.OKButton.TabIndex = 7;
             this.OKButton.Text = "OK";
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // ViewButton
             // 
@@ -98,6 +99,7 @@
             this.ViewButton.StyleController = this.layoutControl1;
             this.ViewButton.TabIndex = 6;
             this.ViewButton.Text = "Xem Chi Tiết";
+            this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
             // 
             // AddButton
             // 
@@ -142,6 +144,8 @@
             this.DoiTraHangHoaGridView.OptionsView.ShowAutoFilterRow = true;
             this.DoiTraHangHoaGridView.OptionsView.ShowGroupPanel = false;
             this.DoiTraHangHoaGridView.OptionsView.ShowIndicator = false;
+            this.DoiTraHangHoaGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.DoiTraHangHoaGridView_FocusedRowChanged);
+            this.DoiTraHangHoaGridView.DoubleClick += new System.EventHandler(this.DoiTraHangHoaGridView_DoubleClick);
             // 
             // DoiTraHangHoaIdColumn
             // 
@@ -262,8 +266,11 @@
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(833, 509);
+            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 34);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // QuanLyDoiTraHangHoaForm

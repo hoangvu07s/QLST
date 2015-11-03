@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using Common.Forms;
 using Helper;
@@ -12,6 +13,7 @@ namespace QuanLySieuThi.KhachHang
         private HoaDonService _hoaDonService;
         private ChiTietHoaDonService _chiTietHoaDonService;
         private HangHoaService _hangHoaService;
+        private DoiTraHangHoaService _doiTraHangHoaService;
 
         private Object _selRow;
         private bool _isSearched;
@@ -66,6 +68,13 @@ namespace QuanLySieuThi.KhachHang
             try
             {
                 var hoaDons = _hoaDonService.GetAll();
+                if (_isSearched)
+                {
+                    _doiTraHangHoaService = new DoiTraHangHoaService(Entities);
+                    var hoaDonInDoiTraHangHoa = _doiTraHangHoaService.GetHoaDons();
+
+                    hoaDons = hoaDons.Except(hoaDonInDoiTraHangHoa).ToList();
+                }
                 HoaDonGridControl.DataSource = hoaDons;
                 HoaDonGridControl.RefreshDataSource();
             }

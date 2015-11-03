@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietDoiTraHangHoaExtension.cs" />
     <Compile Include="ChiTietHoaDonExtension.cs" />
     <Compile Include="ChucVu.cs">
       <DependentUpon>Model.tt</DependentUpon>
