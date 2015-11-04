@@ -32,7 +32,6 @@
             this.SelectButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.ViewButton = new Common.Controls.QButtonControl();
-            this.DeleteButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
             this.HoaDonGridControl = new DevExpress.XtraGrid.GridControl();
             this.HoaDonGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -45,11 +44,9 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -61,11 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
@@ -76,7 +71,6 @@
             this.layoutControl1.Controls.Add(this.SelectButton);
             this.layoutControl1.Controls.Add(this.OKButton);
             this.layoutControl1.Controls.Add(this.ViewButton);
-            this.layoutControl1.Controls.Add(this.DeleteButton);
             this.layoutControl1.Controls.Add(this.AddButton);
             this.layoutControl1.Controls.Add(this.HoaDonGridControl);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -91,7 +85,7 @@
             // 
             this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.SelectButton.Appearance.Options.UseFont = true;
-            this.SelectButton.Location = new System.Drawing.Point(453, 521);
+            this.SelectButton.Location = new System.Drawing.Point(587, 521);
             this.SelectButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.SelectButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.SelectButton.Name = "SelectButton";
@@ -128,20 +122,6 @@
             this.ViewButton.TabIndex = 7;
             this.ViewButton.Text = "Chi Tiết Hóa Đơn";
             this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.DeleteButton.Appearance.Options.UseFont = true;
-            this.DeleteButton.Location = new System.Drawing.Point(587, 521);
-            this.DeleteButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.DeleteButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
-            this.DeleteButton.StyleController = this.layoutControl1;
-            this.DeleteButton.TabIndex = 6;
-            this.DeleteButton.Text = "Hủy Hóa Đơn";
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // AddButton
             // 
@@ -243,8 +223,6 @@
             this.TrangThaiHoaDonColumn.Name = "TrangThaiHoaDonColumn";
             this.TrangThaiHoaDonColumn.OptionsColumn.AllowEdit = false;
             this.TrangThaiHoaDonColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.TrangThaiHoaDonColumn.Visible = true;
-            this.TrangThaiHoaDonColumn.VisibleIndex = 4;
             this.TrangThaiHoaDonColumn.Width = 150;
             // 
             // repositoryItemCheckEdit1
@@ -259,11 +237,9 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.emptySpaceItem1,
-            this.emptySpaceItem2,
             this.emptySpaceItem3,
             this.layoutControlItem6,
             this.emptySpaceItem4});
@@ -290,15 +266,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.DeleteButton;
-            this.layoutControlItem3.Location = new System.Drawing.Point(575, 509);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(124, 34);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.ViewButton;
@@ -322,29 +289,24 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(124, 509);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(317, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(451, 34);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(699, 509);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 34);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(833, 509);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 34);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.SelectButton;
-            this.layoutControlItem6.Location = new System.Drawing.Point(441, 509);
+            this.layoutControlItem6.Location = new System.Drawing.Point(575, 509);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(124, 34);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -353,9 +315,12 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(565, 509);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(699, 509);
+            this.emptySpaceItem4.MaxSize = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem4.MinSize = new System.Drawing.Size(10, 34);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // QuanLyHoaDonForm
@@ -374,11 +339,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
@@ -395,14 +358,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private Common.Controls.QButtonControl OKButton;
         private Common.Controls.QButtonControl ViewButton;
-        private Common.Controls.QButtonControl DeleteButton;
         private Common.Controls.QButtonControl AddButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraGrid.Columns.GridColumn MaHoaDonColumn;
         private DevExpress.XtraGrid.Columns.GridColumn KhachHangColumn;

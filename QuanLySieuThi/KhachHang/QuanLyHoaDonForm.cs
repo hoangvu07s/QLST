@@ -51,14 +51,12 @@ namespace QuanLySieuThi.KhachHang
             {
                 SelectButton.Enabled = true;
                 AddButton.Enabled = false;
-                DeleteButton.Enabled = false;
                 ViewButton.Enabled = false;
             }
             else
             {
                 SelectButton.Enabled = false;
                 AddButton.Enabled = true;
-                DeleteButton.Enabled = true;
                 ViewButton.Enabled = true;
             }
         }
