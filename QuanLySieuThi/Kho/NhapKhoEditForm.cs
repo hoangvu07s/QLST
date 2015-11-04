@@ -163,7 +163,9 @@ namespace QuanLySieuThi.Kho
                         TenHangHoa = HangHoaLookupEdit.Text,
                         SoLuong = SoLuongNummeric.Text.ToInt(),
                         SoluongDatHang = SoLuongDatHangNummeric.Text.ToInt(),
-                        DonGia = DonGiaNummeric.Text.ToDecimal()
+                        DonGia = DonGiaNummeric.Text.ToDecimal(),
+                        NgaySanXuat = (DateTime) NgaySanXuatDateEdit.EditValue,
+                        HanSuDung = (DateTime) HanSuDungDateEdit.EditValue
                     });
 
                     ShowDataToGrid();
@@ -229,6 +231,27 @@ namespace QuanLySieuThi.Kho
                     return false;
                 }
 
+                if (string.IsNullOrWhiteSpace(NgaySanXuatDateEdit.Text))
+                {
+                    MessageBox.Show(@"Vui lòng nhập Ngày sản xuất", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
+                if (string.IsNullOrWhiteSpace(HanSuDungDateEdit.Text))
+                {
+                    MessageBox.Show(@"Vui lòng nhập Hạn Sử Dụng", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
+                var ngaySanXuat = (DateTime) NgaySanXuatDateEdit.EditValue;
+                var hanSuDung = (DateTime) HanSuDungDateEdit.EditValue;
+                if (ngaySanXuat.Date > hanSuDung.Date)
+                {
+                    MessageBox.Show(@"Ngày Sản Xuất phải bé hơn Hạn Sử Dụng", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
+
                 if (isUpdated == false)
                 {
                     if (_chiTietNhapKhos.Any(_ => _.HangHoaId == HangHoaLookupEdit.EditValue.ToString().ToLong()))
@@ -263,6 +286,8 @@ namespace QuanLySieuThi.Kho
                         {
                             chiTietNhapKho.SoLuong = SoLuongNummeric.Text.ToInt();
                             chiTietNhapKho.DonGia = DonGiaNummeric.Text.ToDecimal();
+                            chiTietNhapKho.NgaySanXuat = (DateTime) NgaySanXuatDateEdit.EditValue;
+                            chiTietNhapKho.HanSuDung = (DateTime) HanSuDungDateEdit.EditValue;
                             ShowDataToGrid();
                         }
                     }
@@ -338,6 +363,8 @@ namespace QuanLySieuThi.Kho
                         ctNhapKho.HangHoaId = chiTietNhapKho.HangHoaId;
                         ctNhapKho.SoLuong = chiTietNhapKho.SoLuong;
                         ctNhapKho.DonGia = chiTietNhapKho.DonGia;
+                        ctNhapKho.NgaySanXuat = chiTietNhapKho.NgaySanXuat.Value;
+                        ctNhapKho.HanSuDung = chiTietNhapKho.HanSuDung.Value;
                     }
 
                     _chiTietNhapKhoService.Save();
@@ -443,6 +470,12 @@ namespace QuanLySieuThi.Kho
                 if (_chiTietNhapKhos.Any(_ => _.DonGia <= 0))
                 {
                     MessageBox.Show(@"Đơn giá nhập kho phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
+                    return false;
+                }
+
+                if (_chiTietNhapKhos.Any(_ => _.NgaySanXuat == null || _.HanSuDung == null))
+                {
+                    MessageBox.Show(@"Vui lòng thêm ngày sản xuất và hạn sử dụng", @"Thông Báo", MessageBoxButtons.OK);
                     return false;
                 }
 
