@@ -335,18 +335,9 @@ namespace QuanLySieuThi.KhachHang
                         {
                             theKhachHang.DiemTichLuy = 0;
                         }
-                        if (tongThanhTien <= 300000)
-                        {
-                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 10;
-                        }
-                        else if (tongThanhTien > 300000 && tongThanhTien <= 500000)
-                        {
-                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 20;
-                        }
-                        else
-                        {
-                            theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + 30;
-                        }
+
+                       var diemTichLuy = (int)tongThanhTien/100000;
+                        theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy + diemTichLuy;
 
                         _theKhachHangService.Update(theKhachHang);
 
