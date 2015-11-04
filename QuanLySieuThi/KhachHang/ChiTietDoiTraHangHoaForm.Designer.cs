@@ -581,6 +581,7 @@
             this.ChiTietTraHangGridView.OptionsBehavior.Editable = false;
             this.ChiTietTraHangGridView.OptionsView.ColumnAutoWidth = false;
             this.ChiTietTraHangGridView.OptionsView.ShowAutoFilterRow = true;
+            this.ChiTietTraHangGridView.OptionsView.ShowFooter = true;
             this.ChiTietTraHangGridView.OptionsView.ShowGroupPanel = false;
             this.ChiTietTraHangGridView.OptionsView.ShowIndicator = false;
             this.ChiTietTraHangGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.ChiTietTraHangGridView_FocusedRowChanged);
@@ -658,6 +659,8 @@
             this.TongTienTraLaiColumn.Name = "TongTienTraLaiColumn";
             this.TongTienTraLaiColumn.OptionsColumn.AllowEdit = false;
             this.TongTienTraLaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.TongTienTraLaiColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTienTraLai", "Tổng Tiền Trả Lại = {0:0.##}")});
             this.TongTienTraLaiColumn.Visible = true;
             this.TongTienTraLaiColumn.VisibleIndex = 6;
             this.TongTienTraLaiColumn.Width = 150;
