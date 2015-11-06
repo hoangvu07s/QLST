@@ -25,7 +25,7 @@ namespace QuanLySieuThi.HangHoa
 
         private object _selRow;
 
-        public ChiTietDonHangEditForm(string donHangId)
+        public ChiTietDonHangEditForm(string donHangId)// nếu xem chi tiết sẽ có DonHangId truyền vào , nếu thêm mới DonHangId = null
         {
             InitializeComponent();
             MinimumSizeWidth = 879;
@@ -75,13 +75,13 @@ namespace QuanLySieuThi.HangHoa
 
                 if (string.IsNullOrEmpty(EntityId))
                 {
-                    MaDonHangTextBox.Text = QuanLySieuThiHelper.NextId();
+                    MaDonHangTextBox.Text = QuanLySieuThiHelper.NextId();// Guid.New()
 
                     EntityId = MaDonHangTextBox.Text;
                 }
                 else
                 {
-                    MaDonHangTextBox.Text = EntityId;
+                    MaDonHangTextBox.Text = EntityId; // Mã được gửi qua
                 }
 
                 if (FormMode == FormMode.View)
@@ -105,16 +105,17 @@ namespace QuanLySieuThi.HangHoa
                         });
                     }
 
-                    LoadGridData();
-                    var donHang = _donHangService.Get(new Guid(EntityId));
+                    LoadGridData();// gán gridview = _chiTietDonHang
+                    var donHang = _donHangService.Get(new Guid(EntityId));// xem chi tiết của những đơn hàng có mã là EntityId co trạng thái "đang chờ", thì cho phép sửa số lượng , đơn giá
                     if (donHang.TrangThaiDonHang != "Đang Chờ")
                     {
                         DisableControl();
                     }
                     else
                     {
-                        DeleteButton.Enabled = false;
-                        AddButton.Enabled = false;   
+                        DeleteButton.Enabled = false;// chỉ hiện button cập nhật khi đơn hàng có trạng thái đang chờ.
+                        AddButton.Enabled = false;
+                        SearchTenHangHoaButton.Enabled = false;
                     }
                 }
 
@@ -130,6 +131,7 @@ namespace QuanLySieuThi.HangHoa
             DeleteButton.Enabled = false;
             AddButton.Enabled = false;
             EditButton.Enabled = false;
+            SearchTenHangHoaButton.Enabled = false;
         }
 
 
@@ -189,7 +191,7 @@ namespace QuanLySieuThi.HangHoa
                 var isValidedValue = true;
                 if (string.IsNullOrEmpty(TenHangHoaTextBox.Text))
                 {
-                    MessageBox.Show(@"Vui lòng nhập tên hàng hóa.", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng chọn hàng hóa.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(NhaCungCapLookupEdit.Text))
