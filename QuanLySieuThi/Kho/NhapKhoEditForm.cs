@@ -108,7 +108,7 @@ namespace QuanLySieuThi.Kho
             donHangListForm.ShowForm("OpenDonHangListForm");
             donHangListForm.FormClosed += DonHangListFormOnFormClosed;
         }
-
+        // khi chọn đc đơn hàng và form đơn hàng đóng , các chi tiết đơn hàng sẽ hiện trên form nhập kho
         private void DonHangListFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
         {
             _donHangId = DonHangListForm.MaDonHang.ToString();
@@ -123,7 +123,7 @@ namespace QuanLySieuThi.Kho
                 var soLuongDaNhan = _nhapKhoService.GetSoluongNhapKho(new Guid(_donHangId), chiTietDonHang.HangHoaId);
                 if (soLuongDaNhan < chiTietDonHang.SoLuong)
                 {
-                    hangHoas.Add(chiTietDonHang.HangHoa);
+                    hangHoas.Add(chiTietDonHang.HangHoa);// chỉ lấy những hàng hóa chưa nhập đủ hiển thị trên cbb
                     _chiTietNhapKhos.Add(new ChiTietNhapKho
                     {
                         HangHoaId = chiTietDonHang.HangHoaId,
@@ -154,7 +154,7 @@ namespace QuanLySieuThi.Kho
         private void AddButton_Click(object sender, EventArgs e)
         {
             try
-            {
+            {// kiểm tra không để trống hàng hóa , kiểm tra số lượng nhập , ngày sản xuất, hạn sử dụng
                 if (ValidateChiTietNhapKho())
                 {
                     _chiTietNhapKhos.Add(new ChiTietNhapKho
@@ -251,6 +251,12 @@ namespace QuanLySieuThi.Kho
                     return false;
                 }
 
+                if (ngaySanXuat.Date > DateTime.Now)
+                {
+                    MessageBox.Show(@"Ngày sản xuất không được lớn hơn ngày hiện tại", @"Thông Báo",
+                        MessageBoxButtons.OK);
+                    return false;
+                }
 
                 if (isUpdated == false)
                 {
@@ -342,9 +348,9 @@ namespace QuanLySieuThi.Kho
         private void OKButton_Click(object sender, EventArgs e)
         {
             try
-            {
+            {// kiểm tra không để trống kho ,hàng hóa , số lượng..
                 if (ValidateNhapKho())
-                {
+                {// Lưu bảng nhập kho
                     var nhapKho = _nhapKhoService.Add();
                     nhapKho.PhieuNhapKhoId = new Guid(QuanLySieuThiHelper.NextId());
                     nhapKho.DonHangId = new Guid(MaDonHangTextBox.Text);
@@ -355,7 +361,7 @@ namespace QuanLySieuThi.Kho
 
                     _nhapKhoService.Save();
 
-                    
+                    // Lưu chi tiết nhập kho
                     foreach (var chiTietNhapKho in _chiTietNhapKhos)
                     {
                         var ctNhapKho = _chiTietNhapKhoService.Add();
@@ -368,15 +374,15 @@ namespace QuanLySieuThi.Kho
                     }
 
                     _chiTietNhapKhoService.Save();
-
+                    // update trạng thái của đơn hàng
                     var ctDonHangs = _chiTietDonHangService.GetByDonHangId(new Guid(MaDonHangTextBox.Text));
-                    var soLuongInDonHang = ctDonHangs.Sum(_ => _.SoLuong);
-                    var nhapKhos = _nhapKhoService.Get(new Guid(MaDonHangTextBox.Text));
+                    var soLuongInDonHang = ctDonHangs.Sum(_ => _.SoLuong);// sum tổng số lượng hàng hóa nhập vào
+                    var nhapKhos = _nhapKhoService.Get(new Guid(MaDonHangTextBox.Text));// lấy tất cả các phiếu nhập kho trên đơn hàng Id
                     var soluongDaNhap = 0;
                     foreach (var kho in nhapKhos)
                     {
-                        var ctNhapKhos = _chiTietNhapKhoService.Get(kho.PhieuNhapKhoId);
-                        soluongDaNhap = soluongDaNhap + ctNhapKhos.Sum(_ => _.SoLuong);
+                        var ctNhapKhos = _chiTietNhapKhoService.Get(kho.PhieuNhapKhoId);// lấy chi tiết nhập kho của phiếu nhập kho tương ứng
+                        soluongDaNhap = soluongDaNhap + ctNhapKhos.Sum(_ => _.SoLuong);// sum tổng số lượng đã nhập trên từng đơn hàng
                     }
 
                     var donHang = _donHangService.Get(new Guid(MaDonHangTextBox.Text));
@@ -396,9 +402,9 @@ namespace QuanLySieuThi.Kho
                     _donHangService.Update(donHang);
 
                     _donHangService.Save();
-
+                    // update tồn kho
                     foreach (var chiTietNhapKho in _chiTietNhapKhos)
-                    {
+                    {// lấy thông tin tồn kho của kho được chọn với hàng hóa tưng ứng trên từng dòng của GV _chiTietNhapKhos
                         var tonKho = _tonKhoService.Get(KhoLookupEdit.EditValue.ToString().ToLong(),
                             chiTietNhapKho.HangHoaId);
                         if (tonKho == null)
@@ -419,7 +425,7 @@ namespace QuanLySieuThi.Kho
 
                     _tonKhoService.Save();
 
-
+        // không sử dụng
                     foreach (var chiTietNhapKho in _chiTietNhapKhos)
                     {
                         var hangHoa = _hangHoaService.Get(chiTietNhapKho.HangHoaId);
