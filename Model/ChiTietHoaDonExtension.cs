@@ -6,5 +6,11 @@
         {
             get { return SoLuong*DonGia; }
         }
+
+        public string TenHangHoa
+        {
+            get { return HangHoa.TenHangHoa; }
+        }
+
     }
 }

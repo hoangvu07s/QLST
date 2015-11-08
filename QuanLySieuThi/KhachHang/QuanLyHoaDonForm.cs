@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Common.Forms;
 using Helper;
 using Model;
+using QuanLySieuThi.Report;
 using Service;
 
 namespace QuanLySieuThi.KhachHang
@@ -230,6 +231,23 @@ namespace QuanLySieuThi.KhachHang
             }
 
             Close();
+        }
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selRow = _selRow as HoaDon;
+                if (selRow != null)
+                {
+                    var xuatHoaDonReport = new XuatHoaDonReportForm(selRow.HoaDonId);
+                    xuatHoaDonReport.ShowForm("OpenXuatHoaDon");
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
     }
 }
