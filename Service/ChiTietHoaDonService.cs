@@ -18,7 +18,7 @@ namespace Service
         {
             try
             {
-                return Entities.CT_HoaDon.Where(_ => _.HoaDonId == hoaDonId).Include(_=>_.HangHoa).ToList();
+                return Entities.CT_HoaDon.Where(_ => _.HoaDonId == hoaDonId).Include(_=>_.HangHoa).Include(_=>_.HoaDon).ToList();
             }
             catch (Exception ex)
             {

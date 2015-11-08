@@ -50,6 +50,9 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.PrintButton = new Common.Controls.QButtonControl();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoaDonGridControl)).BeginInit();
@@ -64,10 +67,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.PrintButton);
             this.layoutControl1.Controls.Add(this.SelectButton);
             this.layoutControl1.Controls.Add(this.OKButton);
             this.layoutControl1.Controls.Add(this.ViewButton);
@@ -242,7 +248,9 @@
             this.emptySpaceItem1,
             this.emptySpaceItem3,
             this.layoutControlItem6,
-            this.emptySpaceItem4});
+            this.emptySpaceItem4,
+            this.layoutControlItem3,
+            this.emptySpaceItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(987, 563);
@@ -287,9 +295,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(124, 509);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(258, 509);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(451, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(317, 34);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -323,6 +331,40 @@
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // PrintButton
+            // 
+            this.PrintButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.PrintButton.Appearance.Options.UseFont = true;
+            this.PrintButton.Location = new System.Drawing.Point(146, 521);
+            this.PrintButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.PrintButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(120, 30);
+            this.PrintButton.StyleController = this.layoutControl1;
+            this.PrintButton.TabIndex = 10;
+            this.PrintButton.Text = "In Hóa Đơn";
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.PrintButton;
+            this.layoutControlItem3.Location = new System.Drawing.Point(134, 509);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(124, 509);
+            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // QuanLyHoaDonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,5 +417,8 @@
         private Common.Controls.QButtonControl SelectButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private Common.Controls.QButtonControl PrintButton;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }
