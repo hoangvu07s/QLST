@@ -25,7 +25,7 @@ namespace QuanLySieuThi.HangHoa
 
         private object _selRow;
 
-        public ChiTietDonHangEditForm(string donHangId)
+        public ChiTietDonHangEditForm(string donHangId)// nếu xem chi tiết sẽ có DonHangId truyền vào , nếu thêm mới DonHangId = null
         {
             InitializeComponent();
             MinimumSizeWidth = 879;
@@ -75,13 +75,13 @@ namespace QuanLySieuThi.HangHoa
 
                 if (string.IsNullOrEmpty(EntityId))
                 {
-                    MaDonHangTextBox.Text = QuanLySieuThiHelper.NextId();
+                    MaDonHangTextBox.Text = QuanLySieuThiHelper.NextId();// Guid.New()
 
                     EntityId = MaDonHangTextBox.Text;
                 }
                 else
                 {
-                    MaDonHangTextBox.Text = EntityId;
+                    MaDonHangTextBox.Text = EntityId; // Mã được gửi qua
                 }
 
                 if (FormMode == FormMode.View)
@@ -105,16 +105,17 @@ namespace QuanLySieuThi.HangHoa
                         });
                     }
 
-                    LoadGridData();
-                    var donHang = _donHangService.Get(new Guid(EntityId));
+                    LoadGridData();// gán gridview = _chiTietDonHang
+                    var donHang = _donHangService.Get(new Guid(EntityId));// xem chi tiết của những đơn hàng có mã là EntityId co trạng thái "đang chờ", thì cho phép sửa số lượng , đơn giá
                     if (donHang.TrangThaiDonHang != "Đang Chờ")
                     {
                         DisableControl();
                     }
                     else
                     {
-                        DeleteButton.Enabled = false;
-                        AddButton.Enabled = false;   
+                        DeleteButton.Enabled = false;// chỉ hiện button cập nhật khi đơn hàng có trạng thái đang chờ.
+                        AddButton.Enabled = false;
+                        SearchTenHangHoaButton.Enabled = false;
                     }
                 }
 
@@ -130,6 +131,7 @@ namespace QuanLySieuThi.HangHoa
             DeleteButton.Enabled = false;
             AddButton.Enabled = false;
             EditButton.Enabled = false;
+            SearchTenHangHoaButton.Enabled = false;
         }
 
 
@@ -182,14 +184,14 @@ namespace QuanLySieuThi.HangHoa
             }
         }
 
-        private bool ValidateInput()
+        private bool ValidateInput()// kiểm tra không được để trống thông tin
         {
             try
             {
                 var isValidedValue = true;
                 if (string.IsNullOrEmpty(TenHangHoaTextBox.Text))
                 {
-                    MessageBox.Show(@"Vui lòng nhập tên hàng hóa.", @"Thong Bao", MessageBoxButtons.OK);
+                    MessageBox.Show(@"Vui lòng chọn hàng hóa.", @"Thong Bao", MessageBoxButtons.OK);
                     isValidedValue = false;
                 }
                 else if (string.IsNullOrEmpty(NhaCungCapLookupEdit.Text))
@@ -318,10 +320,10 @@ namespace QuanLySieuThi.HangHoa
                 var soLuong = SoLuongNummeric.Text;
                 var donGia = DonGiaNummeric.Text;
 
-                bool isValidated = ValidateInput();
+                bool isValidated = ValidateInput();// kiểm tra không được để trống thông tin, ban đầu đc khai báo  = true
 
                 if (isValidated)
-                {
+                {// không cho chọn hàng hóa khác loại hàng.
                     isValidated = ValidateTenHangHoaLoaiHangHoaNhaCungCap(tenHangHoa, loaiHang, nhaCungCap);
 
                     if (isValidated)
@@ -348,7 +350,7 @@ namespace QuanLySieuThi.HangHoa
                 if (ValidateChiTietDonHang())
                 {
                     var chiTietDonHang = InitChiTietDonHang();
-                    _chiTietDonHangs.Add(chiTietDonHang);
+                    _chiTietDonHangs.Add(chiTietDonHang);// add lần lượt từng chi tiết đơn hàng mỗi lần nhập vào  để đổ vào gridview
 
                     LoadGridData();
                 }
@@ -359,7 +361,7 @@ namespace QuanLySieuThi.HangHoa
             }
         }
 
-        private ChiTietDonHang InitChiTietDonHang()
+        private ChiTietDonHang InitChiTietDonHang()// lấy thông tin của hàng hóa đặt mua trên các control
         {
             var chiTietDonHang = new ChiTietDonHang
             {
@@ -448,7 +450,7 @@ namespace QuanLySieuThi.HangHoa
                 var donGia = DonGiaNummeric.Text;
                 var isValidated = true;
                 var chiTietDonHang = _selRow as ChiTietDonHang;
-                if (ValidateInput() && chiTietDonHang != null)
+                if (ValidateInput() && chiTietDonHang != null)// kiểm tra dữ liệu không bị trống
                 {
                     if (chiTietDonHang.TenHangHoa != tenHangHoa || chiTietDonHang.TenLoaiHangHoa != loaiHang ||
                         chiTietDonHang.TenNhaCungCap != nhaCungCap)
@@ -467,9 +469,9 @@ namespace QuanLySieuThi.HangHoa
                 if (isValidated)
                 {
                     var chiTietDonHangTemp = _chiTietDonHangs.FirstOrDefault(_ => _.TenHangHoa == chiTietDonHang.TenHangHoa);
-                    _chiTietDonHangs.Remove(chiTietDonHangTemp);
+                    _chiTietDonHangs.Remove(chiTietDonHangTemp);// remove dòng được chọn để sửa , 
                     chiTietDonHang = InitChiTietDonHang();
-                    _chiTietDonHangs.Add(chiTietDonHang);
+                    _chiTietDonHangs.Add(chiTietDonHang);// add lại thông tin mới sửa 
 
                     LoadGridData();
                 }
@@ -498,10 +500,10 @@ namespace QuanLySieuThi.HangHoa
                     {
                         donHang.NgayChinhSua = currentDateTime;
                         donHang.NguoiChinhSuaId = CurrentFormInfo.CurrentUserId;
-                        foreach (var chiTietDonHang in _chiTietDonHangs)
+                        foreach (var chiTietDonHang in _chiTietDonHangs)// ứng với mỗi dòng trên gridview
                         {
-                            var hanghoaInDatabase = _hangHoaService.GetByTenHangHoa(chiTietDonHang.TenHangHoa);
-                            var ctDonHang = _chiTietDonHangService.Get(new Guid(EntityId), hanghoaInDatabase.Id);
+                            var hanghoaInDatabase = _hangHoaService.GetByTenHangHoa(chiTietDonHang.TenHangHoa);// lấy thông tin hàng hóa trong bảng hàng hóa
+                            var ctDonHang = _chiTietDonHangService.Get(new Guid(EntityId), hanghoaInDatabase.Id);//lấy chi tiết của hàng ID trên hóa đơn ID
                             ctDonHang.SoLuong = chiTietDonHang.SoLuong;
                             ctDonHang.DonGia = chiTietDonHang.DonGia;
                             _chiTietDonHangService.Update(ctDonHang);
@@ -571,7 +573,7 @@ namespace QuanLySieuThi.HangHoa
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+        // load thông tin lên các control
         private void HangHoaListFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
         {
             try
