@@ -61,6 +61,21 @@ namespace Service
         {
             Entities.SaveChanges();
         }
+
+        public IList<HoaDon> GetByYear(int year)
+        {
+            try
+            {
+                return Entities.HoaDons.Where(_ => _.NgayLap.Year == year && _.HoatDong.HasValue &&
+                                                   _.HoatDong == true).Include(_=>_.CT_HoaDon).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
     }
 
 

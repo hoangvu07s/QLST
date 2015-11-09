@@ -352,6 +352,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ThongKeDoanhThuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeDoanhThuForm.Designer.cs">
+      <DependentUpon>ThongKeDoanhThuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ThongKeTonKhoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeTonKhoForm.Designer.cs">
+      <DependentUpon>ThongKeTonKhoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\XuatHoaDonReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -504,10 +516,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\ThongKeDoanhThu.rdlc" />
+    <EmbeddedResource Include="Report\ThongKeDoanhThuForm.resx">
+      <DependentUpon>ThongKeDoanhThuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeTonKho.rdlc" />
+    <EmbeddedResource Include="Report\ThongKeTonKhoForm.resx">
+      <DependentUpon>ThongKeTonKhoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\XuatHoaDon.rdlc" />
     <EmbeddedResource Include="Report\XuatHoaDonReportForm.resx">
       <DependentUpon>XuatHoaDonReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Report\Helper.ValueObjects.DoanhThu.datasource" />
+    <None Include="Report\Helper.ValueObjects.ThongKeTonKho.datasource" />
     <None Include="Report\Model.CT_HoaDon.datasource" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

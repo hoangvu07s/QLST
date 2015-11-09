@@ -56,6 +56,22 @@ namespace Service
             return null;
         }
 
+        public IList<DoiTraHangHoa> GetByYear(int year)
+        {
+            try
+            {
+                return
+                    Entities.DoiTraHangHoas.Where(
+                        _ => _.NgayLap.Year == year && _.HoatDong.HasValue && _.HoatDong == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();

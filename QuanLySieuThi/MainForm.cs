@@ -6,6 +6,7 @@ using QuanLySieuThi.KhachHang;
 using QuanLySieuThi.Kho;
 using QuanLySieuThi.NhaCungCap;
 using QuanLySieuThi.NhanVien;
+using QuanLySieuThi.Report;
 
 namespace QuanLySieuThi
 {
@@ -231,6 +232,32 @@ namespace QuanLySieuThi
             {
                 var quanLyDoiTraHangHoa = new QuanLyDoiTraHangHoaForm();
                 quanLyDoiTraHangHoa.ShowForm("OpenQuanLyDoiTraHangHoaForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void ThongKeTonKhoButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var thongKeTonKho = new ThongKeTonKhoForm();
+                thongKeTonKho.ShowForm("OpenThongKeTonKhoReport");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void ThongKeDoanhThuButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var thongKeDoanhThu = new ThongKeDoanhThuForm();
+                thongKeDoanhThu.ShowForm("OpenThongKeDoanhThuReport");
             }
             catch (Exception ex)
             {

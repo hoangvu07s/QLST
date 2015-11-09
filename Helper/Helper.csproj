@@ -54,8 +54,10 @@
     <Compile Include="ValueObjects\ChiTietDonHang.cs" />
     <Compile Include="ValueObjects\ChiTietNhapKho.cs" />
     <Compile Include="ValueObjects\ChiTietXuatKho.cs" />
+    <Compile Include="ValueObjects\DoanhThu.cs" />
     <Compile Include="ValueObjects\GioiTinh.cs" />
     <Compile Include="ValueObjects\ThongKeHangHoa.cs" />
+    <Compile Include="ValueObjects\ThongKeTonKho.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
