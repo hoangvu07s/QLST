@@ -108,7 +108,7 @@ namespace QuanLySieuThi.Kho
             donHangListForm.ShowForm("OpenDonHangListForm");
             donHangListForm.FormClosed += DonHangListFormOnFormClosed;
         }
-        // khi chọn đc đơn hàng và form đơn hàng đóng , các chi tiết đơn hàng sẽ hiện trên form nhập kho
+        // khi chọn đc đơn hàng và form đơn hàng đóng , các chi tiết đơn hàng sẽ hiện trên form nhập kho .. chỉ lấy những hàng hóa chưa nhập đủ
         private void DonHangListFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
         {
             _donHangId = DonHangListForm.MaDonHang.ToString();

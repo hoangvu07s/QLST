@@ -85,7 +85,7 @@ namespace QuanLySieuThi.Kho
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+        // sau khi chạy LoadKhoHang trước sẽ chạy hamf KhoHangLookup để lấy những hàng hóa thuộc kho này,
         private void KhoHangLookupEdit_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -97,14 +97,14 @@ namespace QuanLySieuThi.Kho
                 else
                 {
                     IList<Model.HangHoa> hangHoas = new List<Model.HangHoa>();
-                    var khoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
-                    var nhapKhos = _nhapKhoService.Get(khoId);
+                    var khoId = KhoHangLookupEdit.EditValue.ToString().ToLong();// lấy giá trị KhoId
+                    var nhapKhos = _nhapKhoService.Get(khoId);// lấy các phiếu nhập kho của kho này.
                     foreach (var nhapKho in nhapKhos)
                     {
-                        var chiTietNhapKhos = _chiTietNhapKhoService.Get(nhapKho.PhieuNhapKhoId);
+                        var chiTietNhapKhos = _chiTietNhapKhoService.Get(nhapKho.PhieuNhapKhoId);// lấy chi tiết của từng phiếu nhập kho của kho này
                         foreach (var chiTietNhapKho in chiTietNhapKhos)
                         {
-                            hangHoas.Add(chiTietNhapKho.HangHoa);
+                            hangHoas.Add(chiTietNhapKho.HangHoa);// trên từng chi tiết add hàng hóa vào
                         }
                     }
 
@@ -125,7 +125,7 @@ namespace QuanLySieuThi.Kho
                 var khoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
                 var hangHoaId = HangHoaLookupEdit.EditValue.ToString().ToLong();
 
-                var tonKho = _tonKhoService.Get(khoId, hangHoaId);
+                var tonKho = _tonKhoService.Get(khoId, hangHoaId);// lấy thông tin tồn khi của hàng hóa tương ứng trong kho tương ứng
 
                 SoLuongTonKhoNummeric.Text = tonKho.SoLuongTon.ToString();
             }
@@ -134,7 +134,7 @@ namespace QuanLySieuThi.Kho
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+        // button thêm vào gridview
         private void AddButton_Click(object sender, EventArgs e)
         {
             try
@@ -219,7 +219,7 @@ namespace QuanLySieuThi.Kho
 
             return false;
         }
-
+        // sửa : chỉ sửa số lượng
         private void EditButton_Click(object sender, EventArgs e)
         {
             try
@@ -290,8 +290,8 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                if (ValidateXuatKho())
-                {
+                if (ValidateXuatKho())// kiểm tra chọn kho
+                {// lưu thông tin vào xuất kho
                     var xuatKho = _xuatKhoService.Add();
                     xuatKho.PhieuXuatKhoId = new Guid(QuanLySieuThiHelper.NextId());
                     xuatKho.KhoId = KhoHangLookupEdit.EditValue.ToString().ToLong();
@@ -300,21 +300,21 @@ namespace QuanLySieuThi.Kho
                     xuatKho.HoatDong = true;
 
                     _xuatKhoService.Save();
-
+                    // lưu chi tiết xuất kho của từng phiếu xuất
                     foreach (var chiTietXuatKho in _chiTietXuatKhos)
                     {
                         var ctXuatKho = _chiTietXuatKhoService.Add();
                         ctXuatKho.XuatKhoId = xuatKho.PhieuXuatKhoId;
                         ctXuatKho.HangHoaId = chiTietXuatKho.HangHoaId;
                         ctXuatKho.SoLuong = chiTietXuatKho.SoLuong;
-
+                        // update tòn kho của từng mặt hàng
                         var tonKho = _tonKhoService.Get(KhoHangLookupEdit.EditValue.ToString().ToLong(),
                             chiTietXuatKho.HangHoaId);
                         tonKho.SoLuongTon = tonKho.SoLuongTon - ctXuatKho.SoLuong;
                         tonKho.NgayTao = DateTime.Now;
 
                         _tonKhoService.UpdateTonKho(tonKho);
-
+                        // up date số lượng tồn quầy
                         var hangHoa = _hangHoaService.Get(chiTietXuatKho.HangHoaId);
                         if (!hangHoa.SoLuongTonQuay.HasValue)
                         {
