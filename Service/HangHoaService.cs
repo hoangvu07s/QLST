@@ -160,6 +160,24 @@ namespace Service
             }
         }
 
+        public IList<HangHoa> GetInRangeDateTime(DateTime fromDateTime, DateTime toDateTime)
+        {
+            try
+            {
+                return
+                    Entities.HangHoas.Where(
+                        _ =>
+                            _.NgayTao.Value >= fromDateTime && _.NgayTao.Value <= toDateTime && _.HoatDong.HasValue &&
+                            _.HoatDong == true).Include(_ => _.TonKhoes).Include(_ => _.CT_NhapKho).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public override void Save()
         {
             Entities.SaveChanges();
