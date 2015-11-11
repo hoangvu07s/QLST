@@ -159,7 +159,7 @@ namespace QuanLySieuThi.KhachHang
         {
             Cancel();
         }
-
+        // không sử dụng
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             try
@@ -188,7 +188,7 @@ namespace QuanLySieuThi.KhachHang
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+        // không sử dụng
         private void UpdateHangHoa(Guid hoaDonId)
         {
             try

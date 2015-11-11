@@ -103,7 +103,7 @@ namespace QuanLySieuThi.KhachHang
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
+        // button tìm hàng hóa
         private void SearchButton_Click(object sender, EventArgs e)
         {
             try

@@ -31,6 +31,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.SelectButton = new Common.Controls.QButtonControl();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.RefreshButton = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
@@ -68,6 +69,8 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.KhachHangGridControl = new DevExpress.XtraGrid.GridControl();
             this.KhachHanggridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.TenKhachHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -80,9 +83,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SelectButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -120,14 +120,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHanggridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -177,6 +177,20 @@
             this.layoutControl2.Size = new System.Drawing.Size(959, 273);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // SelectButton
+            // 
+            this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SelectButton.Appearance.Options.UseFont = true;
+            this.SelectButton.Location = new System.Drawing.Point(682, 231);
+            this.SelectButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.SelectButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(120, 30);
+            this.SelectButton.StyleController = this.layoutControl2;
+            this.SelectButton.TabIndex = 18;
+            this.SelectButton.Text = "Chọn";
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // CancelButtonControl
             // 
@@ -592,6 +606,23 @@
             this.layoutControlItem10.Text = "Điểm Tích Lũy";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(143, 17);
             // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.SelectButton;
+            this.layoutControlItem17.Location = new System.Drawing.Point(670, 219);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem17.TextVisible = false;
+            // 
+            // emptySpaceItem9
+            // 
+            this.emptySpaceItem9.AllowHotTrack = false;
+            this.emptySpaceItem9.Location = new System.Drawing.Point(660, 219);
+            this.emptySpaceItem9.Name = "emptySpaceItem9";
+            this.emptySpaceItem9.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // KhachHangGridControl
             // 
             this.KhachHangGridControl.Location = new System.Drawing.Point(12, 312);
@@ -727,37 +758,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // SelectButton
-            // 
-            this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.SelectButton.Appearance.Options.UseFont = true;
-            this.SelectButton.Location = new System.Drawing.Point(682, 231);
-            this.SelectButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.SelectButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.SelectButton.Name = "SelectButton";
-            this.SelectButton.Size = new System.Drawing.Size(120, 30);
-            this.SelectButton.StyleController = this.layoutControl2;
-            this.SelectButton.TabIndex = 18;
-            this.SelectButton.Text = "Chọn";
-            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.SelectButton;
-            this.layoutControlItem17.Location = new System.Drawing.Point(670, 219);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(124, 34);
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem17.TextVisible = false;
-            // 
-            // emptySpaceItem9
-            // 
-            this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(660, 219);
-            this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(10, 34);
-            this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // QuanLyKhachHangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -803,14 +803,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KhachHanggridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
