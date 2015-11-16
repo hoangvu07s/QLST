@@ -65,7 +65,62 @@ GO
 SET IDENTITY_INSERT NhanVien ON;
 GO
 
+
 Update DonHang set TrangThaiDonHang = N'Hoàn Thành' where TrangThaiDonHang = 'Hoàn Thành'
 Update DonHang set TrangThaiDonHang = N'Chưa Hoàn Thành' where TrangThaiDonHang = 'Chua Hoàn Thành'
 Update DonHang set TrangThaiDonHang = N'Đang Chờ' where TrangThaiDonHang = 'Ðang Ch?'
 Update DonHang set TrangThaiDonHang = N'Hủy' where TrangThaiDonHang = 'H?y'
+
+-- INIT QUYEN
+GO
+SET IDENTITY_INSERT Quyen OFF;
+GO
+SET IDENTITY_INSERT NhanVien OFF;
+GO
+
+MERGE INTO Quyen AS Target
+USING (VALUES
+	(1, 'Admin'),
+	(2, N'Nhân Viên'),
+	(3, N'Quản Lý')
+)
+AS Source (Id,Quyen )
+ON Target.Id = Source.Id
+
+When MATCHED THEN
+UPDATE SET		Quyen = Source.Quyen
+WHEN NOT MATCHED BY TARGET THEN
+INSERT (Quyen) 
+VALUES(Quyen);
+GO
+
+SET IDENTITY_INSERT Quyen ON;
+GO
+
+-- INIT QUYEN NHAN VIEN
+
+GO
+SET IDENTITY_INSERT QuyenNhanVien OFF;
+GO
+SET IDENTITY_INSERT NhanVien OFF;
+GO
+SET IDENTITY_INSERT Quyen OFF;
+GO
+
+MERGE INTO QuyenNhanVien AS Target
+USING (VALUES
+	(1, 1, 1)
+)
+AS Source (Id,QuyenId,NhanVienId )
+ON Target.Id = Source.Id
+
+When MATCHED THEN
+UPDATE SET		QuyenId = Source.QuyenId,
+				NhanVienId = Source.NhanVienId
+WHEN NOT MATCHED BY TARGET THEN
+INSERT (QuyenId, NhanVienId) 
+VALUES(QuyenId, NhanVienId);
+GO
+
+SET IDENTITY_INSERT QuyenNhanVien ON;
+GO

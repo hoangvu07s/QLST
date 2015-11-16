@@ -50,5 +50,7 @@ namespace Model
         public virtual DbSet<CT_NhapKho> CT_NhapKho { get; set; }
         public virtual DbSet<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
         public virtual DbSet<CT_PhieuTraQuayHang> CT_PhieuTraQuayHang { get; set; }
+        public virtual DbSet<Quyen> Quyens { get; set; }
+        public virtual DbSet<QuyenNhanVien> QuyenNhanViens { get; set; }
     }
 }

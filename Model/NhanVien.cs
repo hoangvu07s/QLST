@@ -49,6 +49,7 @@ namespace Model
             this.XuatKhoes = new HashSet<XuatKho>();
             this.PhieuTraQuayHangs = new HashSet<PhieuTraQuayHang>();
             this.PhieuTraQuayHangs1 = new HashSet<PhieuTraQuayHang>();
+            this.QuyenNhanViens = new HashSet<QuyenNhanVien>();
         }
     
         public long Id { get; set; }
@@ -103,5 +104,6 @@ namespace Model
         public virtual ICollection<XuatKho> XuatKhoes { get; set; }
         public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs { get; set; }
         public virtual ICollection<PhieuTraQuayHang> PhieuTraQuayHangs1 { get; set; }
+        public virtual ICollection<QuyenNhanVien> QuyenNhanViens { get; set; }
     }
 }
