@@ -308,6 +308,7 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="QuyenId" Type="bigint" Nullable="false" />
           <Property Name="NhanVienId" Type="bigint" Nullable="false" />
+          <Property Name="HoatDong" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="TheKhachHang">
           <Key>
@@ -2960,6 +2961,7 @@
           <Property Name="NhanVienId" Type="Int64" Nullable="false" />
           <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_QuyenNhanVien_NhanVien" FromRole="QuyenNhanVien" ToRole="NhanVien" />
           <NavigationProperty Name="Quyen" Relationship="QuanLySieuThiModel.FK_QuyenNhanVien_Quyen" FromRole="QuyenNhanVien" ToRole="Quyen" />
+          <Property Name="HoatDong" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_QuyenNhanVien_NhanVien">
           <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
@@ -3341,6 +3343,7 @@
           <EntitySetMapping Name="QuyenNhanViens">
             <EntityTypeMapping TypeName="QuanLySieuThiModel.QuyenNhanVien">
               <MappingFragment StoreEntitySet="QuyenNhanVien">
+                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
                 <ScalarProperty Name="NhanVienId" ColumnName="NhanVienId" />
                 <ScalarProperty Name="QuyenId" ColumnName="QuyenId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

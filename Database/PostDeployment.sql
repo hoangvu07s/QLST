@@ -109,17 +109,17 @@ GO
 
 MERGE INTO QuyenNhanVien AS Target
 USING (VALUES
-	(1, 1, 1)
+	(1, 1, 1,1)
 )
-AS Source (Id,QuyenId,NhanVienId )
+AS Source (Id,QuyenId,NhanVienId,HoatDong )
 ON Target.Id = Source.Id
 
 When MATCHED THEN
 UPDATE SET		QuyenId = Source.QuyenId,
 				NhanVienId = Source.NhanVienId
 WHEN NOT MATCHED BY TARGET THEN
-INSERT (QuyenId, NhanVienId) 
-VALUES(QuyenId, NhanVienId);
+INSERT (QuyenId, NhanVienId,HoatDong) 
+VALUES(QuyenId, NhanVienId,HoatDong);
 GO
 
 SET IDENTITY_INSERT QuyenNhanVien ON;

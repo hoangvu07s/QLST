@@ -17,6 +17,7 @@ namespace Model
         public long Id { get; set; }
         public long QuyenId { get; set; }
         public long NhanVienId { get; set; }
+        public bool HoatDong { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }
         public virtual Quyen Quyen { get; set; }

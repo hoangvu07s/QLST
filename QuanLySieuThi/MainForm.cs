@@ -265,6 +265,19 @@ namespace QuanLySieuThi
             }
         }
 
+        private void PhanQuyenBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var quanLyPhanQuyen = new QuanLyQuyenNhanVienForm();
+                quanLyPhanQuyen.ShowForm("OpenQuanLyQuyenNhanVien");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         
     }
 }
