@@ -17,6 +17,36 @@ namespace QuanLySieuThi
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            try
+            {
+                if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.Admin)
+                {
+                    NhanVienPageGroup.Enabled = true;
+                    HangHoaPageGroup.Enabled = true;
+                    NhaCungCapPageGroup.Enabled = true;
+                    KhoHangPageGroup.Enabled = true;
+                    KhachHangPageGroup.Enabled = true;
+                    ThongKePageGroup.Enabled = true;
+                }
+                else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.NhanVien)
+                {
+                    
+                }
+                else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.QuanLy)
+                {
+                        
+                }
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+
         private void QuanLyChucVuButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             try

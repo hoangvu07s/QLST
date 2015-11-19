@@ -48,20 +48,20 @@
             this.QuanLyDoiTraHangHoaButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ThongKeTonKhoButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ThongKeDoanhThuButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.nhanVienRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.HangHoaRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.NhaCungCapRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.KhoHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.KhachHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ThongKeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.PhanQuyenBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.nhanVienRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.NhanVienPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.HangHoaRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.HangHoaPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.NhaCungCapRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.NhaCungCapPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.KhoHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.KhoHangPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.KhachHangRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.KhachHangPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ThongKeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ThongKePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -408,112 +408,6 @@
             this.ThongKeDoanhThuButtonItem.Name = "ThongKeDoanhThuButtonItem";
             this.ThongKeDoanhThuButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThongKeDoanhThuButtonItem_ItemClick);
             // 
-            // nhanVienRibbonPage
-            // 
-            this.nhanVienRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanVienRibbonPage.Appearance.Options.UseFont = true;
-            this.nhanVienRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.nhanVienRibbonPage.Name = "nhanVienRibbonPage";
-            this.nhanVienRibbonPage.Text = "Nhân Viên";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.QuanLyChucVuButton);
-            this.ribbonPageGroup1.ItemLinks.Add(this.QuanLyNhanVienButton);
-            this.ribbonPageGroup1.ItemLinks.Add(this.PhanQuyenBarButtonItem);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            // 
-            // HangHoaRibbonPage
-            // 
-            this.HangHoaRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HangHoaRibbonPage.Appearance.Options.UseFont = true;
-            this.HangHoaRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.HangHoaRibbonPage.Name = "HangHoaRibbonPage";
-            this.HangHoaRibbonPage.Text = "Hàng Hóa";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.QuanLyQuayHangButton);
-            this.ribbonPageGroup3.ItemLinks.Add(this.QuanLyChungLoaiHangHoaButton);
-            this.ribbonPageGroup3.ItemLinks.Add(this.QuanLyDonHangButton);
-            this.ribbonPageGroup3.ItemLinks.Add(this.QuanLyHangHoaButton);
-            this.ribbonPageGroup3.ItemLinks.Add(this.ThongKeHangHoaButton);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            // 
-            // NhaCungCapRibbonPage
-            // 
-            this.NhaCungCapRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NhaCungCapRibbonPage.Appearance.Options.UseFont = true;
-            this.NhaCungCapRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.NhaCungCapRibbonPage.Name = "NhaCungCapRibbonPage";
-            this.NhaCungCapRibbonPage.Text = "Nhà Cung Cấp";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.NhaCUngCapBarButton);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            // 
-            // KhoHangRibbonPage
-            // 
-            this.KhoHangRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhoHangRibbonPage.Appearance.Options.UseFont = true;
-            this.KhoHangRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
-            this.KhoHangRibbonPage.Name = "KhoHangRibbonPage";
-            this.KhoHangRibbonPage.Text = "Kho Hàng";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.QuanLyKhoHangButton);
-            this.ribbonPageGroup4.ItemLinks.Add(this.NhapKhoButton);
-            this.ribbonPageGroup4.ItemLinks.Add(this.XuatKhoButton);
-            this.ribbonPageGroup4.ItemLinks.Add(this.NhapKhoListButton);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup4.ItemLinks.Add(this.TraHangVeKhoButton);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            // 
-            // KhachHangRibbonPage
-            // 
-            this.KhachHangRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhachHangRibbonPage.Appearance.Options.UseFont = true;
-            this.KhachHangRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
-            this.KhachHangRibbonPage.Name = "KhachHangRibbonPage";
-            this.KhachHangRibbonPage.Text = "Khách Hàng";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.QuanLyKhachHangBarButton);
-            this.ribbonPageGroup5.ItemLinks.Add(this.QuanLyHoaDonButtonItem);
-            this.ribbonPageGroup5.ItemLinks.Add(this.QuanLyDoiTraHangHoaButtonItem);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            // 
-            // ThongKeRibbonPage
-            // 
-            this.ThongKeRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThongKeRibbonPage.Appearance.Options.UseFont = true;
-            this.ThongKeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6});
-            this.ThongKeRibbonPage.Name = "ThongKeRibbonPage";
-            this.ThongKeRibbonPage.Text = "Thống Kê";
-            // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.ThongKeTonKhoButtonItem);
-            this.ribbonPageGroup6.ItemLinks.Add(this.ThongKeDoanhThuButtonItem);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 660);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
-            // 
             // PhanQuyenBarButtonItem
             // 
             this.PhanQuyenBarButtonItem.Caption = "Phân Quyền";
@@ -529,6 +423,112 @@
             this.PhanQuyenBarButtonItem.ItemAppearance.Pressed.Options.UseFont = true;
             this.PhanQuyenBarButtonItem.Name = "PhanQuyenBarButtonItem";
             this.PhanQuyenBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PhanQuyenBarButtonItem_ItemClick);
+            // 
+            // nhanVienRibbonPage
+            // 
+            this.nhanVienRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhanVienRibbonPage.Appearance.Options.UseFont = true;
+            this.nhanVienRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.NhanVienPageGroup});
+            this.nhanVienRibbonPage.Name = "nhanVienRibbonPage";
+            this.nhanVienRibbonPage.Text = "Nhân Viên";
+            // 
+            // NhanVienPageGroup
+            // 
+            this.NhanVienPageGroup.ItemLinks.Add(this.QuanLyChucVuButton);
+            this.NhanVienPageGroup.ItemLinks.Add(this.QuanLyNhanVienButton);
+            this.NhanVienPageGroup.ItemLinks.Add(this.PhanQuyenBarButtonItem);
+            this.NhanVienPageGroup.Name = "NhanVienPageGroup";
+            // 
+            // HangHoaRibbonPage
+            // 
+            this.HangHoaRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HangHoaRibbonPage.Appearance.Options.UseFont = true;
+            this.HangHoaRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.HangHoaPageGroup});
+            this.HangHoaRibbonPage.Name = "HangHoaRibbonPage";
+            this.HangHoaRibbonPage.Text = "Hàng Hóa";
+            // 
+            // HangHoaPageGroup
+            // 
+            this.HangHoaPageGroup.ItemLinks.Add(this.QuanLyQuayHangButton);
+            this.HangHoaPageGroup.ItemLinks.Add(this.QuanLyChungLoaiHangHoaButton);
+            this.HangHoaPageGroup.ItemLinks.Add(this.QuanLyDonHangButton);
+            this.HangHoaPageGroup.ItemLinks.Add(this.QuanLyHangHoaButton);
+            this.HangHoaPageGroup.ItemLinks.Add(this.ThongKeHangHoaButton);
+            this.HangHoaPageGroup.Name = "HangHoaPageGroup";
+            // 
+            // NhaCungCapRibbonPage
+            // 
+            this.NhaCungCapRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhaCungCapRibbonPage.Appearance.Options.UseFont = true;
+            this.NhaCungCapRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.NhaCungCapPageGroup});
+            this.NhaCungCapRibbonPage.Name = "NhaCungCapRibbonPage";
+            this.NhaCungCapRibbonPage.Text = "Nhà Cung Cấp";
+            // 
+            // NhaCungCapPageGroup
+            // 
+            this.NhaCungCapPageGroup.ItemLinks.Add(this.NhaCUngCapBarButton);
+            this.NhaCungCapPageGroup.Name = "NhaCungCapPageGroup";
+            // 
+            // KhoHangRibbonPage
+            // 
+            this.KhoHangRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoHangRibbonPage.Appearance.Options.UseFont = true;
+            this.KhoHangRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.KhoHangPageGroup});
+            this.KhoHangRibbonPage.Name = "KhoHangRibbonPage";
+            this.KhoHangRibbonPage.Text = "Kho Hàng";
+            // 
+            // KhoHangPageGroup
+            // 
+            this.KhoHangPageGroup.ItemLinks.Add(this.QuanLyKhoHangButton);
+            this.KhoHangPageGroup.ItemLinks.Add(this.NhapKhoButton);
+            this.KhoHangPageGroup.ItemLinks.Add(this.XuatKhoButton);
+            this.KhoHangPageGroup.ItemLinks.Add(this.NhapKhoListButton);
+            this.KhoHangPageGroup.ItemLinks.Add(this.barButtonItem1);
+            this.KhoHangPageGroup.ItemLinks.Add(this.TraHangVeKhoButton);
+            this.KhoHangPageGroup.Name = "KhoHangPageGroup";
+            // 
+            // KhachHangRibbonPage
+            // 
+            this.KhachHangRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachHangRibbonPage.Appearance.Options.UseFont = true;
+            this.KhachHangRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.KhachHangPageGroup});
+            this.KhachHangRibbonPage.Name = "KhachHangRibbonPage";
+            this.KhachHangRibbonPage.Text = "Khách Hàng";
+            // 
+            // KhachHangPageGroup
+            // 
+            this.KhachHangPageGroup.ItemLinks.Add(this.QuanLyKhachHangBarButton);
+            this.KhachHangPageGroup.ItemLinks.Add(this.QuanLyHoaDonButtonItem);
+            this.KhachHangPageGroup.ItemLinks.Add(this.QuanLyDoiTraHangHoaButtonItem);
+            this.KhachHangPageGroup.Name = "KhachHangPageGroup";
+            // 
+            // ThongKeRibbonPage
+            // 
+            this.ThongKeRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThongKeRibbonPage.Appearance.Options.UseFont = true;
+            this.ThongKeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ThongKePageGroup});
+            this.ThongKeRibbonPage.Name = "ThongKeRibbonPage";
+            this.ThongKeRibbonPage.Text = "Thống Kê";
+            // 
+            // ThongKePageGroup
+            // 
+            this.ThongKePageGroup.ItemLinks.Add(this.ThongKeTonKhoButtonItem);
+            this.ThongKePageGroup.ItemLinks.Add(this.ThongKeDoanhThuButtonItem);
+            this.ThongKePageGroup.Name = "ThongKePageGroup";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 660);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
             // 
             // MainForm
             // 
@@ -554,21 +554,21 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage nhanVienRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup NhanVienPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem QuanLyNhanVienButton;
         private DevExpress.XtraBars.BarButtonItem QuanLyChucVuButton;
         private DevExpress.XtraBars.Ribbon.RibbonPage NhaCungCapRibbonPage;
         private DevExpress.XtraBars.BarButtonItem NhaCUngCapBarButton;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup NhaCungCapPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPage HangHoaRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup HangHoaPageGroup;
         private DevExpress.XtraBars.BarButtonItem QuanLyQuayHangButton;
         private DevExpress.XtraBars.BarButtonItem QuanLyChungLoaiHangHoaButton;
         private DevExpress.XtraBars.BarButtonItem QuanLyDonHangButton;
         private DevExpress.XtraBars.BarButtonItem QuanLyKhoHangButton;
         private DevExpress.XtraBars.Ribbon.RibbonPage KhoHangRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup KhoHangPageGroup;
         private DevExpress.XtraBars.BarButtonItem QuanLyHangHoaButton;
         private DevExpress.XtraBars.BarButtonItem NhapKhoButton;
         private DevExpress.XtraBars.BarButtonItem XuatKhoButton;
@@ -578,12 +578,12 @@
         private DevExpress.XtraBars.BarButtonItem TraHangVeKhoButton;
         private DevExpress.XtraBars.BarButtonItem QuanLyKhachHangBarButton;
         private DevExpress.XtraBars.Ribbon.RibbonPage KhachHangRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup KhachHangPageGroup;
         private DevExpress.XtraBars.BarButtonItem QuanLyHoaDonButtonItem;
         private DevExpress.XtraBars.BarButtonItem QuanLyDoiTraHangHoaButtonItem;
         private DevExpress.XtraBars.BarButtonItem ThongKeTonKhoButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPage ThongKeRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ThongKePageGroup;
         private DevExpress.XtraBars.BarButtonItem ThongKeDoanhThuButtonItem;
         private DevExpress.XtraBars.BarButtonItem PhanQuyenBarButtonItem;
     }

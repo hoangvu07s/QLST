@@ -36,6 +36,7 @@
           </Key>
           <Property Name="DoiTraHangHoaId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="HangHoaId" Type="bigint" Nullable="false" />
+          <Property Name="KhoId" Type="bigint" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="TinhTrang" Type="nvarchar" MaxLength="255" />
@@ -412,6 +413,18 @@
             </Principal>
             <Dependent Role="CT_DoiTraHangHoa">
               <PropertyRef Name="HangHoaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CTDoiTraHangHoa_KhoId">
+          <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
+          <End Role="CT_DoiTraHangHoa" Type="Self.CT_DoiTraHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kho">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CT_DoiTraHangHoa">
+              <PropertyRef Name="KhoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1187,6 +1200,10 @@
             <End Role="HangHoa" EntitySet="HangHoa" />
             <End Role="CT_DoiTraHangHoa" EntitySet="CT_DoiTraHangHoa" />
           </AssociationSet>
+          <AssociationSet Name="FK_CTDoiTraHangHoa_KhoId" Association="Self.FK_CTDoiTraHangHoa_KhoId">
+            <End Role="Kho" EntitySet="Kho" />
+            <End Role="CT_DoiTraHangHoa" EntitySet="CT_DoiTraHangHoa" />
+          </AssociationSet>
           <AssociationSet Name="FK_CTDonHang_DonHang" Association="Self.FK_CTDonHang_DonHang">
             <End Role="DonHang" EntitySet="DonHang" />
             <End Role="CT_DonHang" EntitySet="CT_DonHang" />
@@ -1475,6 +1492,8 @@
           <Property Name="ChietKhauPhanTram" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="DoiTraHangHoa" Relationship="Self.FK_CTDoiTraHangHoa_DoiTraHangHoaId" FromRole="CT_DoiTraHangHoa" ToRole="DoiTraHangHoa" />
           <NavigationProperty Name="HangHoa" Relationship="QuanLySieuThiModel.FK_CTDoiTraHangHoa_HangHoa" FromRole="CT_DoiTraHangHoa" ToRole="HangHoa" />
+          <Property Name="KhoId" Type="Int64" />
+          <NavigationProperty Name="Kho" Relationship="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId" FromRole="CT_DoiTraHangHoa" ToRole="Kho" />
         </EntityType>
         <EntityType Name="CT_DonHang">
           <Key>
@@ -1555,6 +1574,7 @@
           <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_Kho_NguoiTao" FromRole="Kho" ToRole="NhanVien" />
           <NavigationProperty Name="NhanVien2" Relationship="QuanLySieuThiModel.FK_Kho_NhanVien" FromRole="Kho" ToRole="NhanVien" />
           <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_Kho" FromRole="Kho" ToRole="PhieuTraQuayHang" />
+          <NavigationProperty Name="CT_DoiTraHangHoa" Relationship="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId" FromRole="Kho" ToRole="CT_DoiTraHangHoa" />
         </EntityType>
         <EntityType Name="LoaiHangHoa">
           <Key>
@@ -1972,6 +1992,10 @@
           <AssociationSet Name="FK_QuyenNhanVien_Quyen" Association="QuanLySieuThiModel.FK_QuyenNhanVien_Quyen">
             <End Role="Quyen" EntitySet="Quyens" />
             <End Role="QuyenNhanVien" EntitySet="QuyenNhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CTDoiTraHangHoa_KhoId" Association="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId">
+            <End Role="Kho" EntitySet="Khoes" />
+            <End Role="CT_DoiTraHangHoa" EntitySet="CT_DoiTraHangHoa" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="KhachHang">
@@ -2987,6 +3011,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CTDoiTraHangHoa_KhoId">
+          <End Type="QuanLySieuThiModel.Kho" Role="Kho" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.CT_DoiTraHangHoa" Role="CT_DoiTraHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kho">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CT_DoiTraHangHoa">
+              <PropertyRef Name="KhoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3022,6 +3058,7 @@
           <EntitySetMapping Name="CT_DoiTraHangHoa">
             <EntityTypeMapping TypeName="QuanLySieuThiModel.CT_DoiTraHangHoa">
               <MappingFragment StoreEntitySet="CT_DoiTraHangHoa">
+                <ScalarProperty Name="KhoId" ColumnName="KhoId" />
                 <ScalarProperty Name="DoiTraHangHoaId" ColumnName="DoiTraHangHoaId" />
                 <ScalarProperty Name="HangHoaId" ColumnName="HangHoaId" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />

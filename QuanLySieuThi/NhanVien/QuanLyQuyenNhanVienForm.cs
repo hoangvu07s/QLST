@@ -78,7 +78,7 @@ namespace QuanLySieuThi.NhanVien
         {
             try
             {
-                DataBinding.BindEditor(TenNhanVienTextBox, "Text", Entity, "NhanVien.HoVaTen");
+                DataBinding.BindEditor(TenNhanVienTextBox, "Text", Entity, "TenNhanVien");
                 DataBinding.BindLookupEdit(QuyenLookupEdit, "EditValue", Entity, _quyens, "QuyenId", "Quyen1", "Id",
                     "Quyen1");
             }
@@ -230,15 +230,17 @@ namespace QuanLySieuThi.NhanVien
                 
                 if (quyenNhanVien != null)
                 {
-                    quyenNhanVien.NhanVienId = quyenNhanVien.NhanVien.Id;
-                    quyenNhanVien.NhanVien = null;
-                    quyenNhanVien.Quyen = null;
                     if (FormMode == FormMode.Edit)
                     {
                         _quyenNhanVienService.Update(quyenNhanVien);
                     }
-
-                    quyenNhanVien.HoatDong = true;
+                    else
+                    {
+                        quyenNhanVien.NhanVienId = quyenNhanVien.NhanVien.Id;
+                        quyenNhanVien.NhanVien = null;
+                        quyenNhanVien.Quyen = null;
+                        quyenNhanVien.HoatDong = true;
+                    }
 
                     _quyenNhanVienService.Save();
                 }
@@ -253,6 +255,14 @@ namespace QuanLySieuThi.NhanVien
         {
             try
             {
+                var selRow = _selRow as QuyenNhanVien;
+                if (selRow != null && selRow.NhanVien.TenDangNhap == "admin")
+                {
+                    MessageBox.Show(
+                        @"Không Thể Sửa Quyền của Admin",
+                        @"Thông Báo", MessageBoxButtons.OK); return ;
+                }
+
                 ReadOnlyControls(false);
 
                 _isSelectedRow = false;
@@ -277,6 +287,14 @@ namespace QuanLySieuThi.NhanVien
                 var selRow = _selRow as QuyenNhanVien;
                 if (selRow != null)
                 {
+
+                    if (selRow.NhanVien.TenDangNhap == "admin")
+                    {
+                        MessageBox.Show(
+                            @"Không Thể Sửa Quyền của Admin",
+                            @"Thông Báo", MessageBoxButtons.OK); return;
+                    }
+
                     if (DialogResult.Yes ==
                         MessageBox.Show(
                             string.Format("Bạn có muốn xóa quyền của Nhân Viên '{0}' ?", selRow.NhanVien.HoVaTen),

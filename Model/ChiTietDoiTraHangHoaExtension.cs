@@ -2,7 +2,6 @@
 {
     public partial class CT_DoiTraHangHoa
     {
-        public long KhoId { get; set; }
         public string TenKho { get; set; }
 
         public decimal TongTienTraLai
