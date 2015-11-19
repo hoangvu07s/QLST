@@ -308,6 +308,11 @@ namespace QuanLySieuThi
             }
         }
 
+        private void ThoatBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Close();
+        }
+
         
     }
 }

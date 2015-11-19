@@ -42,7 +42,9 @@ namespace QuanLySieuThi
 
         private void MainFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
         {
-            Close();
+            Show();
+            TenDangNhapTextBox.Text = string.Empty;
+            MatKhauTextBox.Text = string.Empty;
         }
 
         private bool ValidateInput()

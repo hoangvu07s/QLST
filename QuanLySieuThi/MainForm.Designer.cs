@@ -62,6 +62,9 @@
             this.ThongKeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ThongKePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.HeThongRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.HeThongPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ThoatBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,10 +92,11 @@
             this.QuanLyDoiTraHangHoaButtonItem,
             this.ThongKeTonKhoButtonItem,
             this.ThongKeDoanhThuButtonItem,
-            this.PhanQuyenBarButtonItem});
+            this.PhanQuyenBarButtonItem,
+            this.ThoatBarButtonItem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 28;
+            this.ribbon.MaxItemId = 29;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.nhanVienRibbonPage,
@@ -100,7 +104,8 @@
             this.NhaCungCapRibbonPage,
             this.KhoHangRibbonPage,
             this.KhachHangRibbonPage,
-            this.ThongKeRibbonPage});
+            this.ThongKeRibbonPage,
+            this.HeThongRibbonPage});
             this.ribbon.Size = new System.Drawing.Size(873, 148);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -530,6 +535,36 @@
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
             // 
+            // HeThongRibbonPage
+            // 
+            this.HeThongRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeThongRibbonPage.Appearance.Options.UseFont = true;
+            this.HeThongRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.HeThongPageGroup});
+            this.HeThongRibbonPage.Name = "HeThongRibbonPage";
+            this.HeThongRibbonPage.Text = "Hệ Thống";
+            // 
+            // HeThongPageGroup
+            // 
+            this.HeThongPageGroup.ItemLinks.Add(this.ThoatBarButtonItem);
+            this.HeThongPageGroup.Name = "HeThongPageGroup";
+            // 
+            // ThoatBarButtonItem
+            // 
+            this.ThoatBarButtonItem.Caption = "Thoát";
+            this.ThoatBarButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.ThoatBarButtonItem.Id = 28;
+            this.ThoatBarButtonItem.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThoatBarButtonItem.ItemAppearance.Disabled.Options.UseFont = true;
+            this.ThoatBarButtonItem.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.ThoatBarButtonItem.ItemAppearance.Hovered.Options.UseFont = true;
+            this.ThoatBarButtonItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.ThoatBarButtonItem.ItemAppearance.Normal.Options.UseFont = true;
+            this.ThoatBarButtonItem.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.ThoatBarButtonItem.ItemAppearance.Pressed.Options.UseFont = true;
+            this.ThoatBarButtonItem.Name = "ThoatBarButtonItem";
+            this.ThoatBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThoatBarButtonItem_ItemClick);
+            // 
             // MainForm
             // 
             this.Appearance.Options.UseFont = true;
@@ -586,5 +621,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ThongKePageGroup;
         private DevExpress.XtraBars.BarButtonItem ThongKeDoanhThuButtonItem;
         private DevExpress.XtraBars.BarButtonItem PhanQuyenBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem ThoatBarButtonItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPage HeThongRibbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup HeThongPageGroup;
     }
 }
