@@ -19,11 +19,18 @@ namespace QuanLySieuThi.NhanVien
 
         private bool _isSelectedRow = true;
 
-        public QuanLyNhanVienForm()
+        public Model.NhanVien NhanVien;
+
+        private bool _isSearchForm;
+        private bool _isValidate = true;
+
+        public QuanLyNhanVienForm(bool isSearchForm = false)
         {
             InitializeComponent();
             MinimumSizeWidth = 1003;
-            MinimumSizeHeight = 602; 
+            MinimumSizeHeight = 602;
+
+            _isSearchForm = isSearchForm;
         }
 
         public override void LoadData(EventArgs e)
@@ -41,6 +48,29 @@ namespace QuanLySieuThi.NhanVien
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+
+                if (_isSearchForm)
+                {
+                    HoVaTenTextBox.Enabled = false;
+                    TenDangNhapTextBox.Enabled = false;
+                    MatKhauTextBox.Enabled = false;
+                    EmailTextBox.Enabled = false;
+                    DiaChiTextBox.Enabled = false;
+                    GioiTinhLookupEdit.Enabled = false;
+                    NgayThangNamSinhDateEdit.Enabled = false;
+                    ChucVuLookupEdit.Enabled = false;
+                    SoDienThoaiTextBox.Enabled = false;
+                    AddButton.Enabled = false;
+                    SaveButton.Enabled = false;
+                    EditButton.Enabled = false;
+                    DeleteButton.Enabled = false;
+                    RefreshButton.Enabled = false;
+                    SelectButton.Enabled = true;
+                }
+                else
+                {
+                    SelectButton.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -225,99 +255,107 @@ namespace QuanLySieuThi.NhanVien
         {
             try
             {
-                var nhanVien = Entity as Model.NhanVien;
-                if (nhanVien != null)
+                if (_isValidate)
                 {
-                    if (string.IsNullOrEmpty(nhanVien.HoVaTen))
+                    var nhanVien = Entity as Model.NhanVien;
+                    if (nhanVien != null)
                     {
-                        MessageBox.Show(@"Vui lòng nhập họ tên.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (string.IsNullOrEmpty(nhanVien.TenDangNhap))
-                    {
-                        MessageBox.Show(@"Vui lòng nhập Tên đăng nhập.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (string.IsNullOrEmpty(nhanVien.MatKhau))
-                    {
-                        MessageBox.Show(@"Vui lòng nhập mật khẩu.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (nhanVien.ChucVuId == 0)
-                    {
-                        MessageBox.Show(@"Vui lòng chọn chức vụ.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (string.IsNullOrEmpty(nhanVien.Email))
-                    {
-                        MessageBox.Show(@"Vui lòng nhập Email", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (string.IsNullOrEmpty(nhanVien.DiaChi))
-                    {
-                        MessageBox.Show(@"Vui lòng nhập địa chỉ.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (nhanVien.NgayThangNamSinh >= DateTime.Now)
-                    {
-                        MessageBox.Show(@"Ngày tháng năm sinh không được lớn hơn hiện tại.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (string.IsNullOrEmpty(nhanVien.SoDienThoai))
-                    {
-                        MessageBox.Show(@"Vui lòng nhập số điện thoại.", @"Thông Báo", MessageBoxButtons.OK);
-                        return false;
-                    }
-
-                    if (FormMode == FormMode.Add)
-                    {
-                        var nhanVienInDatabase = _nhanVienService.GetByTenDangNhap(nhanVien.TenDangNhap);
-                        if (nhanVienInDatabase != null)
+                        if (string.IsNullOrEmpty(nhanVien.HoVaTen))
                         {
-                            MessageBox.Show(
-                                @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
-                                @"Thông Báo", MessageBoxButtons.OK);
-
+                            MessageBox.Show(@"Vui lòng nhập họ tên.", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
                         }
 
-                        var nhanViens = _nhanVienService.GetNhanViensBySoDitenThoai(nhanVien.SoDienThoai);
-                        if (nhanViens.Count > 0)
+                        if (string.IsNullOrEmpty(nhanVien.TenDangNhap))
                         {
-                            MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
-                            return false;
-                        }
-                    }
-                    else
-                    {
-                        var nhanVienInDatabase = _nhanVienService.GetByTenDangNhap(nhanVien.TenDangNhap);
-                        if (nhanVienInDatabase != null && nhanVienInDatabase.Id != nhanVien.Id)
-                        {
-                            MessageBox.Show(
-                                @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
-                                @"Thông Báo", MessageBoxButtons.OK);
-
+                            MessageBox.Show(@"Vui lòng nhập Tên đăng nhập.", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
                         }
 
-                        var nhanViens = _nhanVienService.GetNhanViensBySoDitenThoai(nhanVien.SoDienThoai);
-                        nhanVienInDatabase = _nhanVienService.GetNhanVien(nhanVien.Id);
-                        nhanViens.Remove(nhanVienInDatabase);
-
-                        if (nhanViens.Count > 0)
+                        if (string.IsNullOrEmpty(nhanVien.MatKhau))
                         {
-                            MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
+                            MessageBox.Show(@"Vui lòng nhập mật khẩu.", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
+                        }
+
+                        if (nhanVien.ChucVuId == 0)
+                        {
+                            MessageBox.Show(@"Vui lòng chọn chức vụ.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (string.IsNullOrEmpty(nhanVien.Email))
+                        {
+                            MessageBox.Show(@"Vui lòng nhập Email", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (string.IsNullOrEmpty(nhanVien.DiaChi))
+                        {
+                            MessageBox.Show(@"Vui lòng nhập địa chỉ.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (nhanVien.NgayThangNamSinh >= DateTime.Now)
+                        {
+                            MessageBox.Show(@"Ngày tháng năm sinh không được lớn hơn hiện tại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (string.IsNullOrEmpty(nhanVien.SoDienThoai))
+                        {
+                            MessageBox.Show(@"Vui lòng nhập số điện thoại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+
+                        if (FormMode == FormMode.Add)
+                        {
+                            var nhanVienInDatabase = _nhanVienService.GetByTenDangNhap(nhanVien.TenDangNhap);
+                            if (nhanVienInDatabase != null)
+                            {
+                                MessageBox.Show(
+                                    @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+
+                                return false;
+                            }
+
+                            var nhanViens = _nhanVienService.GetNhanViensBySoDitenThoai(nhanVien.SoDienThoai);
+                            if (nhanViens.Count > 0)
+                            {
+                                MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            var nhanVienInDatabase = _nhanVienService.GetByTenDangNhap(nhanVien.TenDangNhap);
+                            if (nhanVienInDatabase != null && nhanVienInDatabase.Id != nhanVien.Id)
+                            {
+                                MessageBox.Show(
+                                    @"Tên đăng nhập đã tồn tại trong Cơ sở dữ liệu.",
+                                    @"Thông Báo", MessageBoxButtons.OK);
+
+                                return false;
+                            }
+
+                            var nhanViens = _nhanVienService.GetNhanViensBySoDitenThoai(nhanVien.SoDienThoai);
+                            nhanVienInDatabase = _nhanVienService.GetNhanVien(nhanVien.Id);
+                            nhanViens.Remove(nhanVienInDatabase);
+
+                            if (nhanViens.Count > 0)
+                            {
+                                MessageBox.Show(@"Số Điện Thoại đã tồn tại.", @"Thông Báo", MessageBoxButtons.OK);
+                                return false;
+                            }
                         }
                     }
                 }
+                else
+                {
+                    _isValidate = true;
+                }
+                
             }
             catch (Exception ex)
             {
@@ -421,6 +459,14 @@ namespace QuanLySieuThi.NhanVien
             AddButton.Enabled = true;
             EditButton.Enabled = true;
             DeleteButton.Enabled = true;
+        }
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            var nhanVien = _selRow as Model.NhanVien;
+            NhanVien = nhanVien;
+            _isValidate = false;
+            Close();
         }
     }
 }

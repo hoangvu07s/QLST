@@ -138,6 +138,13 @@
     <Compile Include="QuayHang.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Quyen.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuyenNhanVien.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuyenNhanVienExtension.cs" />
     <Compile Include="TheKhachHang.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

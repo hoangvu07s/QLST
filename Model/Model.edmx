@@ -36,6 +36,7 @@
           </Key>
           <Property Name="DoiTraHangHoaId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="HangHoaId" Type="bigint" Nullable="false" />
+          <Property Name="KhoId" Type="bigint" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="TinhTrang" Type="nvarchar" MaxLength="255" />
@@ -100,7 +101,7 @@
           <Property Name="HoaDonId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="NhanVienId" Type="bigint" Nullable="false" />
           <Property Name="NgayLap" Type="datetime2" Precision="7" Nullable="false" />
-          <Property Name="TongTienTraLai" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TongTienTraLai" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="NgayChinhSua" Type="datetime2" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="bigint" />
           <Property Name="HoatDong" Type="bit" />
@@ -294,6 +295,22 @@
           <Property Name="NguoiChinhSuaId" Type="bigint" />
           <Property Name="HoatDong" Type="bit" />
         </EntityType>
+        <EntityType Name="Quyen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quyen" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuyenNhanVien">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuyenId" Type="bigint" Nullable="false" />
+          <Property Name="NhanVienId" Type="bigint" Nullable="false" />
+          <Property Name="HoatDong" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="TheKhachHang">
           <Key>
             <PropertyRef Name="TheKhachHangId" />
@@ -396,6 +413,18 @@
             </Principal>
             <Dependent Role="CT_DoiTraHangHoa">
               <PropertyRef Name="HangHoaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CTDoiTraHangHoa_KhoId">
+          <End Role="Kho" Type="Self.Kho" Multiplicity="0..1" />
+          <End Role="CT_DoiTraHangHoa" Type="Self.CT_DoiTraHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kho">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CT_DoiTraHangHoa">
+              <PropertyRef Name="KhoId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1011,6 +1040,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_QuyenNhanVien_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="QuyenNhanVien" Type="Self.QuyenNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuyenNhanVien">
+              <PropertyRef Name="NhanVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuyenNhanVien_Quyen">
+          <End Role="Quyen" Type="Self.Quyen" Multiplicity="1" />
+          <End Role="QuyenNhanVien" Type="Self.QuyenNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quyen">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuyenNhanVien">
+              <PropertyRef Name="QuyenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TheKhachHang_KhachHang">
           <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
           <End Role="TheKhachHang" Type="Self.TheKhachHang" Multiplicity="*" />
@@ -1118,6 +1171,8 @@
           <EntitySet Name="NhapKho" EntityType="Self.NhapKho" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuTraQuayHang" EntityType="Self.PhieuTraQuayHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QuayHang" EntityType="Self.QuayHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quyen" EntityType="Self.Quyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuyenNhanVien" EntityType="Self.QuyenNhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TheKhachHang" EntityType="Self.TheKhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TonKho" EntityType="Self.TonKho" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XuatKho" EntityType="Self.XuatKho" Schema="dbo" store:Type="Tables" />
@@ -1143,6 +1198,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_CTDoiTraHangHoa_HangHoa" Association="Self.FK_CTDoiTraHangHoa_HangHoa">
             <End Role="HangHoa" EntitySet="HangHoa" />
+            <End Role="CT_DoiTraHangHoa" EntitySet="CT_DoiTraHangHoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CTDoiTraHangHoa_KhoId" Association="Self.FK_CTDoiTraHangHoa_KhoId">
+            <End Role="Kho" EntitySet="Kho" />
             <End Role="CT_DoiTraHangHoa" EntitySet="CT_DoiTraHangHoa" />
           </AssociationSet>
           <AssociationSet Name="FK_CTDonHang_DonHang" Association="Self.FK_CTDonHang_DonHang">
@@ -1349,6 +1408,14 @@
             <End Role="NhanVien" EntitySet="NhanVien" />
             <End Role="QuayHang" EntitySet="QuayHang" />
           </AssociationSet>
+          <AssociationSet Name="FK_QuyenNhanVien_NhanVien" Association="Self.FK_QuyenNhanVien_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="QuyenNhanVien" EntitySet="QuyenNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuyenNhanVien_Quyen" Association="Self.FK_QuyenNhanVien_Quyen">
+            <End Role="Quyen" EntitySet="Quyen" />
+            <End Role="QuyenNhanVien" EntitySet="QuyenNhanVien" />
+          </AssociationSet>
           <AssociationSet Name="FK_TheKhachHang_KhachHang" Association="Self.FK_TheKhachHang_KhachHang">
             <End Role="KhachHang" EntitySet="KhachHang" />
             <End Role="TheKhachHang" EntitySet="TheKhachHang" />
@@ -1425,6 +1492,8 @@
           <Property Name="ChietKhauPhanTram" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="DoiTraHangHoa" Relationship="Self.FK_CTDoiTraHangHoa_DoiTraHangHoaId" FromRole="CT_DoiTraHangHoa" ToRole="DoiTraHangHoa" />
           <NavigationProperty Name="HangHoa" Relationship="QuanLySieuThiModel.FK_CTDoiTraHangHoa_HangHoa" FromRole="CT_DoiTraHangHoa" ToRole="HangHoa" />
+          <Property Name="KhoId" Type="Int64" />
+          <NavigationProperty Name="Kho" Relationship="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId" FromRole="CT_DoiTraHangHoa" ToRole="Kho" />
         </EntityType>
         <EntityType Name="CT_DonHang">
           <Key>
@@ -1458,7 +1527,7 @@
           <Property Name="HoaDonId" Type="Guid" Nullable="false" />
           <Property Name="NhanVienId" Type="Int64" Nullable="false" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="7" />
-          <Property Name="TongTienTraLai" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TongTienTraLai" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="NgayChinhSua" Type="DateTime" Precision="7" />
           <Property Name="NguoiChinhSuaId" Type="Int64" />
           <Property Name="HoatDong" Type="Boolean" />
@@ -1505,6 +1574,7 @@
           <NavigationProperty Name="NhanVien1" Relationship="QuanLySieuThiModel.FK_Kho_NguoiTao" FromRole="Kho" ToRole="NhanVien" />
           <NavigationProperty Name="NhanVien2" Relationship="QuanLySieuThiModel.FK_Kho_NhanVien" FromRole="Kho" ToRole="NhanVien" />
           <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_Kho" FromRole="Kho" ToRole="PhieuTraQuayHang" />
+          <NavigationProperty Name="CT_DoiTraHangHoa" Relationship="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId" FromRole="Kho" ToRole="CT_DoiTraHangHoa" />
         </EntityType>
         <EntityType Name="LoaiHangHoa">
           <Key>
@@ -1912,6 +1982,20 @@
           <AssociationSet Name="FK_CTPhieuTraQuayHang_PhieuTraQuayHang" Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_PhieuTraQuayHang">
             <End Role="PhieuTraQuayHang" EntitySet="PhieuTraQuayHangs" />
             <End Role="CT_PhieuTraQuayHang" EntitySet="CT_PhieuTraQuayHang" />
+          </AssociationSet>
+          <EntitySet Name="Quyens" EntityType="QuanLySieuThiModel.Quyen" />
+          <EntitySet Name="QuyenNhanViens" EntityType="QuanLySieuThiModel.QuyenNhanVien" />
+          <AssociationSet Name="FK_QuyenNhanVien_NhanVien" Association="QuanLySieuThiModel.FK_QuyenNhanVien_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="QuyenNhanVien" EntitySet="QuyenNhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuyenNhanVien_Quyen" Association="QuanLySieuThiModel.FK_QuyenNhanVien_Quyen">
+            <End Role="Quyen" EntitySet="Quyens" />
+            <End Role="QuyenNhanVien" EntitySet="QuyenNhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CTDoiTraHangHoa_KhoId" Association="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId">
+            <End Role="Kho" EntitySet="Khoes" />
+            <End Role="CT_DoiTraHangHoa" EntitySet="CT_DoiTraHangHoa" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="KhachHang">
@@ -2323,6 +2407,7 @@
           <NavigationProperty Name="XuatKhoes" Relationship="QuanLySieuThiModel.FK_XuatKho_NhanVien" FromRole="NhanVien" ToRole="XuatKho" />
           <NavigationProperty Name="PhieuTraQuayHangs" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NguoiChinhSua" FromRole="NhanVien" ToRole="PhieuTraQuayHang" />
           <NavigationProperty Name="PhieuTraQuayHangs1" Relationship="QuanLySieuThiModel.FK_PhieuTraQuayHang_NhanVien" FromRole="NhanVien" ToRole="PhieuTraQuayHang" />
+          <NavigationProperty Name="QuyenNhanViens" Relationship="QuanLySieuThiModel.FK_QuyenNhanVien_NhanVien" FromRole="NhanVien" ToRole="QuyenNhanVien" />
         </EntityType>
         <Association Name="FK_ChucVu_NguoiChinhSua">
           <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
@@ -2883,6 +2968,61 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Quyen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quyen1" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="QuyenNhanViens" Relationship="QuanLySieuThiModel.FK_QuyenNhanVien_Quyen" FromRole="Quyen" ToRole="QuyenNhanVien" />
+        </EntityType>
+        <EntityType Name="QuyenNhanVien">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuyenId" Type="Int64" Nullable="false" />
+          <Property Name="NhanVienId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="NhanVien" Relationship="QuanLySieuThiModel.FK_QuyenNhanVien_NhanVien" FromRole="QuyenNhanVien" ToRole="NhanVien" />
+          <NavigationProperty Name="Quyen" Relationship="QuanLySieuThiModel.FK_QuyenNhanVien_Quyen" FromRole="QuyenNhanVien" ToRole="Quyen" />
+          <Property Name="HoatDong" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_QuyenNhanVien_NhanVien">
+          <End Type="QuanLySieuThiModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.QuyenNhanVien" Role="QuyenNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuyenNhanVien">
+              <PropertyRef Name="NhanVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuyenNhanVien_Quyen">
+          <End Type="QuanLySieuThiModel.Quyen" Role="Quyen" Multiplicity="1" />
+          <End Type="QuanLySieuThiModel.QuyenNhanVien" Role="QuyenNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quyen">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuyenNhanVien">
+              <PropertyRef Name="QuyenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CTDoiTraHangHoa_KhoId">
+          <End Type="QuanLySieuThiModel.Kho" Role="Kho" Multiplicity="0..1" />
+          <End Type="QuanLySieuThiModel.CT_DoiTraHangHoa" Role="CT_DoiTraHangHoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kho">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CT_DoiTraHangHoa">
+              <PropertyRef Name="KhoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2918,6 +3058,7 @@
           <EntitySetMapping Name="CT_DoiTraHangHoa">
             <EntityTypeMapping TypeName="QuanLySieuThiModel.CT_DoiTraHangHoa">
               <MappingFragment StoreEntitySet="CT_DoiTraHangHoa">
+                <ScalarProperty Name="KhoId" ColumnName="KhoId" />
                 <ScalarProperty Name="DoiTraHangHoaId" ColumnName="DoiTraHangHoaId" />
                 <ScalarProperty Name="HangHoaId" ColumnName="HangHoaId" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -3225,6 +3366,24 @@
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="HangHoaId" ColumnName="HangHoaId" />
                 <ScalarProperty Name="PhieuTraQuayHangId" ColumnName="PhieuTraQuayHangId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quyens">
+            <EntityTypeMapping TypeName="QuanLySieuThiModel.Quyen">
+              <MappingFragment StoreEntitySet="Quyen">
+                <ScalarProperty Name="Quyen1" ColumnName="Quyen" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuyenNhanViens">
+            <EntityTypeMapping TypeName="QuanLySieuThiModel.QuyenNhanVien">
+              <MappingFragment StoreEntitySet="QuyenNhanVien">
+                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
+                <ScalarProperty Name="NhanVienId" ColumnName="NhanVienId" />
+                <ScalarProperty Name="QuyenId" ColumnName="QuyenId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

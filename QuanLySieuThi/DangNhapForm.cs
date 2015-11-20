@@ -5,14 +5,22 @@ using Service;
 
 namespace QuanLySieuThi
 {
+    public enum QuyenNhanVienEnum : long
+    {
+        Admin = 1,
+        NhanVien = 2,
+        QuanLy = 3
+    }
     public partial class DangNhapForm
     {
         private readonly NhanVienService _nhanVienService;
+        private QuyenNhanVienService _quyenNhanVienService;
 
         public DangNhapForm()
         {
             InitializeComponent();
             _nhanVienService = new NhanVienService(Entities);
+            _quyenNhanVienService = new QuyenNhanVienService(Entities);
         }
 
         private void CancelButtonControl_Click(object sender, EventArgs e)
@@ -34,7 +42,9 @@ namespace QuanLySieuThi
 
         private void MainFormOnFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
         {
-            Close();
+            Show();
+            TenDangNhapTextBox.Text = string.Empty;
+            MatKhauTextBox.Text = string.Empty;
         }
 
         private bool ValidateInput()
@@ -82,6 +92,17 @@ namespace QuanLySieuThi
                     return false;
                 }
 
+                var quyenNhanVien = _quyenNhanVienService.GetByNhanVienId(nhanVien.Id);
+                if (quyenNhanVien == null)
+                {
+                    MessageBox.Show(
+                        @"Nhân Viên chưa được cấp quyền. Vui lòng cấp quyền cho nhân viên trước khi sử dụng phần mềm.",
+                        @"Thông Báo", MessageBoxButtons.OK);
+
+                    return false;
+                }
+
+                CurrentFormInfo.QuyenId = quyenNhanVien.QuyenId;
                 CurrentFormInfo.CurrentUserId = nhanVien.Id;
                 return true;
             }

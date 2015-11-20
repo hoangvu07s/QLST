@@ -94,6 +94,11 @@
         <EntityTypeShape EntityType="QuanLySieuThiModel.CT_PhieuTraQuayHang" Width="1.5" PointX="18" PointY="40.75" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_HangHoa" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_CTPhieuTraQuayHang_PhieuTraQuayHang" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.Quyen" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.QuyenNhanVien" Width="1.5" PointX="6" PointY="18.75" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_QuyenNhanVien_NhanVien" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_QuyenNhanVien_Quyen" />
+        <AssociationConnector Association="QuanLySieuThiModel.FK_CTDoiTraHangHoa_KhoId" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

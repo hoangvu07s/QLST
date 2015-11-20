@@ -467,7 +467,8 @@ namespace QuanLySieuThi.KhachHang
                         SoLuong = chiTietDoiTraHangHoa.SoLuong,
                         DonGia = chiTietDoiTraHangHoa.DonGia,
                         TinhTrang = chiTietDoiTraHangHoa.TinhTrang,
-                        ChietKhauPhanTram = chiTietDoiTraHangHoa.ChietKhauPhanTram
+                        ChietKhauPhanTram = chiTietDoiTraHangHoa.ChietKhauPhanTram,
+                        KhoId = chiTietDoiTraHangHoa.KhoId
                     };
 
                     _chiTietDoiTraHangHoaService.Add(chiTietDoiTraHangHoaToDatabase);
@@ -478,7 +479,7 @@ namespace QuanLySieuThi.KhachHang
                 // Update Ton kho
                 foreach (var chiTietDoiTraHangHoa in _chiTietDoiTraHangHoas)
                 {
-                    var tonKho = _tonKhoService.GetByHangHoaIdKhoId(chiTietDoiTraHangHoa.HangHoaId, chiTietDoiTraHangHoa.KhoId);
+                    var tonKho = _tonKhoService.GetByHangHoaIdKhoId(chiTietDoiTraHangHoa.HangHoaId, chiTietDoiTraHangHoa.KhoId.Value);
                     tonKho.SoLuongTon = tonKho.SoLuongTon + chiTietDoiTraHangHoa.SoLuong;
 
                     _tonKhoService.UpdateTonKho(tonKho);

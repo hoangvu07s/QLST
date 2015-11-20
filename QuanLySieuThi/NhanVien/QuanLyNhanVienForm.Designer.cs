@@ -43,6 +43,7 @@
             this.EmailColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.SelectButton = new Common.Controls.QButtonControl();
             this.RefreshButton = new Common.Controls.QButtonControl();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.DeleteButton = new Common.Controls.QButtonControl();
@@ -79,6 +80,8 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -122,6 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -293,6 +298,7 @@
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.SelectButton);
             this.layoutControl2.Controls.Add(this.RefreshButton);
             this.layoutControl2.Controls.Add(this.CancelButtonControl);
             this.layoutControl2.Controls.Add(this.DeleteButton);
@@ -315,6 +321,20 @@
             this.layoutControl2.Size = new System.Drawing.Size(959, 194);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // SelectButton
+            // 
+            this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SelectButton.Appearance.Options.UseFont = true;
+            this.SelectButton.Location = new System.Drawing.Point(682, 152);
+            this.SelectButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.SelectButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(120, 30);
+            this.SelectButton.StyleController = this.layoutControl2;
+            this.SelectButton.TabIndex = 19;
+            this.SelectButton.Text = "Chọn";
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // RefreshButton
             // 
@@ -524,7 +544,9 @@
             this.layoutControlItem11,
             this.layoutControlItem10,
             this.layoutControlItem17,
-            this.emptySpaceItem5});
+            this.emptySpaceItem5,
+            this.layoutControlItem18,
+            this.emptySpaceItem6});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 194);
@@ -555,9 +577,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(660, 140);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(794, 140);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(155, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(21, 34);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -723,6 +745,23 @@
             this.emptySpaceItem5.Size = new System.Drawing.Size(10, 34);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem18
+            // 
+            this.layoutControlItem18.Control = this.SelectButton;
+            this.layoutControlItem18.Location = new System.Drawing.Point(670, 140);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem18.TextVisible = false;
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.Location = new System.Drawing.Point(660, 140);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -801,6 +840,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -864,5 +905,8 @@
         private Common.Controls.QButtonControl RefreshButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private Common.Controls.QButtonControl SelectButton;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
     }
 }

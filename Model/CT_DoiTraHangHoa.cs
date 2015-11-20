@@ -20,8 +20,10 @@ namespace Model
         public decimal DonGia { get; set; }
         public string TinhTrang { get; set; }
         public Nullable<decimal> ChietKhauPhanTram { get; set; }
+        public Nullable<long> KhoId { get; set; }
     
         public virtual DoiTraHangHoa DoiTraHangHoa { get; set; }
         public virtual HangHoa HangHoa { get; set; }
+        public virtual Kho Kho { get; set; }
     }
 }
