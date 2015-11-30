@@ -53,6 +53,11 @@ namespace QuanLySieuThi.HangHoa
                 DonHangGridControl.RefreshDataSource();
 
                 DisableControls();
+
+                if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.NhanVien)
+                {
+                    DeleteButton.Enabled = false;
+                }
             }
             catch (Exception ex)
             {

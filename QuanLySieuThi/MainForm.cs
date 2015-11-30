@@ -33,12 +33,9 @@ namespace QuanLySieuThi
                 }
                 else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.NhanVien)
                 {
-                    
+                    ThongKePageGroup.Enabled = false;
                 }
-                else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.QuanLy)
-                {
-                        
-                }
+                
             }
             catch (Exception ex)
             {
