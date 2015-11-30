@@ -8,8 +8,7 @@ namespace QuanLySieuThi
     public enum QuyenNhanVienEnum : long
     {
         Admin = 1,
-        NhanVien = 2,
-        QuanLy = 3
+        NhanVien = 2
     }
     public partial class DangNhapForm
     {

@@ -81,8 +81,7 @@ GO
 MERGE INTO Quyen AS Target
 USING (VALUES
 	(1, 'Admin'),
-	(2, N'Nhân Viên'),
-	(3, N'Quản Lý')
+	(2, N'Nhân Viên')
 )
 AS Source (Id,Quyen )
 ON Target.Id = Source.Id
