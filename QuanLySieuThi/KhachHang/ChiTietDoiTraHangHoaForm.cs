@@ -283,6 +283,7 @@ namespace QuanLySieuThi.KhachHang
                             TinhTrang = TinhTrangTextBox.Text,
                             ChietKhauPhanTram = ChietKhauNummeric.Text.ToDecimal(),
                             KhoId = KhoLookupEdit.EditValue.ToString().ToLong(),
+  
                             TenKho = KhoLookupEdit.Text,
                             HangHoa = new Model.HangHoa
                             {

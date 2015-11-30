@@ -30,16 +30,16 @@ namespace QuanLySieuThi.Report
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(YearTextBox.Text))
+                if (string.IsNullOrWhiteSpace(YearTextBox.Text) || YearTextBox.Text.ToInt() <= 0 || YearTextBox.Text.ToInt() > DateTime.Now.ToString().Trim().Substring(6,4).ToInt())
                 {
-                    MessageBox.Show(@"Vui lòng nhập Năm",
+                    MessageBox.Show(@"Năm bạn nhập không phù hợp.",
                                     @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else
                 {
                     IList<DoanhThu> doanhThus = new List<DoanhThu>();
                     var hoaDons = _hoaDonService.GetByYear(YearTextBox.Text.ToInt());
-                    var phieuTraQuayHangs = _doiTraHangHoaService.GetByYear(YearTextBox.Text.ToInt());
+                    var phieuTraHangHoas = _doiTraHangHoaService.GetByYear(YearTextBox.Text.ToInt());
 
                     for (int i = 1; i <= 12; i++)
                     {
@@ -50,7 +50,7 @@ namespace QuanLySieuThi.Report
                             tongTienTheoThang = tongTienTheoThang + hoaDon.CT_HoaDon.Sum(_ => _.DonGia * _.SoLuong);
                         }
 
-                        var phieuTraQuayHangTheoThang = phieuTraQuayHangs.Where(_ => _.NgayLap.Month == i).ToList();
+                        var phieuTraQuayHangTheoThang = phieuTraHangHoas.Where(_ => _.NgayLap.Month == i).ToList();
                         var tongTienTraLai = phieuTraQuayHangTheoThang.Sum(_ => _.TongTienTraLai);
 
                         var doanhThu = new DoanhThu
@@ -61,7 +61,7 @@ namespace QuanLySieuThi.Report
 
                         doanhThus.Add(doanhThu);
                     }
-
+                    
                     decimal tongDoanhThu = doanhThus.Sum(_ => _.DoanhThuValue);
 
                     foreach (var doanhThu in doanhThus)
