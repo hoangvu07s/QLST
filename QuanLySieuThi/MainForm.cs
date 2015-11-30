@@ -34,6 +34,7 @@ namespace QuanLySieuThi
                 else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.NhanVien)
                 {
                     ThongKePageGroup.Enabled = false;
+                    PhanQuyenBarButtonItem.Enabled = false;
                 }
                 
             }
