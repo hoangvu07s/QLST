@@ -37,9 +37,7 @@
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.SearchButton = new Common.Controls.QButtonControl();
             this.ToDateEdit = new Common.Controls.QDateEditControl();
-            this.FromDateEdit = new Common.Controls.QDateEditControl();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -56,10 +54,7 @@
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ToDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ToDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -111,7 +106,6 @@
             // 
             this.layoutControl2.Controls.Add(this.SearchButton);
             this.layoutControl2.Controls.Add(this.ToDateEdit);
-            this.layoutControl2.Controls.Add(this.FromDateEdit);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(2, 21);
             this.layoutControl2.Name = "layoutControl2";
@@ -124,7 +118,7 @@
             // 
             this.SearchButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.SearchButton.Appearance.Options.UseFont = true;
-            this.SearchButton.Location = new System.Drawing.Point(513, 12);
+            this.SearchButton.Location = new System.Drawing.Point(275, 12);
             this.SearchButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.SearchButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.SearchButton.Name = "SearchButton";
@@ -137,7 +131,7 @@
             // ToDateEdit
             // 
             this.ToDateEdit.EditValue = null;
-            this.ToDateEdit.Location = new System.Drawing.Point(314, 12);
+            this.ToDateEdit.Location = new System.Drawing.Point(76, 12);
             this.ToDateEdit.Name = "ToDateEdit";
             this.ToDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.ToDateEdit.Properties.Appearance.Options.UseFont = true;
@@ -149,27 +143,11 @@
             this.ToDateEdit.StyleController = this.layoutControl2;
             this.ToDateEdit.TabIndex = 5;
             // 
-            // FromDateEdit
-            // 
-            this.FromDateEdit.EditValue = null;
-            this.FromDateEdit.Location = new System.Drawing.Point(76, 12);
-            this.FromDateEdit.Name = "FromDateEdit";
-            this.FromDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.FromDateEdit.Properties.Appearance.Options.UseFont = true;
-            this.FromDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.FromDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.FromDateEdit.Size = new System.Drawing.Size(170, 24);
-            this.FromDateEdit.StyleController = this.layoutControl2;
-            this.FromDateEdit.TabIndex = 4;
-            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.emptySpaceItem1,
@@ -179,26 +157,12 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 54);
             this.layoutControlGroup2.TextVisible = false;
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem3.Control = this.FromDateEdit;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(238, 34);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(238, 34);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(238, 34);
-            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem3.Text = "Từ Ngày";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(61, 17);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.ToDateEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(238, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(243, 34);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(243, 34);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -210,7 +174,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.SearchButton;
-            this.layoutControlItem5.Location = new System.Drawing.Point(501, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(263, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(124, 34);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
@@ -219,7 +183,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(481, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(243, 0);
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(20, 34);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(20, 34);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -230,9 +194,9 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(625, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(387, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(314, 34);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(552, 34);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup1
@@ -282,10 +246,7 @@
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ToDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ToDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FromDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -310,8 +271,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private Common.Controls.QButtonControl SearchButton;
         private Common.Controls.QDateEditControl ToDateEdit;
-        private Common.Controls.QDateEditControl FromDateEdit;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;

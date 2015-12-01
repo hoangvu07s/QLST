@@ -37,72 +37,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Tính từ ngày: </Value>
-                <Style>
-                  <FontFamily>Segoe UI</FontFamily>
-                  <FontSize>11pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.01958in</Top>
-        <Left>1.13417in</Left>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="TuNgay">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Parameters!TuNgay.Value</Value>
-                <Style>
-                  <FontFamily>Segoe UI</FontFamily>
-                  <FontSize>11pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>TuNgay</rd:DefaultName>
-        <Top>1.01958in</Top>
-        <Left>2.20361in</Left>
-        <Height>0.25in</Height>
-        <Width>1.44792in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox18">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -125,7 +59,7 @@
         <Left>4in</Left>
         <Height>0.25in</Height>
         <Width>0.875in</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -158,7 +92,7 @@
         <Left>4.94444in</Left>
         <Height>0.25in</Height>
         <Width>1.35417in</Width>
-        <ZIndex>4</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -214,6 +148,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -250,6 +185,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -286,6 +222,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -322,6 +259,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -336,6 +274,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -372,6 +311,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -386,6 +326,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -422,6 +363,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -458,6 +400,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -494,6 +437,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -733,6 +677,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Format>#,0.00;(#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -766,6 +711,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Format>#,0.00;(#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -816,8 +762,8 @@
         <Top>1.55083in</Top>
         <Left>0.87714in</Left>
         <Height>0.75in</Height>
-        <Width>8.43323in</Width>
-        <ZIndex>5</ZIndex>
+        <Width>8.43322in</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -846,7 +792,7 @@
         <Left>6.3937in</Left>
         <Height>0.25in</Height>
         <Width>1.57594in</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -868,6 +814,7 @@
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                   <FontSize>11pt</FontSize>
+                  <Format>#,0.00;(#,0.00)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -879,7 +826,7 @@
         <Left>8.10203in</Left>
         <Height>0.25in</Height>
         <Width>1.20833in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -956,10 +903,6 @@
     </DataSet>
   </DataSets>
   <ReportParameters>
-    <ReportParameter Name="TuNgay">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="DenNgay">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>

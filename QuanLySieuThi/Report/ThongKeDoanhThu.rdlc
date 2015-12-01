@@ -67,6 +67,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -103,6 +104,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -139,6 +141,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -213,6 +216,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Format>#,0.00;(#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -246,6 +250,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -264,6 +269,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -291,7 +297,7 @@
         <Top>1.23833in</Top>
         <Left>1.01042in</Left>
         <Height>0.5in</Height>
-        <Width>5.72917in</Width>
+        <Width>5.72916in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -317,8 +323,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>0.74875in</Top>
-        <Left>0.92583in</Left>
+        <Top>0.86333in</Top>
+        <Left>2.95312in</Left>
         <Height>0.25in</Height>
         <Width>0.47917in</Width>
         <ZIndex>2</ZIndex>
@@ -350,8 +356,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Year</rd:DefaultName>
-        <Top>0.74875in</Top>
-        <Left>1.47444in</Left>
+        <Top>0.86333in</Top>
+        <Left>3.82986in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>3</ZIndex>

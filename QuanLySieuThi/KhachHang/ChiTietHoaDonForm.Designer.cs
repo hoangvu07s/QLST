@@ -275,7 +275,7 @@
             this.SoLuongDatMuaNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongDatMuaNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongDatMuaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongDatMuaNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongDatMuaNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongDatMuaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongDatMuaNummeric.Properties.NullText = "0";
             this.SoLuongDatMuaNummeric.Size = new System.Drawing.Size(100, 24);
@@ -288,9 +288,9 @@
             this.DonGiaNummeric.Name = "DonGiaNummeric";
             this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
-            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
-            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaNummeric.Properties.Mask.EditMask = "c";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(100, 24);
@@ -555,6 +555,8 @@
             // DonGiaColumn
             // 
             this.DonGiaColumn.Caption = "Đơn Giá";
+            this.DonGiaColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DonGiaColumn.FieldName = "DonGia";
             this.DonGiaColumn.Name = "DonGiaColumn";
             this.DonGiaColumn.OptionsColumn.AllowEdit = false;
@@ -566,6 +568,8 @@
             // ThanhTienColumn
             // 
             this.ThanhTienColumn.Caption = "Thành Tiền";
+            this.ThanhTienColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.ThanhTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.ThanhTienColumn.FieldName = "TongTien";
             this.ThanhTienColumn.Name = "ThanhTienColumn";
             this.ThanhTienColumn.OptionsColumn.AllowEdit = false;

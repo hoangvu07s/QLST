@@ -227,6 +227,8 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoLuongGridColumn.AppearanceHeader.Options.UseFont = true;
             this.SoLuongGridColumn.Caption = "Số Lượng";
+            this.SoLuongGridColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.SoLuongGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.SoLuongGridColumn.FieldName = "SoLuong";
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
@@ -244,6 +246,8 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonGiaGridColumn.AppearanceHeader.Options.UseFont = true;
             this.DonGiaGridColumn.Caption = "Đơn Giá";
+            this.DonGiaGridColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.DonGiaGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DonGiaGridColumn.FieldName = "DonGia";
             this.DonGiaGridColumn.Name = "DonGiaGridColumn";
             this.DonGiaGridColumn.OptionsColumn.AllowEdit = false;
@@ -254,6 +258,8 @@ namespace QuanLySieuThi.HangHoa
             // ThanhTienColumn
             // 
             this.ThanhTienColumn.Caption = "Thành Tiền";
+            this.ThanhTienColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.ThanhTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.ThanhTienColumn.FieldName = "ThanhTien";
             this.ThanhTienColumn.Name = "ThanhTienColumn";
             this.ThanhTienColumn.OptionsColumn.AllowEdit = false;
@@ -270,9 +276,9 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaNummeric.Name = "DonGiaNummeric";
             this.DonGiaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
-            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
-            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
+            this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaNummeric.Properties.Mask.EditMask = "c";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.NullText = "0.00";
             this.DonGiaNummeric.Size = new System.Drawing.Size(745, 24);
@@ -287,7 +293,7 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(745, 24);

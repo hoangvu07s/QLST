@@ -31,6 +31,7 @@ namespace QuanLySieuThi
                     KhoHangPageGroup.Enabled = true;
                     KhachHangPageGroup.Enabled = true;
                     ThongKePageGroup.Enabled = true;
+                    ThongKeHangHoaButton.Enabled = false;
                 }
                 else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.NhanVien)
                 {
