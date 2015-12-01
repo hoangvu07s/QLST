@@ -49,6 +49,8 @@
             this.ThongKeTonKhoButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ThongKeDoanhThuButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.PhanQuyenBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ThoatBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.SaoLuuDuLieubarButton = new DevExpress.XtraBars.BarButtonItem();
             this.nhanVienRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.NhanVienPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.HangHoaRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -61,10 +63,10 @@
             this.KhachHangPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThongKeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ThongKePageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.HeThongRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.HeThongPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ThoatBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.KhoiPhucDuLieubarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,10 +95,12 @@
             this.ThongKeTonKhoButtonItem,
             this.ThongKeDoanhThuButtonItem,
             this.PhanQuyenBarButtonItem,
-            this.ThoatBarButtonItem});
+            this.ThoatBarButtonItem,
+            this.SaoLuuDuLieubarButton,
+            this.KhoiPhucDuLieubarButtonItem});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 29;
+            this.ribbon.MaxItemId = 31;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.nhanVienRibbonPage,
@@ -429,6 +433,38 @@
             this.PhanQuyenBarButtonItem.Name = "PhanQuyenBarButtonItem";
             this.PhanQuyenBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PhanQuyenBarButtonItem_ItemClick);
             // 
+            // ThoatBarButtonItem
+            // 
+            this.ThoatBarButtonItem.Caption = "Thoát";
+            this.ThoatBarButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.ThoatBarButtonItem.Id = 28;
+            this.ThoatBarButtonItem.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThoatBarButtonItem.ItemAppearance.Disabled.Options.UseFont = true;
+            this.ThoatBarButtonItem.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.ThoatBarButtonItem.ItemAppearance.Hovered.Options.UseFont = true;
+            this.ThoatBarButtonItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.ThoatBarButtonItem.ItemAppearance.Normal.Options.UseFont = true;
+            this.ThoatBarButtonItem.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.ThoatBarButtonItem.ItemAppearance.Pressed.Options.UseFont = true;
+            this.ThoatBarButtonItem.Name = "ThoatBarButtonItem";
+            this.ThoatBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThoatBarButtonItem_ItemClick);
+            // 
+            // SaoLuuDuLieubarButton
+            // 
+            this.SaoLuuDuLieubarButton.Caption = "Sao Lưu Dữ Liệu";
+            this.SaoLuuDuLieubarButton.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.SaoLuuDuLieubarButton.Id = 29;
+            this.SaoLuuDuLieubarButton.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaoLuuDuLieubarButton.ItemAppearance.Disabled.Options.UseFont = true;
+            this.SaoLuuDuLieubarButton.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.SaoLuuDuLieubarButton.ItemAppearance.Hovered.Options.UseFont = true;
+            this.SaoLuuDuLieubarButton.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.SaoLuuDuLieubarButton.ItemAppearance.Normal.Options.UseFont = true;
+            this.SaoLuuDuLieubarButton.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.SaoLuuDuLieubarButton.ItemAppearance.Pressed.Options.UseFont = true;
+            this.SaoLuuDuLieubarButton.Name = "SaoLuuDuLieubarButton";
+            this.SaoLuuDuLieubarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.SaoLuuDuLieubarButton_ItemClick);
+            // 
             // nhanVienRibbonPage
             // 
             this.nhanVienRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -527,14 +563,6 @@
             this.ThongKePageGroup.ItemLinks.Add(this.ThongKeDoanhThuButtonItem);
             this.ThongKePageGroup.Name = "ThongKePageGroup";
             // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 660);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
-            // 
             // HeThongRibbonPage
             // 
             this.HeThongRibbonPage.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -547,23 +575,33 @@
             // HeThongPageGroup
             // 
             this.HeThongPageGroup.ItemLinks.Add(this.ThoatBarButtonItem);
+            this.HeThongPageGroup.ItemLinks.Add(this.SaoLuuDuLieubarButton);
+            this.HeThongPageGroup.ItemLinks.Add(this.KhoiPhucDuLieubarButtonItem);
             this.HeThongPageGroup.Name = "HeThongPageGroup";
             // 
-            // ThoatBarButtonItem
+            // ribbonStatusBar
             // 
-            this.ThoatBarButtonItem.Caption = "Thoát";
-            this.ThoatBarButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
-            this.ThoatBarButtonItem.Id = 28;
-            this.ThoatBarButtonItem.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThoatBarButtonItem.ItemAppearance.Disabled.Options.UseFont = true;
-            this.ThoatBarButtonItem.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.ThoatBarButtonItem.ItemAppearance.Hovered.Options.UseFont = true;
-            this.ThoatBarButtonItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.ThoatBarButtonItem.ItemAppearance.Normal.Options.UseFont = true;
-            this.ThoatBarButtonItem.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.ThoatBarButtonItem.ItemAppearance.Pressed.Options.UseFont = true;
-            this.ThoatBarButtonItem.Name = "ThoatBarButtonItem";
-            this.ThoatBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThoatBarButtonItem_ItemClick);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 660);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(873, 31);
+            // 
+            // KhoiPhucDuLieubarButtonItem
+            // 
+            this.KhoiPhucDuLieubarButtonItem.Caption = "Khôi Phục Dữ Liệu";
+            this.KhoiPhucDuLieubarButtonItem.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.KhoiPhucDuLieubarButtonItem.Id = 30;
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Disabled.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Disabled.Options.UseFont = true;
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Hovered.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Hovered.Options.UseFont = true;
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Normal.Options.UseFont = true;
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.KhoiPhucDuLieubarButtonItem.ItemAppearance.Pressed.Options.UseFont = true;
+            this.KhoiPhucDuLieubarButtonItem.Name = "KhoiPhucDuLieubarButtonItem";
+            this.KhoiPhucDuLieubarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.KhoiPhucDuLieubarButtonItem_ItemClick);
             // 
             // MainForm
             // 
@@ -624,5 +662,7 @@
         private DevExpress.XtraBars.BarButtonItem ThoatBarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPage HeThongRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup HeThongPageGroup;
+        private DevExpress.XtraBars.BarButtonItem SaoLuuDuLieubarButton;
+        private DevExpress.XtraBars.BarButtonItem KhoiPhucDuLieubarButtonItem;
     }
 }

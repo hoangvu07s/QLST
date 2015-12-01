@@ -2,6 +2,7 @@
 using DevExpress.XtraBars;
 using Helper;
 using QuanLySieuThi.HangHoa;
+using QuanLySieuThi.HeThong;
 using QuanLySieuThi.KhachHang;
 using QuanLySieuThi.Kho;
 using QuanLySieuThi.NhaCungCap;
@@ -310,6 +311,32 @@ namespace QuanLySieuThi
         private void ThoatBarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             Close();
+        }
+
+        private void SaoLuuDuLieubarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var saoLuuDuLieuForm = new SaoLuuDuLieuForm();
+                saoLuuDuLieuForm.ShowForm("OpenSaoLuuDuLieuForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void KhoiPhucDuLieubarButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var khoiPhucDuLieuForm = new KhoiPhucDuLieuForm();
+                khoiPhucDuLieuForm.ShowForm("OpenKhoiPhucDuLieuForm");
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
         }
 
         
