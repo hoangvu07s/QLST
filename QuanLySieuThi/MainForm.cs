@@ -36,6 +36,8 @@ namespace QuanLySieuThi
                 {
                     ThongKePageGroup.Enabled = false;
                     PhanQuyenBarButtonItem.Enabled = false;
+                    SaoLuuDuLieubarButton.Enabled = false;
+                    KhoiPhucDuLieubarButtonItem.Enabled = false;
                 }
                 
             }
