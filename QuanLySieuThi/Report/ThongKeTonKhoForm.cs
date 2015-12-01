@@ -30,8 +30,7 @@ namespace QuanLySieuThi.Report
                 if (ValidateInput())
                 {
                     IList<ThongKeTonKho> thongKeTonKhos = new List<ThongKeTonKho>();
-                    var hangHoas = _hangHoaService.GetInRangeDateTime((DateTime) FromDateEdit.EditValue,
-                        (DateTime) ToDateEdit.EditValue);
+                    var hangHoas = _hangHoaService.GetInRangeDateTime( (DateTime) ToDateEdit.EditValue);
 
                     foreach (var hangHoa in hangHoas)
                     {
@@ -50,7 +49,7 @@ namespace QuanLySieuThi.Report
 
                     var reportParameter = new ReportParameter[]
                     {
-                        new ReportParameter("TuNgay", FromDateEdit.Text),
+                        
                         new ReportParameter("DenNgay", ToDateEdit.Text)
                     };
 
@@ -70,22 +69,15 @@ namespace QuanLySieuThi.Report
         private bool ValidateInput()
         {
             bool isValidate = true;
-            if (string.IsNullOrWhiteSpace(FromDateEdit.Text))
+           if (string.IsNullOrWhiteSpace(ToDateEdit.Text))
             {
-                MessageBox.Show(@"Vui lòng chọn Ngày Bắt Đầu",
-                                    @"Thông Báo", MessageBoxButtons.OK);
-
-                isValidate = false;
-            }
-            else if (string.IsNullOrWhiteSpace(ToDateEdit.Text))
-            {
-                MessageBox.Show(@"Vui lòng chọn Ngày Kết Thúc",
+                MessageBox.Show(@"Vui lòng chọn Ngày kết số lượng tồn.",
                                     @"Thông Báo", MessageBoxButtons.OK);
                 isValidate = false;
             }
-            else if ((DateTime) FromDateEdit.EditValue > (DateTime) ToDateEdit.EditValue)
+            else if ( (DateTime) ToDateEdit.EditValue > DateTime.Now)
             {
-                MessageBox.Show(@"Ngày Bắt Đầu phải bé hơn Ngày Kết Thúc",
+                MessageBox.Show(@"Không được chọn ngày kết vượt quá ngày hiện tại.",
                                     @"Thông Báo", MessageBoxButtons.OK);
                 isValidate = false;
             }

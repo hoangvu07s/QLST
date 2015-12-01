@@ -183,6 +183,8 @@
             // TongTienColumn
             // 
             this.TongTienColumn.Caption = "Tổng Tiền Trả Lại";
+            this.TongTienColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.TongTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.TongTienColumn.FieldName = "TongTienTraLai";
             this.TongTienColumn.Name = "TongTienColumn";
             this.TongTienColumn.OptionsColumn.AllowEdit = false;

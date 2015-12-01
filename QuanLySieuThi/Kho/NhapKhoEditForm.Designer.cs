@@ -47,6 +47,8 @@ namespace QuanLySieuThi.Kho
             this.SoLuongDatHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DonGiaColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgaySanXuatColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HanSuDungColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongNummeric = new Common.Controls.QNummericControl();
             this.HangHoaLookupEdit = new Common.Controls.QLookupEditControl();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -75,8 +77,6 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
-            this.NgaySanXuatColumn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HanSuDungColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -205,7 +205,7 @@ namespace QuanLySieuThi.Kho
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
             this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.Mask.EditMask = "c";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.NullText = "0.00";
             this.DonGiaNummeric.Properties.ReadOnly = true;
@@ -221,7 +221,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongDaNhanNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongDaNhanNummeric.Properties.EditFormat.FormatString = "d";
             this.SoLuongDaNhanNummeric.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongDaNhanNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongDaNhanNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongDaNhanNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongDaNhanNummeric.Properties.NullText = "0";
             this.SoLuongDaNhanNummeric.Properties.ReadOnly = true;
@@ -237,7 +237,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongDatHangNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongDatHangNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongDatHangNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongDatHangNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongDatHangNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongDatHangNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongDatHangNummeric.Properties.NullText = "0";
             this.SoLuongDatHangNummeric.Properties.ReadOnly = true;
@@ -355,12 +355,36 @@ namespace QuanLySieuThi.Kho
             // DonGiaColumn
             // 
             this.DonGiaColumn.Caption = "Đơn Giá";
+            this.DonGiaColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DonGiaColumn.FieldName = "DonGia";
             this.DonGiaColumn.Name = "DonGiaColumn";
             this.DonGiaColumn.OptionsColumn.AllowEdit = false;
             this.DonGiaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonGiaColumn.Visible = true;
             this.DonGiaColumn.VisibleIndex = 3;
+            // 
+            // NgaySanXuatColumn
+            // 
+            this.NgaySanXuatColumn.Caption = "Ngày Sản Xuất";
+            this.NgaySanXuatColumn.FieldName = "NgaySanXuat";
+            this.NgaySanXuatColumn.Name = "NgaySanXuatColumn";
+            this.NgaySanXuatColumn.OptionsColumn.AllowEdit = false;
+            this.NgaySanXuatColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgaySanXuatColumn.Visible = true;
+            this.NgaySanXuatColumn.VisibleIndex = 4;
+            this.NgaySanXuatColumn.Width = 200;
+            // 
+            // HanSuDungColumn
+            // 
+            this.HanSuDungColumn.Caption = "Hạn Sử Dụng";
+            this.HanSuDungColumn.FieldName = "HanSuDung";
+            this.HanSuDungColumn.Name = "HanSuDungColumn";
+            this.HanSuDungColumn.OptionsColumn.AllowEdit = false;
+            this.HanSuDungColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.HanSuDungColumn.Visible = true;
+            this.HanSuDungColumn.VisibleIndex = 5;
+            this.HanSuDungColumn.Width = 200;
             // 
             // SoLuongNummeric
             // 
@@ -370,7 +394,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongNummeric.Properties.EditFormat.FormatString = "d";
             this.SoLuongNummeric.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(733, 24);
@@ -691,28 +715,6 @@ namespace QuanLySieuThi.Kho
             this.OKButton.TabIndex = 2;
             this.OKButton.Text = "OK";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
-            // 
-            // NgaySanXuatColumn
-            // 
-            this.NgaySanXuatColumn.Caption = "Ngày Sản Xuất";
-            this.NgaySanXuatColumn.FieldName = "NgaySanXuat";
-            this.NgaySanXuatColumn.Name = "NgaySanXuatColumn";
-            this.NgaySanXuatColumn.OptionsColumn.AllowEdit = false;
-            this.NgaySanXuatColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.NgaySanXuatColumn.Visible = true;
-            this.NgaySanXuatColumn.VisibleIndex = 4;
-            this.NgaySanXuatColumn.Width = 200;
-            // 
-            // HanSuDungColumn
-            // 
-            this.HanSuDungColumn.Caption = "Hạn Sử Dụng";
-            this.HanSuDungColumn.FieldName = "HanSuDung";
-            this.HanSuDungColumn.Name = "HanSuDungColumn";
-            this.HanSuDungColumn.OptionsColumn.AllowEdit = false;
-            this.HanSuDungColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.HanSuDungColumn.Visible = true;
-            this.HanSuDungColumn.VisibleIndex = 5;
-            this.HanSuDungColumn.Width = 200;
             // 
             // NhapKhoEditForm
             // 

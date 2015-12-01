@@ -293,6 +293,10 @@
             this.GiaBanRaNummeric.Name = "GiaBanRaNummeric";
             this.GiaBanRaNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.GiaBanRaNummeric.Properties.Appearance.Options.UseFont = true;
+            this.GiaBanRaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
+            this.GiaBanRaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.GiaBanRaNummeric.Properties.Mask.EditMask = "c";
+            this.GiaBanRaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.GiaBanRaNummeric.Size = new System.Drawing.Size(355, 24);
             this.GiaBanRaNummeric.StyleController = this.layoutControl2;
             this.GiaBanRaNummeric.TabIndex = 9;
@@ -303,6 +307,10 @@
             this.GiaNhapVaoNummeric.Name = "GiaNhapVaoNummeric";
             this.GiaNhapVaoNummeric.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.GiaNhapVaoNummeric.Properties.Appearance.Options.UseFont = true;
+            this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
+            this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.GiaNhapVaoNummeric.Properties.Mask.EditMask = "c";
+            this.GiaNhapVaoNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.GiaNhapVaoNummeric.Size = new System.Drawing.Size(388, 24);
             this.GiaNhapVaoNummeric.StyleController = this.layoutControl2;
             this.GiaNhapVaoNummeric.TabIndex = 8;
@@ -658,6 +666,8 @@
             // GiaNhapVaoColumn
             // 
             this.GiaNhapVaoColumn.Caption = "Giá Nhập Vào";
+            this.GiaNhapVaoColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.GiaNhapVaoColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.GiaNhapVaoColumn.FieldName = "GiaNhapVao";
             this.GiaNhapVaoColumn.Name = "GiaNhapVaoColumn";
             this.GiaNhapVaoColumn.OptionsColumn.AllowEdit = false;
@@ -669,6 +679,8 @@
             // GiaBanRaColumn
             // 
             this.GiaBanRaColumn.Caption = "Giá Bán Ra";
+            this.GiaBanRaColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.GiaBanRaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.GiaBanRaColumn.FieldName = "GiaBanRa";
             this.GiaBanRaColumn.Name = "GiaBanRaColumn";
             this.GiaBanRaColumn.OptionsColumn.AllowEdit = false;
