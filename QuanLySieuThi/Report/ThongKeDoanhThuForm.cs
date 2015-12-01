@@ -30,7 +30,7 @@ namespace QuanLySieuThi.Report
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(YearTextBox.Text) || YearTextBox.Text.ToInt() <= 0 || YearTextBox.Text.ToInt() > DateTime.Now.ToString().Trim().Substring(6,4).ToInt())
+                if (string.IsNullOrWhiteSpace(YearTextBox.Text) || YearTextBox.Text.ToInt() <= 0 || YearTextBox.Text.ToInt() > Convert.ToInt32(DateTime.Now.ToString("yyyy")))
                 {
                     MessageBox.Show(@"Năm bạn nhập không phù hợp.",
                                     @"Thông Báo", MessageBoxButtons.OK);
