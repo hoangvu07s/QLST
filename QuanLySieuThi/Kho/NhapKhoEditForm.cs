@@ -425,7 +425,7 @@ namespace QuanLySieuThi.Kho
 
                     _tonKhoService.Save();
 
-        // không sử dụng
+        // update giá hàng hóa trong bảng HH
                     foreach (var chiTietNhapKho in _chiTietNhapKhos)
                     {
                         var hangHoa = _hangHoaService.Get(chiTietNhapKho.HangHoaId);

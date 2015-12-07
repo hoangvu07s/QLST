@@ -542,7 +542,7 @@ namespace QuanLySieuThi.HangHoa
                             ctDonHang.SoLuong = chiTietDonHang.SoLuong;
                             ctDonHang.DonGia = chiTietDonHang.DonGia;
                             _chiTietDonHangService.Save();
-
+                            // không sử dụng
                             hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
 
                             _hangHoaService.Update(hanghoaInDatabase);
