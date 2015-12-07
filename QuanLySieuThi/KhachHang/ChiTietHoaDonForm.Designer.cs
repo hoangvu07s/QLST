@@ -291,7 +291,7 @@
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
             this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "c";
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.ReadOnly = true;
@@ -307,7 +307,7 @@
             this.SoLuongTonKhoNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongTonKhoNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongTonKhoNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongTonKhoNummeric.Properties.Mask.EditMask = "d";
+            this.SoLuongTonKhoNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongTonKhoNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongTonKhoNummeric.Properties.ReadOnly = true;
             this.SoLuongTonKhoNummeric.Size = new System.Drawing.Size(100, 24);
@@ -544,12 +544,14 @@
             // SoLuongColumn
             // 
             this.SoLuongColumn.Caption = "Số Lượng";
+            this.SoLuongColumn.DisplayFormat.FormatString = "{0:n}";
+            this.SoLuongColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongColumn.FieldName = "SoLuong";
             this.SoLuongColumn.Name = "SoLuongColumn";
             this.SoLuongColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:c2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:n2}")});
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 1;
             this.SoLuongColumn.Width = 200;
@@ -557,8 +559,8 @@
             // DonGiaColumn
             // 
             this.DonGiaColumn.Caption = "Đơn Giá";
-            this.DonGiaColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaColumn.DisplayFormat.FormatString = "{0:n2}";
+            this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DonGiaColumn.FieldName = "DonGia";
             this.DonGiaColumn.Name = "DonGiaColumn";
             this.DonGiaColumn.OptionsColumn.AllowEdit = false;
@@ -570,14 +572,14 @@
             // ThanhTienColumn
             // 
             this.ThanhTienColumn.Caption = "Thành Tiền";
-            this.ThanhTienColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.ThanhTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.ThanhTienColumn.DisplayFormat.FormatString = "{0:n2}";
+            this.ThanhTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ThanhTienColumn.FieldName = "TongTien";
             this.ThanhTienColumn.Name = "ThanhTienColumn";
             this.ThanhTienColumn.OptionsColumn.AllowEdit = false;
             this.ThanhTienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.ThanhTienColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTien", "Tổng Thành Tiền = {0:c2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTien", "Tổng Thành Tiền = {0:n2}")});
             this.ThanhTienColumn.Visible = true;
             this.ThanhTienColumn.VisibleIndex = 3;
             this.ThanhTienColumn.Width = 200;

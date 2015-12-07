@@ -283,6 +283,8 @@
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
             this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
+            this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(817, 24);
@@ -628,8 +630,8 @@
             // DonGiaColumn
             // 
             this.DonGiaColumn.Caption = "Đơn Giá";
-            this.DonGiaColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaColumn.DisplayFormat.FormatString = "{0:n2}";
+            this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DonGiaColumn.FieldName = "DonGia";
             this.DonGiaColumn.Name = "DonGiaColumn";
             this.DonGiaColumn.OptionsColumn.AllowEdit = false;
@@ -663,14 +665,14 @@
             // TongTienTraLaiColumn
             // 
             this.TongTienTraLaiColumn.Caption = "Tổng Tiền Trả Lại";
-            this.TongTienTraLaiColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.TongTienTraLaiColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.TongTienTraLaiColumn.DisplayFormat.FormatString = "{0:n2}";
+            this.TongTienTraLaiColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TongTienTraLaiColumn.FieldName = "TongTienTraLai";
             this.TongTienTraLaiColumn.Name = "TongTienTraLaiColumn";
             this.TongTienTraLaiColumn.OptionsColumn.AllowEdit = false;
             this.TongTienTraLaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TongTienTraLaiColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTienTraLai", "Tổng Tiền Trả Lại = {0:0.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTienTraLai", "Tổng Tiền Trả Lại = {0:n2}")});
             this.TongTienTraLaiColumn.Visible = true;
             this.TongTienTraLaiColumn.VisibleIndex = 6;
             this.TongTienTraLaiColumn.Width = 150;

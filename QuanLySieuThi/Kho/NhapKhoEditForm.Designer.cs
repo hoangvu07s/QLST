@@ -205,7 +205,7 @@ namespace QuanLySieuThi.Kho
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
             this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "n";
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "c";
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.NullText = "0.00";
@@ -358,7 +358,7 @@ namespace QuanLySieuThi.Kho
             // DonGiaColumn
             // 
             this.DonGiaColumn.Caption = "Đơn Giá";
-            this.DonGiaColumn.DisplayFormat.FormatString = "{0:c2}";
+            this.DonGiaColumn.DisplayFormat.FormatString = "{0:n2}";
             this.DonGiaColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DonGiaColumn.FieldName = "DonGia";
             this.DonGiaColumn.Name = "DonGiaColumn";
