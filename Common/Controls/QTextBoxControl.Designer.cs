@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Common.Controls
 {
@@ -32,6 +34,33 @@ namespace Common.Controls
         {
             components = new System.ComponentModel.Container();
             Font = new Font("Times New Roman", 11.0F);
+        }
+
+        //protected override void OnEditValueChanged()
+        //{
+        //    base.OnEditValueChanged();
+        //    if (string.IsNullOrWhiteSpace(Text))
+        //    {
+        //        MessageBox.Show(@"Vui lòng không nhập ký tự trống", @"Thông Báo", MessageBoxButtons.OK);
+        //        Text = string.Empty;
+        //    }
+
+            
+        //}
+
+        protected override void OnEditorLeave(EventArgs e)
+        {
+            base.OnEditorLeave(e);
+
+            if (string.IsNullOrWhiteSpace(Text))
+            {
+                MessageBox.Show(@"Vui lòng không nhập ký tự trống", @"Thông Báo", MessageBoxButtons.OK);
+                Text = string.Empty;
+            }
+            else
+            {
+                Text = Text.Trim();
+            }
         }
 
         #endregion
