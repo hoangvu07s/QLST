@@ -205,11 +205,11 @@ namespace QuanLySieuThi.HangHoa
                             MessageBox.Show(@"Giá Nhập vào phải lớn hơn 0", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
                         }
-                        if (GiaBanRaNummeric.Text.ToDecimal() <= GiaNhapVaoNummeric.Text.ToDecimal())
+                     /*   if (GiaBanRaNummeric.Text.ToDecimal() <= GiaNhapVaoNummeric.Text.ToDecimal())
                         {
                             MessageBox.Show(@"Giá bán ra phải lớn hơn giá nhập vào", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
-                        }
+                        }*/
 
                         if (hangHoa.NhaCungCapId == 0)
                         {
@@ -394,5 +394,7 @@ namespace QuanLySieuThi.HangHoa
             _isValidate = false;
             Close();
         }
+
+      
     }
 }

@@ -173,6 +173,7 @@
             this.SoLuongTraLaiNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongTraLaiNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongTraLaiNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongTraLaiNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongTraLaiNummeric.Properties.NullText = "0";
             this.SoLuongTraLaiNummeric.Size = new System.Drawing.Size(817, 24);
             this.SoLuongTraLaiNummeric.StyleController = this.layoutControl2;
@@ -258,6 +259,7 @@
             this.ChietKhauNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ChietKhauNummeric.Properties.Mask.EditMask = "P";
             this.ChietKhauNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.ChietKhauNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.ChietKhauNummeric.Properties.NullText = "0";
             this.ChietKhauNummeric.Size = new System.Drawing.Size(817, 24);
             this.ChietKhauNummeric.StyleController = this.layoutControl2;
@@ -281,6 +283,7 @@
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
             this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(817, 24);
             this.DonGiaNummeric.StyleController = this.layoutControl2;
@@ -296,6 +299,7 @@
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Properties.ReadOnly = true;
             this.SoLuongNummeric.Size = new System.Drawing.Size(817, 24);

@@ -280,6 +280,7 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DonGiaNummeric.Properties.Mask.EditMask = "c";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.NullText = "0.00";
             this.DonGiaNummeric.Size = new System.Drawing.Size(745, 24);
             this.DonGiaNummeric.StyleController = this.layoutControl1;
@@ -295,6 +296,7 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(745, 24);
             this.SoLuongNummeric.StyleController = this.layoutControl1;

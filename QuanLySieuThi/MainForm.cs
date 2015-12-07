@@ -31,7 +31,7 @@ namespace QuanLySieuThi
                     KhoHangPageGroup.Enabled = true;
                     KhachHangPageGroup.Enabled = true;
                     ThongKePageGroup.Enabled = true;
-                    ThongKeHangHoaButton.Enabled = false;
+                //    ThongKeHangHoaButton.Enabled = false;
                 }
                 else if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.NhanVien)
                 {
@@ -205,7 +205,7 @@ namespace QuanLySieuThi
             }
         }
 
-        private void ThongKeHangHoaButton_ItemClick(object sender, ItemClickEventArgs e)
+    /*    private void ThongKeHangHoaButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
@@ -218,7 +218,7 @@ namespace QuanLySieuThi
             }
 
         }
-
+        */
         private void TraHangVeKhoButton_ItemClick(object sender, ItemClickEventArgs e)
         {
             try

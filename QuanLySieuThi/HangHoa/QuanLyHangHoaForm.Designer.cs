@@ -297,6 +297,7 @@
             this.GiaBanRaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.GiaBanRaNummeric.Properties.Mask.EditMask = "c";
             this.GiaBanRaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.GiaBanRaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.GiaBanRaNummeric.Size = new System.Drawing.Size(355, 24);
             this.GiaBanRaNummeric.StyleController = this.layoutControl2;
             this.GiaBanRaNummeric.TabIndex = 9;
@@ -311,9 +312,11 @@
             this.GiaNhapVaoNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.GiaNhapVaoNummeric.Properties.Mask.EditMask = "c";
             this.GiaNhapVaoNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.GiaNhapVaoNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.GiaNhapVaoNummeric.Size = new System.Drawing.Size(388, 24);
             this.GiaNhapVaoNummeric.StyleController = this.layoutControl2;
             this.GiaNhapVaoNummeric.TabIndex = 8;
+        
             // 
             // QuayHangLookupEdit
             // 

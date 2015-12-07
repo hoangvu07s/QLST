@@ -21,6 +21,7 @@ namespace QuanLySieuThi.HangHoa
             MinimumSizeWidth = 694;
             MinimumSizeHeight = 279;
             _isSearchDonHang = isSearchDonHang;
+            DeleteButton.Enabled = false;
         }
 
         public override void LoadData(EventArgs e)
@@ -105,6 +106,7 @@ namespace QuanLySieuThi.HangHoa
                             _donHangService.Update(donHang);
                             _donHangService.Save();
                             ShowData();
+                            DeleteButton.Enabled = false;
                         }
                     }                  
                 }
@@ -120,6 +122,15 @@ namespace QuanLySieuThi.HangHoa
             try
             {
                 _sellRow = DonHangGridView.GetRow(e.FocusedRowHandle);
+                var selRow = _sellRow as DonHang;
+                if (selRow != null && selRow.TrangThaiDonHang == "Đang Chờ")
+                {
+                    DeleteButton.Enabled = true;
+                }
+                else
+                {
+                    DeleteButton.Enabled = false;
+                }
             }
             catch (Exception ex)
             {

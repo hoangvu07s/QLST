@@ -207,6 +207,7 @@ namespace QuanLySieuThi.Kho
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DonGiaNummeric.Properties.Mask.EditMask = "c";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.NullText = "0.00";
             this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(733, 24);
@@ -223,6 +224,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongDaNhanNummeric.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongDaNhanNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongDaNhanNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongDaNhanNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongDaNhanNummeric.Properties.NullText = "0";
             this.SoLuongDaNhanNummeric.Properties.ReadOnly = true;
             this.SoLuongDaNhanNummeric.Size = new System.Drawing.Size(733, 24);
@@ -239,6 +241,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongDatHangNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongDatHangNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongDatHangNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongDatHangNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongDatHangNummeric.Properties.NullText = "0";
             this.SoLuongDatHangNummeric.Properties.ReadOnly = true;
             this.SoLuongDatHangNummeric.Size = new System.Drawing.Size(733, 24);
@@ -377,7 +380,7 @@ namespace QuanLySieuThi.Kho
             // 
             // HanSuDungColumn
             // 
-            this.HanSuDungColumn.Caption = "Hạn Sử Dụng";
+            this.HanSuDungColumn.Caption = "Ngày Hết Hạn";
             this.HanSuDungColumn.FieldName = "HanSuDung";
             this.HanSuDungColumn.Name = "HanSuDungColumn";
             this.HanSuDungColumn.OptionsColumn.AllowEdit = false;
@@ -396,6 +399,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongNummeric.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(733, 24);
             this.SoLuongNummeric.StyleController = this.layoutControl2;
@@ -597,7 +601,7 @@ namespace QuanLySieuThi.Kho
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(290, 28);
-            this.layoutControlItem15.Text = "Hạn Sử Dụng";
+            this.layoutControlItem15.Text = "Ngày Hết Hạn";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(123, 17);
             // 
             // KhoLookupEdit
