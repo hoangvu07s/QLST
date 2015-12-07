@@ -277,6 +277,7 @@
             this.SoLuongDatMuaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongDatMuaNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongDatMuaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongDatMuaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongDatMuaNummeric.Properties.NullText = "0";
             this.SoLuongDatMuaNummeric.Size = new System.Drawing.Size(100, 24);
             this.SoLuongDatMuaNummeric.StyleController = this.layoutControl2;
@@ -292,6 +293,7 @@
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DonGiaNummeric.Properties.Mask.EditMask = "c";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(100, 24);
             this.DonGiaNummeric.StyleController = this.layoutControl2;

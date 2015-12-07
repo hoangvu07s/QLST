@@ -165,6 +165,7 @@
             this.SoLuongKhoXuatToiQuayNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongKhoXuatToiQuayNummeric.Properties.NullText = "0";
             this.SoLuongKhoXuatToiQuayNummeric.Properties.ReadOnly = true;
             this.SoLuongKhoXuatToiQuayNummeric.Size = new System.Drawing.Size(732, 24);
@@ -181,6 +182,7 @@
             this.SoLuongTonQuayNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongTonQuayNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongTonQuayNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongTonQuayNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongTonQuayNummeric.Properties.NullText = "0";
             this.SoLuongTonQuayNummeric.Properties.ReadOnly = true;
             this.SoLuongTonQuayNummeric.Size = new System.Drawing.Size(732, 24);
@@ -267,6 +269,7 @@
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongNummeric.Properties.Mask.EditMask = "f";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";
             this.SoLuongNummeric.Size = new System.Drawing.Size(732, 24);
             this.SoLuongNummeric.StyleController = this.layoutControl2;
