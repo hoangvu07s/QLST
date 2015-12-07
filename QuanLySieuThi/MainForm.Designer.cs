@@ -476,7 +476,6 @@
             // 
             this.NhanVienPageGroup.ItemLinks.Add(this.QuanLyChucVuButton);
             this.NhanVienPageGroup.ItemLinks.Add(this.QuanLyNhanVienButton);
-            this.NhanVienPageGroup.ItemLinks.Add(this.PhanQuyenBarButtonItem);
             this.NhanVienPageGroup.Name = "NhanVienPageGroup";
             // 
             // HangHoaRibbonPage
