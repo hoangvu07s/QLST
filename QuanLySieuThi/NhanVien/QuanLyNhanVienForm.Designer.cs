@@ -41,8 +41,10 @@
             this.SoDienThoaiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DiaChiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmailColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.QuyenColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.QuyenLookupEdit = new Common.Controls.QLookupEditControl();
             this.SelectButton = new Common.Controls.QButtonControl();
             this.RefreshButton = new Common.Controls.QButtonControl();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
@@ -82,6 +84,7 @@
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -94,6 +97,7 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuyenLookupEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoDienThoaiTextBox.Properties)).BeginInit();
@@ -127,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -146,12 +151,12 @@
             // 
             // nhanVienGridControl
             // 
-            this.nhanVienGridControl.Location = new System.Drawing.Point(12, 233);
+            this.nhanVienGridControl.Location = new System.Drawing.Point(12, 263);
             this.nhanVienGridControl.MainView = this.nhanVienGridView;
             this.nhanVienGridControl.Name = "nhanVienGridControl";
             this.nhanVienGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.nhanVienGridControl.Size = new System.Drawing.Size(963, 318);
+            this.nhanVienGridControl.Size = new System.Drawing.Size(963, 288);
             this.nhanVienGridControl.TabIndex = 0;
             this.nhanVienGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.nhanVienGridView});
@@ -171,7 +176,8 @@
             this.ChucVuColumn,
             this.SoDienThoaiColumn,
             this.DiaChiColumn,
-            this.EmailColumn});
+            this.EmailColumn,
+            this.QuyenColumn});
             this.nhanVienGridView.GridControl = this.nhanVienGridControl;
             this.nhanVienGridView.Name = "nhanVienGridView";
             this.nhanVienGridView.OptionsBehavior.Editable = false;
@@ -285,19 +291,31 @@
             this.EmailColumn.VisibleIndex = 8;
             this.EmailColumn.Width = 150;
             // 
+            // QuyenColumn
+            // 
+            this.QuyenColumn.Caption = "Quyền";
+            this.QuyenColumn.FieldName = "TenQuyen";
+            this.QuyenColumn.Name = "QuyenColumn";
+            this.QuyenColumn.OptionsColumn.AllowEdit = false;
+            this.QuyenColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.QuyenColumn.Visible = true;
+            this.QuyenColumn.VisibleIndex = 9;
+            this.QuyenColumn.Width = 150;
+            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.layoutControl2);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
-            this.groupControl1.MaximumSize = new System.Drawing.Size(0, 217);
-            this.groupControl1.MinimumSize = new System.Drawing.Size(0, 217);
+            this.groupControl1.MaximumSize = new System.Drawing.Size(0, 247);
+            this.groupControl1.MinimumSize = new System.Drawing.Size(0, 247);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(963, 217);
+            this.groupControl1.Size = new System.Drawing.Size(963, 247);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Nhập liệu";
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.QuyenLookupEdit);
             this.layoutControl2.Controls.Add(this.SelectButton);
             this.layoutControl2.Controls.Add(this.RefreshButton);
             this.layoutControl2.Controls.Add(this.CancelButtonControl);
@@ -318,15 +336,27 @@
             this.layoutControl2.Location = new System.Drawing.Point(2, 21);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(959, 194);
+            this.layoutControl2.Size = new System.Drawing.Size(959, 224);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // QuyenLookupEdit
+            // 
+            this.QuyenLookupEdit.Location = new System.Drawing.Point(151, 124);
+            this.QuyenLookupEdit.Name = "QuyenLookupEdit";
+            this.QuyenLookupEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.QuyenLookupEdit.Properties.Appearance.Options.UseFont = true;
+            this.QuyenLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.QuyenLookupEdit.Size = new System.Drawing.Size(339, 24);
+            this.QuyenLookupEdit.StyleController = this.layoutControl2;
+            this.QuyenLookupEdit.TabIndex = 20;
             // 
             // SelectButton
             // 
             this.SelectButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.SelectButton.Appearance.Options.UseFont = true;
-            this.SelectButton.Location = new System.Drawing.Point(682, 152);
+            this.SelectButton.Location = new System.Drawing.Point(682, 180);
             this.SelectButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.SelectButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.SelectButton.Name = "SelectButton";
@@ -340,7 +370,7 @@
             // 
             this.RefreshButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.RefreshButton.Appearance.Options.UseFont = true;
-            this.RefreshButton.Location = new System.Drawing.Point(548, 152);
+            this.RefreshButton.Location = new System.Drawing.Point(548, 180);
             this.RefreshButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.RefreshButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.RefreshButton.Name = "RefreshButton";
@@ -354,7 +384,7 @@
             // 
             this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.CancelButtonControl.Appearance.Options.UseFont = true;
-            this.CancelButtonControl.Location = new System.Drawing.Point(827, 152);
+            this.CancelButtonControl.Location = new System.Drawing.Point(827, 180);
             this.CancelButtonControl.MaximumSize = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.MinimumSize = new System.Drawing.Size(120, 30);
             this.CancelButtonControl.Name = "CancelButtonControl";
@@ -368,7 +398,7 @@
             // 
             this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.DeleteButton.Appearance.Options.UseFont = true;
-            this.DeleteButton.Location = new System.Drawing.Point(414, 152);
+            this.DeleteButton.Location = new System.Drawing.Point(414, 180);
             this.DeleteButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.DeleteButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.DeleteButton.Name = "DeleteButton";
@@ -382,7 +412,7 @@
             // 
             this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(280, 152);
+            this.EditButton.Location = new System.Drawing.Point(280, 180);
             this.EditButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.EditButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.EditButton.Name = "EditButton";
@@ -396,7 +426,7 @@
             // 
             this.SaveButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.SaveButton.Appearance.Options.UseFont = true;
-            this.SaveButton.Location = new System.Drawing.Point(146, 152);
+            this.SaveButton.Location = new System.Drawing.Point(146, 180);
             this.SaveButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.SaveButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.SaveButton.Name = "SaveButton";
@@ -418,7 +448,7 @@
             // 
             // DiaChiTextBox
             // 
-            this.DiaChiTextBox.Location = new System.Drawing.Point(151, 124);
+            this.DiaChiTextBox.Location = new System.Drawing.Point(151, 152);
             this.DiaChiTextBox.Name = "DiaChiTextBox";
             this.DiaChiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.DiaChiTextBox.Properties.Appearance.Options.UseFont = true;
@@ -510,7 +540,7 @@
             // 
             this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(12, 152);
+            this.AddButton.Location = new System.Drawing.Point(12, 180);
             this.AddButton.MaximumSize = new System.Drawing.Size(120, 30);
             this.AddButton.MinimumSize = new System.Drawing.Size(120, 30);
             this.AddButton.Name = "AddButton";
@@ -546,10 +576,11 @@
             this.layoutControlItem17,
             this.emptySpaceItem5,
             this.layoutControlItem18,
-            this.emptySpaceItem6});
+            this.emptySpaceItem6,
+            this.layoutControlItem19});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(959, 194);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(959, 224);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem4
@@ -577,78 +608,78 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(794, 140);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(794, 168);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(21, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(21, 36);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(124, 140);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(124, 168);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(10, 36);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(392, 140);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(392, 168);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 36);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.CancelButtonControl;
-            this.layoutControlItem16.Location = new System.Drawing.Point(815, 140);
+            this.layoutControlItem16.Location = new System.Drawing.Point(815, 168);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem16.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.DeleteButton;
-            this.layoutControlItem15.Location = new System.Drawing.Point(402, 140);
+            this.layoutControlItem15.Location = new System.Drawing.Point(402, 168);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem15.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.EditButton;
-            this.layoutControlItem14.Location = new System.Drawing.Point(268, 140);
+            this.layoutControlItem14.Location = new System.Drawing.Point(268, 168);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem14.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.SaveButton;
-            this.layoutControlItem12.Location = new System.Drawing.Point(134, 140);
+            this.layoutControlItem12.Location = new System.Drawing.Point(134, 168);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem12.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.AddButton;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 140);
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem13.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(258, 140);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(258, 168);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 36);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -702,7 +733,7 @@
             this.layoutControlItem9.Control = this.SoDienThoaiTextBox;
             this.layoutControlItem9.Location = new System.Drawing.Point(482, 84);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(457, 28);
+            this.layoutControlItem9.Size = new System.Drawing.Size(457, 56);
             this.layoutControlItem9.Text = "Số Điện Thoại";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(136, 17);
             // 
@@ -722,7 +753,7 @@
             this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem10.Control = this.DiaChiTextBox;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 140);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(939, 28);
             this.layoutControlItem10.Text = "Địa Chỉ";
@@ -731,36 +762,47 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.RefreshButton;
-            this.layoutControlItem17.Location = new System.Drawing.Point(536, 140);
+            this.layoutControlItem17.Location = new System.Drawing.Point(536, 168);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem17.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(526, 140);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(526, 168);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 36);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.SelectButton;
-            this.layoutControlItem18.Location = new System.Drawing.Point(670, 140);
+            this.layoutControlItem18.Location = new System.Drawing.Point(670, 168);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(124, 34);
+            this.layoutControlItem18.Size = new System.Drawing.Size(124, 36);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(660, 140);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(660, 168);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(10, 34);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(10, 36);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem19.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem19.Control = this.QuyenLookupEdit;
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(482, 28);
+            this.layoutControlItem19.Text = "Quyền";
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(136, 17);
             // 
             // layoutControlGroup1
             // 
@@ -779,16 +821,16 @@
             this.layoutControlItem1.Control = this.groupControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(967, 221);
+            this.layoutControlItem1.Size = new System.Drawing.Size(967, 251);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.nhanVienGridControl;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 221);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 251);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(967, 322);
+            this.layoutControlItem2.Size = new System.Drawing.Size(967, 292);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -809,6 +851,7 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QuyenLookupEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoDienThoaiTextBox.Properties)).EndInit();
@@ -842,6 +885,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -908,5 +952,8 @@
         private Common.Controls.QButtonControl SelectButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private Common.Controls.QLookupEditControl QuyenLookupEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraGrid.Columns.GridColumn QuyenColumn;
     }
 }

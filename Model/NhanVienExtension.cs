@@ -15,5 +15,7 @@ namespace Model
                 
             }
         }
+
+        public string TenQuyen { get; set; }
     }
 }

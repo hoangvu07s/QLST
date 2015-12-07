@@ -49,7 +49,7 @@ namespace Service
         {
             try
             {
-                return Entities.QuyenNhanViens.FirstOrDefault(_ => _.NhanVienId == nhanVienId && _.HoatDong);
+                return Entities.QuyenNhanViens.Include(_=>_.Quyen).FirstOrDefault(_ => _.NhanVienId == nhanVienId && _.HoatDong);
             }
             catch (Exception ex)
             {

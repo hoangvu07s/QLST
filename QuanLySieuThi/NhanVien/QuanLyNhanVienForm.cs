@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Common.Forms;
+using DevExpress.XtraEditors.Controls;
 using Helper;
 using Helper.ValueObjects;
 using Model;
@@ -24,6 +25,10 @@ namespace QuanLySieuThi.NhanVien
         private bool _isSearchForm;
         private bool _isValidate = true;
 
+        private IList<Quyen> _quyens;
+        private QuyenService _quyenService;
+        private QuyenNhanVienService _quyenNhanVienService;
+
         public QuanLyNhanVienForm(bool isSearchForm = false)
         {
             InitializeComponent();
@@ -39,10 +44,23 @@ namespace QuanLySieuThi.NhanVien
 
             try
             {
+                _quyenNhanVienService = new QuyenNhanVienService(Entities);
                 _gioiTinhs = InitGioiTinhs();
 
                 _chucVuService = new ChucVuService(Entities);
                 _chucVus = _chucVuService.GetChucVus();
+
+                _quyenService = new QuyenService(Entities);
+                _quyens = _quyenService.GetAll();
+
+                QuyenLookupEdit.Properties.DataSource = _quyens;
+                QuyenLookupEdit.Properties.ValueMember = "Id";
+                QuyenLookupEdit.Properties.DisplayMember = "Quyen1";
+                QuyenLookupEdit.Properties.Columns.Clear();
+                foreach (var column in new List<string>(){"Quyen1"})
+                {
+                    QuyenLookupEdit.Properties.Columns.Add(new LookUpColumnInfo(column));
+                }
 
                 ShowData();
 
@@ -65,6 +83,7 @@ namespace QuanLySieuThi.NhanVien
                     EditButton.Enabled = false;
                     DeleteButton.Enabled = false;
                     RefreshButton.Enabled = false;
+                    QuyenLookupEdit.Enabled = false;
                     SelectButton.Enabled = true;
                 }
                 else
@@ -116,6 +135,12 @@ namespace QuanLySieuThi.NhanVien
                 }
 
                 //CollectNhanViens(nhanViensTemp);
+
+                foreach (var nhanVien in nhanViensTemp)
+                {
+                    var quyenNhanVien =_quyenNhanVienService.GetByNhanVienId(nhanVien.Id);
+                    nhanVien.TenQuyen = quyenNhanVien.Quyen.Quyen1;
+                }
 
                 nhanVienGridControl.DataSource = nhanViensTemp;
                 nhanVienGridControl.RefreshDataSource();
@@ -178,6 +203,15 @@ namespace QuanLySieuThi.NhanVien
                     _selRow = nhanVienGridView.GetRow(e.FocusedRowHandle);
                     Entity = _selRow;
                     BindData();
+
+                    var nhanVien = _selRow as Model.NhanVien;
+
+                    if (nhanVien != null)
+                    {
+                        var quyenNhanVien = _quyenNhanVienService.GetByNhanVienId(nhanVien.Id);
+
+                        QuyenLookupEdit.EditValue = quyenNhanVien.QuyenId;
+                    }
                 }                
             }
             catch (Exception ex)
@@ -197,6 +231,15 @@ namespace QuanLySieuThi.NhanVien
             SoDienThoaiTextBox.Properties.ReadOnly = isDisable;
             EmailTextBox.Properties.ReadOnly = isDisable;
             DiaChiTextBox.Properties.ReadOnly = isDisable;
+            if (CurrentFormInfo.QuyenId == (long) QuyenNhanVienEnum.Admin)
+            {
+                QuyenLookupEdit.Properties.ReadOnly = isDisable;
+            }
+            else
+            {
+                QuyenLookupEdit.Properties.ReadOnly = true;
+            }
+            
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -213,6 +256,8 @@ namespace QuanLySieuThi.NhanVien
                 DeleteButton.Enabled = false;
 
                 FormMode = FormMode.Edit;
+
+                MatKhauTextBox.Text = MatKhauTextBox.Text.Decrypt();
             }
             catch (Exception ex)
             {
@@ -395,6 +440,27 @@ namespace QuanLySieuThi.NhanVien
                 }
 
                 _nhanVienService.Save();
+
+                // Save Quyen Nhan Vien
+                if (nhanVien != null)
+                {
+                    var quyenNhienVien = _quyenNhanVienService.GetByNhanVienId(nhanVien.Id);
+                    if (quyenNhienVien != null)
+                    {
+                        quyenNhienVien.QuyenId = QuyenLookupEdit.EditValue.ToString().ToLong();
+
+                        _quyenNhanVienService.Update(quyenNhienVien);
+                    }
+                    else
+                    {
+                        quyenNhienVien = _quyenNhanVienService.AddQuyenNhanVien();
+                        quyenNhienVien.QuyenId = QuyenLookupEdit.EditValue.ToString().ToLong();
+                        quyenNhienVien.NhanVienId = nhanVien.Id;
+                        quyenNhienVien.HoatDong = true;
+                    }
+
+                    _quyenNhanVienService.Save();
+                }
             }
             catch (Exception ex)
             {
