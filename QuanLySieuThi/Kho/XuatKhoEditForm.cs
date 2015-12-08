@@ -91,6 +91,11 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
+                if (_chiTietXuatKhos.Count == 0)
+                {
+                    _isSelected = false;
+                }
+
                 if (_isSelected)
                 {
                     _isSelected = false;
