@@ -224,6 +224,7 @@
             this.TenChungLoaiHangHoaLookupEdit.Properties.Appearance.Options.UseFont = true;
             this.TenChungLoaiHangHoaLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TenChungLoaiHangHoaLookupEdit.Properties.NullText = "";
             this.TenChungLoaiHangHoaLookupEdit.Size = new System.Drawing.Size(772, 24);
             this.TenChungLoaiHangHoaLookupEdit.StyleController = this.layoutControl2;
             this.TenChungLoaiHangHoaLookupEdit.TabIndex = 5;
