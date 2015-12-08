@@ -23,6 +23,7 @@ namespace QuanLySieuThi.Kho
         private IList<ChiTietXuatKho> _chiTietXuatKhos;
         private object _selRow;
         private bool _isSelected = false;
+        private long _khoId;
 
         public XuatKhoEditForm()
         {
@@ -92,7 +93,12 @@ namespace QuanLySieuThi.Kho
             {
                 if (_isSelected)
                 {
+                    _isSelected = false;
                     MessageBox.Show(@"Chỉ được xuất cho một kho Hàng duy nhất", @"Thông Báo", MessageBoxButtons.OK);
+
+                    KhoHangLookupEdit.EditValue = _khoId;
+
+                    _isSelected = true;
                 }
                 else
                 {
@@ -109,6 +115,8 @@ namespace QuanLySieuThi.Kho
                     }
 
                     LoadHangHoa(hangHoas.Distinct().ToList());
+
+                    _khoId = khoId;
                 }
                 
             }
