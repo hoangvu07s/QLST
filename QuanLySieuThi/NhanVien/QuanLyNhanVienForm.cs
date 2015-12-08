@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Common.Forms;
 using DevExpress.XtraEditors.Controls;
@@ -126,6 +127,12 @@ namespace QuanLySieuThi.NhanVien
                 ResetEntities();
                 _nhanVienService = new NhanVienService(Entities);                
                 var nhanViens = _nhanVienService.GetNhanViens();
+
+                var admin = nhanViens.FirstOrDefault(_ => _.TenDangNhap == "admin");
+                if (admin != null)
+                {
+                    nhanViens.Remove(admin);
+                }
 
                 //var nhanViensTemp = nhanViens.ToList().DeepCopy();
                 var nhanViensTemp = new List<Model.NhanVien>();
