@@ -209,7 +209,6 @@ namespace QuanLySieuThi.Kho
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.NullText = "0.00";
-            this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(733, 24);
             this.DonGiaNummeric.StyleController = this.layoutControl2;
             this.DonGiaNummeric.TabIndex = 12;

@@ -23,7 +23,7 @@ namespace QuanLySieuThi.HangHoa
         private IList<Model.NhaCungCap> _nhaCungCaps;
         private IList<QuayHang> _quayHangs;
 
-        public Model.HangHoa HangHoa;
+        public  Model.HangHoa HangHoa;
 
         private bool _isSearchForm;
         private bool _isValidate = true;
