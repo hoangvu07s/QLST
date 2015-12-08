@@ -139,7 +139,10 @@ namespace QuanLySieuThi.NhanVien
                 foreach (var nhanVien in nhanViensTemp)
                 {
                     var quyenNhanVien =_quyenNhanVienService.GetByNhanVienId(nhanVien.Id);
-                    nhanVien.TenQuyen = quyenNhanVien.Quyen.Quyen1;
+                    if (quyenNhanVien != null)
+                    {
+                        nhanVien.TenQuyen = quyenNhanVien.Quyen.Quyen1;
+                    }                   
                 }
 
                 nhanVienGridControl.DataSource = nhanViensTemp;
