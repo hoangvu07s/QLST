@@ -131,6 +131,14 @@ namespace QuanLySieuThi.HangHoa
                 {
                     DeleteButton.Enabled = false;
                 }
+                if (selRow != null && selRow.TrangThaiDonHang == "Hủy")
+                {
+                    EditButton.Enabled = false;
+                }
+                else
+                {
+                    EditButton.Enabled = true;
+                }
             }
             catch (Exception ex)
             {

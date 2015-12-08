@@ -227,14 +227,14 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoLuongGridColumn.AppearanceHeader.Options.UseFont = true;
             this.SoLuongGridColumn.Caption = "Số Lượng";
-            this.SoLuongGridColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.SoLuongGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.SoLuongGridColumn.DisplayFormat.FormatString = "{0:n}";
+            this.SoLuongGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongGridColumn.FieldName = "SoLuong";
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:c2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:n}")});
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 4;
             this.SoLuongGridColumn.Width = 150;
@@ -246,8 +246,8 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonGiaGridColumn.AppearanceHeader.Options.UseFont = true;
             this.DonGiaGridColumn.Caption = "Đơn Giá";
-            this.DonGiaGridColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.DonGiaGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.DonGiaGridColumn.DisplayFormat.FormatString = "{0:n2}";
+            this.DonGiaGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DonGiaGridColumn.FieldName = "DonGia";
             this.DonGiaGridColumn.Name = "DonGiaGridColumn";
             this.DonGiaGridColumn.OptionsColumn.AllowEdit = false;
@@ -258,14 +258,14 @@ namespace QuanLySieuThi.HangHoa
             // ThanhTienColumn
             // 
             this.ThanhTienColumn.Caption = "Thành Tiền";
-            this.ThanhTienColumn.DisplayFormat.FormatString = "{0:c2}";
-            this.ThanhTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.ThanhTienColumn.DisplayFormat.FormatString = "{0:n2}";
+            this.ThanhTienColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ThanhTienColumn.FieldName = "ThanhTien";
             this.ThanhTienColumn.Name = "ThanhTienColumn";
             this.ThanhTienColumn.OptionsColumn.AllowEdit = false;
             this.ThanhTienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.ThanhTienColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "Tổng Thành Tiền = {0:c2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "Tổng Thành Tiền = {0:n2}")});
             this.ThanhTienColumn.Visible = true;
             this.ThanhTienColumn.VisibleIndex = 6;
             this.ThanhTienColumn.Width = 200;
@@ -278,7 +278,7 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaNummeric.Properties.Appearance.Options.UseFont = true;
             this.DonGiaNummeric.Properties.DisplayFormat.FormatString = "{0:c2}";
             this.DonGiaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.DonGiaNummeric.Properties.Mask.EditMask = "c";
+            this.DonGiaNummeric.Properties.Mask.EditMask = "n";
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.NullText = "0.00";
