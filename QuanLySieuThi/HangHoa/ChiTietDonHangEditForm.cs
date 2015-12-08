@@ -23,6 +23,8 @@ namespace QuanLySieuThi.HangHoa
         private IList<ChiTietDonHang> _chiTietDonHangs;
         private Model.HangHoa hangHoa;
 
+        private QuanLyHangHoaForm _quanLyHangHoaForm;
+
         private object _selRow;
 
         public ChiTietDonHangEditForm(string donHangId)// nếu xem chi tiết sẽ có DonHangId truyền vào , nếu thêm mới DonHangId = null
@@ -564,9 +566,9 @@ namespace QuanLySieuThi.HangHoa
         {
             try
             {
-                var hangHoaListForm = new HangHoaListForm(true);
-                hangHoaListForm.ShowForm("OpenHangHoaListForm");
-                hangHoaListForm.FormClosed += HangHoaListFormOnFormClosed;
+                _quanLyHangHoaForm = new QuanLyHangHoaForm(true);
+                _quanLyHangHoaForm.ShowForm("OpenHangHoaListForm");
+                _quanLyHangHoaForm.FormClosed += HangHoaListFormOnFormClosed;
             }
             catch (Exception ex)
             {
@@ -578,7 +580,7 @@ namespace QuanLySieuThi.HangHoa
         {
             try
             {
-                hangHoa = HangHoaListForm.HangHoa;
+                hangHoa = _quanLyHangHoaForm.HangHoa;
 
                 TenHangHoaTextBox.Text = hangHoa.TenHangHoa;
                 LoaiHangHoaLookupEdit.EditValue = hangHoa.LoaiHangHoaId;
