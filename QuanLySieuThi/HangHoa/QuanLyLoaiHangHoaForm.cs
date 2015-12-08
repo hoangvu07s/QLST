@@ -17,7 +17,7 @@ namespace QuanLySieuThi.HangHoa
 
         private bool _isSelectedRow = true;
         private long _chungLoaiHangHoaId;
-
+      
         public QuanLyLoaiHangHoaForm(long chungLoaiHangHoaId)
         {
             InitializeComponent();

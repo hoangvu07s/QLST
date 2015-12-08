@@ -567,6 +567,9 @@ namespace QuanLySieuThi.HangHoa
                 var hangHoaListForm = new HangHoaListForm(true);
                 hangHoaListForm.ShowForm("OpenHangHoaListForm");
                 hangHoaListForm.FormClosed += HangHoaListFormOnFormClosed;
+              /*  var QuanLyHangHoaForm = new QuanLyHangHoaForm(true);
+                QuanLyHangHoaForm.ShowForm("OpenQuanLyHangHoaForm");
+                QuanLyHangHoaForm.FormClosed += HangHoaListFormOnFormClosed;*/
             }
             catch (Exception ex)
             {
@@ -579,7 +582,7 @@ namespace QuanLySieuThi.HangHoa
             try
             {
                 hangHoa = HangHoaListForm.HangHoa;
-
+               // hangHoa = QuanLyHangHoaForm.HangHoa;
                 TenHangHoaTextBox.Text = hangHoa.TenHangHoa;
                 LoaiHangHoaLookupEdit.EditValue = hangHoa.LoaiHangHoaId;
                 NhaCungCapLookupEdit.EditValue = hangHoa.NhaCungCapId;
