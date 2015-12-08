@@ -40,7 +40,7 @@ namespace Common.Controls
         {
             base.OnEditorLeave(e);
 
-            if (string.IsNullOrWhiteSpace(Text))
+            if (this.ReadOnly == false && string.IsNullOrWhiteSpace(Text))
             {
                 MessageBox.Show(@"Vui lòng không nhập ký tự trống", @"Thông Báo", MessageBoxButtons.OK);
                 Text = string.Empty;

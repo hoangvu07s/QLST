@@ -624,7 +624,7 @@ namespace QuanLySieuThi.Kho
             this.SearchDonHangButton.Name = "SearchDonHangButton";
             this.SearchDonHangButton.Size = new System.Drawing.Size(128, 24);
             this.SearchDonHangButton.StyleController = this.layoutControl1;
-            this.SearchDonHangButton.TabIndex = 2;
+            this.SearchDonHangButton.TabIndex = 1;
             this.SearchDonHangButton.Text = "Tìm Đơn Hàng";
             this.SearchDonHangButton.Click += new System.EventHandler(this.SearchDonHangButton_Click);
             // 
@@ -634,9 +634,10 @@ namespace QuanLySieuThi.Kho
             this.MaDonHangTextBox.Name = "MaDonHangTextBox";
             this.MaDonHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.MaDonHangTextBox.Properties.Appearance.Options.UseFont = true;
+            this.MaDonHangTextBox.Properties.ReadOnly = true;
             this.MaDonHangTextBox.Size = new System.Drawing.Size(666, 24);
             this.MaDonHangTextBox.StyleController = this.layoutControl1;
-            this.MaDonHangTextBox.TabIndex = 0;
+            this.MaDonHangTextBox.TabIndex = 2;
             // 
             // layoutControlGroup1
             // 
