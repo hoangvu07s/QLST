@@ -25,6 +25,7 @@ namespace QuanLySieuThi.KhachHang
         private XuatKhoService _xuatKhoService;
         private DoiTraHangHoaService _doiTraHangHoaService;
         private TonKhoService _tonKhoService;
+        private ChiTietNhapKhoService _chiTietNhapKhoService;
 
         private Guid? _maDoiTraHangHoa;
         private IList<CT_DoiTraHangHoa> _chiTietDoiTraHangHoas;
@@ -181,8 +182,8 @@ namespace QuanLySieuThi.KhachHang
                     _chiTietXuatKhoService.GetByHangHoaId(HangHoaLookupEdit.EditValue.ToString().ToLong())
                         .Select(_ => _.XuatKhoId).ToList();
 
-                var khos = _xuatKhoService.GetByXuatKhoIds(xuatKhoIds).Select(_ => _.Kho).ToList().Distinct().ToList();
-
+         //       var khos = _xuatKhoService.GetByXuatKhoIds(xuatKhoIds).Select(_ => _.Kho).ToList().Distinct().ToList();
+                var khos = _chiTietNhapKhoService.GetKhos(HangHoaLookupEdit.EditValue.ToString().ToLong());
                 LoadKho(khos);
 
                 var chiTietHoaDons = _chiTietHoaDonService.GetByHoaDonId(_hoaDon.HoaDonId);
