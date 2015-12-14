@@ -78,6 +78,7 @@
             this.CancelButtonControl.StyleController = this.layoutControl1;
             this.CancelButtonControl.TabIndex = 7;
             this.CancelButtonControl.Text = "Thoát";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // RestoreDatabaseButton
             // 
@@ -113,6 +114,7 @@
             this.FileTextBox.Name = "FileTextBox";
             this.FileTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.FileTextBox.Properties.Appearance.Options.UseFont = true;
+            this.FileTextBox.Properties.ReadOnly = true;
             this.FileTextBox.Size = new System.Drawing.Size(395, 24);
             this.FileTextBox.StyleController = this.layoutControl1;
             this.FileTextBox.TabIndex = 4;
@@ -140,7 +142,7 @@
             this.layoutControlItem1.Control = this.FileTextBox;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(423, 34);
+            this.layoutControlItem1.Size = new System.Drawing.Size(423, 28);
             this.layoutControlItem1.Text = "File";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(21, 17);
             // 
@@ -149,16 +151,16 @@
             this.layoutControlItem2.Control = this.SelectFileButton;
             this.layoutControlItem2.Location = new System.Drawing.Point(423, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(111, 34);
+            this.layoutControlItem2.Size = new System.Drawing.Size(111, 28);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 34);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 28);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(534, 22);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(534, 28);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
