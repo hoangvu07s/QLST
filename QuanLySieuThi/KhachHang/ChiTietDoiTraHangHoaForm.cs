@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Forms;
 using DevExpress.XtraEditors.Controls;
@@ -25,6 +20,7 @@ namespace QuanLySieuThi.KhachHang
         private XuatKhoService _xuatKhoService;
         private DoiTraHangHoaService _doiTraHangHoaService;
         private TonKhoService _tonKhoService;
+        private TheKhachHangService _theKhachHangService;
 
         private Guid? _maDoiTraHangHoa;
         private IList<CT_DoiTraHangHoa> _chiTietDoiTraHangHoas;
@@ -454,6 +450,13 @@ namespace QuanLySieuThi.KhachHang
                     NguoiChinhSuaId = CurrentFormInfo.CurrentUserId,
                     HoatDong = true
                 };
+
+                _theKhachHangService = new TheKhachHangService(Entities);
+                var theKhachHang = _theKhachHangService.GetByKhachHangId(_hoaDon.KhachHangId);
+                var diemTichLuy = (int)doiTraHangHoa.TongTienTraLai / 100000;
+                theKhachHang.DiemTichLuy = theKhachHang.DiemTichLuy - diemTichLuy;
+                _theKhachHangService.Update(theKhachHang);
+
 
                 doiTraHangHoa = _doiTraHangHoaService.Add(doiTraHangHoa);
                 _doiTraHangHoaService.Save();
