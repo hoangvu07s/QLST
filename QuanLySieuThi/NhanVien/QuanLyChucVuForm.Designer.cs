@@ -189,7 +189,7 @@
             this.RefreshButton.Size = new System.Drawing.Size(120, 30);
             this.RefreshButton.StyleController = this.layoutControl2;
             this.RefreshButton.TabIndex = 9;
-            this.RefreshButton.Text = "Làm Mới";
+            this.RefreshButton.Text = "Hủy";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // DeleteButton

@@ -29,27 +29,22 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.quayHangGridControl = new DevExpress.XtraGrid.GridControl();
-            this.quayHangGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.QuayHangTextBox = new Common.Controls.QTextBoxControl();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.AddButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SaveButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.EditButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DeleteButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.RefreshButton = new Common.Controls.QButtonControl();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
+            this.RefreshButton = new Common.Controls.QButtonControl();
+            this.DeleteButton = new Common.Controls.QButtonControl();
+            this.EditButton = new Common.Controls.QButtonControl();
+            this.SaveButton = new Common.Controls.QButtonControl();
+            this.AddButton = new Common.Controls.QButtonControl();
+            this.QuayHangTextBox = new Common.Controls.QTextBoxControl();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -57,20 +52,20 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.quayHangGridControl = new DevExpress.XtraGrid.GridControl();
+            this.quayHangGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.TenQuayColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuayHangTextBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -84,6 +79,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -98,54 +98,6 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(987, 563);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // quayHangGridControl
-            // 
-            this.quayHangGridControl.Location = new System.Drawing.Point(12, 155);
-            this.quayHangGridControl.MainView = this.quayHangGridView;
-            this.quayHangGridControl.Name = "quayHangGridControl";
-            this.quayHangGridControl.Size = new System.Drawing.Size(963, 396);
-            this.quayHangGridControl.TabIndex = 4;
-            this.quayHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.quayHangGridView});
-            // 
-            // quayHangGridView
-            // 
-            this.quayHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quayHangGridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.quayHangGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quayHangGridView.Appearance.Row.Options.UseFont = true;
-            this.quayHangGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.TenQuayColumn});
-            this.quayHangGridView.GridControl = this.quayHangGridControl;
-            this.quayHangGridView.Name = "quayHangGridView";
-            this.quayHangGridView.OptionsBehavior.Editable = false;
-            this.quayHangGridView.OptionsView.ColumnAutoWidth = false;
-            this.quayHangGridView.OptionsView.ShowAutoFilterRow = true;
-            this.quayHangGridView.OptionsView.ShowGroupPanel = false;
-            this.quayHangGridView.OptionsView.ShowIndicator = false;
-            this.quayHangGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.quayHangGridView_FocusedRowChanged);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.quayHangGridControl;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 143);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(967, 400);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.layoutControl2);
@@ -156,15 +108,6 @@
             this.groupControl1.Size = new System.Drawing.Size(963, 139);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Nhập Liệu";
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.groupControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(967, 143);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControl2
             // 
@@ -182,6 +125,100 @@
             this.layoutControl2.Size = new System.Drawing.Size(959, 116);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // CancelButtonControl
+            // 
+            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.CancelButtonControl.Appearance.Options.UseFont = true;
+            this.CancelButtonControl.Location = new System.Drawing.Point(827, 74);
+            this.CancelButtonControl.MaximumSize = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.MinimumSize = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.Name = "CancelButtonControl";
+            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
+            this.CancelButtonControl.StyleController = this.layoutControl2;
+            this.CancelButtonControl.TabIndex = 10;
+            this.CancelButtonControl.Text = "Thoát";
+            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.RefreshButton.Appearance.Options.UseFont = true;
+            this.RefreshButton.Location = new System.Drawing.Point(548, 74);
+            this.RefreshButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.RefreshButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(120, 30);
+            this.RefreshButton.StyleController = this.layoutControl2;
+            this.RefreshButton.TabIndex = 9;
+            this.RefreshButton.Text = "Hủy";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DeleteButton.Appearance.Options.UseFont = true;
+            this.DeleteButton.Location = new System.Drawing.Point(414, 74);
+            this.DeleteButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.DeleteButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
+            this.DeleteButton.StyleController = this.layoutControl2;
+            this.DeleteButton.TabIndex = 8;
+            this.DeleteButton.Text = "Xóa";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.EditButton.Appearance.Options.UseFont = true;
+            this.EditButton.Location = new System.Drawing.Point(280, 74);
+            this.EditButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.EditButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(120, 30);
+            this.EditButton.StyleController = this.layoutControl2;
+            this.EditButton.TabIndex = 7;
+            this.EditButton.Text = "Sửa";
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.SaveButton.Appearance.Options.UseFont = true;
+            this.SaveButton.Location = new System.Drawing.Point(146, 74);
+            this.SaveButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.SaveButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(120, 30);
+            this.SaveButton.StyleController = this.layoutControl2;
+            this.SaveButton.TabIndex = 6;
+            this.SaveButton.Text = "Lưu";
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AddButton.Appearance.Options.UseFont = true;
+            this.AddButton.Location = new System.Drawing.Point(12, 74);
+            this.AddButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.AddButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(120, 30);
+            this.AddButton.StyleController = this.layoutControl2;
+            this.AddButton.TabIndex = 5;
+            this.AddButton.Text = "Thêm";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // QuayHangTextBox
+            // 
+            this.QuayHangTextBox.Location = new System.Drawing.Point(110, 12);
+            this.QuayHangTextBox.Name = "QuayHangTextBox";
+            this.QuayHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.QuayHangTextBox.Properties.Appearance.Options.UseFont = true;
+            this.QuayHangTextBox.Size = new System.Drawing.Size(837, 24);
+            this.QuayHangTextBox.StyleController = this.layoutControl2;
+            this.QuayHangTextBox.TabIndex = 4;
             // 
             // layoutControlGroup2
             // 
@@ -206,16 +243,6 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(959, 116);
             this.layoutControlGroup2.TextVisible = false;
             // 
-            // QuayHangTextBox
-            // 
-            this.QuayHangTextBox.Location = new System.Drawing.Point(111, 12);
-            this.QuayHangTextBox.Name = "QuayHangTextBox";
-            this.QuayHangTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.QuayHangTextBox.Properties.Appearance.Options.UseFont = true;
-            this.QuayHangTextBox.Size = new System.Drawing.Size(836, 24);
-            this.QuayHangTextBox.StyleController = this.layoutControl2;
-            this.QuayHangTextBox.TabIndex = 4;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,20 +254,6 @@
             this.layoutControlItem3.Text = "Tên Quầy Hàng";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(95, 17);
             // 
-            // AddButton
-            // 
-            this.AddButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.AddButton.Appearance.Options.UseFont = true;
-            this.AddButton.Location = new System.Drawing.Point(12, 74);
-            this.AddButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.AddButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 30);
-            this.AddButton.StyleController = this.layoutControl2;
-            this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Thêm";
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.AddButton;
@@ -249,20 +262,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(124, 34);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.SaveButton.Appearance.Options.UseFont = true;
-            this.SaveButton.Location = new System.Drawing.Point(146, 74);
-            this.SaveButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.SaveButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(120, 30);
-            this.SaveButton.StyleController = this.layoutControl2;
-            this.SaveButton.TabIndex = 6;
-            this.SaveButton.Text = "Lưu";
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // layoutControlItem5
             // 
@@ -273,20 +272,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // EditButton
-            // 
-            this.EditButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.EditButton.Appearance.Options.UseFont = true;
-            this.EditButton.Location = new System.Drawing.Point(280, 74);
-            this.EditButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.EditButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(120, 30);
-            this.EditButton.StyleController = this.layoutControl2;
-            this.EditButton.TabIndex = 7;
-            this.EditButton.Text = "Sửa";
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.EditButton;
@@ -295,20 +280,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(124, 34);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.DeleteButton.Appearance.Options.UseFont = true;
-            this.DeleteButton.Location = new System.Drawing.Point(414, 74);
-            this.DeleteButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.DeleteButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(120, 30);
-            this.DeleteButton.StyleController = this.layoutControl2;
-            this.DeleteButton.TabIndex = 8;
-            this.DeleteButton.Text = "Xóa";
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // layoutControlItem7
             // 
@@ -319,20 +290,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // RefreshButton
-            // 
-            this.RefreshButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.RefreshButton.Appearance.Options.UseFont = true;
-            this.RefreshButton.Location = new System.Drawing.Point(548, 74);
-            this.RefreshButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.RefreshButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(120, 30);
-            this.RefreshButton.StyleController = this.layoutControl2;
-            this.RefreshButton.TabIndex = 9;
-            this.RefreshButton.Text = "Làm Mới";
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.RefreshButton;
@@ -341,20 +298,6 @@
             this.layoutControlItem8.Size = new System.Drawing.Size(124, 34);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
-            // 
-            // CancelButtonControl
-            // 
-            this.CancelButtonControl.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.CancelButtonControl.Appearance.Options.UseFont = true;
-            this.CancelButtonControl.Location = new System.Drawing.Point(827, 74);
-            this.CancelButtonControl.MaximumSize = new System.Drawing.Size(120, 30);
-            this.CancelButtonControl.MinimumSize = new System.Drawing.Size(120, 30);
-            this.CancelButtonControl.Name = "CancelButtonControl";
-            this.CancelButtonControl.Size = new System.Drawing.Size(120, 30);
-            this.CancelButtonControl.StyleController = this.layoutControl2;
-            this.CancelButtonControl.TabIndex = 10;
-            this.CancelButtonControl.Text = "Thoát";
-            this.CancelButtonControl.Click += new System.EventHandler(this.CancelButtonControl_Click);
             // 
             // layoutControlItem9
             // 
@@ -413,6 +356,33 @@
             this.emptySpaceItem6.Size = new System.Drawing.Size(939, 34);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // quayHangGridControl
+            // 
+            this.quayHangGridControl.Location = new System.Drawing.Point(12, 155);
+            this.quayHangGridControl.MainView = this.quayHangGridView;
+            this.quayHangGridControl.Name = "quayHangGridControl";
+            this.quayHangGridControl.Size = new System.Drawing.Size(963, 396);
+            this.quayHangGridControl.TabIndex = 4;
+            this.quayHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.quayHangGridView});
+            // 
+            // quayHangGridView
+            // 
+            this.quayHangGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayHangGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.quayHangGridView.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayHangGridView.Appearance.Row.Options.UseFont = true;
+            this.quayHangGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.TenQuayColumn});
+            this.quayHangGridView.GridControl = this.quayHangGridControl;
+            this.quayHangGridView.Name = "quayHangGridView";
+            this.quayHangGridView.OptionsBehavior.Editable = false;
+            this.quayHangGridView.OptionsView.ColumnAutoWidth = false;
+            this.quayHangGridView.OptionsView.ShowAutoFilterRow = true;
+            this.quayHangGridView.OptionsView.ShowGroupPanel = false;
+            this.quayHangGridView.OptionsView.ShowIndicator = false;
+            this.quayHangGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.quayHangGridView_FocusedRowChanged);
+            // 
             // TenQuayColumn
             // 
             this.TenQuayColumn.Caption = "Tên Quầy Hàng";
@@ -424,6 +394,36 @@
             this.TenQuayColumn.VisibleIndex = 0;
             this.TenQuayColumn.Width = 150;
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(987, 563);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.quayHangGridControl;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 143);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(967, 400);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.groupControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(967, 143);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // QuanLyQuayHangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,17 +434,12 @@
             this.Text = "QuanLyQuayHang";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuayHangTextBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -458,6 +453,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quayHangGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }

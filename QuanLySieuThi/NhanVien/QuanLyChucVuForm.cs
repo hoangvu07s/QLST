@@ -31,6 +31,7 @@ namespace QuanLySieuThi.NhanVien
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -111,6 +112,7 @@ namespace QuanLySieuThi.NhanVien
                 DeleteButton.Enabled = false;
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
 
                 _isSelectedRow = false;
 
@@ -184,6 +186,7 @@ namespace QuanLySieuThi.NhanVien
                 EditButton.Enabled = true;
                 DeleteButton.Enabled = true;
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
                 AddButton.Enabled = true;
 
                 _isSelectedRow = true;
@@ -235,6 +238,7 @@ namespace QuanLySieuThi.NhanVien
 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
 

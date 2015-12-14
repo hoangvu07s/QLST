@@ -257,7 +257,7 @@
             this.ChietKhauNummeric.Properties.Appearance.Options.UseFont = true;
             this.ChietKhauNummeric.Properties.DisplayFormat.FormatString = "n";
             this.ChietKhauNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.ChietKhauNummeric.Properties.Mask.EditMask = "P";
+            this.ChietKhauNummeric.Properties.Mask.EditMask = "f";
             this.ChietKhauNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.ChietKhauNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.ChietKhauNummeric.Properties.NullText = "0";
@@ -299,7 +299,7 @@
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";

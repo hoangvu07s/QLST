@@ -30,6 +30,7 @@ namespace QuanLySieuThi.NhaCungCap
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -120,6 +121,7 @@ namespace QuanLySieuThi.NhaCungCap
                 DeleteButton.Enabled = false;
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
 
                 _isSelectedRow = false;
 
@@ -219,6 +221,7 @@ namespace QuanLySieuThi.NhaCungCap
                 EditButton.Enabled = true;
                 DeleteButton.Enabled = true;
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
                 AddButton.Enabled = true;
 
                 _isSelectedRow = true;
@@ -270,6 +273,7 @@ namespace QuanLySieuThi.NhaCungCap
 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
 

@@ -56,6 +56,7 @@ namespace QuanLySieuThi.HangHoa
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
 
                 if (_isSearchForm)
                 {
@@ -169,6 +170,7 @@ namespace QuanLySieuThi.HangHoa
                 DeleteButton.Enabled = false;
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
 
                 _isSelectedRow = false;
 
@@ -274,6 +276,7 @@ namespace QuanLySieuThi.HangHoa
                 EditButton.Enabled = true;
                 DeleteButton.Enabled = true;
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
                 AddButton.Enabled = true;
 
                 _isSelectedRow = true;
@@ -325,6 +328,7 @@ namespace QuanLySieuThi.HangHoa
 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
 

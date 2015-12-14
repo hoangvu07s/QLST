@@ -226,10 +226,10 @@ namespace QuanLySieuThi.Kho
                 {
                     MessageBox.Show(@"Hàng Hóa đã được thêm vào danh sách", @"Thông Báo", MessageBoxButtons.OK);
                 }
-                else if (SoLuongNummeric.Text.ToInt() > SoLuongKhoXuatToiQuayNummeric.Text.ToInt())
+              /*  else if (SoLuongNummeric.Text.ToInt() > SoLuongKhoXuatToiQuayNummeric.Text.ToInt())
                 {
                     MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng từ kho xuất tới quầy", @"Thông Báo", MessageBoxButtons.OK);
-                }
+                }*/
                 else
                 {
                     var chiTietTraHang = new CT_PhieuTraQuayHang
@@ -249,6 +249,7 @@ namespace QuanLySieuThi.Kho
                     LoadGridData();
 
                     _isSelectedKhoHang = true;
+                    
                 }
             }
             catch (Exception ex)
@@ -282,10 +283,10 @@ namespace QuanLySieuThi.Kho
                 {
                     MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng tồn quầy", @"Thông Báo", MessageBoxButtons.OK);
                 }
-                else if (SoLuongNummeric.Text.ToInt() > SoLuongKhoXuatToiQuayNummeric.Text.ToInt())
+          /*      else if (SoLuongNummeric.Text.ToInt() > SoLuongKhoXuatToiQuayNummeric.Text.ToInt())
                 {
                     MessageBox.Show(@"Số Lượng trả về kho phải bé hơn hoắc bằng với số lượng từ kho xuất tới quầy", @"Thông Báo", MessageBoxButtons.OK);
-                }
+                }*/
                 else
                 {                    
                     var chiTietPhieuTraQuayHang =
@@ -365,7 +366,7 @@ namespace QuanLySieuThi.Kho
         {
             try
             {
-                var phieuTraQuayHang = Entity as PhieuTraQuayHang;
+                var phieuTraQuayHang = Entity as PhieuTraQuayHang;// Entity = Phiếu trả quầy hàng.
                 if (phieuTraQuayHang != null)
                 {
                     if (phieuTraQuayHang.KhoId == 0)

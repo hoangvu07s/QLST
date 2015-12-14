@@ -163,7 +163,7 @@
             this.SoLuongKhoXuatToiQuayNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongKhoXuatToiQuayNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongKhoXuatToiQuayNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongKhoXuatToiQuayNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongKhoXuatToiQuayNummeric.Properties.NullText = "0";
@@ -180,7 +180,7 @@
             this.SoLuongTonQuayNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongTonQuayNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongTonQuayNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongTonQuayNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongTonQuayNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongTonQuayNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongTonQuayNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongTonQuayNummeric.Properties.NullText = "0";
@@ -267,7 +267,7 @@
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";
