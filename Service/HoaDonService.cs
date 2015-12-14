@@ -76,6 +76,22 @@ namespace Service
 
             return null;
         }
+
+        public HoaDon Get(Guid hoadonId)
+        {
+            try
+            {
+                return
+                    Entities.HoaDons.FirstOrDefault(
+                        _ => _.HoaDonId == hoadonId && (_.HoatDong.HasValue && _.HoatDong.Value));
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
     }
 
 
