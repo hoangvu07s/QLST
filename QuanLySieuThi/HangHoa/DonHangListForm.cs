@@ -123,7 +123,7 @@ namespace QuanLySieuThi.HangHoa
             {
                 _sellRow = DonHangGridView.GetRow(e.FocusedRowHandle);
                 var selRow = _sellRow as DonHang;
-                if (selRow != null && selRow.TrangThaiDonHang == "Đang Chờ")
+                if (selRow != null && selRow.TrangThaiDonHang == "Đang Chờ" && CurrentFormInfo.QuyenId == (long)QuyenNhanVienEnum.Admin)
                 {
                     DeleteButton.Enabled = true;
                 }

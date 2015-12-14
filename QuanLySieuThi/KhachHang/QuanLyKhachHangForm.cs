@@ -39,6 +39,7 @@ namespace QuanLySieuThi.KhachHang
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
 
                 if (_isSearched)
                 {
@@ -169,6 +170,7 @@ namespace QuanLySieuThi.KhachHang
                 DeleteButton.Enabled = false;
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
 
                 _isSelectedRow = false;
 
@@ -257,6 +259,7 @@ namespace QuanLySieuThi.KhachHang
                 EditButton.Enabled = true;
                 DeleteButton.Enabled = true;
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
                 AddButton.Enabled = true;
 
                 _isSelectedRow = true;
@@ -312,6 +315,7 @@ namespace QuanLySieuThi.KhachHang
 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
 

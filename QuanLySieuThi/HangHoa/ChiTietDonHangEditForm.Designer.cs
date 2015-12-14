@@ -227,14 +227,14 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongGridColumn.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoLuongGridColumn.AppearanceHeader.Options.UseFont = true;
             this.SoLuongGridColumn.Caption = "Số Lượng";
-            this.SoLuongGridColumn.DisplayFormat.FormatString = "{0:n}";
+            this.SoLuongGridColumn.DisplayFormat.FormatString = "{0:d}";
             this.SoLuongGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongGridColumn.FieldName = "SoLuong";
             this.SoLuongGridColumn.Name = "SoLuongGridColumn";
             this.SoLuongGridColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongGridColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:d}")});
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 4;
             this.SoLuongGridColumn.Width = 150;
@@ -295,7 +295,7 @@ namespace QuanLySieuThi.HangHoa
             this.SoLuongNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongNummeric.Properties.NullText = "0";

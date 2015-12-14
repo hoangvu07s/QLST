@@ -49,7 +49,9 @@ namespace QuanLySieuThi.HangHoa
                 {
                     FormMode = FormMode.View;
                 }
-
+                DeleteButton.Enabled = false;
+                EditButton.Enabled = false;
+                OKButton.Enabled = false;
                 ShowData();
             }
             catch (Exception ex)
@@ -254,13 +256,13 @@ namespace QuanLySieuThi.HangHoa
                             isValidated = false;
                         }
                     }
-                    else
+                   /* else
                     {
                         MessageBox.Show(@"Hàng hóa phải có loại hàng hóa như trong chi tiết đơn hàng.",
                             @"Thong Bao",
                             MessageBoxButtons.OK);
                         isValidated = false;
-                    }
+                    }*/
 
                 }
 
@@ -325,7 +327,7 @@ namespace QuanLySieuThi.HangHoa
                 bool isValidated = ValidateInput();// kiểm tra không được để trống thông tin, ban đầu đc khai báo  = true
 
                 if (isValidated)
-                {// không cho chọn hàng hóa khác loại hàng.
+                {// không cho chọn hàng hóa đã nằm trong list và khác nhà cung cấp.
                     isValidated = ValidateTenHangHoaLoaiHangHoaNhaCungCap(tenHangHoa, loaiHang, nhaCungCap);
 
                     if (isValidated)
@@ -349,6 +351,9 @@ namespace QuanLySieuThi.HangHoa
         {
             try
             {
+                DeleteButton.Enabled = true;
+                EditButton.Enabled = true;
+                OKButton.Enabled = true;
                 if (ValidateChiTietDonHang())
                 {
                     var chiTietDonHang = InitChiTietDonHang();

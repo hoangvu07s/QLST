@@ -37,6 +37,7 @@ namespace QuanLySieuThi.HangHoa
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -116,7 +117,9 @@ namespace QuanLySieuThi.HangHoa
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
                 AddButton.Enabled = false;
+                LoaiHangHoaButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
 
                 _isSelectedRow = false;
 
@@ -191,7 +194,9 @@ namespace QuanLySieuThi.HangHoa
                 EditButton.Enabled = true;
                 DeleteButton.Enabled = true;
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
                 AddButton.Enabled = true;
+                LoaiHangHoaButton.Enabled = true;
 
                 _isSelectedRow = true;
             }
@@ -242,8 +247,10 @@ namespace QuanLySieuThi.HangHoa
 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
+                LoaiHangHoaButton.Enabled = false;
 
                 FormMode = FormMode.Edit;
             }
@@ -292,6 +299,7 @@ namespace QuanLySieuThi.HangHoa
             AddButton.Enabled = true;
             EditButton.Enabled = true;
             DeleteButton.Enabled = true;
+            LoaiHangHoaButton.Enabled = true;
         }
 
         private void LoaiHangHoaButton_Click(object sender, EventArgs e)

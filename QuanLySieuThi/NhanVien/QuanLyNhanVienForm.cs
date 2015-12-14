@@ -67,6 +67,7 @@ namespace QuanLySieuThi.NhanVien
 
                 ReadOnlyControls(true);
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
 
                 if (_isSearchForm)
                 {
@@ -262,6 +263,7 @@ namespace QuanLySieuThi.NhanVien
                 
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
                 EditButton.Enabled = false;
                 DeleteButton.Enabled = false;
 
@@ -295,6 +297,7 @@ namespace QuanLySieuThi.NhanVien
                 DeleteButton.Enabled = false;
                 AddButton.Enabled = false;
                 SaveButton.Enabled = true;
+                RefreshButton.Enabled = true;
 
                 _isSelectedRow = false;
 
@@ -431,6 +434,7 @@ namespace QuanLySieuThi.NhanVien
                 EditButton.Enabled = true;
                 DeleteButton.Enabled = true;
                 SaveButton.Enabled = false;
+                RefreshButton.Enabled = false;
                 AddButton.Enabled = true;
 
                 _isSelectedRow = true;
@@ -502,9 +506,9 @@ namespace QuanLySieuThi.NhanVien
                     //}
                     //else
                     //{
-                    if (selRow.TenDangNhap == "admin")
+                    if (selRow.Id == CurrentFormInfo.CurrentUserId )
                     {
-                        MessageBox.Show(@"Bạn không thể xóa tài khoản Admin", @"Thông Báo", MessageBoxButtons.OK);
+                        MessageBox.Show(@"Bạn đang đăng nhập vào hệ thống này nên bạn không thể xóa thông tin của bạn.", @"Thông Báo", MessageBoxButtons.OK);
                     }
                     else
                     {

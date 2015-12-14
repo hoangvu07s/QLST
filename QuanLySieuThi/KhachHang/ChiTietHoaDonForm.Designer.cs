@@ -275,7 +275,7 @@
             this.SoLuongDatMuaNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongDatMuaNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongDatMuaNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongDatMuaNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongDatMuaNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongDatMuaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongDatMuaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoLuongDatMuaNummeric.Properties.NullText = "0";
@@ -307,7 +307,7 @@
             this.SoLuongTonKhoNummeric.Properties.Appearance.Options.UseFont = true;
             this.SoLuongTonKhoNummeric.Properties.DisplayFormat.FormatString = "d";
             this.SoLuongTonKhoNummeric.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SoLuongTonKhoNummeric.Properties.Mask.EditMask = "f";
+            this.SoLuongTonKhoNummeric.Properties.Mask.EditMask = "d";
             this.SoLuongTonKhoNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.SoLuongTonKhoNummeric.Properties.ReadOnly = true;
             this.SoLuongTonKhoNummeric.Size = new System.Drawing.Size(100, 24);
@@ -544,14 +544,14 @@
             // SoLuongColumn
             // 
             this.SoLuongColumn.Caption = "Số Lượng";
-            this.SoLuongColumn.DisplayFormat.FormatString = "{0:n}";
+            this.SoLuongColumn.DisplayFormat.FormatString = "{0:d}";
             this.SoLuongColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SoLuongColumn.FieldName = "SoLuong";
             this.SoLuongColumn.Name = "SoLuongColumn";
             this.SoLuongColumn.OptionsColumn.AllowEdit = false;
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongColumn.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:n2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:d}")});
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 1;
             this.SoLuongColumn.Width = 200;

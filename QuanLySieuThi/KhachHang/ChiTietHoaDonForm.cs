@@ -51,6 +51,9 @@ namespace QuanLySieuThi.KhachHang
                     FormMode = FormMode.Add;
                     _chiTietHoaDons = new List<CT_HoaDon>();
                     EnabledControls(true);
+                    SaveButton.Enabled = false;
+                    EditButton.Enabled = false;
+                    DeleteButton.Enabled = false;
 
                     _maHoaDon = new Guid(QuanLySieuThiHelper.NextId());
                 }
@@ -140,6 +143,9 @@ namespace QuanLySieuThi.KhachHang
         {
             try
             {
+                SaveButton.Enabled = true;
+                EditButton.Enabled = true;
+                DeleteButton.Enabled = true;
                 if (_hangHoa != null)
                 {
                     if (_chiTietHoaDons.Any(_ => _.HangHoaId == _hangHoa.Id))
