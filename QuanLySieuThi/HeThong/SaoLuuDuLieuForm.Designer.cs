@@ -114,6 +114,7 @@
             this.ThuMucTextBox.Name = "ThuMucTextBox";
             this.ThuMucTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.ThuMucTextBox.Properties.Appearance.Options.UseFont = true;
+            this.ThuMucTextBox.Properties.ReadOnly = true;
             this.ThuMucTextBox.Size = new System.Drawing.Size(361, 24);
             this.ThuMucTextBox.StyleController = this.layoutControl1;
             this.ThuMucTextBox.TabIndex = 4;

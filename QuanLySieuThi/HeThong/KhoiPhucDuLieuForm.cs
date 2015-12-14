@@ -66,5 +66,10 @@ namespace QuanLySieuThi.HeThong
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
+
+        private void CancelButtonControl_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
     }
 }
