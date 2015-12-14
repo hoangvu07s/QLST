@@ -138,7 +138,7 @@ namespace QuanLySieuThi.KhachHang
                 if (DateTime.Now.Subtract(_hoaDon.NgayLap).Days > 3)
                 {
                     MessageBox.Show(
-                                    @"Không thể dổi hàng vì hóa đơn được lập trước 3 ngày",
+                                    @"Không thể dổi hàng vì hóa đơn được mua quá 3 ngày",
                                     @"Thông Báo", MessageBoxButtons.OK);
                 }
                 else
