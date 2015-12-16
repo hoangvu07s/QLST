@@ -173,7 +173,7 @@ namespace QuanLySieuThi.HangHoa
             this.TenHangHoaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenHangHoaGridColumn.Visible = true;
             this.TenHangHoaGridColumn.VisibleIndex = 0;
-            this.TenHangHoaGridColumn.Width = 150;
+            this.TenHangHoaGridColumn.Width = 200;
             // 
             // LoaiHangHoaGridColumn
             // 
@@ -188,7 +188,7 @@ namespace QuanLySieuThi.HangHoa
             this.LoaiHangHoaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.LoaiHangHoaGridColumn.Visible = true;
             this.LoaiHangHoaGridColumn.VisibleIndex = 1;
-            this.LoaiHangHoaGridColumn.Width = 150;
+            this.LoaiHangHoaGridColumn.Width = 200;
             // 
             // NhaCungCapGridColumn
             // 
@@ -203,7 +203,7 @@ namespace QuanLySieuThi.HangHoa
             this.NhaCungCapGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NhaCungCapGridColumn.Visible = true;
             this.NhaCungCapGridColumn.VisibleIndex = 2;
-            this.NhaCungCapGridColumn.Width = 150;
+            this.NhaCungCapGridColumn.Width = 200;
             // 
             // QuayHangGridColumn
             // 
@@ -218,7 +218,7 @@ namespace QuanLySieuThi.HangHoa
             this.QuayHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.QuayHangGridColumn.Visible = true;
             this.QuayHangGridColumn.VisibleIndex = 3;
-            this.QuayHangGridColumn.Width = 150;
+            this.QuayHangGridColumn.Width = 170;
             // 
             // SoLuongGridColumn
             // 
@@ -237,7 +237,7 @@ namespace QuanLySieuThi.HangHoa
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:d}")});
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 4;
-            this.SoLuongGridColumn.Width = 150;
+            this.SoLuongGridColumn.Width = 170;
             // 
             // DonGiaGridColumn
             // 
@@ -254,6 +254,7 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonGiaGridColumn.Visible = true;
             this.DonGiaGridColumn.VisibleIndex = 5;
+            this.DonGiaGridColumn.Width = 200;
             // 
             // ThanhTienColumn
             // 
@@ -282,7 +283,6 @@ namespace QuanLySieuThi.HangHoa
             this.DonGiaNummeric.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.DonGiaNummeric.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DonGiaNummeric.Properties.NullText = "0.00";
-            this.DonGiaNummeric.Properties.ReadOnly = true;
             this.DonGiaNummeric.Size = new System.Drawing.Size(745, 24);
             this.DonGiaNummeric.StyleController = this.layoutControl1;
             this.DonGiaNummeric.TabIndex = 10;
@@ -580,6 +580,7 @@ namespace QuanLySieuThi.HangHoa
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTietDonHangEditForm";
             this.Text = "CHI TIẾT ĐƠN HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChiTietDonHangGridControl)).EndInit();

@@ -666,7 +666,7 @@
             this.TenKhachHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenKhachHangColumn.Visible = true;
             this.TenKhachHangColumn.VisibleIndex = 0;
-            this.TenKhachHangColumn.Width = 150;
+            this.TenKhachHangColumn.Width = 250;
             // 
             // DiaChiGridColumn
             // 
@@ -677,7 +677,7 @@
             this.DiaChiGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DiaChiGridColumn.Visible = true;
             this.DiaChiGridColumn.VisibleIndex = 1;
-            this.DiaChiGridColumn.Width = 200;
+            this.DiaChiGridColumn.Width = 300;
             // 
             // SoDienThoaiColumn
             // 
@@ -688,7 +688,7 @@
             this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoDienThoaiColumn.Visible = true;
             this.SoDienThoaiColumn.VisibleIndex = 2;
-            this.SoDienThoaiColumn.Width = 150;
+            this.SoDienThoaiColumn.Width = 200;
             // 
             // TuoiColumn
             // 
@@ -699,6 +699,7 @@
             this.TuoiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TuoiColumn.Visible = true;
             this.TuoiColumn.VisibleIndex = 3;
+            this.TuoiColumn.Width = 200;
             // 
             // EmailColumn
             // 
@@ -709,7 +710,7 @@
             this.EmailColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.EmailColumn.Visible = true;
             this.EmailColumn.VisibleIndex = 4;
-            this.EmailColumn.Width = 150;
+            this.EmailColumn.Width = 200;
             // 
             // KhachHangThanThietColumn
             // 
@@ -721,7 +722,7 @@
             this.KhachHangThanThietColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.KhachHangThanThietColumn.Visible = true;
             this.KhachHangThanThietColumn.VisibleIndex = 5;
-            this.KhachHangThanThietColumn.Width = 150;
+            this.KhachHangThanThietColumn.Width = 190;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -765,7 +766,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyKhachHangForm";
-            this.Text = "QuanLyKhachHangForm";
+            this.Text = "QUẢN LÝ KHÁCH HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

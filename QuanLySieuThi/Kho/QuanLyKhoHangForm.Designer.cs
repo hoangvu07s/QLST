@@ -475,7 +475,7 @@
             // TenNhanVienQuanLyKhoColumn
             // 
             this.TenNhanVienQuanLyKhoColumn.Caption = "Tên Nhân Viên Quản Lý Kho";
-            this.TenNhanVienQuanLyKhoColumn.FieldName = "NhanVien2.TenDangNhap";
+            this.TenNhanVienQuanLyKhoColumn.FieldName = "NhanVien2.HoVaTen";
             this.TenNhanVienQuanLyKhoColumn.Name = "TenNhanVienQuanLyKhoColumn";
             this.TenNhanVienQuanLyKhoColumn.OptionsColumn.AllowEdit = false;
             this.TenNhanVienQuanLyKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
@@ -492,7 +492,7 @@
             this.DiaChiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DiaChiColumn.Visible = true;
             this.DiaChiColumn.VisibleIndex = 2;
-            this.DiaChiColumn.Width = 200;
+            this.DiaChiColumn.Width = 400;
             // 
             // SoDienThoaiColumn
             // 
@@ -503,7 +503,7 @@
             this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoDienThoaiColumn.Visible = true;
             this.SoDienThoaiColumn.VisibleIndex = 3;
-            this.SoDienThoaiColumn.Width = 150;
+            this.SoDienThoaiColumn.Width = 300;
             // 
             // layoutControlGroup1
             // 
@@ -542,7 +542,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyKhoHangForm";
-            this.Text = "QuanLyKhoHangForm";
+            this.Text = "QUẢN LÝ KHO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

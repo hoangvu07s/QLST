@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.PrintButton = new Common.Controls.QButtonControl();
             this.SelectButton = new Common.Controls.QButtonControl();
             this.OKButton = new Common.Controls.QButtonControl();
             this.ViewButton = new Common.Controls.QButtonControl();
@@ -50,7 +51,6 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.PrintButton = new Common.Controls.QButtonControl();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -86,6 +86,20 @@
             this.layoutControl1.Size = new System.Drawing.Size(987, 563);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // PrintButton
+            // 
+            this.PrintButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.PrintButton.Appearance.Options.UseFont = true;
+            this.PrintButton.Location = new System.Drawing.Point(146, 521);
+            this.PrintButton.MaximumSize = new System.Drawing.Size(120, 30);
+            this.PrintButton.MinimumSize = new System.Drawing.Size(120, 30);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(120, 30);
+            this.PrintButton.StyleController = this.layoutControl1;
+            this.PrintButton.TabIndex = 10;
+            this.PrintButton.Text = "In Hóa Đơn";
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // SelectButton
             // 
@@ -197,7 +211,7 @@
             this.KhachHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.KhachHangColumn.Visible = true;
             this.KhachHangColumn.VisibleIndex = 1;
-            this.KhachHangColumn.Width = 200;
+            this.KhachHangColumn.Width = 250;
             // 
             // NhanVienColumn
             // 
@@ -219,7 +233,7 @@
             this.NgayLapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NgayLapColumn.Visible = true;
             this.NgayLapColumn.VisibleIndex = 3;
-            this.NgayLapColumn.Width = 150;
+            this.NgayLapColumn.Width = 250;
             // 
             // TrangThaiHoaDonColumn
             // 
@@ -331,20 +345,6 @@
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // PrintButton
-            // 
-            this.PrintButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.PrintButton.Appearance.Options.UseFont = true;
-            this.PrintButton.Location = new System.Drawing.Point(146, 521);
-            this.PrintButton.MaximumSize = new System.Drawing.Size(120, 30);
-            this.PrintButton.MinimumSize = new System.Drawing.Size(120, 30);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(120, 30);
-            this.PrintButton.StyleController = this.layoutControl1;
-            this.PrintButton.TabIndex = 10;
-            this.PrintButton.Text = "In Hóa Đơn";
-            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.PrintButton;
@@ -372,7 +372,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyHoaDonForm";
-            this.Text = "QuanLyHoaDonForm";
+            this.Text = "DANH SÁCH HÓA ĐƠN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HoaDonGridControl)).EndInit();

@@ -431,7 +431,7 @@
             this.ChungLoaiHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.ChungLoaiHangHoaColumn.Visible = true;
             this.ChungLoaiHangHoaColumn.VisibleIndex = 0;
-            this.ChungLoaiHangHoaColumn.Width = 200;
+            this.ChungLoaiHangHoaColumn.Width = 1340;
             // 
             // layoutControlGroup1
             // 
@@ -470,7 +470,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyChungLoaiHangHoa";
-            this.Text = "QuanLyChungLoaiHangHoa";
+            this.Text = "QUẢN LÝ CHỦNG LOẠI HÀNG HÓA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

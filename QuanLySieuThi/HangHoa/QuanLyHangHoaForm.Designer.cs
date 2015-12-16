@@ -658,7 +658,7 @@
             this.TraLaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TraLaiColumn.Visible = true;
             this.TraLaiColumn.VisibleIndex = 4;
-            this.TraLaiColumn.Width = 200;
+            this.TraLaiColumn.Width = 140;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -676,7 +676,7 @@
             this.GiaNhapVaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.GiaNhapVaoColumn.Visible = true;
             this.GiaNhapVaoColumn.VisibleIndex = 5;
-            this.GiaNhapVaoColumn.Width = 150;
+            this.GiaNhapVaoColumn.Width = 200;
             // 
             // GiaBanRaColumn
             // 
@@ -689,7 +689,7 @@
             this.GiaBanRaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.GiaBanRaColumn.Visible = true;
             this.GiaBanRaColumn.VisibleIndex = 6;
-            this.GiaBanRaColumn.Width = 150;
+            this.GiaBanRaColumn.Width = 200;
             // 
             // layoutControlGroup1
             // 
@@ -728,7 +728,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyHangHoaForm";
-            this.Text = "QuanLyHangHoaForm";
+            this.Text = "QUẢN LÝ HÀNG HÓA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

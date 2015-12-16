@@ -91,9 +91,9 @@ namespace QuanLySieuThi.HangHoa
             // 
             // GridView1
             // 
-            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
             this.GridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
             this.GridView1.Appearance.Row.Options.UseFont = true;
             this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TenHangHoaColumn,
@@ -123,12 +123,13 @@ namespace QuanLySieuThi.HangHoa
             // 
             this.TenHangHoaColumn.Caption = "Tên Hàng Hóa";
             this.TenHangHoaColumn.FieldName = "TenHangHoa";
+            this.TenHangHoaColumn.MaxWidth = 20;
             this.TenHangHoaColumn.Name = "TenHangHoaColumn";
             this.TenHangHoaColumn.OptionsColumn.AllowEdit = false;
             this.TenHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenHangHoaColumn.Visible = true;
             this.TenHangHoaColumn.VisibleIndex = 0;
-            this.TenHangHoaColumn.Width = 103;
+            this.TenHangHoaColumn.Width = 20;
             // 
             // LoaiHangHoaColumn
             // 

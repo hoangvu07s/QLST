@@ -102,7 +102,7 @@ namespace QuanLySieuThi.NhanVien
             this.gridColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 150;
+            this.gridColumn1.Width = 250;
             // 
             // gridColumn2
             // 
@@ -113,18 +113,18 @@ namespace QuanLySieuThi.NhanVien
             this.gridColumn2.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 150;
+            this.gridColumn2.Width = 250;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Người Xuất";
-            this.gridColumn3.FieldName = "NhanVien.TenDangNhap";
+            this.gridColumn3.FieldName = "NhanVien.HoVaTen";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 150;
+            this.gridColumn3.Width = 250;
             // 
             // gridColumn4
             // 
@@ -135,7 +135,7 @@ namespace QuanLySieuThi.NhanVien
             this.gridColumn4.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 150;
+            this.gridColumn4.Width = 250;
             // 
             // layoutControlGroup1
             // 
@@ -190,7 +190,8 @@ namespace QuanLySieuThi.NhanVien
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.layoutControl1);
             this.Name = "XuatKhoListForm";
-            this.Text = "XuatKhoListForm";
+            this.Text = "DANH SÁCH PHIẾU XUẤT KHO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

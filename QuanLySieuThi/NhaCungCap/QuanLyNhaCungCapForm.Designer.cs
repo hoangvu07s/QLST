@@ -497,7 +497,7 @@
             this.TenNhaCungCapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenNhaCungCapColumn.Visible = true;
             this.TenNhaCungCapColumn.VisibleIndex = 0;
-            this.TenNhaCungCapColumn.Width = 200;
+            this.TenNhaCungCapColumn.Width = 250;
             // 
             // TenCongTyColumn
             // 
@@ -508,7 +508,7 @@
             this.TenCongTyColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenCongTyColumn.Visible = true;
             this.TenCongTyColumn.VisibleIndex = 1;
-            this.TenCongTyColumn.Width = 200;
+            this.TenCongTyColumn.Width = 250;
             // 
             // DiaChiColumn
             // 
@@ -519,7 +519,7 @@
             this.DiaChiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DiaChiColumn.Visible = true;
             this.DiaChiColumn.VisibleIndex = 2;
-            this.DiaChiColumn.Width = 200;
+            this.DiaChiColumn.Width = 250;
             // 
             // SoDienThoaiColumn
             // 
@@ -530,7 +530,7 @@
             this.SoDienThoaiColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoDienThoaiColumn.Visible = true;
             this.SoDienThoaiColumn.VisibleIndex = 3;
-            this.SoDienThoaiColumn.Width = 150;
+            this.SoDienThoaiColumn.Width = 250;
             // 
             // EmailColumn
             // 
@@ -541,7 +541,7 @@
             this.EmailColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.EmailColumn.Visible = true;
             this.EmailColumn.VisibleIndex = 4;
-            this.EmailColumn.Width = 150;
+            this.EmailColumn.Width = 250;
             // 
             // layoutControlGroup1
             // 
@@ -580,7 +580,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyNhaCungCapForm";
-            this.Text = "QuanLyNhaCungCapForm";
+            this.Text = "QUẢN LÝ NHÀ CUNG CẤP";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

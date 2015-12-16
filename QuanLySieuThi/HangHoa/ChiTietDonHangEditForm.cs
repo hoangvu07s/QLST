@@ -117,8 +117,10 @@ namespace QuanLySieuThi.HangHoa
                     }
                     else
                     {
-                        DeleteButton.Enabled = false;// chỉ hiện button cập nhật khi đơn hàng có trạng thái đang chờ.
-                        AddButton.Enabled = false;
+                        DeleteButton.Enabled = true;// chỉ hiện button cập nhật khi đơn hàng có trạng thái đang chờ.
+                        AddButton.Enabled = true;
+                        EditButton.Enabled = true;
+                        OKButton.Enabled = true;
                         SearchTenHangHoaButton.Enabled = false;
                     }
                 }
@@ -516,10 +518,10 @@ namespace QuanLySieuThi.HangHoa
                             _chiTietDonHangService.Update(ctDonHang);
                             _chiTietDonHangService.Save();
 
-                            hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia; // chỉnh sửa giá nhập vào trên đơn hàng của hàng hóa
+                       /*     hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia; // chỉnh sửa giá nhập vào trên đơn hàng của hàng hóa
 
                             _hangHoaService.Update(hanghoaInDatabase);
-                            _hangHoaService.Save();
+                            _hangHoaService.Save();*/
                         }
                     }
                     else
@@ -550,10 +552,10 @@ namespace QuanLySieuThi.HangHoa
                             ctDonHang.DonGia = chiTietDonHang.DonGia;
                             _chiTietDonHangService.Save();
                             // không sử dụng
-                            hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
+                        /*    hanghoaInDatabase.GiaNhapVao = ctDonHang.DonGia;
 
                             _hangHoaService.Update(hanghoaInDatabase);
-                            _hangHoaService.Save();
+                            _hangHoaService.Save();*/
                         }
                     }
                     

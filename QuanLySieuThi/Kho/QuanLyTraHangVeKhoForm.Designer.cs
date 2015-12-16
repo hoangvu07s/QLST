@@ -579,6 +579,7 @@
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 1;
+            this.SoLuongColumn.Width = 200;
             // 
             // LyDoColumn
             // 
@@ -589,7 +590,7 @@
             this.LyDoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.LyDoColumn.Visible = true;
             this.LyDoColumn.VisibleIndex = 2;
-            this.LyDoColumn.Width = 200;
+            this.LyDoColumn.Width = 940;
             // 
             // layoutControlGroup1
             // 
@@ -628,7 +629,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyTraHangVeKhoForm";
-            this.Text = "QuanLyTraHangVeKhoForm";
+            this.Text = "CHI TIẾT PHIẾU TRẢ QUẦY HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

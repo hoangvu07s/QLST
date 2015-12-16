@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Mã Hóa Đơn :</Value>
+                <Value>Số Hóa Đơn :</Value>
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                   <FontSize>11pt</FontSize>
@@ -55,7 +55,7 @@
               <TextRun>
                 <Value>SIÊU THỊ FAMILY</Value>
                 <Style>
-                  <FontFamily>Segoe UI</FontFamily>
+                  <FontFamily>Segoe UI Black</FontFamily>
                   <FontSize>11pt</FontSize>
                 </Style>
               </TextRun>
@@ -67,7 +67,7 @@
         <Top>0.20708in</Top>
         <Left>0.73958in</Left>
         <Height>0.25in</Height>
-        <Width>1.26042in</Width>
+        <Width>1.45834in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -89,7 +89,7 @@
                 <Value>HÓA ĐƠN XUẤT HÀNG
 </Value>
                 <Style>
-                  <FontFamily>Segoe UI</FontFamily>
+                  <FontFamily>Segoe UI Black</FontFamily>
                   <FontSize>11pt</FontSize>
                 </Style>
               </TextRun>
@@ -456,6 +456,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
+                                <Format>0;(0)</Format>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -638,7 +639,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
-                                <Format>0.00;(0.00)</Format>
+                                <Format>0;(0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -672,7 +673,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
-                                <Format>#,0.00;(#,0.00)</Format>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -691,7 +692,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -707,7 +707,7 @@
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>11pt</FontSize>
-                                <Format>#,0.00;(#,0.00)</Format>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -873,7 +873,7 @@
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                   <FontSize>11pt</FontSize>
-                  <Format>#,0.00;(#,0.00)</Format>
+                  <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -907,7 +907,7 @@
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                   <FontSize>11pt</FontSize>
-                  <Format>#,0.00;(#,0.00)</Format>
+                  <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -941,7 +941,7 @@
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                   <FontSize>11pt</FontSize>
-                  <Format>#,0.00;(#,0.00)</Format>
+                  <Format>#,0;(#,0)</Format>
                 </Style>
               </TextRun>
             </TextRuns>

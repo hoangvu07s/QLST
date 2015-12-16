@@ -392,7 +392,7 @@
             this.TenQuayColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenQuayColumn.Visible = true;
             this.TenQuayColumn.VisibleIndex = 0;
-            this.TenQuayColumn.Width = 150;
+            this.TenQuayColumn.Width = 1340;
             // 
             // layoutControlGroup1
             // 
@@ -431,7 +431,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyQuayHangForm";
-            this.Text = "QuanLyQuayHang";
+            this.Text = "QUẢN LÝ QUẦY HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

@@ -422,7 +422,7 @@
             this.TenLoaiHangHoaColumn.Name = "TenLoaiHangHoaColumn";
             this.TenLoaiHangHoaColumn.Visible = true;
             this.TenLoaiHangHoaColumn.VisibleIndex = 0;
-            this.TenLoaiHangHoaColumn.Width = 200;
+            this.TenLoaiHangHoaColumn.Width = 400;
             // 
             // TenChungLoaiHangHoaColumn
             // 
@@ -431,7 +431,7 @@
             this.TenChungLoaiHangHoaColumn.Name = "TenChungLoaiHangHoaColumn";
             this.TenChungLoaiHangHoaColumn.Visible = true;
             this.TenChungLoaiHangHoaColumn.VisibleIndex = 1;
-            this.TenChungLoaiHangHoaColumn.Width = 200;
+            this.TenChungLoaiHangHoaColumn.Width = 670;
             // 
             // layoutControlGroup1
             // 
@@ -470,7 +470,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyLoaiHangHoaForm";
-            this.Text = "QuanLyLoaiHangHoaForm";
+            this.Text = "QUẢN LÝ LOẠI HÀNG HÓA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

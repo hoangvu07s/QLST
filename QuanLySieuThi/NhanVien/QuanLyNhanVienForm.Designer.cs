@@ -208,6 +208,7 @@
             this.GioiTinhColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.GioiTinhColumn.Visible = true;
             this.GioiTinhColumn.VisibleIndex = 1;
+            this.GioiTinhColumn.Width = 100;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -223,7 +224,7 @@
             this.NgayThangNamSinhColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NgayThangNamSinhColumn.Visible = true;
             this.NgayThangNamSinhColumn.VisibleIndex = 2;
-            this.NgayThangNamSinhColumn.Width = 200;
+            this.NgayThangNamSinhColumn.Width = 150;
             // 
             // TenDangNhapColumn
             // 
@@ -841,7 +842,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyNhanVienForm";
-            this.Text = "QuanLyNhanVienForm";
+            this.Text = "QUẢN LÝ NHÂN VIÊN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).EndInit();

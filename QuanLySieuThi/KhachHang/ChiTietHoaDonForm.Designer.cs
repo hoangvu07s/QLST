@@ -539,7 +539,7 @@
             this.HangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.HangHoaColumn.Visible = true;
             this.HangHoaColumn.VisibleIndex = 0;
-            this.HangHoaColumn.Width = 200;
+            this.HangHoaColumn.Width = 250;
             // 
             // SoLuongColumn
             // 
@@ -554,7 +554,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "Tổng Số Lượng = {0:d}")});
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 1;
-            this.SoLuongColumn.Width = 200;
+            this.SoLuongColumn.Width = 250;
             // 
             // DonGiaColumn
             // 
@@ -567,7 +567,7 @@
             this.DonGiaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonGiaColumn.Visible = true;
             this.DonGiaColumn.VisibleIndex = 2;
-            this.DonGiaColumn.Width = 100;
+            this.DonGiaColumn.Width = 250;
             // 
             // ThanhTienColumn
             // 
@@ -582,7 +582,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTien", "Tổng Thành Tiền = {0:n2}")});
             this.ThanhTienColumn.Visible = true;
             this.ThanhTienColumn.VisibleIndex = 3;
-            this.ThanhTienColumn.Width = 200;
+            this.ThanhTienColumn.Width = 250;
             // 
             // layoutControlGroup1
             // 
@@ -621,7 +621,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ChiTietHoaDonForm";
-            this.Text = "ChiTietHoaDonForm";
+            this.Text = "CHI TIẾT HÓA ĐƠN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

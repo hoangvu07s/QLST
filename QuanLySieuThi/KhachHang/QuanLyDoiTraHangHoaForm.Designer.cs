@@ -156,7 +156,7 @@
             this.DoiTraHangHoaIdColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DoiTraHangHoaIdColumn.Visible = true;
             this.DoiTraHangHoaIdColumn.VisibleIndex = 0;
-            this.DoiTraHangHoaIdColumn.Width = 200;
+            this.DoiTraHangHoaIdColumn.Width = 250;
             // 
             // HoaDonIdColumn
             // 
@@ -167,7 +167,7 @@
             this.HoaDonIdColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.HoaDonIdColumn.Visible = true;
             this.HoaDonIdColumn.VisibleIndex = 1;
-            this.HoaDonIdColumn.Width = 200;
+            this.HoaDonIdColumn.Width = 250;
             // 
             // NhanVienColumn
             // 
@@ -178,7 +178,7 @@
             this.NhanVienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NhanVienColumn.Visible = true;
             this.NhanVienColumn.VisibleIndex = 2;
-            this.NhanVienColumn.Width = 200;
+            this.NhanVienColumn.Width = 250;
             // 
             // TongTienColumn
             // 
@@ -191,7 +191,7 @@
             this.TongTienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TongTienColumn.Visible = true;
             this.TongTienColumn.VisibleIndex = 3;
-            this.TongTienColumn.Width = 150;
+            this.TongTienColumn.Width = 300;
             // 
             // NgayLapPhieuColumn
             // 
@@ -202,7 +202,7 @@
             this.NgayLapPhieuColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NgayLapPhieuColumn.Visible = true;
             this.NgayLapPhieuColumn.VisibleIndex = 4;
-            this.NgayLapPhieuColumn.Width = 150;
+            this.NgayLapPhieuColumn.Width = 250;
             // 
             // layoutControlGroup1
             // 
@@ -282,7 +282,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyDoiTraHangHoaForm";
-            this.Text = "QuanLyDoiTraHangHoaForm";
+            this.Text = "DANH SÁCH PHIẾU TRẢ HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DoiTraHangHoaGridControl)).EndInit();

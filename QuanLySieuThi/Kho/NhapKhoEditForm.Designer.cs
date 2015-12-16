@@ -330,7 +330,7 @@ namespace QuanLySieuThi.Kho
             this.TenHangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenHangHoaColumn.Visible = true;
             this.TenHangHoaColumn.VisibleIndex = 0;
-            this.TenHangHoaColumn.Width = 150;
+            this.TenHangHoaColumn.Width = 200;
             // 
             // SoLuongDatHangColumn
             // 
@@ -341,7 +341,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongDatHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongDatHangColumn.Visible = true;
             this.SoLuongDatHangColumn.VisibleIndex = 1;
-            this.SoLuongDatHangColumn.Width = 150;
+            this.SoLuongDatHangColumn.Width = 200;
             // 
             // SoLuongGridColumn
             // 
@@ -352,7 +352,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongGridColumn.Visible = true;
             this.SoLuongGridColumn.VisibleIndex = 2;
-            this.SoLuongGridColumn.Width = 150;
+            this.SoLuongGridColumn.Width = 200;
             // 
             // DonGiaColumn
             // 
@@ -365,6 +365,7 @@ namespace QuanLySieuThi.Kho
             this.DonGiaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonGiaColumn.Visible = true;
             this.DonGiaColumn.VisibleIndex = 3;
+            this.DonGiaColumn.Width = 300;
             // 
             // NgaySanXuatColumn
             // 
@@ -729,7 +730,8 @@ namespace QuanLySieuThi.Kho
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Name = "NhapKhoEditForm";
-            this.Text = "NhapKhoEditForm";
+            this.Text = "CHI TIẾT PHIẾU NHẬP KHO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

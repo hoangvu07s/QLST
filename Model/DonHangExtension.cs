@@ -5,7 +5,7 @@
         public string NguoiLapDonHang {
             get
             {
-                return NhanVien1.TenDangNhap; 
+                return NhanVien1.HoVaTen; 
                 
             }
         }

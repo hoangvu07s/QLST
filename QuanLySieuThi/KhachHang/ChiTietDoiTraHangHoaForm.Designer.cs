@@ -614,7 +614,7 @@
             this.TenKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenKhoColumn.Visible = true;
             this.TenKhoColumn.VisibleIndex = 1;
-            this.TenKhoColumn.Width = 200;
+            this.TenKhoColumn.Width = 150;
             // 
             // SoLuongColumn
             // 
@@ -625,7 +625,7 @@
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 2;
-            this.SoLuongColumn.Width = 150;
+            this.SoLuongColumn.Width = 200;
             // 
             // DonGiaColumn
             // 
@@ -638,7 +638,7 @@
             this.DonGiaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonGiaColumn.Visible = true;
             this.DonGiaColumn.VisibleIndex = 3;
-            this.DonGiaColumn.Width = 100;
+            this.DonGiaColumn.Width = 200;
             // 
             // TinhTrangColumn
             // 
@@ -660,7 +660,7 @@
             this.ChietKhauPhanTramColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.ChietKhauPhanTramColumn.Visible = true;
             this.ChietKhauPhanTramColumn.VisibleIndex = 5;
-            this.ChietKhauPhanTramColumn.Width = 100;
+            this.ChietKhauPhanTramColumn.Width = 140;
             // 
             // TongTienTraLaiColumn
             // 
@@ -675,7 +675,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongTienTraLai", "Tổng Tiền Trả Lại = {0:n2}")});
             this.TongTienTraLaiColumn.Visible = true;
             this.TongTienTraLaiColumn.VisibleIndex = 6;
-            this.TongTienTraLaiColumn.Width = 150;
+            this.TongTienTraLaiColumn.Width = 200;
             // 
             // layoutControlGroup1
             // 
@@ -715,7 +715,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ChiTietDoiTraHangHoaForm";
-            this.Text = "ChiTietDoiTraHangHoaForm";
+            this.Text = "CHI TIẾT PHIẾU TRẢ HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

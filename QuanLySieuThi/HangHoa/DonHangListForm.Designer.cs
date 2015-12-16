@@ -37,6 +37,7 @@ namespace QuanLySieuThi.HangHoa
             this.NguoiLapDonHangGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NhaCungCapGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TrangThaiDonHangColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayLapColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CancelButtonControl = new Common.Controls.QButtonControl();
@@ -45,7 +46,6 @@ namespace QuanLySieuThi.HangHoa
             this.EditButton = new Common.Controls.QButtonControl();
             this.AddButton = new Common.Controls.QButtonControl();
             this.SelectButton = new Common.Controls.QButtonControl();
-            this.NgayLapColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).BeginInit();
@@ -113,7 +113,7 @@ namespace QuanLySieuThi.HangHoa
             this.MaDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.MaDonHangGridColumn.Visible = true;
             this.MaDonHangGridColumn.VisibleIndex = 0;
-            this.MaDonHangGridColumn.Width = 200;
+            this.MaDonHangGridColumn.Width = 370;
             // 
             // NguoiLapDonHangGridColumn
             // 
@@ -128,7 +128,7 @@ namespace QuanLySieuThi.HangHoa
             this.NguoiLapDonHangGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NguoiLapDonHangGridColumn.Visible = true;
             this.NguoiLapDonHangGridColumn.VisibleIndex = 1;
-            this.NguoiLapDonHangGridColumn.Width = 200;
+            this.NguoiLapDonHangGridColumn.Width = 250;
             // 
             // NhaCungCapGridColumn
             // 
@@ -143,7 +143,7 @@ namespace QuanLySieuThi.HangHoa
             this.NhaCungCapGridColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NhaCungCapGridColumn.Visible = true;
             this.NhaCungCapGridColumn.VisibleIndex = 2;
-            this.NhaCungCapGridColumn.Width = 200;
+            this.NhaCungCapGridColumn.Width = 250;
             // 
             // TrangThaiDonHangColumn
             // 
@@ -159,6 +159,17 @@ namespace QuanLySieuThi.HangHoa
             this.TrangThaiDonHangColumn.Visible = true;
             this.TrangThaiDonHangColumn.VisibleIndex = 3;
             this.TrangThaiDonHangColumn.Width = 200;
+            // 
+            // NgayLapColumn
+            // 
+            this.NgayLapColumn.Caption = "Ngày Lập Đơn Hàng";
+            this.NgayLapColumn.FieldName = "NgayTao";
+            this.NgayLapColumn.Name = "NgayLapColumn";
+            this.NgayLapColumn.OptionsColumn.AllowEdit = false;
+            this.NgayLapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.NgayLapColumn.Visible = true;
+            this.NgayLapColumn.VisibleIndex = 4;
+            this.NgayLapColumn.Width = 240;
             // 
             // layoutControlGroup1
             // 
@@ -258,17 +269,6 @@ namespace QuanLySieuThi.HangHoa
             this.SelectButton.Text = "Chọn";
             this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
-            // NgayLapColumn
-            // 
-            this.NgayLapColumn.Caption = "Ngày Lập Đơn Hàng";
-            this.NgayLapColumn.FieldName = "NgayTao";
-            this.NgayLapColumn.Name = "NgayLapColumn";
-            this.NgayLapColumn.OptionsColumn.AllowEdit = false;
-            this.NgayLapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.NgayLapColumn.Visible = true;
-            this.NgayLapColumn.VisibleIndex = 4;
-            this.NgayLapColumn.Width = 150;
-            // 
             // DonHangListForm
             // 
             this.Appearance.Options.UseFont = true;
@@ -284,7 +284,8 @@ namespace QuanLySieuThi.HangHoa
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DonHangListForm";
-            this.Text = "ĐƠN HÀNG";
+            this.Text = "DANH SÁCH ĐƠN HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DonHangGridControl)).EndInit();

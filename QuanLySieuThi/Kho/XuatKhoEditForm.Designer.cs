@@ -120,6 +120,7 @@ namespace QuanLySieuThi.Kho
             this.HangHoaColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.HangHoaColumn.Visible = true;
             this.HangHoaColumn.VisibleIndex = 0;
+            this.HangHoaColumn.Width = 200;
             // 
             // SoLuongColumn
             // 
@@ -130,6 +131,7 @@ namespace QuanLySieuThi.Kho
             this.SoLuongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.SoLuongColumn.Visible = true;
             this.SoLuongColumn.VisibleIndex = 1;
+            this.SoLuongColumn.Width = 200;
             // 
             // SoLuongXuatKhoNummeric
             // 
@@ -330,7 +332,8 @@ namespace QuanLySieuThi.Kho
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Name = "XuatKhoEditForm";
-            this.Text = "XuatKhoEditForm";
+            this.Text = "CHI TIẾT PHIẾU XUẤT KHO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CTXuatKhoGridControl)).EndInit();

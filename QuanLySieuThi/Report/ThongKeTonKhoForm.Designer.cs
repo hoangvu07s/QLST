@@ -237,6 +237,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "ThongKeTonKhoForm";
             this.Text = "ThongKeTonKhoForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ThongKeTonKhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

@@ -21,7 +21,7 @@ namespace QuanLySieuThi.KhachHang
         private DoiTraHangHoaService _doiTraHangHoaService;
         private TonKhoService _tonKhoService;
         private ChiTietNhapKhoService _chiTietNhapKhoService;
-        private TheKhachHangService _theKhachHangService;
+       private TheKhachHangService _theKhachHangService;
 
         private Guid? _maDoiTraHangHoa;
         private IList<CT_DoiTraHangHoa> _chiTietDoiTraHangHoas;
@@ -48,6 +48,7 @@ namespace QuanLySieuThi.KhachHang
                 _chiTietHoaDonService = new ChiTietHoaDonService(Entities);
                 _chiTietXuatKhoService = new ChiTietXuatKhoService(Entities);
                 _xuatKhoService = new XuatKhoService(Entities);
+                _chiTietNhapKhoService = new ChiTietNhapKhoService(Entities);
                 _doiTraHangHoaService = new DoiTraHangHoaService(Entities);
                 _tonKhoService = new TonKhoService(Entities);
 
@@ -137,6 +138,7 @@ namespace QuanLySieuThi.KhachHang
                     MessageBox.Show(
                                     @"Không thể dổi hàng vì hóa đơn được mua quá 3 ngày",
                                     @"Thông Báo", MessageBoxButtons.OK);
+                  
                 }
                 else
                 {
@@ -174,11 +176,11 @@ namespace QuanLySieuThi.KhachHang
         {
             try
             {
-                var xuatKhoIds =
+             /*   var xuatKhoIds =
                     _chiTietXuatKhoService.GetByHangHoaId(HangHoaLookupEdit.EditValue.ToString().ToLong())
-                        .Select(_ => _.XuatKhoId).ToList();
+                        .Select(_ => _.XuatKhoId).ToList();*/
 
-         //       var khos = _xuatKhoService.GetByXuatKhoIds(xuatKhoIds).Select(_ => _.Kho).ToList().Distinct().ToList();
+               // var khos = _xuatKhoService.GetByXuatKhoIds(xuatKhoIds).Select(_ => _.Kho).ToList().Distinct().ToList();
                 var khos = _chiTietNhapKhoService.GetKhos(HangHoaLookupEdit.EditValue.ToString().ToLong());
                 LoadKho(khos);
 

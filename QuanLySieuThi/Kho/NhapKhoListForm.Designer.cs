@@ -104,7 +104,7 @@ namespace QuanLySieuThi.Kho
             this.PhieuNhapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.PhieuNhapColumn.Visible = true;
             this.PhieuNhapColumn.VisibleIndex = 0;
-            this.PhieuNhapColumn.Width = 150;
+            this.PhieuNhapColumn.Width = 300;
             // 
             // DonHangColumn
             // 
@@ -115,7 +115,7 @@ namespace QuanLySieuThi.Kho
             this.DonHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.DonHangColumn.Visible = true;
             this.DonHangColumn.VisibleIndex = 1;
-            this.DonHangColumn.Width = 150;
+            this.DonHangColumn.Width = 300;
             // 
             // KhoColumn
             // 
@@ -126,18 +126,18 @@ namespace QuanLySieuThi.Kho
             this.KhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.KhoColumn.Visible = true;
             this.KhoColumn.VisibleIndex = 2;
-            this.KhoColumn.Width = 150;
+            this.KhoColumn.Width = 200;
             // 
             // NguoiTaoColumn
             // 
             this.NguoiTaoColumn.Caption = "Người Tạo";
-            this.NguoiTaoColumn.FieldName = "NhanVien.TenDangNhap";
+            this.NguoiTaoColumn.FieldName = "NhanVien.HoVaTen";
             this.NguoiTaoColumn.Name = "NguoiTaoColumn";
             this.NguoiTaoColumn.OptionsColumn.AllowEdit = false;
             this.NguoiTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NguoiTaoColumn.Visible = true;
             this.NguoiTaoColumn.VisibleIndex = 3;
-            this.NguoiTaoColumn.Width = 150;
+            this.NguoiTaoColumn.Width = 250;
             // 
             // NgayTaoColumn
             // 
@@ -148,7 +148,7 @@ namespace QuanLySieuThi.Kho
             this.NgayTaoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.NgayTaoColumn.Visible = true;
             this.NgayTaoColumn.VisibleIndex = 4;
-            this.NgayTaoColumn.Width = 150;
+            this.NgayTaoColumn.Width = 200;
             // 
             // layoutControlGroup1
             // 
@@ -203,7 +203,8 @@ namespace QuanLySieuThi.Kho
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.layoutControl1);
             this.Name = "NhapKhoListForm";
-            this.Text = "NhapKhoListForm";
+            this.Text = "DANH SÁCH PHIẾU NHẬP KHO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NhapKhoGridControl)).EndInit();

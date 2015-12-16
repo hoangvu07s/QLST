@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DoanhThuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -79,9 +79,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "ThongKeDoanhThu";
-            reportDataSource2.Value = this.DoanhThuBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ThongKeDoanhThu";
+            reportDataSource1.Value = this.DoanhThuBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLySieuThi.Report.ThongKeDoanhThu.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 93);
             this.reportViewer1.Name = "reportViewer1";
@@ -220,6 +220,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "ThongKeDoanhThuForm";
             this.Text = "ThongKeDoanhThuForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.DoanhThuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

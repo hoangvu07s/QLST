@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.CT_HoaDonBindingSource = new System.Windows.Forms.BindingSource();
+            this.CT_HoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -58,7 +59,6 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ChiTietHoaDon";
             reportDataSource1.Value = this.CT_HoaDonBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -96,6 +96,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "XuatHoaDonReportForm";
             this.Text = "XuatHoaDonReportForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.XuatHoaDonReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CT_HoaDonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

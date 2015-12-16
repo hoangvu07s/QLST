@@ -107,18 +107,18 @@ namespace QuanLySieuThi.Kho
             this.phieuTraHangQuayHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.phieuTraHangQuayHangColumn.Visible = true;
             this.phieuTraHangQuayHangColumn.VisibleIndex = 0;
-            this.phieuTraHangQuayHangColumn.Width = 150;
+            this.phieuTraHangQuayHangColumn.Width = 250;
             // 
             // nhanVienColumn
             // 
             this.nhanVienColumn.Caption = "Nhân Viên";
-            this.nhanVienColumn.FieldName = "NhanVien1.TenDangNhap";
+            this.nhanVienColumn.FieldName = "NhanVien1.HoVaTen";
             this.nhanVienColumn.Name = "nhanVienColumn";
             this.nhanVienColumn.OptionsColumn.AllowEdit = false;
             this.nhanVienColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.nhanVienColumn.Visible = true;
             this.nhanVienColumn.VisibleIndex = 1;
-            this.nhanVienColumn.Width = 150;
+            this.nhanVienColumn.Width = 250;
             // 
             // quayHangColumn
             // 
@@ -129,7 +129,7 @@ namespace QuanLySieuThi.Kho
             this.quayHangColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.quayHangColumn.Visible = true;
             this.quayHangColumn.VisibleIndex = 2;
-            this.quayHangColumn.Width = 150;
+            this.quayHangColumn.Width = 250;
             // 
             // TenKhoColumn
             // 
@@ -140,7 +140,7 @@ namespace QuanLySieuThi.Kho
             this.TenKhoColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.TenKhoColumn.Visible = true;
             this.TenKhoColumn.VisibleIndex = 3;
-            this.TenKhoColumn.Width = 150;
+            this.TenKhoColumn.Width = 250;
             // 
             // ngayLapColumn
             // 
@@ -151,7 +151,7 @@ namespace QuanLySieuThi.Kho
             this.ngayLapColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.ngayLapColumn.Visible = true;
             this.ngayLapColumn.VisibleIndex = 4;
-            this.ngayLapColumn.Width = 150;
+            this.ngayLapColumn.Width = 250;
             // 
             // layoutControlGroup1
             // 
@@ -232,7 +232,8 @@ namespace QuanLySieuThi.Kho
             this.Controls.Add(this.CancelButtonControl);
             this.Controls.Add(this.layoutControl1);
             this.Name = "PhieuTraQuayHangForm";
-            this.Text = "PhieuTraQuayHangForm";
+            this.Text = "DANH SÁCH PHIẾU TRẢ QUẦY HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.phieuTraHangGridControl)).EndInit();

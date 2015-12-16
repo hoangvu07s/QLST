@@ -134,7 +134,7 @@
             this.tenChucVuColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.tenChucVuColumn.Visible = true;
             this.tenChucVuColumn.VisibleIndex = 0;
-            this.tenChucVuColumn.Width = 150;
+            this.tenChucVuColumn.Width = 1340;
             // 
             // groupControl1
             // 
@@ -431,7 +431,8 @@
             this.ClientSize = new System.Drawing.Size(987, 563);
             this.Controls.Add(this.layoutControl1);
             this.Name = "QuanLyChucVuForm";
-            this.Text = "QuanLyChucVuForm";
+            this.Text = "QUẢN LÝ CHỨC VỤ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chucVuGridControl)).EndInit();
