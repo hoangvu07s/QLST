@@ -91,7 +91,8 @@ namespace QuanLySieuThi.Kho
                 if (hangHoas == null || hangHoas.Count == 0)
                 {
                    hangHoas = _chiTietDonHangService.GetHangHoas(new Guid(_donHangId)); 
-                }                
+                }  
+                HangHoaLookupEdit.Properties.Columns.Clear();
                 HangHoaLookupEdit.Properties.DataSource = hangHoas;
                 HangHoaLookupEdit.Properties.DisplayMember = "TenHangHoa";
                 HangHoaLookupEdit.Properties.ValueMember = "Id";
