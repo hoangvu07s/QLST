@@ -19,7 +19,7 @@ namespace Service
         {
             try
             {
-                return Entities.HoaDons
+                return Entities.HoaDons.Where(_=>_.HoatDong == true)
                     .Include(_ => _.NhanVien1)
                     .Include(_=>_.KhachHang).ToList();
             }

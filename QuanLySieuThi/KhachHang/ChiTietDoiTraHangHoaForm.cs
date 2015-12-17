@@ -121,6 +121,7 @@ namespace QuanLySieuThi.KhachHang
                 _quanLyHoaDonForm = new QuanLyHoaDonForm(true);
                 _quanLyHoaDonForm.ShowForm("OpenSeachHoaDon");
                 _quanLyHoaDonForm.FormClosed += QuanLyHoaDonFormOnFormClosed;
+           //     _chiTietDoiTraHangHoas = new List<CT_DoiTraHangHoa>();
             }
             catch (Exception ex)
             {
@@ -132,6 +133,7 @@ namespace QuanLySieuThi.KhachHang
         {
             try
             {
+                _chiTietDoiTraHangHoas = new List<CT_DoiTraHangHoa>();
                 _hoaDon = _quanLyHoaDonForm.HoaDon;
                 if (DateTime.Now.Subtract(_hoaDon.NgayLap).Days > 3)
                 {

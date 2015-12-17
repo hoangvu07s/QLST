@@ -107,7 +107,7 @@ namespace QuanLySieuThi.Kho
             {
                 if (KhoLookupEdit.EditValue.ToString().ToLong() != 0)
                 {
-                    if ( _isSelectedKhoHang == false)
+                  /*  if ( _isSelectedKhoHang == false)
                     {                        
                         _khoId = KhoLookupEdit.EditValue.ToString().ToLong();                        
                     }
@@ -116,7 +116,7 @@ namespace QuanLySieuThi.Kho
                         KhoLookupEdit.EditValue = _khoId;
                         MessageBox.Show(@"Chỉ được chọn duy nhất một Kho Hàng", @"Thông Báo", MessageBoxButtons.OK);
                         
-                    }
+                    }*/
 
                     LoadSoLuongKhoXuatToiQuay();
                 }          
