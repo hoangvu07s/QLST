@@ -72,6 +72,7 @@ namespace QuanLySieuThi.Kho
             try
             {
                 var khoHangs = _khoHangService.GetAll();
+                KhoLookupEdit.Properties.Columns.Clear();
                 KhoLookupEdit.Properties.DataSource = khoHangs;
                 KhoLookupEdit.Properties.DisplayMember = "TenKho";
                 KhoLookupEdit.Properties.ValueMember = "Id";
