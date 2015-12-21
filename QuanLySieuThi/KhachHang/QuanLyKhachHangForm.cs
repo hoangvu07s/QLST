@@ -203,10 +203,28 @@ namespace QuanLySieuThi.KhachHang
                             return false;
                         }
 
+                        if (khachHang.Email != null)
+                        {
+                            if (!Regexp.checkForMail(khachHang.Email))
+                            {
+                                MessageBox.Show(@"Email của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                                return false;
+                            }
+                          }
+
                         if (string.IsNullOrEmpty(khachHang.SoDienThoai))
                         {
                             MessageBox.Show(@"Vui lòng nhập Số Điện Thoại.", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
+                        }
+
+                        if (khachHang.SoDienThoai != null)
+                        {
+                            if (!Regexp.checkPhone(khachHang.SoDienThoai))
+                            {
+                                MessageBox.Show(@"Số điện thoại của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                                return false;
+                            }
                         }
 
                         if (TuoiTextBox.Text.ToInt() <= 0)

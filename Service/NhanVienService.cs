@@ -15,6 +15,24 @@ namespace Service
             Entities = quanLySieuThiEntities;
         }
 
+        public IList<NhanVien> GetNhanVienNghis()
+        {
+            try
+            {
+                return
+                    Entities.NhanViens.Where(_ => _.HoatDong.HasValue && _.HoatDong == false)
+                        .Include(_ => _.ChucVu)
+                        .Include(_ => _.NhanVien2)
+                        .Include(_ => _.NhanVien3)
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                
+                QuanLySieuThiHelper.LogError(ex);
+            }
+            return null;
+        }
         public IList<NhanVien> GetNhanViens()
         {
             try

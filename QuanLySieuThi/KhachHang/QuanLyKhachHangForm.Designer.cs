@@ -342,6 +342,7 @@
             this.SoDienThoaiTextBox.Name = "SoDienThoaiTextBox";
             this.SoDienThoaiTextBox.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.SoDienThoaiTextBox.Properties.Appearance.Options.UseFont = true;
+            this.SoDienThoaiTextBox.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.SoDienThoaiTextBox.Size = new System.Drawing.Size(308, 24);
             this.SoDienThoaiTextBox.StyleController = this.layoutControl2;
             this.SoDienThoaiTextBox.TabIndex = 6;

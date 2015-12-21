@@ -85,6 +85,24 @@ namespace Service
             return null;
         }
 
+        public NhaCungCap GetByTenCongTy(string tenCongTy)
+        {
+            try
+            {
+                var TenCongTy1 =
+                    Entities.NhaCungCaps.FirstOrDefault(
+                        _ => _.TenCongTy == tenCongTy && _.HoatDong.HasValue && _.HoatDong == true);
+
+                return TenCongTy1;
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public IList<NhaCungCap> GetAll()
         {
             try

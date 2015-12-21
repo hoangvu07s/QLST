@@ -341,6 +341,20 @@ namespace QuanLySieuThi
             }
         }
 
+        private void DanhSachNhanVienNghirButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var nhanVienListForm = new NhanVienListForm();
+                nhanVienListForm.ShowForm("OpenNhanVienListForm");
+            }
+            catch (Exception ex)
+            {
+                
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
         
     }
 }

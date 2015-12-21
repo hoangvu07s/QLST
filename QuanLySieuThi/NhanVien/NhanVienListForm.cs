@@ -38,8 +38,8 @@ namespace QuanLySieuThi.NhanVien
             {
                 ResetEntities();
                 _nhanVienService = new NhanVienService(Entities);
-                var nhanViens = _nhanVienService.GetNhanViens();
-                CollectNhanViens(nhanViens);
+                var nhanViens = _nhanVienService.GetNhanVienNghis();
+              //  CollectNhanViens(nhanViens);
                 NhanVienGridControl.DataSource = nhanViens;
                 NhanVienGridControl.RefreshDataSource();
             }
@@ -49,7 +49,7 @@ namespace QuanLySieuThi.NhanVien
             }
         }
 
-        private void CollectNhanViens(IEnumerable<Model.NhanVien> nhanViens)
+     /*   private void CollectNhanViens(IEnumerable<Model.NhanVien> nhanViens)
         {
             try
             {
@@ -73,13 +73,13 @@ namespace QuanLySieuThi.NhanVien
         {
             AcceptAndSavechange();
         }
-
+        */
         private void CancelButtonControl_Click(object sender, EventArgs e)
         {
             Cancel();
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
+    /*    private void DeleteButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -195,6 +195,6 @@ namespace QuanLySieuThi.NhanVien
             {
                 QuanLySieuThiHelper.LogError(ex);
             }
-        }
+        }*/
     }
 }

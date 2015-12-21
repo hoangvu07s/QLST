@@ -51,6 +51,7 @@
     <Compile Include="Enum\TrangThaiDonHangType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLySieuThiHelper.cs" />
+    <Compile Include="Regexp.cs" />
     <Compile Include="ValueObjects\ChiTietDonHang.cs" />
     <Compile Include="ValueObjects\ChiTietNhapKho.cs" />
     <Compile Include="ValueObjects\ChiTietXuatKho.cs" />

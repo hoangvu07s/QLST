@@ -129,6 +129,12 @@
     <Compile Include="HangHoa\HangHoaListForm.Designer.cs">
       <DependentUpon>HangHoaListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangHoa\KiemKeHangHoaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangHoa\KiemKeHangHoaForm.Designer.cs">
+      <DependentUpon>KiemKeHangHoaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa\LoaiHangHoaEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\HangHoaListForm.resx">
       <DependentUpon>HangHoaListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HangHoa\KiemKeHangHoaForm.resx">
+      <DependentUpon>KiemKeHangHoaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HangHoa\LoaiHangHoaEditForm.resx">
       <DependentUpon>LoaiHangHoaEditForm.cs</DependentUpon>

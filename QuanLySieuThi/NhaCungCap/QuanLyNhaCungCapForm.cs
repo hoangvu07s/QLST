@@ -167,6 +167,15 @@ namespace QuanLySieuThi.NhaCungCap
                         return false;
                     }
 
+                    if (nhaCungCap.Email != null)
+                    {
+                        if (!Regexp.checkForMail(nhaCungCap.Email))
+                        {
+                            MessageBox.Show(@"Email của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+                    }
+
                     if (string.IsNullOrEmpty(nhaCungCap.SoDienThoai))
                     {
                         MessageBox.Show(
@@ -176,13 +185,23 @@ namespace QuanLySieuThi.NhaCungCap
                         return false;
                     }
 
+                    if (nhaCungCap.SoDienThoai != null)
+                    {
+                        if (!Regexp.checkPhone(nhaCungCap.SoDienThoai))
+                        {
+                            MessageBox.Show(@"Số điện thoại của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+                    }
+
                     if (FormMode == FormMode.Add)
                     {
                         var nhaCungCapInDatabase = _nhaCungCapService.GetByTenNhaCungCap(nhaCungCap.TenNhaCungCap);
-                        if (nhaCungCapInDatabase != null)
+                        var tenCongTyInDatabase = _nhaCungCapService.GetByTenCongTy(nhaCungCap.TenCongTy);
+                        if (nhaCungCapInDatabase != null || tenCongTyInDatabase != null)
                         {
                             MessageBox.Show(
-                                @"Tên Nhà Cung Cấp đã tồn tại trong cở sở dữ liệu",
+                                @" Nhà Cung Cấp đã tồn tại trong cở sở dữ liệu",
                                 @"Thông Báo", MessageBoxButtons.OK);
 
                             return false;
@@ -191,10 +210,11 @@ namespace QuanLySieuThi.NhaCungCap
                     else if (FormMode == FormMode.Edit)
                     {
                         var nhaCungCapInDatabase = _nhaCungCapService.GetByTenNhaCungCap(nhaCungCap.TenNhaCungCap);
-                        if (nhaCungCapInDatabase != null && nhaCungCapInDatabase.Id != nhaCungCap.Id)
+                        var tenCongTyInDatabase = _nhaCungCapService.GetByTenCongTy(nhaCungCap.TenCongTy);
+                        if ((nhaCungCapInDatabase != null && nhaCungCapInDatabase.Id != nhaCungCap.Id) || (tenCongTyInDatabase != null && tenCongTyInDatabase.Id != nhaCungCap.Id))
                         {
                             MessageBox.Show(
-                                @"Tên Nhà Cung Cấp đã tồn tại trong cở sở dữ liệu",
+                                @" Nhà Cung Cấp đã tồn tại trong cở sở dữ liệu",
                                 @"Thông Báo", MessageBoxButtons.OK);
 
                             return false;

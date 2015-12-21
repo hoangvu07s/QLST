@@ -166,6 +166,15 @@ namespace QuanLySieuThi.Kho
                         
                     }
 
+                    if (khoHang.SoDienThoai != null)
+                    {
+                        if (!Regexp.checkPhone(khoHang.SoDienThoai))
+                        {
+                            MessageBox.Show(@"Số điện thoại của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                            return false;
+                        }
+                    }
+
                     var khoHangs = _khoHangService.GetAll();
                     if (FormMode == FormMode.Edit)
                     {

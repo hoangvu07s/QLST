@@ -342,10 +342,19 @@ namespace QuanLySieuThi.NhanVien
                             return false;
                         }
 
-                        if (string.IsNullOrEmpty(nhanVien.Email))
+                    /*    if (string.IsNullOrEmpty(nhanVien.Email))
                         {
                             MessageBox.Show(@"Vui lòng nhập Email", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
+                        }*/
+
+                        if (nhanVien.Email != null)
+                        {
+                            if (!Regexp.checkForMail(nhanVien.Email))
+                            {
+                                MessageBox.Show(@"Email của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                                return false;
+                            }
                         }
 
                         if (string.IsNullOrEmpty(nhanVien.DiaChi))
@@ -364,6 +373,15 @@ namespace QuanLySieuThi.NhanVien
                         {
                             MessageBox.Show(@"Vui lòng nhập số điện thoại.", @"Thông Báo", MessageBoxButtons.OK);
                             return false;
+                        }
+
+                        if (nhanVien.SoDienThoai != null)
+                        {
+                            if (!Regexp.checkPhone(nhanVien.SoDienThoai))
+                            {
+                                MessageBox.Show(@"Số điện thoại của bạn không đúng vui lòng kiểm tra lại.", @"Thông Báo", MessageBoxButtons.OK);
+                                return false;
+                            }
                         }
 
                         if (FormMode == FormMode.Add)
