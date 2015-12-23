@@ -22,6 +22,19 @@ namespace Helper
             return Mapper.Map<T>(instance);
         }
 
+        public static bool IsEncrypted(string stringValue)
+        {
+            try
+            {
+                stringValue.Decrypt();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         #region Extension method
 
         public static long ToLong(this string value)
