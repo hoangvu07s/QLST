@@ -316,6 +316,17 @@
             this.HoatDongColumn.Visible = true;
             this.HoatDongColumn.VisibleIndex = 10;
             // 
+            // HoatDongColumn
+            // 
+            this.HoatDongColumn.Caption = "Còn Làm Việc";
+            this.HoatDongColumn.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.HoatDongColumn.FieldName = "HoatDong";
+            this.HoatDongColumn.Name = "HoatDongColumn";
+            this.HoatDongColumn.OptionsColumn.AllowEdit = false;
+            this.HoatDongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.HoatDongColumn.Visible = true;
+            this.HoatDongColumn.VisibleIndex = 10;
+            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.layoutControl2);
