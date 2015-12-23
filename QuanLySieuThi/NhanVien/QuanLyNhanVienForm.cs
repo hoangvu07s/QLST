@@ -464,11 +464,19 @@ namespace QuanLySieuThi.NhanVien
             try
             {
                 var nhanVien = Entity as Model.NhanVien;
-                if (nhanVien != null) nhanVien.MatKhau = nhanVien.MatKhau.Encrypt();
+                
 
                 if (FormMode == FormMode.Edit)
                 {
+                    if (nhanVien != null && !QuanLySieuThiHelper.IsEncrypted(nhanVien.MatKhau))
+                    {
+                        nhanVien.MatKhau = nhanVien.MatKhau.Encrypt();
+                    }
                     _nhanVienService.Update(nhanVien);
+                }
+                else
+                {
+                    if (nhanVien != null) nhanVien.MatKhau = nhanVien.MatKhau.Encrypt();
                 }
 
                 _nhanVienService.Save();
