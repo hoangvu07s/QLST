@@ -30,6 +30,20 @@ namespace Service
             return null;
         }
 
+        public IList<TonKho> GetByKhoId(long khoId)
+        {
+            try
+            {
+                return Entities.TonKhoes.Where(_ => _.KhoId == khoId).ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;
+        }
+
         public TonKho Get(long khoId, long hangHoaId)
         {
             try

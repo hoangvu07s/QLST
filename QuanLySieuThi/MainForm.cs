@@ -8,6 +8,7 @@ using QuanLySieuThi.Kho;
 using QuanLySieuThi.NhaCungCap;
 using QuanLySieuThi.NhanVien;
 using QuanLySieuThi.Report;
+using QuanLySieuThi.ThongKe;
 
 namespace QuanLySieuThi
 {
@@ -351,6 +352,20 @@ namespace QuanLySieuThi
             catch (Exception ex)
             {
                 
+                QuanLySieuThiHelper.LogError(ex);
+            }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                var thongKeKhoHang = new ThongKeHangHoaTrongKho();
+                thongKeKhoHang.ShowForm("OpenThongKeHangHoaTrongKho");
+            }
+            catch (Exception ex)
+            {
+
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
