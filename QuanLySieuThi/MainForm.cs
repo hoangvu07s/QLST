@@ -355,8 +355,8 @@ namespace QuanLySieuThi
                 QuanLySieuThiHelper.LogError(ex);
             }
         }
-
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        
+        private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             try
             {

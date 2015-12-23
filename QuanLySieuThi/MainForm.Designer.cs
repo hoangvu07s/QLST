@@ -97,7 +97,7 @@
             this.ThoatBarButtonItem,
             this.SaoLuuDuLieubarButton,
             this.KhoiPhucDuLieubarButtonItem,
-
+            this.barButtonItem2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbon.MaxItemId = 33;
@@ -600,7 +600,7 @@
             this.barButtonItem2.ItemAppearance.Pressed.Font = new System.Drawing.Font("Times New Roman", 11.25F);
             this.barButtonItem2.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_1);
             // 
             // MainForm
             // 
@@ -624,7 +624,6 @@
         }
 
         #endregion
-
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage nhanVienRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup NhanVienPageGroup;
@@ -663,6 +662,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup HeThongPageGroup;
         private DevExpress.XtraBars.BarButtonItem SaoLuuDuLieubarButton;
         private DevExpress.XtraBars.BarButtonItem KhoiPhucDuLieubarButtonItem;
-
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
