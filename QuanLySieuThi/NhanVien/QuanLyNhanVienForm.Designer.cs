@@ -303,7 +303,18 @@
             this.QuyenColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.QuyenColumn.Visible = true;
             this.QuyenColumn.VisibleIndex = 9;
-            this.QuyenColumn.Width = 150;
+            this.QuyenColumn.Width = 100;
+            // 
+            // HoatDongColumn
+            // 
+            this.HoatDongColumn.Caption = "Còn Làm Việc";
+            this.HoatDongColumn.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.HoatDongColumn.FieldName = "HoatDong";
+            this.HoatDongColumn.Name = "HoatDongColumn";
+            this.HoatDongColumn.OptionsColumn.AllowEdit = false;
+            this.HoatDongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.HoatDongColumn.Visible = true;
+            this.HoatDongColumn.VisibleIndex = 10;
             // 
             // HoatDongColumn
             // 
