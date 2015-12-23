@@ -42,6 +42,7 @@
             this.DiaChiColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmailColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.QuyenColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HoatDongColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.QuyenLookupEdit = new Common.Controls.QLookupEditControl();
@@ -88,7 +89,6 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.HoatDongColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
@@ -303,7 +303,18 @@
             this.QuyenColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.QuyenColumn.Visible = true;
             this.QuyenColumn.VisibleIndex = 9;
-            this.QuyenColumn.Width = 150;
+            this.QuyenColumn.Width = 100;
+            // 
+            // HoatDongColumn
+            // 
+            this.HoatDongColumn.Caption = "Còn Làm Việc";
+            this.HoatDongColumn.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.HoatDongColumn.FieldName = "HoatDong";
+            this.HoatDongColumn.Name = "HoatDongColumn";
+            this.HoatDongColumn.OptionsColumn.AllowEdit = false;
+            this.HoatDongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.HoatDongColumn.Visible = true;
+            this.HoatDongColumn.VisibleIndex = 10;
             // 
             // groupControl1
             // 
@@ -836,17 +847,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(967, 292);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // HoatDongColumn
-            // 
-            this.HoatDongColumn.Caption = "Còn Làm Việc";
-            this.HoatDongColumn.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.HoatDongColumn.FieldName = "HoatDong";
-            this.HoatDongColumn.Name = "HoatDongColumn";
-            this.HoatDongColumn.OptionsColumn.AllowEdit = false;
-            this.HoatDongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.HoatDongColumn.Visible = true;
-            this.HoatDongColumn.VisibleIndex = 10;
             // 
             // QuanLyNhanVienForm
             // 
