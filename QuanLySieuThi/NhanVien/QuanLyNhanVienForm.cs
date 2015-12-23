@@ -155,6 +155,8 @@ namespace QuanLySieuThi.NhanVien
 
                 nhanVienGridControl.DataSource = nhanViensTemp;
                 nhanVienGridControl.RefreshDataSource();
+
+                nhanVienGridView.ActiveFilterString = "[HoatDong] = true";
             }
             catch (Exception ex)
             {
@@ -222,6 +224,19 @@ namespace QuanLySieuThi.NhanVien
                         var quyenNhanVien = _quyenNhanVienService.GetByNhanVienId(nhanVien.Id);
 
                         QuyenLookupEdit.EditValue = quyenNhanVien.QuyenId;
+
+                        if (nhanVien.HoatDong == false)
+                        {
+                            AddButton.Enabled = false;
+                            EditButton.Enabled = false;
+                            DeleteButton.Enabled = false;
+                        }
+                        else
+                        {
+                            AddButton.Enabled = true;
+                            EditButton.Enabled = true;
+                            DeleteButton.Enabled = true;
+                        }
                     }
                 }                
             }
