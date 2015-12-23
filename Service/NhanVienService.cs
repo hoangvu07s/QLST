@@ -52,6 +52,24 @@ namespace Service
             return null;
         }
 
+        public IList<NhanVien> GetAllNhanVien()
+        {
+            try
+            {
+                return
+                    Entities.NhanViens
+                        .Include(_ => _.ChucVu)
+                        .Include(_ => _.NhanVien2)
+                        .Include(_ => _.NhanVien3)
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                QuanLySieuThiHelper.LogError(ex);
+            }
+
+            return null;}
+
         public NhanVien GetNhanVien(long nhanVienId)
         {
             try

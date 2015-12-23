@@ -88,6 +88,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.HoatDongColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
@@ -177,7 +178,8 @@
             this.SoDienThoaiColumn,
             this.DiaChiColumn,
             this.EmailColumn,
-            this.QuyenColumn});
+            this.QuyenColumn,
+            this.HoatDongColumn});
             this.nhanVienGridView.GridControl = this.nhanVienGridControl;
             this.nhanVienGridView.Name = "nhanVienGridView";
             this.nhanVienGridView.OptionsBehavior.Editable = false;
@@ -835,6 +837,17 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // HoatDongColumn
+            // 
+            this.HoatDongColumn.Caption = "Còn Làm Việc";
+            this.HoatDongColumn.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.HoatDongColumn.FieldName = "HoatDong";
+            this.HoatDongColumn.Name = "HoatDongColumn";
+            this.HoatDongColumn.OptionsColumn.AllowEdit = false;
+            this.HoatDongColumn.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.HoatDongColumn.Visible = true;
+            this.HoatDongColumn.VisibleIndex = 10;
+            // 
             // QuanLyNhanVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -957,5 +970,6 @@
         private Common.Controls.QLookupEditControl QuyenLookupEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraGrid.Columns.GridColumn QuyenColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn HoatDongColumn;
     }
 }

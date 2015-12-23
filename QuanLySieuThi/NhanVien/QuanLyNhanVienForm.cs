@@ -126,8 +126,8 @@ namespace QuanLySieuThi.NhanVien
             try
             {
                 ResetEntities();
-                _nhanVienService = new NhanVienService(Entities);                
-                var nhanViens = _nhanVienService.GetNhanViens();
+                _nhanVienService = new NhanVienService(Entities);
+                var nhanViens = _nhanVienService.GetAllNhanVien();
 
                 var admin = nhanViens.FirstOrDefault(_ => _.TenDangNhap == "admin");
                 if (admin != null)
